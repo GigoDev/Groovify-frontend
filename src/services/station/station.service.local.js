@@ -14,10 +14,78 @@ export const stationService = {
 }
 window.cs = stationService
 
+const stations =
+    [
+        {
+            _id: '5cksxjas89xjsa8xjsa8jxs09',
+            name: 'Funky Monks',
+            tags: ['Funk', 'Happy'],
+            createdBy: {
+                _id: 'u101',
+                fullname: 'Puki Ben David',
+                imgUrl: `https://robohash.org/Funky?set=set1`,
+            },
+            likedByUsers: ['{Johny}', '{Walker}'],
+            songs: [
+                {
+                    id: 's1001',
+                    title: 'The Meters - Cissy Strut',
+                    url: 'youtube/song.mp4',
+                    imgUrl: '`https://robohash.org/meters?set=set1`',
+                    addedBy: '{minimal-user}',
+                    likedBy: ['{minimal-user}'],
+                    addedAt: 162521765262,
+                },
+                {
+                    id: 'mUkfiLjooxs',
+                    title: "The JB's - Pass The Peas",
+                    url: 'youtube/song.mp4',
+                    imgUrl: 'https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg',
+                    addedBy: {},
+                },
+            ]
+        },
+        {
+            _id: '5cksxjas89xjsa8xjsa8jxs08',
+            name: '90s  party',
+            tags: ['Hip-Hop', 'Happy'],
+            createdBy: {
+                _id: 'u102',
+                fullname: 'Muki Ja',
+                imgUrl: 'http://some-photo/',
+            },
+            likedByUsers: ['{Addam}', '{Alex}'],
+            songs: [
+                {
+                    id: 's1002',
+                    title: 'The Rooling stones - Paint it black',
+                    url: 'youtube/song.mp4',
+                    imgUrl: '`https://robohash.org/black?set=set1`',
+                    addedBy: '{Tommy}',
+                    likedBy: ['{David}'],
+                    addedAt: 162521765262,
+                },
+                {
+                    id: 'mUkfiLjooxs',
+                    title: "Prince-Kiss",
+                    url: 'youtube/song.mp4',
+                    imgUrl: '`https://robohash.org/Kiss?set=set1`',
+                    addedBy: '{Michael}',
+                    addedAt: 162521765001,
+                },
+            ]
+        },
+    ]
 
-async function query(filterBy = { txt: ''}) {
+_createStations()
+
+function _createStations() {
+    saveToStorage(STORAGE_KEY, stations)
+}
+
+async function query(filterBy = { txt: '' }) {
     var stations = await storageService.query(STORAGE_KEY)
-    const { txt, minSpeed, maxPrice, sortField, sortDir } = filterBy
+    const { txt } = filterBy
 
     if (txt) {
         const regex = new RegExp(filterBy.txt, 'i')
@@ -74,53 +142,6 @@ async function addStationMsg(stationId, txt) {
     return msg
 }
 
-const stationNames = [
-    "Summer Vibes", "Chill Hits", "Workout Boost", "Throwback Jams", "Party Anthems", "Acoustic Relaxation", "Road Trip Tunes", "Morning Motivation", "Evening Unwind", "Dance Floor Fillers",
-    "Rock Legends", "Pop Perfection", "Jazz Essentials", "Classical Calm", "Hip-Hop Hype", "Indie Inspiration", "R&B Grooves", "Reggae Rhythms", "Blues Classics", "Country Roads",
-    "EDM Energy", "Latin Beats", "Soulful Sundays", "Piano Moods", "Folk Favorites", "Metal Madness", "Ambient Atmosphere", "Funk Fever", "Gospel Greats", "Alternative Anthems",
-    "Lofi Lounge", "Electro Chill", "World Music Wonders", "Holiday Hits", "Romantic Ballads", "Festival Favorites", "Synthwave Dreams", "Guitar Heroes", "Opera Highlights", "Epic Soundtracks"
-]
-
-const musicGenres = [
-    "Rock", "Pop", "Jazz", "Classical", "Hip-Hop", "Indie", "R&B", "Reggae", "Blues", "Country",
-    "EDM", "Latin", "Soul", "Folk", "Metal"
-]
-
-const usernames = [
-    "StarGazer", "NightOwl", "HappyCamper", "TechieGuru", "MountainMover", "DreamWeaver", "OceanExplorer", "SkyWalker", "WildHeart", "SunChaser",
-    "UrbanNomad", "ForestWhisperer", "CyberPunk", "BlazeRunner", "PixelPainter", "CodeCrafter", "QuantumLeap", "EchoWhisper", "MysticTraveler", "GalacticRider",
-    "PhoenixFire", "AquaMarine", "ShadowHunter", "NeonNinja", "ZenMaster", "RogueWarrior", "SilentStorm", "LunarLover", "VoyageSeeker", "WindRider",
-    "SolsticeSeeker", "ThunderStrike", "CrystalMage", "AstralPilot", "MysticMuse", "NebulaNavigator", "DesertRover", "CosmicDreamer", "InfinityWalker", "AuroraDancer"
-]
-
-const songTitles = [
-    "Dancing in the Moonlight", "Whispers in the Wind", "Sunset Boulevard", "Electric Dreams", "Ocean Waves", "Starlight Serenade", "Neon Nights", "Echoes of Love", "Mystic Journey", "Endless Summer",
-    "Silver Lining", "Midnight Run", "Golden Horizon", "Crimson Skies", "Velvet Rain", "City Lights", "Shadow Play", "Heartbeats", "Desert Mirage", "Aurora Borealis",
-    "Whispering Pines", "Crystal Clear", "Wildflower", "Eternal Flame", "Morning Dew", "Twilight Glow", "Celestial Voyage", "Silent Echoes", "Timeless Melody", "Lunar Eclipse",
-    "Radiant Dawn", "Mystic River", "Paradise Lost", "Chasing Dreams", "Harmonic Bliss", "Echo Chamber", "Galactic Tide", "Enchanted Forest", "Ephemeral Beauty", "Solstice Serenade"
-]
-
-_createStations()
-
-function _createStations() {
-    const stations = []
-    for (let i = 0; i < 40; i++) {
-        stations.push(_createStation(i))
-    }
-    saveToStorage(STORAGE_KEY, stations)
-}
-
-function _createStation(i) {
-    return {
-        _id: makeId(),
-        name: stationNames[i],
-        tags: ['Funk', 'Happy'],
-        createdBy: {
-            _id: makeId(),
-            fullname: usernames[i],
-        },
-    }
-}
 
 
 

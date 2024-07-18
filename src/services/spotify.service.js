@@ -54,10 +54,10 @@ async function getToken() {
 }
 
 //getArtist()
-async function getArtist(id = '0TnOYISbd1XYRBk9myaseg') {
+async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
     const token = loadFromStorage('access_token')
     try {
-        const url = `https://api.spotify.com/v1/artists/${id}`;
+        const url = `https://api.spotify.com/v1/artists/${artistId}`;
 
         // Define headers correctly
         const headers = {
@@ -76,14 +76,12 @@ async function getArtist(id = '0TnOYISbd1XYRBk9myaseg') {
             imgs: resp.data.images,
             listeners: resp.data.followers.total,
             id: resp.data.id,
-            tracks: [//map all tracks to this format
-                {
-                    id: resp.data.tracks.items[0].id,
-                    name: resp.data.tracks.items[0].name,
-                    img: resp.data.images
-                }]
         }
+        const topTracks = await getArtistTopTracks(artistId)
+        station.tracks = topTracks
         console.log(station)
+        return station
+        
 
     } catch (error) {
         // Handle any errors that occur during the request
@@ -91,10 +89,10 @@ async function getArtist(id = '0TnOYISbd1XYRBk9myaseg') {
     }
 }
 
-async function getArtistTopTracks(id = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') {
+async function getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') {
     const token = loadFromStorage('access_token')
     try {
-        const url = `https://api.spotify.com/v1/artists/${id}/top-tracks?market=${market}`;
+        const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${market}`;
 
         // Define headers correctly
         const headers = {
@@ -103,18 +101,17 @@ async function getArtistTopTracks(id = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') 
 
         // Make the GET request with axios
         const resp = await axios.get(url, { headers })
-
-        // Log the response data
         console.log(resp.data)
 
-        const station = [{// tracks list
-
-            id: resp.data[0].id,
-            name: resp.data[0].name,
-            artist: resp.data[0].artists[0]
-        }]
-        console.log(station)
-
+        const tracks = resp.data.tracks.map(track => ({
+            id: track.id,
+            name: track.name,
+            artists: track.artists,
+            album: track.album
+        }))
+        
+        console.log(tracks)
+        return tracks
     } catch (error) {
         // Handle any errors that occur during the request
         console.error('Error fetching artist tracks:', error)
@@ -145,6 +142,7 @@ async function getAlbum(id = '4aawyAB9vmqN3uQ7FjRGTy', market = 'IL') {
             name: resp.data.name,
             imgs: resp.data.images,
             id: resp.data.id,
+            releaseDate: resp.data.release_date,
             tracks: [//map all tracks to this format
                 {
                     id: resp.data.tracks.items[0].id,

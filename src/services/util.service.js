@@ -1,5 +1,5 @@
 import fs from 'fs'
-import fr from 'follow-redirects'
+// import fr from 'follow-redirects'
 
 
 export function makeId(length = 6) {

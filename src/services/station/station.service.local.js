@@ -1,8 +1,7 @@
-
 import { storageService } from '../async-storage.service.js'
-import { makeId, readJsonFile, saveToStorage } from '../util.service.js'
+import { makeId, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
-
+import { stations as dataStations} from '../../../data/stations.js'
 const STORAGE_KEY = 'station'
 
 export const stationService = {
@@ -14,11 +13,12 @@ export const stationService = {
 }
 window.cs = stationService
 
-let stations = readJsonFile('./data/station.json')
-
-
 async function query(filterBy = { txt: '' }) {
-    var stations = await storageService.query(STORAGE_KEY)
+    let stations = await storageService.query(STORAGE_KEY)
+    if (!stations || stations.length === 0) {
+        saveToStorage(STORAGE_KEY, dataStations)
+        stations = dataStations.slice()
+    }
     const { txt } = filterBy
 
     if (txt) {

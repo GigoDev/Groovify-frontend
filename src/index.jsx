@@ -9,6 +9,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import { store } from './store/store'
 import { RootCmp } from './RootCmp'
 import { spotifyService } from './services/spotify.service'
+import { stationService } from './services/station'
+
 
 import './assets/styles/main.scss'
 

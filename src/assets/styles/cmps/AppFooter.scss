@@ -1,0 +1,144 @@
+.main-view-footer {
+    
+    .details-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-content: space-between;
+
+        .info {
+            display: flex;
+            gap: 50px;
+            
+
+
+            .company {
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+
+                span {
+                    font-size: .9em;
+                    color: $clr09;
+
+                    &:hover {
+                        color: $clr01;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .communities {
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+
+                span {
+                    font-size: .9em;
+                    color: $clr09;
+                    
+                    &:hover {
+                        color: $clr01;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+
+            .useful-links {
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+
+                span {
+                    font-size: .9em;
+                    color: $clr09;
+
+                    &:hover {
+                        color: $clr01;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .groovify-plans {
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+
+                span {
+                    font-size: .9em;
+                    color: $clr09;
+
+                    &:hover {
+                        color: $clr01;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .links-container {
+
+        .social-links {
+            display: flex;
+            justify-content: end;
+            margin-inline: 1rem;
+
+            .btn {
+                display: grid;
+                align-items: center;
+                border: 0;
+                background-color: $clr10;
+                border-radius: 50%;
+                padding: 7px 8px;
+                margin-inline: .2rem;
+
+                &:hover {
+                    background-color: $clr02;
+                    cursor: pointer;
+                }
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+
+
+                    path {
+                        stroke: $clr02;
+                        fill: $clr01;
+                    }
+                }
+
+            }
+        }
+    }
+
+    hr.horizontal-line {
+        height: 1px;
+        background-color: $clr10;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        display: grid;    
+        grid-auto-flow: column;
+        margin-block: 3rem;
+        
+
+        span {
+            font-size: .8em;
+            color: $clr09;
+
+            &:hover {
+                color: $clr01;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}

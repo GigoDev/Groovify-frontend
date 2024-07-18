@@ -5,6 +5,7 @@ export function StationList({ activeStation, setActiveStation, stations, listNam
 
     return (
         <section className='main-stations-container'>
+            <h1>Station list CMP</h1>
             <div className="station-list-name">{listName}</div>
             <section className="station-list-container">
                 {

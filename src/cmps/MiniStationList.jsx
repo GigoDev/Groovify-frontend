@@ -4,6 +4,7 @@ export function MiniStationList({ activeStation, setActiveStation, stations }) {
     if (!stations) return <div></div>
     return (
         <section className="mini-stations-container">
+            <h1>MiniStationList CMP</h1>
             <div className='mini-station-list'>
                 {
                     stations.map(station => (

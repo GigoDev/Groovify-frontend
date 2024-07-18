@@ -25,8 +25,8 @@ export function AppHeader() {
 				<button className="forward-btn"><i className="fa-solid fa-chevron-right"></i></button>
 			</nav>
 			<section className='header-menu flex'>
-				<button className='install-btn'><i class="fa-regular fa-circle-down"></i>Install App</button>
-				<button className='notification-btn'><i class="fa-regular fa-bell"></i></button>
+				<button className='install-btn'><i className="fa-regular fa-circle-down"></i>Install App</button>
+				<button className='notification-btn'><i className="fa-regular fa-bell"></i></button>
 				<button className='user-btn'></button>
 			</section>
 		</header>

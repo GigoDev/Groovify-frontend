@@ -1,8 +1,29 @@
 @font-face {
-    // font-family: caveat;
-    // src: url(../../fonts/Caveat/Caveat-Regular.ttf);
+    font-family: gotham;
+    src: url('/src/assets/fonts/Gotham/GothamMedium_1.ttf');
 }
+
 @font-face {
-    // font-family: montserrat;
-    // src: url(../../fonts/Montserrat/Montserrat-Regular.ttf);
+    font-family: gotham-light;
+    src: url('/src/assets/fonts/Gotham/GothamLight.ttf')
+}
+
+@font-face {
+    font-family: rubik;
+    src: url('/src/assets/fonts/Rubik/Rubik-Medium.ttf')
+}
+
+@font-face {
+    font-family: rubik-light;
+    src: url('/src/assets/fonts/Rubik/Rubik-Light.ttf')
+}
+
+@font-face {
+    font-family: circular;
+    src: url('/src/assets/fonts/Circular/CircularStd-Book.otf');
+}
+
+@font-face {
+    font-family: circular-light;
+    src: url('/src/assets/fonts/Circular/CircularStd-Light.otf');
 }

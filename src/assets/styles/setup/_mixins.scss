@@ -28,31 +28,101 @@
 @mixin aspect-ratio($width, $height) {
     position: relative;
     overflow: hidden;
+
     &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(($height / $width) * 100%);
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: calc(($height / $width) * 100%);
     }
-    > * {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
-  
-    > img {
-      height: 100%;
-      object-fit: cover;
+
+    >img {
+        height: 100%;
+        object-fit: cover;
     }
-  }
-  
-  // Mixin for removing hover efects on iphone screen
-  @mixin hover-supported {    
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
     @media not all and (pointer: coarse) {
         &:hover {
             @content;
         }
     }
-  }
+}
+
+// Buttons
+@mixin btn($type: regular, $bg: $clr08) {
+    color: $clr03;
+    font-family: circular-light, sans-serif;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+
+    @if $type ==regular {
+        background-color: $bg;
+        color: $clr03;
+        transition: 0.3s;
+
+        &:hover {
+            color: $clr02;
+
+            path {
+                fill: $clr02;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    @else if $type ==dark {
+        background-color: $clr02;
+        color: $clr03;
+
+        &:hover {
+            background-color: $clr01;
+            color: $clr03;
+        }
+    }
+
+    @else if $type ==light {
+        background-color: $clr3;
+        color: $clr2;
+
+        &:hover {
+            background-color: $clr01;
+            color: $clr03;
+        }
+    }
+
+    @else if $type ==generalPlayerBtn {
+        display: flex;
+
+        &:hover {
+            path {
+                filter: brightness(140%)
+            }
+        }
+    }
+}
+
+
+@mixin container($type: regular) {
+
+    @if $type ==regular {}
+
+    @if $type ==barContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+}

@@ -6,7 +6,7 @@
     min-height: 3.5rem;
 
     padding: rem(10px) 1rem;
-    background-color: $clr4;
+    background-color: $clr04;
 
     p {
         margin: 0;
@@ -16,11 +16,11 @@
         font-size: .8em;
         
         &.local-services {
-            color: $clr1;
+            color: $clr01;
         }
         
         &.remote-services {
-            color: $clr5;
+            color: $clr05;
         }
     }
 }

@@ -1,86 +1,15 @@
-.main-container {
+.app-container{
     display: grid;
-    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
 
-    >* {
-        grid-column: 2;
-
-        &.full {
-            grid-column: 1 / -1;
-        }
-    }
-
-    @include for-normal-layout {
-        grid-template-columns:
-            minmax(20px, 1fr) minmax(auto, $narrow-breakpoint) minmax(20px, 1fr);
-    }
-
-    .app-layout {
-        height: calc(100vh - 90px);
-    
-        @media (max-width:$narrow-breakpoint) {
-            height: 100vh;
-        }
-    }
-    .main-layout {
-        flex-grow: 1;
-        overflow-y: overlay;
-        overflow-x: hidden;
-        height: 100%;
-        max-width: calc(100vw - $nav-width);
-    
-        
-    
-        @media (max-width:$narrow-breakpoint) {
-            width: 100%;
-            max-width: 100%;
-            padding-bottom: 170px;
-    
-        }
-    
-    }
-    
-
-    // @include for-narrow-layout {
-    //     grid-template-columns: 
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $mobile-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
-    // @include for-normal-layout {
-    //     grid-template-columns: 
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $narrow-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
-    // @include for-wide-layout {
-    //     grid-template-columns: 
-    //         minmax(20px, 1fr)
-    //         minmax(auto, $normal-breakpoint)
-    //         minmax(20px, 1fr);
-    // }
+    min-height: 100vh;
 }
 
-.content-layout {
-
-    display: grid;
-    grid-template-columns: 10px 1fr 10px;
-
-    @media (min-width: 860px) {
-        grid-template-columns: 30px 1fr 30px;
-    }
-
-    >* {
-        grid-column: 2;
-
-        &.full {
-            grid-column: 1 /-1;
-        }
-    }
+.side-menu{
+    grid-column: 1;
 }
-
-@media(max-width:$narrow-breakpoint) {
-    .home-page {
-        background-color: $clr08;
-    }
+.main-container{
+    grid-column: 2;
+ 
 }

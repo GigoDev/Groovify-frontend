@@ -9,22 +9,24 @@ import { UserDetails } from './pages/UserDetails'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'
+import { SearchPage } from './pages/SearchPage.jsx'
+import { SideMenu } from './cmps/SideMenu.jsx'
 
 
 export function RootCmp() {
     return (
-        <div className="main-container">
-            <AppHeader />
-            <UserMsg />
-
-            <main>
+        <div className="app-container">
+            <SideMenu />
+            <main className="main-container">
+                <AppHeader />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    {/* <Route path="station/:stationId" element={<StationDetails />} /> */}
+                    <Route path="/search" element={<SearchPage />} />
                     <Route path="user/:id" element={<UserDetails />} />
                 </Routes>
+                <AppFooter />
             </main>
-            <AppFooter />
+            <UserMsg />
         </div>
     )
 }

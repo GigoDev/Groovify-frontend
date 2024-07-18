@@ -19,15 +19,15 @@ export function AppHeader() {
 	}
 
 	return (
-		<header className="app-header ">
+		<header className="header flex full">
 			<nav className='flex'>
-				<button className="back-btn" ><i className="fa-solid fa-chevron-left"></i></button>
-				<button className="forward-btn"><i className="fa-solid fa-chevron-right"></i></button>
+				<button className="btn round back-btn" ><i className="fa-solid fa-chevron-left"></i></button>
+				<button className="btn round forward-btn "><i className="fa-solid fa-chevron-right"></i></button>
 			</nav>
-			<section className='header-menu flex'>
-				<button className='install-btn'><i className="fa-regular fa-circle-down"></i>Install App</button>
-				<button className='notification-btn'><i className="fa-regular fa-bell"></i></button>
-				<button className='user-btn'></button>
+			<section className='header-menu flex align-center'>
+				<button className='btn pill install-btn'><i className="fa-regular fa-circle-down"></i>Install App</button>
+				<button className='btn round notification-btn'><i className="fa-regular fa-bell"></i></button>
+				<button className='btn round  user-btn'>G</button>
 			</section>
 		</header>
 	)

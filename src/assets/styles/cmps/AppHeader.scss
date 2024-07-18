@@ -1,55 +1,47 @@
-.app-header {
-    position: fixed;
-    
-    display: flex;
-    min-height: 3.5rem;
+.header {
+    position: sticky;
+
+    justify-content: space-between;
+    height: 3.5rem;
+    width: 100%;
 
     background-color: $clr04;
     padding: rem(10px) 1rem;
 
+    .btn{
+        background-color: rgba(0, 0,0, 0.6);
+        color: white;
+    }
+
     nav {
         display: flex;
-        width: 100%;
         align-items: center;
         gap: .3em;
 
         .back-btn {
             justify-content: center;
             align-items: center;
-            width: 3em;
-            height: 3em;
-            border-radius: 50%;
-
-            background-color: rgba(0, 0,0, 0.6);
-            color: white;
         }
 
         .forward-btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 3em;
-            height: 3em;
-            border-radius: 50%;
-
-            background-color: rgba(0, 0,0, 0.6);
-            color: white;
         }
     }
 
     .header-menu{
+        gap: .3em;
 
         .install-btn{
             display: flex;
-            gap: .3em;
+            gap: .4em;
             align-items: center;
             
             width: 10em;
-            padding: 10px 20px;
-            
-            background-color: rgba(0, 0,0, 0.6);
-            border-radius: 2em;
             font-weight: bold;
         }
+
+
     }
 }

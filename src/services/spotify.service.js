@@ -282,8 +282,77 @@ async function getRecommendationTopTracks(limit = '10') {
 async function getFeaturedPlaylists() {
     var featuredPlaylists = loadFromStorage('featuredPlaylists')
     if(featuredPlaylists) {
-        console.log('from storage:',featuredPlaylists)
+        // console.log('from storage:',featuredPlaylists)
         return featuredPlaylists
+    }
+   
+
+    try {
+        const token = loadFromStorage('access_token')
+        const url = `https://api.spotify.com/v1/browse/featured-playlists?limit=10`
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const resp = await axios.get(url, { headers })
+
+        const items = resp.data.playlists.items
+        featuredPlaylists = items.map(item => ({
+            id: item.id,
+            imgs: item.images,
+            name: item.name,
+            description: item.description,
+            tracksUrl: item.tracks.href,
+            total: item.tracks.total
+        }))
+
+        // console.log(featuredPlaylists)
+        saveToStorage('featuredPlaylists',featuredPlaylists)
+        return featuredPlaylists
+
+    } catch (error) {
+        console.error('Error in searching:', error)
+    }
+
+}
+
+// get a list of popular artists
+async function getPopularArtists() {
+    var popularArtists = loadFromStorage('popularArtists')
+
+    if(popularArtists) {
+        // console.log('from storage:',popularArtists)
+        return popularArtists
+    }
+
+    const token = loadFromStorage('access_token')
+    const Artists = ['1IAEef07H0fd9aA8aUHUlL', '17pbOSPIn3lmY0vHhOlKGL', '17pbOSPIn3lmY0vHhOlKGL', '6uQl3gu1AIXyvqCAxnc2q4', '6VdxGMRiiFQhI8F0FkuQZg', '2JQK9mzxqKz16lSgICHDTx', '4gzpq5DPGxSnKTe4SA8HAU', '5Ea0d3mUECVaMf8h2DTehE', '6qqNVTkY8uBg9cP3Jd7DAH', '343YYaA5MSjiZZ5cGyTr4u', '1CD5WWtF6AFUq6BTY20I4k', '3cDi1D2FHMVgljfdB1QVgr'].join(',')
+    const url = `https://api.spotify.com/v1/artists?ids=${Artists}`
+    const headers = { 'Authorization': `Bearer ${token}` }
+
+    try{
+        const resp = await axios.get(url, { headers })
+        //console.log(resp.data)
+        popularArtists = resp.data.artists.map(artist => ({
+            id: artist.id,
+            name: artist.name,
+            followers: artist.followers,
+            imgs: artist.images,
+            artistUrl: artist.href
+        }))
+        //console.log(popularArtists)
+        saveToStorage('popularArtists',popularArtists)
+        return popularArtists
+    }
+    catch(error){
+        console.error('Error in fetching popular artists:', error)
+    }
+  
+}
+
+
+async function getFeaturedCharts() {
+    var featuredCharts = loadFromStorage('featuredCharts')
+    if(featuredCharts) {
+        console.log('from storage:',featuredCharts)
+        return featuredCharts
     }
    
 
@@ -305,45 +374,12 @@ async function getFeaturedPlaylists() {
 
         console.log(featuredPlaylists)
         saveToStorage('featuredPlaylists',featuredPlaylists)
+        return featuredPlaylists
 
     } catch (error) {
         console.error('Error in searching:', error)
     }
 
 }
-
-// get a list of popular artists
-async function getPopularArtists() {
-    var popularArtists = loadFromStorage('popularArtists')
-
-    if(popularArtists) {
-        console.log('from storage:',popularArtists)
-        return popularArtists
-    }
-
-    const token = loadFromStorage('access_token')
-    const Artists = ['1IAEef07H0fd9aA8aUHUlL', '17pbOSPIn3lmY0vHhOlKGL', '17pbOSPIn3lmY0vHhOlKGL', '6uQl3gu1AIXyvqCAxnc2q4', '6VdxGMRiiFQhI8F0FkuQZg', '2JQK9mzxqKz16lSgICHDTx', '4gzpq5DPGxSnKTe4SA8HAU', '5Ea0d3mUECVaMf8h2DTehE', '6qqNVTkY8uBg9cP3Jd7DAH', '343YYaA5MSjiZZ5cGyTr4u', '1CD5WWtF6AFUq6BTY20I4k', '3cDi1D2FHMVgljfdB1QVgr'].join(',')
-    const url = `https://api.spotify.com/v1/artists?ids=${Artists}`
-    const headers = { 'Authorization': `Bearer ${token}` }
-
-    try{
-        const resp = await axios.get(url, { headers })
-        console.log(resp.data)
-        popularArtists = resp.data.artists.map(artist => ({
-            id: artist.id,
-            name: artist.name,
-            followers: artist.followers,
-            imgs: artist.images,
-            artistUrl: artist.href
-        }))
-        console.log(popularArtists)
-        saveToStorage('popularArtists',popularArtists)
-    }
-    catch(error){
-        console.error('Error in fetching popular artists:', error)
-    }
-  
-}
-
 
 

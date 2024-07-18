@@ -19,25 +19,16 @@ export function AppHeader() {
 	}
 
 	return (
-		<header className="app-header full">
-			<nav>
-				<NavLink to="/" className="logo">
-					E2E Demo
-				</NavLink>
-				<NavLink to="station">Station</NavLink>
-
-				{!user && <NavLink to="login" className="login-link">Login</NavLink>}
-				{user && (
-					<div className="user-info">
-						<Link to={`user/${user._id}`}>
-							{/* {user.imgUrl && <img src={user.imgUrl} />} */}
-							{user.fullname}
-						</Link>
-						{/* <span className="score">{user.score?.toLocaleString()}</span> */}
-						<button onClick={onLogout}>logout</button>
-					</div>
-				)}
+		<header className="app-header ">
+			<nav className='flex'>
+				<button className="back-btn" ><i className="fa-solid fa-chevron-left"></i></button>
+				<button className="forward-btn"><i className="fa-solid fa-chevron-right"></i></button>
 			</nav>
+			<section className='header-menu flex'>
+				<button className='install-btn'><i class="fa-regular fa-circle-down"></i>Install App</button>
+				<button className='notification-btn'><i class="fa-regular fa-bell"></i></button>
+				<button className='user-btn'></button>
+			</section>
 		</header>
 	)
 }

@@ -1,27 +1,24 @@
-import { userService } from '../services/user'
 import { StationPreview } from './StationPreview'
 
-export function StationList({ stations, onRemoveStation, onUpdateStation }) {
-    
-    function shouldShowActionBtns(station) {
-        const user = userService.getLoggedinUser()
-        
-        if (!user) return false
-        if (user.isAdmin) return true
-        return station.owner?._id === user._id
-    }
-
-    return <section>
-        <ul className="list">
-            {stations.map(station =>
-                <li key={station._id}>
-                    <StationPreview station={station}/>
-                    {shouldShowActionBtns(station) && <div className="actions">
-                        <button onClick={() => onUpdateStation(station)}>Edit</button>
-                        <button onClick={() => onRemoveStation(station._id)}>x</button>
-                    </div>}
-                </li>)
-            }
-        </ul>
-    </section>
+export function StationList({ activeStation, setActiveStation, stations, listName, amount }) {
+    if (!stations) return <div>Loading...</div>
+    return (
+        <section className='main-stations-container'>
+            <div className="station-list-name">{listName}</div>
+            <section className="station-list-container">
+                {
+                    stations.slice(0, amount).map(station => (
+                        <div className='station-list-item' key={station._id}>
+                            <StationPreview
+                                station={station}
+                                isMini={false}
+                                setActiveStation={setActiveStation}
+                                activeStation={activeStation}
+                            />
+                        </div>
+                    ))
+                }
+            </section>
+        </section>
+    )
 }

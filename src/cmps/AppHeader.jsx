@@ -24,9 +24,7 @@ export function AppHeader() {
 				<NavLink to="/" className="logo">
 					E2E Demo
 				</NavLink>
-				<NavLink to="station">Station</NavLink>
 
-				{!user && <NavLink to="login" className="login-link">Login</NavLink>}
 				{user && (
 					<div className="user-info">
 						<Link to={`user/${user._id}`}>

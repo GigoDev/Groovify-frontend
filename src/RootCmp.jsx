@@ -2,9 +2,8 @@ import React from 'react'
 import { Routes, Route } from 'react-router'
 
 import { HomePage } from './pages/HomePage'
-import { StationIndex } from './pages/StationIndex.jsx'
 
-import { StationDetails } from './pages/StationDetails'
+// import { StationDetails } from './pages/StationDetails'
 import { UserDetails } from './pages/UserDetails'
 
 import { AppHeader } from './cmps/AppHeader'
@@ -20,9 +19,8 @@ export function RootCmp() {
 
             <main>
                 <Routes>
-                    <Route path="" element={<HomePage />} />
-                    <Route path="station" element={<StationIndex />} />
-                    <Route path="station/:stationId" element={<StationDetails />} />
+                    <Route path="/" element={<HomePage />} />
+                    {/* <Route path="station/:stationId" element={<StationDetails />} /> */}
                     <Route path="user/:id" element={<UserDetails />} />
                 </Routes>
             </main>

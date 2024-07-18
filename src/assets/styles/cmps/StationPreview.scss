@@ -13,14 +13,19 @@
         background-color: rgba(255, 255, 255, 0.035);
     }
 
+    .name{
+        margin-inline: 5px;
+    }
+
     .station-content {
         .station-name {
             font-size: 1em;
+            margin-inline: 10px;
         }
 
         .station-desc {
             color: $clr08;
-
+            
         }
     }
 
@@ -29,6 +34,7 @@
         min-width: 130px;
         width: 100%;
         height: auto;
+        overflow: hidden;
         position: relative;
 
         .station-img {

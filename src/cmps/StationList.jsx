@@ -1,8 +1,8 @@
 import { StationPreview } from './StationPreview'
 
-export function StationList({ activeStation, setActiveStation, stations, listName, amount }) {
+export function StationList({stations, listName }) {
     if (!stations) return <div>Loading...</div>
-
+    
     return (
         <section className='main-stations-container'>
             <h1>Station list CMP</h1>
@@ -22,9 +22,6 @@ export function StationList({ activeStation, setActiveStation, stations, listNam
                             
                             <StationPreview
                                 station={station}
-                                isMini={false}
-                                setActiveStation={setActiveStation}
-                                activeStation={activeStation}
                             />
                         </div>
                     ))

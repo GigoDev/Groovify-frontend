@@ -8,7 +8,7 @@ export function HomePage() {
     const homeMainViewRef = useRef(null)
     
     useEffect(() => {
-        console.log("Stations:", stations)
+        // console.log("Stations:", stations)
         const handleScroll = () => {}
 
         const homeMainViewElement = homeMainViewRef.current;

@@ -1,7 +1,7 @@
 export function AppFooter() {
 
 	return (
-		<footer className="main-view-footer">
+		<footer className="footer-container">
 			<div className="details-container">
 				<div className="info flex">
 					<section className="company">
@@ -47,7 +47,7 @@ export function AppFooter() {
 			</div>
 			<hr className="horizontal-line"></hr>
 
-			<section className="footer">
+			<section className="policies-container">
 				<span>Legal </span>
 				<span>Safety & Privacy Center </span>
 				<span>Privacy Policy </span>

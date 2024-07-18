@@ -1,5 +1,5 @@
-.main-view-footer {
-    
+.footer-container {
+
     .details-container {
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -8,7 +8,7 @@
         .info {
             display: flex;
             gap: 50px;
-            
+
 
 
             .company {
@@ -36,14 +36,14 @@
                 span {
                     font-size: .9em;
                     color: $clr09;
-                    
+
                     &:hover {
                         color: $clr01;
                         cursor: pointer;
                         text-decoration: underline;
                     }
                 }
-                
+
             }
 
             .useful-links {
@@ -124,11 +124,20 @@
         margin-bottom: 20px;
     }
 
-    .footer {
-        display: grid;    
-        grid-auto-flow: column;
+    .policies-container {
+        display: grid;
+        grid-template-columns: repeat(6, auto) 1fr;
+        gap: 10px;
+        justify-content: start;
+
+        span:last-child {
+            justify-self: end;
+            padding-inline: 1rem;
+        }
+
+
         margin-block: 3rem;
-        
+
 
         span {
             font-size: .8em;

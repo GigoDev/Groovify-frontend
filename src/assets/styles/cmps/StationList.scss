@@ -1,22 +1,25 @@
-.station-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: .5em;
+.main-stations-container {
+    position: relative;
 
-    li {
-        display: grid;
-        grid-template-columns: max-content auto;
-        padding: .5em;
-        background-color: $clr2;
+    margin-top: 10px;
 
-        color: $clr6;
+    .station-list-name {
+        padding-left: 24px;
+        font-family: circular-bold;
+        font-size: 24px;
+    }
 
-        .actions {
-            justify-self: end;
+    .station-list-container {
+        display: flex;
+        max-width: 100%;
+        position: relative;
+        flex: 1 1 100%;
+        margin-bottom: 16px;
+        min-height: 200px;
+        padding-inline: 12px;
 
-            button {
-                padding: .3em .5em;
-            }
-        }
+        z-index: 2;
+        margin-top: 25px;
+        justify-content: space-evenly;
     }
 }

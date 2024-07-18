@@ -1,17 +1,14 @@
-import { StationPreview } from './StationPreview'
+import { StationPreview } from "./StationPreview"
 
-export function StationList({ activeStation, setActiveStation, stations, listName, amount }) {
-    if (!stations) return <div>Loading...</div>
-
+export function MiniStationList({ activeStation, setActiveStation, stations }) {
+    if (!stations) return <div></div>
     return (
-        <section className='main-stations-container'>
-            <h1>Station list CMP</h1>
-            <div className="station-list-name">{listName}</div>
-            <section className="station-list-container">
+        <section className="mini-stations-container">
+            <h1>MiniStationList CMP</h1>
+            <div className='mini-station-list'>
                 {
                     stations.map(station => (
-                        <div className='station-list-item' key={station._id}>
-
+                        <div className='mini-station' key={station._id}>
                             <button
                                 className={`preview-play-btn`}>
                                 <svg width='24' height='24' viewBox="0 0 24 24">
@@ -19,17 +16,16 @@ export function StationList({ activeStation, setActiveStation, stations, listNam
                                     </path>
                                 </svg>
                             </button >
-                            
                             <StationPreview
                                 station={station}
-                                isMini={false}
+                                isMini={true}
                                 setActiveStation={setActiveStation}
                                 activeStation={activeStation}
                             />
                         </div>
                     ))
                 }
-            </section>
+            </div>
         </section>
     )
 }

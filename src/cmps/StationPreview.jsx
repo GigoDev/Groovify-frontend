@@ -1,13 +1,16 @@
-import { Link } from 'react-router-dom'
 
-export function StationPreview({ station }) {
-    return <article className="preview">
-        <header>
-            {/* <Link to={`/station/${station._id}`}>{station.vendor}</Link> */}
-        </header>
+export function StationPreview({ station}) {
 
-        <p>Name: <span>{station.name} </span></p>
-        {/* {station.owner && <p>Owner: <span>{station.owner.fullname}</span></p>} */}
-        
-    </article>
+    return (
+        <article className="station-preview">
+            <div className="img-container">
+                <img className="station-img" src={station.imgUrl} alt={`${station.name}`} />
+            </div>
+
+            <div className="station-content">
+                <h3 className="station-name">{station.name}</h3>
+                <h5 className="station-desc">{station.desc}</h5>
+            </div>
+        </article>
+    )
 }

@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { saveToStorage, loadFromStorage } from './util.service'
 
+
+
+//mini list -  thumbnail, Station name
 // const TOKEN = "BQCwnNRQ5-5eZRfOkiPEAv0p4Q6MjsZAs7hnesNH55DkCHkVyiWm3TRbTA0kW2ijWEWEB6-bSzQSalB0uTIprmpjkF-SEIAwtHPbRLWjOR2fTXXT2vE"
 const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
 const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
@@ -14,6 +17,7 @@ export const spotifyService = {
     getRecommendationsByArtist,
     getRecommendationsByGeners,
     searchFor,
+    getUserTopItems,
 }
 
 window.spotifyService = spotifyService
@@ -23,10 +27,11 @@ if (!loadFromStorage('access_token')) getToken()
 // getToken()
 async function getToken() {
     const url = 'https://accounts.spotify.com/api/token'
+
     const data = {
-        'grant_type': 'client_credentials',
         'client_id': CLIENT_ID,
-        'client_secret': CLIENT_SECRET
+        'grant_type': 'client_credentials',
+        'client_secret': CLIENT_SECRET,
     }
 
     const headers = {
@@ -35,7 +40,7 @@ async function getToken() {
 
     try {
         const resp = await axios.post(url, data, { headers })
-        // console.log(resp)
+        console.log(resp)
         // console.log(resp.data)
         console.log('access token: ', resp.data.access_token)
         saveToStorage('access_token', resp.data.access_token)
@@ -46,7 +51,7 @@ async function getToken() {
 
 }
 
-//getArtist(TOKEN)
+//getArtist()
 async function getArtist() {
     const token = loadFromStorage('access_token')
     try {
@@ -189,9 +194,5 @@ async function searchFor(searchStr = 'coldplay', types = ["track", "album"], lim
         console.error('Error in searching:', error)
     }
 }
-
-
-
-
 
 

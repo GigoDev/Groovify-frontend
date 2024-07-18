@@ -1,3 +1,7 @@
+import fs from 'fs'
+import fr from 'follow-redirects'
+
+
 export function makeId(length = 6) {
     var txt = ''
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
@@ -50,4 +54,21 @@ export function saveToStorage(key, value) {
 export function loadFromStorage(key) {
     const data = localStorage.getItem(key)
     return (data) ? JSON.parse(data) : undefined
+}
+
+export function readJsonFile(path) {
+    const str = fs.readFileSync(path, 'utf8')
+    const json = JSON.parse(str)
+    return json
+}
+
+export function writeJsonFile(path, data) {
+    return new Promise((resolve, reject) => {
+        const jsonData = JSON.stringify(data, null, 2)
+
+        fs.writeFile(path, jsonData, (err) => {
+            if (err) return reject(err)
+            resolve()
+        })
+    })
 }

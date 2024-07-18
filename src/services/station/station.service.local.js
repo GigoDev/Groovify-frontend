@@ -1,6 +1,6 @@
 
 import { storageService } from '../async-storage.service.js'
-import { makeId, saveToStorage } from '../util.service.js'
+import { makeId, readJsonFile, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
 
 const STORAGE_KEY = 'station'
@@ -14,74 +14,8 @@ export const stationService = {
 }
 window.cs = stationService
 
-const stations =
-    [
-        {
-            _id: '5cksxjas89xjsa8xjsa8jxs09',
-            name: 'Funky Monks',
-            tags: ['Funk', 'Happy'],
-            createdBy: {
-                _id: 'u101',
-                fullname: 'Puki Ben David',
-                imgUrl: `https://robohash.org/Funky?set=set1`,
-            },
-            likedByUsers: ['{Johny}', '{Walker}'],
-            songs: [
-                {
-                    id: 's1001',
-                    title: 'The Meters - Cissy Strut',
-                    url: 'youtube/song.mp4',
-                    imgUrl: '`https://robohash.org/meters?set=set1`',
-                    addedBy: '{minimal-user}',
-                    likedBy: ['{minimal-user}'],
-                    addedAt: 162521765262,
-                },
-                {
-                    id: 'mUkfiLjooxs',
-                    title: "The JB's - Pass The Peas",
-                    url: 'youtube/song.mp4',
-                    imgUrl: 'https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg',
-                    addedBy: {},
-                },
-            ]
-        },
-        {
-            _id: '5cksxjas89xjsa8xjsa8jxs08',
-            name: '90s  party',
-            tags: ['Hip-Hop', 'Happy'],
-            createdBy: {
-                _id: 'u102',
-                fullname: 'Muki Ja',
-                imgUrl: 'http://some-photo/',
-            },
-            likedByUsers: ['{Addam}', '{Alex}'],
-            songs: [
-                {
-                    id: 's1002',
-                    title: 'The Rooling stones - Paint it black',
-                    url: 'youtube/song.mp4',
-                    imgUrl: '`https://robohash.org/black?set=set1`',
-                    addedBy: '{Tommy}',
-                    likedBy: ['{David}'],
-                    addedAt: 162521765262,
-                },
-                {
-                    id: 'mUkfiLjooxs',
-                    title: "Prince-Kiss",
-                    url: 'youtube/song.mp4',
-                    imgUrl: '`https://robohash.org/Kiss?set=set1`',
-                    addedBy: '{Michael}',
-                    addedAt: 162521765001,
-                },
-            ]
-        },
-    ]
+let stations = readJsonFile('./data/station.json')
 
-_createStations()
-
-function _createStations() {
-    saveToStorage(STORAGE_KEY, stations)
-}
 
 async function query(filterBy = { txt: '' }) {
     var stations = await storageService.query(STORAGE_KEY)

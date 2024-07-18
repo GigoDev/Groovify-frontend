@@ -1,0 +1,55 @@
+.side-lib {
+    background-color: $clr07;
+    margin-inline: .4em;
+    border-radius: 7px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(3, auto) 1fr;
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        height: 48px;
+        align-items: center;
+        padding: 8px 2px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+
+        .your-library {
+            display: flex;
+            background-color: $clr07;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0;
+            font-size: rem(16px);
+            
+            svg {
+                width: 30px;
+                height: 24px;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+
+            span.library {
+                color: $clr02;
+                font-weight: bold;
+                font-family: circular-bold;
+                display: flex;
+            }
+        }
+
+        .add-btn {
+            @include btn($type: regular);
+
+            border-radius: 20px;
+            margin-right: 20px;
+            padding: 5px 5px 1px;
+            background-color: $clr07;
+
+            &:hover {
+                background-color: $clr06;
+            }
+        }
+    }
+}

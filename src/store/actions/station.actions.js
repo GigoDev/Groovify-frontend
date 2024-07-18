@@ -1,6 +1,7 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG } from '../reducers/station.reducer'
+import { MENU_TOGGLE } from '../reducers/system.reducer'
 
 export async function loadStations(filterBy) {
     try {
@@ -66,6 +67,12 @@ export async function addStationMsg(stationId, txt) {
     }
 }
 
+export function toggleLibraryAction(){
+    return {
+        type: MENU_TOGGLE
+    }
+}
+
 // Command Creators:
 function getCmdSetStations(stations) {
     return {
@@ -115,3 +122,4 @@ async function unitTestActions() {
     await removeStation('m1oC7')
     // TODO unit test addStationMsg
 }
+

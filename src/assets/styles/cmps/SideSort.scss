@@ -1,0 +1,32 @@
+.side-sort-container {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 3px;
+    height: 37px;
+
+    .btn:first-child {
+        margin-left: 4px;
+    }
+
+    .btn {
+        height: 32px;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 13px;
+        font-weight: 400;
+        background-color: $clr06;
+        color: $clr01;
+        margin-inline: 5px;
+        transition: 0.3s ease;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: $clr11;
+        }
+    }
+
+    .btn-clicked:first-child {
+        margin-left: 4px;
+        margin-right: 12px;
+    }
+}

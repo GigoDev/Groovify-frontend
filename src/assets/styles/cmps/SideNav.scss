@@ -1,0 +1,62 @@
+.side-nav {
+    gap: 8px;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 7px;
+    
+    width: 400px;
+
+    .actions-btns {
+        border-radius: 8px;
+        background-color: $clr07;
+        padding: 10px;
+
+        .home-link {
+            text-decoration: none;
+            color: $clr03;
+
+            &:hover {
+                color: $clr01;
+                transition: 0.6s;
+            }
+
+            .home-btn-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                font-family: circular-bold;
+
+
+                .home-btn {
+                    background-color: $clr07;
+                }
+
+                span {
+                    color: $clr02;
+                    font-size: .9rem;
+                    margin-left: 7px;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .search-btn-container {
+            display: flex;
+            align-items: center;
+            font-family: circular-bold;
+
+            .search-btn {
+                background-color: $clr07;
+                border: 0;
+            }
+            
+            span.span-search {
+                font-size: 1rem;
+                background-color: $clr07;
+                margin-left: 7px;
+                padding: 10px;
+            }
+        }
+    }
+}

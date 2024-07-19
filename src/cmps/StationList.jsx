@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 export function StationList({stations}) {
-    console.log('stations:',stations)
 
     if (!stations) return <div>Loading..</div>
     return (

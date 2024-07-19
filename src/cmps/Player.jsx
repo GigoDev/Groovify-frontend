@@ -1,6 +1,20 @@
+import React from 'react'
+import ReactPlayer from 'react-player/youtube'
+
 export function Player() {
+
+    const videoId = 'TvnYmWpD_T8'
     return (
         <section className="player-container">
+
+            <ReactPlayer 
+            playing={false}
+            url={`https://www.youtube.com/watch?v=${videoId}`}
+            height={0}
+            width={0}
+            />
+            {/* <iframe width="0" height="0" src={`https://www.youtube.com/embed/${videoId}`}></iframe> */}
+
 
             <div className="left-controls">
                 <img className="media-img fit-img" src="http://res.cloudinary.com/dmbgmvobl/image/upload/v1721056820/dkdgpdfddmrsvnyfrjdn.png" alt="img" />

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router'
 
 import { HomePage } from './pages/HomePage'
 
-// import { StationDetails } from './pages/StationDetails'
+import { StationDetails } from './pages/StationDetails'
 import { UserDetails } from './pages/UserDetails'
 
 import { AppHeader } from './cmps/AppHeader'
@@ -23,6 +23,7 @@ export function RootCmp() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="user/:id" element={<UserDetails />} />
+                    <Route path="station/:id" element={<StationDetails />} />
                 </Routes>
                 <AppFooter />
             </main>

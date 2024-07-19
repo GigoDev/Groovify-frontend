@@ -1,0 +1,49 @@
+
+.station-details {
+    $hero-img-height: 400px;
+    
+    position: relative;
+    .hero-container {
+        position: fixed;
+        z-index: -1;
+        height: $hero-img-height;
+        width: 100%;
+        
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+
+            
+        }
+    }
+
+    .station-content {
+        .title-container {
+            height: $hero-img-height;
+            align-content: end;
+            padding: 0px 0px 24px 24px;
+            .title {
+                font-size: 5em;
+                font-weight: 800px;
+            }
+
+            .listeners {}
+        }
+
+        .controlls {
+            .play{
+
+            }
+
+            .follow{
+
+            }
+        }
+
+    }
+
+    
+}

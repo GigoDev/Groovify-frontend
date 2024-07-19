@@ -1,77 +1,17 @@
-.station-preview {
-    max-width: 215px;
-    max-height: 288px;
-    min-height: 230px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    border-radius: 7px;
-    cursor: pointer;
+.card{
+    display: grid;
+    grid-auto-flow: column;
+    align-content: space-between;
+    
+    
+    background-color: $clr02;
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.035);
+    .card-img-container{
+        height: 100px;;
+        width: 100px;;
     }
 
-    .station-content {
-        .station-name {
-            font-size: 1em;
-        }
+    .card-title{
 
-        .station-desc {
-            color: $clr08;
-
-        }
     }
-
-    .img-container {
-        max-width: 190px;
-        min-width: 130px;
-        width: 100%;
-        height: auto;
-        position: relative;
-
-        .station-img {
-            // background-color: var(--card-color, #333);
-            border-radius: 6px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
-            position: relative;
-            max-width: 190px;
-            width: 100%;
-            height: auto;
-
-        }
-
-        .preview-play-btn {
-            background-color: #1ed760;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            translate: -10px 0;
-            box-shadow: 0 8px 8px rgba(0, 0, 0, .3);
-
-            &.static {
-                visibility: visible;
-                opacity: 1;
-                translate: -10px -20px;
-            }
-        }
-    }
-
-    &:hover {
-        .preview-play-btn {
-            visibility: visible;
-            opacity: 1;
-            translate: -10px -20px;
-        }
-    }
-
-
-
 }

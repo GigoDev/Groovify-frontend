@@ -1,15 +1,13 @@
 
 export function StationPreview({station}) {
     const {imgs, id, listeners, name, type, tracks} = station
-    console.log(station)
-
     
     return (
-        <article className="station-preview">
-            <div className="img-container">
-                <img className="station-img" src={imgs[1].url}/>
+        <article className="card">
+            <div className="card-img-container">
+                <img className="station-img" src={imgs[2].url}/>
             </div>
-                <span className='name'>{name}</span>
+                <span className='card-title'>{name}</span>
         </article>
     )
 }

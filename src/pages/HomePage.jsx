@@ -13,27 +13,10 @@ export function HomePage() {
 
     }, [])
 
-
-    useEffect(() => {
-        // console.log("Stations:", stations)
-        const handleScroll = () => { }
-
-        const homeMainViewElement = homeMainViewRef.current;
-        if (homeMainViewElement) {
-            homeMainViewElement.addEventListener('scroll', handleScroll);
-        }
-
-        return () => {
-            if (homeMainViewElement) {
-                homeMainViewElement.removeEventListener('scroll', handleScroll);
-            }
-        }
-    }, [])
-
     if (!stations) return <div>Loading...</div>
     return (
         <>
-            <section ref={homeMainViewRef} className="home-main-view">
+            <section ref={homeMainViewRef} className="home-container">
 
                 <StationList stations={stations}/>
 

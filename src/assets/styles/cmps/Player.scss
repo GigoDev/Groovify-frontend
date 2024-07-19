@@ -8,16 +8,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     height: 80px;
     padding: 0 13px;
 
     background-color: $clr07;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 
-    span {
+    button {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        color: white;
         cursor: pointer;
+        font-size: 14px;
+        gap: 5px;
+
+        &:hover {
+            svg {
+                fill: $clr01;
+                color: $clr01;
+            }
+        }
     }
+
+
 
     .left-controls {
         display: flex;
@@ -38,7 +54,7 @@
         }
 
         .player-song-name {
-            font-size: 16px; 
+            font-size: 16px;
             color: white;
         }
 
@@ -55,7 +71,7 @@
         }
     }
 
-    
+
     .center-controls {
         display: flex;
         flex-direction: column;
@@ -64,13 +80,22 @@
 
         .top-center-controls {
             display: flex;
-            align-items: center;
             gap: 10px;
 
-            span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .play-btn {
+                background-color: $clr01;
+                border-radius: 50%;
+                padding: 8px;
+
+                &:hover {
+                    color: $clr01;
+                    scale: 1.1;
+                }
+
+                svg {
+                    fill: $clr07;
+
+                }
             }
         }
 
@@ -107,7 +132,7 @@
     .right-controls {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 5px;
 
         .sound-btn,
         .fullscreen-btn {
@@ -119,7 +144,7 @@
         }
 
         .progress-container {
-            
+
             gap: 5px;
 
             .progress-bar,

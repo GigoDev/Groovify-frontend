@@ -1,5 +1,8 @@
 export function SearchPage() {
-    return(
-        <h1>Search Page</h1>
+    return (
+        <section className="search-container">
+
+            <h1>Browse all</h1>
+        </section>
     )
 }

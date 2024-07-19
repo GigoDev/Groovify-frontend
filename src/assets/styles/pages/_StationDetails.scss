@@ -1,49 +1,89 @@
-
-.station-details {
+.station-details-container {
     $hero-img-height: 400px;
-    
     position: relative;
-    .hero-container {
+    width: 100%;
+
+    font-family: circular;
+
+    .hero {
         position: fixed;
         z-index: -1;
+
         height: $hero-img-height;
         width: 100%;
-        
 
         img {
             width: 100%;
             height: 100%;
-            display: block;
             object-fit: cover;
-
-            
         }
+    }
+
+    .hero-info {
+        height: $hero-img-height;
+        align-content: end;
+        padding: 0px 0px 24px 24px;
+
+        .title {
+            font-family: circular-bold;
+            font-size: 96px;
+            font-weight: 800px;
+        }
+
+        .listeners {}
     }
 
     .station-content {
-        .title-container {
-            height: $hero-img-height;
-            align-content: end;
-            padding: 0px 0px 24px 24px;
-            .title {
-                font-size: 5em;
-                font-weight: 800px;
-            }
-
-            .listeners {}
-        }
+        background-color: black; // gradient
 
         .controlls {
-            .play{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
 
+            .play {
+                aspect-ratio: 1;
+                width: 60px;
+                border-radius: 50%;
+                @include btn(play)
             }
 
-            .follow{
-
+            .follow {
+                background-color: transparent;
+                color: white;
+                outline: 1px solid rgba(255, 255, 255, 0.5);
             }
         }
 
+        h2 {
+            font-family: circular-bold;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li {
+            display: grid;
+            grid-template-columns: 20px 40px 1fr 1fr 50px 80px;
+            align-items: center;
+            justify-items: center;
+
+            color: $clr02;
+            font-size: 1rem;
+            // font-family: ;
+
+            .title {
+                color: white;
+                padding-inline-start: 10px;
+                justify-self:left;
+            }
+
+        }
     }
 
-    
+
 }

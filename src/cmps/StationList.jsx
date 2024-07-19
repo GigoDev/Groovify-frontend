@@ -1,4 +1,6 @@
 import { StationPreview } from "./StationPreview"
+import { Link } from 'react-router-dom';
+
 
 export function StationList({stations}) {
     console.log('stations:',stations)
@@ -7,9 +9,9 @@ export function StationList({stations}) {
     return (
             <ul className='cards-container clean-list'>{
                     stations.map(station => (
-                        <li  key={station.id}>
+                        <Link to={`station/${station.id}`} key={station.id}>
                             <StationPreview station={station}/> 
-                        </li>
+                        </Link>
                     ))
                 }
             </ul>

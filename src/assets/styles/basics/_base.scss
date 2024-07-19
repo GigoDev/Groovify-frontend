@@ -1,26 +1,21 @@
 * {
     box-sizing: border-box;
-
-
 }
 
-::selection {
-    background-color: $clr02;
-    color: $clr06;
-}
 
 html {
     font-family: circular, gotham, rubik;
-    line-height: 1.6;
+}
+
+.app-container{
     color: $clr01;
-    // letter-spacing: .01em;
 }
 
 body {
     font-size: rem(18px);
     margin: 0;
-
     background-color: $clr08;
+
 
     @media (min-width: 860px) {
         background-color: $clr08;
@@ -85,6 +80,7 @@ input {
     position: absolute;
     right: 0;
     width: 10px;
+    height: 0;
 
     /* Track */
     &-track {

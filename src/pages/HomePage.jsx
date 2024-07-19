@@ -6,8 +6,6 @@ import { loadStations } from '../store/actions/station.actions'
 export function HomePage() {
     const stations = useSelector(storeState => storeState.stationModule.stations)
 
-    const homeMainViewRef = useRef(null)
-
     useEffect(() => {
         loadStations()
 
@@ -16,7 +14,7 @@ export function HomePage() {
     if (!stations) return <div>Loading...</div>
     return (
         <>
-            <section ref={homeMainViewRef} className="home-container">
+            <section  className="home-container">
 
                 <StationList stations={stations}/>
 

@@ -4,14 +4,16 @@
     bottom: 0;
     left: 0;
     right: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    height: 80px;
+    padding: 0 13px;
+
     background-color: $clr07;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    padding: 0 13px;
-    height: 80px;
 
     span {
         cursor: pointer;

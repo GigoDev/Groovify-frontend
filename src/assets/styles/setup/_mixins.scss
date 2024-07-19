@@ -96,10 +96,18 @@
     @else if $type ==light {
         background-color: $clr3;
         color: $clr2;
-
         &:hover {
             background-color: $clr01;
             color: $clr03;
+        }
+    }
+
+    @else if $type ==play {
+        background-color: $clrGreen;
+        color: black;
+
+        &:hover {
+            scale: 1.1;
         }
     }
 

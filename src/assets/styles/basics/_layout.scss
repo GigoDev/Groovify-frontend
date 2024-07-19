@@ -9,13 +9,11 @@
     }
 
     .main-container {        
+        grid-column: 2;
+
         display: grid;
         grid-template-rows: 1fr auto;
         gap: 1rem;
-
-        grid-column: 2;
-
-
     }
 
 }

@@ -1,0 +1,19 @@
+.side-lib,
+.side-nav {
+    
+    &.collapsed {
+        width: 60px;
+        overflow: hidden;
+
+        span,
+        .side-sort-container,
+        .side-search-library,
+        .side-filter-menu,
+        .add-btn {
+            display: none;
+        }
+
+
+    }
+}
+

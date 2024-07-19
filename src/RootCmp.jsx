@@ -11,6 +11,7 @@ import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'
 import { SearchPage } from './pages/SearchPage.jsx'
 import { SideMenu } from './cmps/SideMenu.jsx'
+import { Player } from './cmps/Player.jsx'
 
 
 export function RootCmp() {
@@ -28,6 +29,7 @@ export function RootCmp() {
                 <AppFooter />
             </main>
             <UserMsg />
+            <Player />
         </div>
     )
 }

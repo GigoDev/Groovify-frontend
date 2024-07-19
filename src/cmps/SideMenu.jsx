@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export function SideMenu() {
+    const [isCollapsed, setIsCollapsed] = useState(false)
+
+    function handleCollapse() {
+        setIsCollapsed(prevState => !prevState)
+    }
+
     return (
         <div className="side-menu">
-            {/* <h1>Side Menu</h1> */}
-            <SideNav />
-            <SideLib />
+            <SideNav isCollapsed={isCollapsed} />
+            <SideLib isCollapsed={isCollapsed} onCollapse={handleCollapse} />
         </div>
     )
-
 }

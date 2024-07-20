@@ -50,7 +50,7 @@ async function getCurrSong(track) {
         youtubeUrl: ''
     }
     
-    await getVideoId(`${song.artist} ${song.name}`).then(res => song.youtubeUrl = res)
+    await getVideoId(`${song.artist} ${song.name}`).then(res => song.youtubeUrl = `https://www.youtube.com/watch?v=${res}`)
 
     console.log(song)
     return song

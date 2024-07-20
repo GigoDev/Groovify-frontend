@@ -1,7 +1,19 @@
+import { useSelector } from "react-redux";
 import { SideFilter } from "./SideFilter";
+import { SideList } from "./SideList";
 import { SideSort } from "./SideSort";
+import { useEffect } from "react";
 
 export function SideLib({ isCollapsed, onCollapse }) {
+    const stations = useSelector(storeState => storeState.stationModule.stations)
+
+
+    useEffect(() => {
+     //to filter the station list by sideFilterValue   
+    
+    }, []);
+
+
     return (
         <section className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="top-bar">
@@ -22,7 +34,8 @@ export function SideLib({ isCollapsed, onCollapse }) {
             </div>
             <SideSort />
             <SideFilter />
-            
+
+            <SideList stations={stations}/>
         </section>
     )
 }

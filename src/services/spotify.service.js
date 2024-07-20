@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { saveToStorage, loadFromStorage } from './util.service'
-
+import { youtubeService } from './youtube.service'
 
 
 //mini list -  thumbnail, Station name
@@ -72,21 +72,25 @@ async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
 
         const station = {
             type: resp.data.type,
+            id: resp.data.id,
             name: resp.data.name,
             imgs: resp.data.images,
             listeners: resp.data.followers.total,
-            id: resp.data.id,
         }
+
         const topTracks = await getArtistTopTracks(artistId)
-        station.tracks = topTracks
-        console.log(station)
-        return station
         
+
+        station.tracks = topTracks
+        // console.log(station)
+        return station
 
     } catch (error) {
         // Handle any errors that occur during the request
         console.error('Error fetching artist:', error)
     }
+
+
 }
 
 async function getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') {
@@ -101,17 +105,23 @@ async function getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market = 
 
         // Make the GET request with axios
         const resp = await axios.get(url, { headers })
-        console.log(resp.data)
+        // console.log(resp.data)
 
         const tracks = resp.data.tracks.map(track => ({
             id: track.id,
             name: track.name,
-            artists: track.artists,
-            album: track.album
+            artists: track.artists.map(artist => ({ id: artist.id, name: artist.name, url: artist.href })),
+            // album: track.album.map(album => ({ id: album.id, name: album.name, artists: album.artists.map(artist => ({ id: artist.id, name: artist.name, url: artist.href })), imgs: album.images, releaseDate: album.releaseDate, totalTracks: album.total_tracks })),
         }))
-        
+
+        tracks.forEach(track => {
+           _getYoutubeUrl(track)
+           .then(res => track.youtubeUrl = `https://www.youtube.com/watch?v=${res}`)
+        })
+
         console.log(tracks)
-        return tracks
+        return (tracks)
+
     } catch (error) {
         // Handle any errors that occur during the request
         console.error('Error fetching artist tracks:', error)
@@ -279,11 +289,11 @@ async function getRecommendationTopTracks(limit = '10') {
 //get top 10 playlists in IL
 async function getFeaturedPlaylists() {
     var featuredPlaylists = loadFromStorage('featuredPlaylists')
-    if(featuredPlaylists) {
+    if (featuredPlaylists) {
         // console.log('from storage:',featuredPlaylists)
         return featuredPlaylists
     }
-   
+
 
     try {
         const token = loadFromStorage('access_token')
@@ -302,7 +312,7 @@ async function getFeaturedPlaylists() {
         }))
 
         // console.log(featuredPlaylists)
-        saveToStorage('featuredPlaylists',featuredPlaylists)
+        saveToStorage('featuredPlaylists', featuredPlaylists)
         return featuredPlaylists
 
     } catch (error) {
@@ -315,7 +325,7 @@ async function getFeaturedPlaylists() {
 async function getPopularArtists() {
     var popularArtists = loadFromStorage('popularArtists')
 
-    if(popularArtists) {
+    if (popularArtists) {
         // console.log('from storage:',popularArtists)
         return popularArtists
     }
@@ -325,7 +335,7 @@ async function getPopularArtists() {
     const url = `https://api.spotify.com/v1/artists?ids=${Artists}`
     const headers = { 'Authorization': `Bearer ${token}` }
 
-    try{
+    try {
         const resp = await axios.get(url, { headers })
         //console.log(resp.data)
         popularArtists = resp.data.artists.map(artist => ({
@@ -336,23 +346,23 @@ async function getPopularArtists() {
             artistUrl: artist.href
         }))
         //console.log(popularArtists)
-        saveToStorage('popularArtists',popularArtists)
+        saveToStorage('popularArtists', popularArtists)
         return popularArtists
     }
-    catch(error){
+    catch (error) {
         console.error('Error in fetching popular artists:', error)
     }
-  
+
 }
 
 
 async function getFeaturedCharts() {
     var featuredCharts = loadFromStorage('featuredCharts')
-    if(featuredCharts) {
-        console.log('from storage:',featuredCharts)
+    if (featuredCharts) {
+        console.log('from storage:', featuredCharts)
         return featuredCharts
     }
-   
+
 
     try {
         const token = loadFromStorage('access_token')
@@ -371,7 +381,7 @@ async function getFeaturedCharts() {
         }))
 
         console.log(featuredPlaylists)
-        saveToStorage('featuredPlaylists',featuredPlaylists)
+        saveToStorage('featuredPlaylists', featuredPlaylists)
         return featuredPlaylists
 
     } catch (error) {
@@ -380,4 +390,8 @@ async function getFeaturedCharts() {
 
 }
 
-
+async function _getYoutubeUrl(track) {
+    const res = await youtubeService.getVideoId(`${track.artists[0].name} ${track.name}`)
+    console.log(res)
+    return res
+}

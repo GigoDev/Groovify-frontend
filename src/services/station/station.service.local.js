@@ -2,6 +2,8 @@ import { storageService } from '../async-storage.service.js'
 import { makeId, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
 import { stations as dataStations} from '../../../data/stations.js'
+
+//local storage keys
 const STORAGE_KEY = 'station'
 
 export const stationService = {
@@ -9,7 +11,8 @@ export const stationService = {
     getById,
     save,
     remove,
-    addStationMsg
+    addStationMsg,
+    getEmptyStation,
 }
 window.cs = stationService
 
@@ -74,6 +77,17 @@ async function addStationMsg(stationId, txt) {
     await storageService.put(STORAGE_KEY, station)
 
     return msg
+}
+
+function getEmptyStation(){
+    const emptyStation = {
+        name: 'New station',
+        createdBy: {},
+        likedByUsers:{},
+        songs: {},
+    }
+
+    return emptyStation
 }
 
 

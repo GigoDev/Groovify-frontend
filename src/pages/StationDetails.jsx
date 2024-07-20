@@ -1,22 +1,21 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { TrackList } from '../cmps/TrackList'
 
-import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
-import { loadStation, addStationMsg } from '../store/actions/station.actions'
-
+import { loadStation, clearStation } from '../store/actions/station.actions'
 
 export function StationDetails() {
 
-  const { stationId } = useParams()
+  const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
+  
 
   useEffect(() => {
-    loadStation(stationId)
-    // console.log(station)
-  }, [stationId])
+    loadStation(id) // get station on load / when id changed
+    
+    return clearStation() // clear station when unmount
+  }, [id])
 
   function onAddTrack() {
     console.log('add')

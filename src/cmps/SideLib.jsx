@@ -3,7 +3,7 @@ import { SideSort } from "./SideSort";
 
 export function SideLib({ isCollapsed, onCollapse }) {
     return (
-        <div className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
+        <section className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="top-bar">
                 <button className="your-library">
                     <svg
@@ -13,7 +13,6 @@ export function SideLib({ isCollapsed, onCollapse }) {
                     </svg>
                     <span className="library" style={{ display: isCollapsed ? 'none' : 'inline' }}>Your Library</span>
                 </button>
-
                 <button className="add-btn">
                     <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                         <path className="plus-icon" d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z" fill="#b3b3af">
@@ -23,6 +22,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
             </div>
             <SideSort />
             <SideFilter />
-        </div>
+            
+        </section>
     )
 }

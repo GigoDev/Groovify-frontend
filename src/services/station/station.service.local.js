@@ -12,9 +12,8 @@ export const stationService = {
     save,
     remove,
     addStationMsg,
-    getEmptyStation,
 }
-window.cs = stationService
+// window.cs = stationService
 
 async function query(filterBy = { txt: '' }) {
     let stations = await storageService.query(STORAGE_KEY)
@@ -80,16 +79,7 @@ async function addStationMsg(stationId, txt) {
     return msg
 }
 
-function getEmptyStation(){
-    const emptyStation = {
-        name: 'New station',
-        createdBy: {},
-        likedByUsers:{},
-        songs: {},
-    }
 
-    return emptyStation
-}
 
 
 

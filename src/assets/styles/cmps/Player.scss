@@ -144,11 +144,11 @@
         }
 
         .progress-container {
-
+            display: flex;
             gap: 5px;
-
             .progress-bar,
             .sound {
+                height: 5px;
                 width: 100px;
             }
         }

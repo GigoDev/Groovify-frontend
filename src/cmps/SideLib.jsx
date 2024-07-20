@@ -1,7 +1,9 @@
 import { SideFilter } from "./SideFilter";
+import { SideList } from "./SideList";
 import { SideSort } from "./SideSort";
+import { TrackList } from "./TrackList";
 
-export function SideLib({ isCollapsed, onCollapse }) {
+export function SideLib({ isCollapsed, onCollapse, stations }) {
     return (
         <div className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="top-bar">
@@ -23,6 +25,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
             </div>
             <SideSort />
             <SideFilter />
+            <SideList stations={stations}/>
         </div>
     )
 }

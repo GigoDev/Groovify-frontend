@@ -1,10 +1,12 @@
 import { SideLib } from "./SideLib";
 import { SideNav } from "./SideNav";
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useSelector } from "react-redux";
 
 export function SideMenu() {
     const [isCollapsed, setIsCollapsed] = useState(false)
+    const stations = useSelector(storeState => storeState.stationModule.stations)
+    console.log('stations', stations)
 
     function handleCollapse() {
         setIsCollapsed(prevState => !prevState)
@@ -13,7 +15,7 @@ export function SideMenu() {
     return (
         <div className="side-menu">
             <SideNav isCollapsed={isCollapsed} />
-            <SideLib isCollapsed={isCollapsed} onCollapse={handleCollapse} />
+            <SideLib stations={stations} isCollapsed={isCollapsed} onCollapse={handleCollapse} />
         </div>
     )
 }

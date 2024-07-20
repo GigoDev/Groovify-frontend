@@ -1,5 +1,6 @@
 .footer-container {
     line-height: 1.6;
+    margin-inline: 1em;
 
     .details-container {
         display: grid;
@@ -9,8 +10,6 @@
         .info {
             display: flex;
             gap: 50px;
-
-
 
             .company {
                 display: flex;
@@ -130,6 +129,7 @@
         grid-template-columns: repeat(6, auto) 1fr;
         gap: 10px;
         justify-content: start;
+        margin-block: 3rem;
 
         span:last-child {
             justify-self: end;
@@ -137,7 +137,6 @@
         }
 
 
-        margin-block: 3rem;
 
 
         span {

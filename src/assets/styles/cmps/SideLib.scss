@@ -1,8 +1,7 @@
 .side-lib {
     background-color: $clr07;
-    margin-inline: .4em;
     border-radius: 7px;
-    overflow: hidden;
+    margin-block: .4em;
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
 
@@ -37,14 +36,15 @@
                 font-family: circular-bold;
                 display: flex;
             }
+           
         }
 
         .add-btn {
             @include btn($type: regular);
-
             border-radius: 20px;
             margin-right: 20px;
             padding: 5px 5px 1px;
+            
             background-color: $clr07;
 
             &:hover {

@@ -1,6 +1,7 @@
 .header {
-    position: absolute;
-
+    position: fixed;
+    top: 0;
+    bottom: 0;
     justify-content: space-between;
     height: 3.5rem;
     width: 100%;

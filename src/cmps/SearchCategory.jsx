@@ -9,7 +9,7 @@ export function SearchCategory() {
                     </path>
                 </svg>
                 <input
-                    type="search"
+                    type="text"
                     placeholder="What do you want to play?"
                 />
             </div>

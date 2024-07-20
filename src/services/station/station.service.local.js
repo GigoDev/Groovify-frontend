@@ -17,6 +17,7 @@ async function query(filterBy = { txt: '' }) {
     let stations = await storageService.query(STORAGE_KEY)
     if (!stations || stations.length === 0) {
         saveToStorage(STORAGE_KEY, dataStations)
+        
         stations = dataStations.slice()
     }
     const { txt } = filterBy

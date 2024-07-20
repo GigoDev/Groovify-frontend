@@ -1,35 +1,82 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player/youtube'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { togglePlaying } from '../store/actions/player.action'
+import { formatTime } from '../services/util.service'
 
 export function Player() {
-    // const isPlay= useSelector()
+    const stations = useSelector(storeState => storeState.stationModule.stations)
+    const currSongIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
+    const currStationIdx = useSelector(storeState => storeState.playerModule.currStationIdx)
+    const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+
+    // Time states
+    const [progress, setProgress] = useState(0)
+    const [currSongTime, setCurrSongTime] = useState(0)
+    const [totalSongTime, setTotalSongTime] = useState(0)
+    const [currSongRemainder, setCurrSongRemainder] = useState(0)
+    const [showRemainder, setShowRemainder] = useState(false)
+    const [prevSongIdx, setPrevSongIdx] = useState(null)
+
+    const dispatch = useDispatch()
+    const currStation = stations[currStationIdx]
+    const currSong = currStation?.tracks[currSongIdx]
+    console.log('currStation', currStation)
+    console.log('currSong', currSong)
+    console.log('stations', stations)
+    let shuffleSongs = []
+    const playerRef = useRef(null)
+    
+    useEffect(() => {
+        setCurrSongRemainder(totalSongTime - currSongTime) // updates the remaining time whenever the progress or total time changes
+    }, [currSongTime, totalSongTime])
+    
+    
 
     function onPlay() {
-        
+        if (!currSong) return
+        togglePlaying(isPlaying)
+    }
+
+    function handleProgress(state) {
+        if (!state.loaded) return
+        setProgress(state.playedSeconds)
+
+        const totalDuration = playerRef.current ? playerRef.current.getDuration() : 0
+        setCurrSongTime(state.playedSeconds)
+        setTotalSongTime(totalDuration)
+    }
+
+    function handleSeek(ev) {
+        const seekProgress = ev.target.value
+        setProgress(seekProgress)
+        playerRef.current.seekTo(seekProgress)
+    }
+
+    function handleEnd() {
+        if (loop) {
+            setProgress(0)
+            playerRef.current.SeekTo(0)
+            if (isPlaying) {
+                playerRef.current.play()
+            }
+        } else {
+            goToNextSong()
+        }
     }
 
     function onNext() {
-        
+
     }
 
     function onPrev() {
-        
+
     }
 
- 
-    const videoId = 'TvnYmWpD_T8'
+
+    const videoId = 'tvTRZJ-4EyI'
     return (
         <section className="player-container">
-
-            {/* <ReactPlayer 
-            playing={false}
-            url={`https://www.youtube.com/watch?v=${videoId}`}
-            height={0}
-            width={0}
-            /> */}
-            {/* <iframe width="0" height="0" src={`https://www.youtube.com/embed/${videoId}`}></iframe> */}
-
 
             <div className="left-controls">
                 <img className="media-img fit-img" src="http://res.cloudinary.com/dmbgmvobl/image/upload/v1721056820/dkdgpdfddmrsvnyfrjdn.png" alt="img" />
@@ -50,7 +97,22 @@ export function Player() {
                         <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 uPxdw"><path d="M3.3 1a.7.7 0 01.7.7v5.15l9.95-5.744a.7.7 0 011.05.606v12.575a.7.7 0 01-1.05.607L4 9.149V14.3a.7.7 0 01-.7.7H1.7a.7.7 0 01-.7-.7V1.7a.7.7 0 01.7-.7h1.6z"></path></svg>
                     </button>
                     <button className="play-btn" onClick={onPlay} >
-                        <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="play"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.12L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
+                        {isPlaying ? (<svg width="17" height="17" viewBox="0 0 17 16">
+                            <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"
+                                fill='black'
+                                stroke='black'
+                                strokeWidth={0.4}
+                            >
+                            </path>
+                        </svg>) : (<svg width="17" height="17" viewBox="0 0 16 16" >
+                            <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                                fill='black'
+                                stroke='black'
+                                strokeWidth={1}
+                            >
+                            </path>
+                        </svg>)
+                        }
                     </button>
                     <button className="next-btn " onClick={onNext}>
                         <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 uPxdw"><path d="M12.7 1a.7.7 0 00-.7.7v5.15L2.05 1.107A.7.7 0 001 1.712v12.575a.7.7 0 001.05.607L12 9.149V14.3a.7.7 0 00.7.7h1.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-1.6z"></path></svg>
@@ -61,12 +123,25 @@ export function Player() {
                 </div>
 
                 <div className="bottom-center-controls">
-                    <span className="time-progress-1">0:00</span>
-                    <div className="progress-container">
-                        <progress className="prog progress-bar" type="progress" min="0" max="100"></progress>
-                        <input hidden className="prog input-bar timestamp" type="range" min="0" max="100" />
+                    <span className="time-progress-1">{formatTime(currSongTime)}</span>
+                    <div className="progress-bar" style={{ width: `${progress / totalSongTime * 100}%` }}></div>
+                    <div className="progress-container" >
+                        <input
+                            className="prog progress-bar timestamp"
+                            type="range"
+                            id='progressRange'
+                            name='progressRange'
+                            min="0"
+                            value={progress}
+                            onChange={handleSeek}
+                            max={playerRef.current ? playerRef.current.getDuration() : 0} />
                     </div>
-                    <span className="time-progress-2">3:00</span>
+                    <span className="time-progress-2" onClick={() => {
+                        setShowRemainder(!showRemainder)
+                        setCurrSongRemainder(totalSongTime - currSongTime)
+                    }}>
+                        {currSong ? showRemainder ? '-' + formatTime(currSongRemainder) : formatTime(totalSongTime) : '-:--'}
+                    </span>
                 </div>
             </div>
 
@@ -97,6 +172,24 @@ export function Player() {
                     <svg role="img" height="16" fill="#b3b3b3" width="16" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 uPxdw"><path d="M6.53 9.47a.75.75 0 010 1.06l-2.72 2.72h1.018a.75.75 0 010 1.5H1.25v-3.579a.75.75 0 011.5 0v1.018l2.72-2.72a.75.75 0 011.06 0zm2.94-2.94a.75.75 0 010-1.06l2.72-2.72h-1.018a.75.75 0 110-1.5h3.578v3.579a.75.75 0 01-1.5 0V3.81l-2.72 2.72a.75.75 0 01-1.06 0z"></path></svg>
                 </button>
             </div>
+
+            <ReactPlayer
+                ref={playerRef}
+                url={`https://www.youtube.com/watch?v=${videoId}`}
+                config={{
+                    youtube: {
+                        playerVars: {
+                            showinfo: 1,
+                        }
+                    }
+                }}
+                playing={isPlaying}
+                onProgress={handleProgress}
+                onEnded={handleEnd}
+                height="0%"
+                width="0%"
+            />
+            {/* <iframe width="0" height="0" src={`https://www.youtube.com/embed/${videoId}`}></iframe> */}
 
         </section>
     )

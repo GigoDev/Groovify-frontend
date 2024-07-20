@@ -29,6 +29,15 @@ export function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive 
 }
 
+export function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60)
+    const remainingSeconds = seconds % 60
+    const roundedSeconds = Math.round(remainingSeconds * 100) / 100
+    const formattedSeconds = roundedSeconds === 0 ? '00' : roundedSeconds.toFixed(2).padStart(5, '0')
+
+    return `${minutes}:${formattedSeconds.split('.')[0]}`
+}
+
 
 export function randomPastTime() {
     const HOUR = 1000 * 60 * 60

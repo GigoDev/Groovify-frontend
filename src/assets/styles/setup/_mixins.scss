@@ -104,10 +104,11 @@
 
     @else if $type ==play {
         background-color: $clrGreen;
-        color: black;
 
         &:hover {
-            scale: 1.1;
+            scale: 1.05;
+            background-color: rgb(59, 228, 119);
+            
         }
     }
 

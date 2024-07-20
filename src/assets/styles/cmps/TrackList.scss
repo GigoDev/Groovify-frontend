@@ -1,0 +1,38 @@
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+       display: grid;
+       grid-template-columns: 25px 40px 2fr 1fr 50px 100px;
+       align-items: center;
+       justify-items: left;
+
+       color: $clr02;
+       font-size: 1rem;
+
+       &:hover {
+          background-color: $clr06;
+
+          .listeners {
+             color: white;
+          }
+       }
+
+       .title {
+          justify-self: left;
+          padding-inline-start: 10px;
+          color: white;
+
+          &:hover {
+             text-decoration: underline;
+          }
+       }
+
+       .add-btn svg:hover{
+             cursor: pointer;
+             fill: white;
+       }
+    }
+}

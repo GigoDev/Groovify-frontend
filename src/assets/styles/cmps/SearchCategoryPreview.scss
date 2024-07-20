@@ -1,0 +1,32 @@
+.search-category-card {
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 16px;
+    }
+
+    .img-container {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(35deg) translate(18%, -2%);
+        background-color: rgba(78, 78, 78, 0.308);
+        border-radius: 8px;
+
+
+        img {
+            aspect-ratio: 1;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+    }
+}

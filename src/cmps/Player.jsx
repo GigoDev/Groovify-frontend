@@ -2,7 +2,7 @@ import React from 'react'
 import ReactPlayer from 'react-player/youtube'
 
 export function Player() {
-
+ 
     const videoId = 'TvnYmWpD_T8'
     return (
         <section className="player-container">
@@ -34,7 +34,7 @@ export function Player() {
                     <button className="prev-btn">
                         <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 uPxdw"><path d="M3.3 1a.7.7 0 01.7.7v5.15l9.95-5.744a.7.7 0 011.05.606v12.575a.7.7 0 01-1.05.607L4 9.149V14.3a.7.7 0 01-.7.7H1.7a.7.7 0 01-.7-.7V1.7a.7.7 0 01.7-.7h1.6z"></path></svg>
                     </button>
-                    <button className="play-btn">
+                    <button className="play-btn" >
                         <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="play"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.12L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
                     </button>
                     <button className="next-btn">

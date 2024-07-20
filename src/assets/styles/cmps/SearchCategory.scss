@@ -1,0 +1,33 @@
+.main-search {
+    display: flex;
+    font-family: circular-bold;
+
+    .input-container {
+        position: relative;
+        width: 100%;
+        
+
+        svg {
+            position: absolute;
+
+            fill: $clr02;
+            left: 9px;
+            top: 13px;
+        }
+
+        input {
+            height: 43px;
+            border-radius: 20px;
+            width: 320px;
+            background-color: $clr13;
+            padding: 10px 0 8px 33px;
+            border: 0;
+            
+
+            &::placeholder {
+                color: $clr12;
+                
+            }
+        }
+    }
+}

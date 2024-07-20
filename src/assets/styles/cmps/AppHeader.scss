@@ -10,8 +10,8 @@
     background-color: $clr07;
     padding: rem(10px) 1rem;
 
-    .btn{
-        background-color: rgba(0, 0,0, 0.6);
+    .btn {
+        background-color: rgba(0, 0, 0, 0.6);
         color: white;
     }
 
@@ -20,26 +20,44 @@
         align-items: center;
         gap: .3em;
 
+        svg {
+            fill: $clr09;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
         .back-btn {
+            display: flex;
             justify-content: center;
             align-items: center;
+
+            background-color: $clr14;
+            border-radius: 50%;
+            padding: 5px;
         }
 
         .forward-btn {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            background-color: $clr14;
+            border-radius: 50%;
+            padding: 5px;
         }
     }
 
-    .header-menu{
+    .header-menu {
         gap: .3em;
 
-        .install-btn{
+        .install-btn {
             display: flex;
             gap: .4em;
             align-items: center;
-            
+
             width: 10em;
             font-weight: bold;
         }

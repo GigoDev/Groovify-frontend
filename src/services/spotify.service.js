@@ -356,39 +356,39 @@ async function getPopularArtists() {
 }
 
 
-async function getFeaturedCharts() {
-    var featuredCharts = loadFromStorage('featuredCharts')
-    if (featuredCharts) {
-        console.log('from storage:', featuredCharts)
-        return featuredCharts
-    }
+// async function getFeaturedCharts() {
+//     var featuredCharts = loadFromStorage('featuredCharts')
+//     if (featuredCharts) {
+//         console.log('from storage:', featuredCharts)
+//         return featuredCharts
+//     }
 
 
-    try {
-        const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/browse/featured-playlists?limit=10`
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const resp = await axios.get(url, { headers })
+//     try {
+//         const token = loadFromStorage('access_token')
+//         const url = `https://api.spotify.com/v1/browse/featured-playlists?limit=10`
+//         const headers = { 'Authorization': `Bearer ${token}` }
+//         const resp = await axios.get(url, { headers })
 
-        const items = resp.data.playlists.items
-        featuredPlaylists = items.map(item => ({
-            id: item.id,
-            imgs: item.images,
-            name: item.name,
-            description: item.description,
-            tracksUrl: item.tracks.href,
-            total: item.tracks.total
-        }))
+//         const items = resp.data.playlists.items
+//         featuredPlaylists = items.map(item => ({
+//             id: item.id,
+//             imgs: item.images,
+//             name: item.name,
+//             description: item.description,
+//             tracksUrl: item.tracks.href,
+//             total: item.tracks.total
+//         }))
 
-        console.log(featuredPlaylists)
-        saveToStorage('featuredPlaylists', featuredPlaylists)
-        return featuredPlaylists
+//         console.log(featuredPlaylists)
+//         saveToStorage('featuredPlaylists', featuredPlaylists)
+//         return featuredPlaylists
 
-    } catch (error) {
-        console.error('Error in searching:', error)
-    }
+//     } catch (error) {
+//         console.error('Error in searching:', error)
+//     }
 
-}
+// }
 
 async function _getYoutubeUrl(track) {
     const res = await youtubeService.getVideoId(`${track.artists[0].name} ${track.name}`)

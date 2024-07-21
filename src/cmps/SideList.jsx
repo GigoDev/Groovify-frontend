@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 
 export function SideList({ stations }) {
+    const navigate = useNavigate()
 
+    function handleClick(id, type) {
+       navigate(`/${type}/${id}`)
+    }
 
     if (!stations) return null
-    //img, name, creator, 
     return (
         <ul className='side-list-container clean-list'>{
             stations.map(station => (
-                <Link to={`station/${station.id}`} key={station.id}>
-                    <article className="side-card">
-                        <div className="img-container square-ratio">
-                            <img src={station.imgs[2].url} />
-                        </div>
-                        <span className='card-title'>{station.name}</span>
-                    </article>
-                </Link>
+                <article className="side-card" key={station.id} onClick={() => handleClick(station.id, station.type)}>
+                    <div className="img-container square-ratio">
+                        <img src={station.imgs[2].url} />
+                    </div>
+                    <span className='card-title'>{station.name}</span>
+                </article>
             ))
         }
         </ul>

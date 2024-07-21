@@ -4,6 +4,7 @@
     margin-block: .4em;
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
+    // height: 100%;
 
     .top-bar {
         display: flex;
@@ -18,7 +19,7 @@
             display: flex;
             background-color: $clr07;
             align-items: center;
-            padding: 10px;
+            padding: 10px 16px;
             border-radius: 10px;
             border: 0;
             font-size: rem(16px);

@@ -2,13 +2,15 @@
 .side-nav {
     
     &.collapsed {
-        width: 60px;
+        // changed to 70
+        width: 70px;
         overflow: hidden;
 
         span,
         .side-sort-container,
         .side-search-library,
         .side-filter-menu,
+        .side-filter,
         .add-btn {
             display: none;
         }

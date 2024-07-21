@@ -1,0 +1,24 @@
+.side-list-container {
+
+    .side-card{
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        background-color: $clr07;
+
+        
+        .img-container{
+           width: 50px;
+           border-radius: 5px;
+           
+            img{
+
+            }
+        }
+        .card-title {
+            padding-inline-start: 10px;
+
+        }
+    }
+   
+}

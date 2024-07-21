@@ -5,12 +5,14 @@ import { getRandomIntInclusive, makeId } from '../util.service'
 import { stationService as local } from './station.service.local'
 import { stationService as remote } from './station.service.remote'
 
-function getEmptyStation() {
-	return {
-		vendor: makeId(),
-		speed: getRandomIntInclusive(80, 240),
-		msgs: [],
-	}
+
+function getEmptyStation(){
+    return {
+        name: 'New station',
+        createdBy: {},
+        likedByUsers:{},
+        songs: {},
+    }
 }
 
 function getDefaultFilter() {

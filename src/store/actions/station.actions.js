@@ -17,6 +17,7 @@ export async function loadStation(stationId) {
     try {
         const station = await stationService.getById(stationId)
         store.dispatch(getCmdSetStation(station))
+        return station
     } catch (err) {
         console.log('Cannot load station', err)
         throw err
@@ -65,6 +66,10 @@ export async function addStationMsg(stationId, txt) {
         console.log('Cannot add station msg', err)
         throw err
     }
+}
+
+export function clearStation() {
+    store.dispatch(getCmdSetStation())
 }
 
 export function toggleLibraryAction(){

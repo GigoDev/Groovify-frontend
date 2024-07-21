@@ -1,98 +1,134 @@
 .side-filter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 13px;
-
-    .side-search-library {
+    .side-filter-btns {
         display: flex;
         align-items: center;
-
-        button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            width: 32px;
+        margin: 0 0 10px 3px;
+        height: 37px;
+    
+        .btn:first-child {
+            margin-left: 4px;
+        }
+    
+        .btn {
             height: 32px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: 400;
+            background-color: $clr06;
+            color: $clr01;
+            margin-inline: 5px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            
             &:hover {
-                background-color: $clr04;
-            }
-
-            svg {
-                fill: $clr02;
-                transition: fill 1s ease;
-            }
-
-            &:hover svg {
-                fill: $clr02;
+                background-color: $clr11;
             }
         }
+    
+        .btn-clicked:first-child {
+            margin-left: 4px;
+            margin-right: 12px;
+        }
+    }
 
-        input {
-            background-color: transparent;
-            border: none;
-            transform: translateY(1.5px);
-            opacity: 0;
-            color: $clr02;
-            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-
-            &:focus {
-                outline: none;
+    .side-search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px;
+    
+        .side-search-btn {
+            display: flex;
+            align-items: center;
+    
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+    
+                &:hover {
+                    background-color: $clr04;
+                }
+    
+                svg {
+                    fill: $clr02;
+                    transition: fill 1s ease;
+                }
+    
+                &:hover svg {
+                    fill: $clr02;
+                }
             }
-
-            &::placeholder {
+    
+            input {
+                background-color: transparent;
+                border: none;
+                transform: translateY(1.5px);
+                opacity: 0;
+                color: $clr02;
+                transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    
+                &:focus {
+                    outline: none;
+                }
+    
+                &::placeholder {
+                    color: $clr02;
+                }
+    
+                &.input-visible {
+                    opacity: 1;
+                }
+            }
+    
+            &.button-clicked input {
+                background-color: $clr01;
+            }
+        }
+    
+        .side-filter-menu {
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
                 color: $clr02;
             }
-
-            &.input-visible {
-                opacity: 1;
-            }
-        }
-
-        &.button-clicked input {
-            background-color: $clr01;
-        }
-    }
-
-    .side-filter-menu {
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            color: $clr02;
-        }
-
-        &:hover {
-            color: $clr01;
-
-            span {
+    
+            &:hover {
                 color: $clr01;
+    
+                span {
+                    color: $clr01;
+                }
+    
+                svg {
+                    fill: $clr01;
+                }
             }
-
+    
+            span {
+                color: $clr02;
+                font-size: 14px;
+            }
+    
             svg {
-                fill: $clr01;
+                fill: $clr02;
+                margin-inline-start: 6px;
+                transform: translateY(1px);
             }
+    
         }
-
-        span {
-            color: $clr02;
-            font-size: 14px;
-        }
-
-        svg {
-            fill: $clr02;
-            margin-inline-start: 6px;
-            transform: translateY(1px);
-        }
-
     }
 }
+

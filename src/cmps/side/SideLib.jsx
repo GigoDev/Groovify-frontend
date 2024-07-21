@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { SideFilter } from "./SideFilter";
 import { SideList } from "./SideList";
 import { SideSort } from "./SideSort";
-import { TrackList } from "./TrackList";
+import { TrackList } from "../TrackList";
 import { useEffect } from "react";
 
 export function SideLib({ isCollapsed, onCollapse }) {

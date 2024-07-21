@@ -1,0 +1,202 @@
+// .update-modal-overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     z-index: 999;
+
+//     .update-modal {
+//         flex-direction: column;
+//         width: 582px;
+//         min-height: 427px;
+//         background-color: $clr11;
+//         box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+//         border-radius: 5px;
+
+//         .modal-content {
+//             background-color: $clr11;
+//             box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+//             padding: 24px 24px 24px 24px;
+
+//             .modal-top {
+//                 display: flex;
+//                 justify-content: space-between;
+//                 width: 546px;
+//                 height: 26px;
+//                 background-color: $clr11;
+//                 margin: 0px;
+//                 align-items: center;
+
+//                 h3 {
+//                     font-family: circular-bold;
+//                     font-size: 24px;
+//                     height: 24px;
+//                     font-weight: bold;
+//                     margin-top: 16px;
+//                     margin-left: 3px;
+//                 }
+
+//                 .close-btn {
+//                     margin-left: 10px;
+//                     background-color: $clr11;
+
+//                     &:hover {
+//                         border-radius: 25px;
+//                         background-color: $clr12;
+//                         transition: 0.3s;
+//                     }
+
+//                     svg {
+//                         width: 16px;
+//                         height: 16px;
+//                     }
+
+//                     path {
+//                         stroke: $clr3;
+//                         fill: $clr3;
+//                         stroke: width 1px;
+
+//                     }
+//                 }
+//             }
+
+//             .content-container {
+//                 display: grid;
+//                 width: 490px;
+//                 grid-template-columns: 180px minmax(1fr, 280px);
+//                 grid-template-rows: 32px 179px 32px 41px;
+//                 grid-gap: 16px;
+
+//                 grid-template-areas:
+//                     "img title"
+//                     "img desc"
+//                     ". save"
+//                     "discla discla";
+
+//                 .station-name {
+//                     grid-area: title;
+//                     width: 310px;
+//                     height: 44px;
+//                     justify-self: end;
+
+//                     border: none;
+//                     outline: none;
+//                     border-radius: 5px;
+//                     padding-left: 10px;
+//                     margin-top: 19px;
+//                     // margin-left: 25px;
+
+//                     background-color: $clr12;
+//                     color: $clr2;
+//                 }
+
+//                 .station-desc {
+//                     grid-area: desc;
+//                     width: 312px;
+//                     height: 138px;
+//                     justify-self: end;
+//                     resize: none;
+
+//                     border: none;
+//                     outline: none;
+//                     border-radius: 5px;
+//                     // padding: 0 12px;
+//                     margin-top: 17px;
+//                     margin-left: 13px;
+
+//                     background-color: $clr12;
+//                     color: $clr3;
+//                 }
+
+//                 .station-img {
+//                     grid-area: img;
+//                     background-color: $clr13;
+//                     width: 180px;
+//                     height: 180px;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     margin-top: 31px;
+//                     margin-left: 13px;
+
+//                     .image-upload-btn {
+
+//                         .svg-hover-txt {
+//                             display: flex;
+//                             flex-direction: column;
+//                             justify-content: center;
+//                             align-items: center;
+//                         }
+
+//                         svg {
+//                             width: 50px;
+//                             height: 50px;
+
+//                             path {
+//                                 fill: $clr3;
+//                             }
+//                         }
+
+//                         .image-upload-img {
+//                             width: 100%;
+//                         }
+//                     }
+
+//                     img.image-preview {
+//                         width: 180px;
+//                     }
+
+//                     .file-upload {
+//                         margin: 20px 0;
+
+//                         .file-upload-label {
+//                             display: block;
+//                             margin-bottom: 10px;
+//                         }
+
+//                         input[type="file"] {
+//                             width: 180px;
+//                             height: 180px;
+//                         }
+//                     }
+//                 }
+
+//                 button.save-btn {
+//                     grid-area: save;
+//                     width: 107px;
+//                     height: 52px;
+//                     place-self: end;
+//                     align-self: center;
+
+//                     margin-right: 4px;
+//                     margin-bottom: 14px;
+
+//                     border-radius: 24px;
+//                     background-color: white;
+//                     color: $clr8;
+//                     font-weight: bold;
+//                     font-size: em(16px);
+//                     // margin-top: 10px;
+
+//                     &:hover {
+//                         transition: scale 1.01;
+//                         scale: 1.05;
+//                     }
+//                 }
+
+//                 .disclaimer {
+//                     grid-area: discla;
+//                     font-size: $font-size-12;
+//                     font-weight: bold;
+//                     margin-left: 4px;
+//                 }
+
+//             }
+//         }
+//     }
+// }

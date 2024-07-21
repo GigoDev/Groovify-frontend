@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { TrackList } from '../cmps/TrackList'
+import { TrackList } from '../../cmps/TrackList'
 
-import { loadStation, clearStation } from '../store/actions/station.actions'
+import { loadStation, clearStation } from '../../store/actions/station.actions'
 
-export function StationDetails() {
+export function ArtistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)

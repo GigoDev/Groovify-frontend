@@ -1,9 +1,21 @@
+// React:
+
 import React, { useRef, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useDispatch, useSelector } from 'react-redux'
-import { togglePlaying } from '../store/actions/player.action'
-import { formatTime } from '../services/util.service'
-import { youtubeService } from '../services/youtube.service'
+
+
+import { togglePlaying } from '../../store/actions/player.action'
+import { formatTime } from '../../services/util.service'
+
+// Player controls:
+import { PlayerLeft } from './PlayerLeft'
+
+// SVGs:
+import ShuffleIcon from '../../assets/icons/ShuffleIcon.svg'
+import PrevSongIcon from '../../assets/icons/PrevSongIcon.svg'
+import PlayIcon from '../../assets/icons/PlayIcon.svg'
+import PauseIcon from '../../assets/icons/PauseIcon.svg'
 
 
 export function Player() {
@@ -26,22 +38,18 @@ export function Player() {
     const [currSongRemainder, setCurrSongRemainder] = useState(0)
     const [showRemainder, setShowRemainder] = useState(false)
     const [prevSongIdx, setPrevSongIdx] = useState(null)
-    
-    // console.log('stations', stations)
+
     const dispatch = useDispatch()
-   
+
     const playerRef = useRef(null)
     let shuffleSongs = []
-    // console.log('playerRef',playerRef)
     useEffect(() => {
         setCurrSongRemainder(totalSongTime - currSongTime) // updates the remaining time whenever the progress or total time changes
     }, [currSongTime, totalSongTime])
-    
-    
+
+
 
     function onPlay() {
-        // if (!currSong) return
-        // console.log('Current playing state:', isPlaying)
         dispatch(togglePlaying(isPlaying))
     }
 
@@ -102,42 +110,23 @@ export function Player() {
     return (
         <section className="player-container">
 
-            <div className="left-controls">
-                <img className="media-img fit-img" src="http://res.cloudinary.com/dmbgmvobl/image/upload/v1721056820/dkdgpdfddmrsvnyfrjdn.png" alt="img" />
-                <div className="artist-details">
-                    <span className="player-song-name">Songname</span>
-                </div>
-                <button>
-                    <svg data-encore-id="icon" fill="#b3b3b3" width="14" height="14" role="img" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 dYnaPI"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path><path d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"></path></svg>
-                </button>
-            </div>
+            <PlayerLeft />
 
             <div className="center-controls">
+
                 <div className="top-center-controls">
                     <button className={'shuffle-btn' + (shuffle ? ' active' : '')} onClick={() => {
-                         setShuffle(!shuffle)
+                        setShuffle(!shuffle)
                     }}>
-                        <svg data-encore-id="icon" fill="#b3b3b3" width="14" height="14" role="img" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 dYnaPI"><path d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"></path><path d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"></path></svg>
+                        <ShuffleIcon />
                     </button>
+
                     <button className="prev-btn" onClick={onPrev}>
-                        <svg role="img" fill="#b3b3b3" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" className="Svg-sc-ytk21e-0 uPxdw"><path d="M3.3 1a.7.7 0 01.7.7v5.15l9.95-5.744a.7.7 0 011.05.606v12.575a.7.7 0 01-1.05.607L4 9.149V14.3a.7.7 0 01-.7.7H1.7a.7.7 0 01-.7-.7V1.7a.7.7 0 01.7-.7h1.6z"></path></svg>
+                        <PrevSongIcon />
                     </button>
+
                     <button className="play-btn" onClick={onPlay} >
-                        {isPlaying ? (<svg width="17" height="17" viewBox="0 0 17 16">
-                            <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"
-                                fill='black'
-                                stroke='black'
-                                strokeWidth={0.4}
-                            >
-                            </path>
-                        </svg>) : (<svg width="17" height="17" viewBox="0 0 16 16" >
-                            <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-                                fill='black'
-                                stroke='black'
-                                strokeWidth={1}
-                            >
-                            </path>
-                        </svg>)
+                        {isPlaying ? (<PlayIcon />) : (<PauseIcon/>)
                         }
                     </button>
                     <button className="next-btn " onClick={onNext}>
@@ -189,62 +178,62 @@ export function Player() {
                 </button>
                 <button className="sound-btn" onClick={handleMute}>
                     {isMuted || volume === 0 ? (
+                        <svg width="16" height="16" viewBox="0 0 17 16" >
+                            <path d="M13.86 5.47a.75.75 0 0 0-1.061 0l-1.47 1.47-1.47-1.47A.75.75 0 0 0 8.8 6.53L10.269 8l-1.47 1.47a.75.75 0 1 0 1.06 1.06l1.47-1.47 1.47 1.47a.75.75 0 0 0 1.06-1.06L12.39 8l1.47-1.47a.75.75 0 0 0 0-1.06z"
+                                fill="black"
+                                stroke="black"
+
+                            >
+                            </path>
                             <svg width="16" height="16" viewBox="0 0 17 16" >
                                 <path d="M13.86 5.47a.75.75 0 0 0-1.061 0l-1.47 1.47-1.47-1.47A.75.75 0 0 0 8.8 6.53L10.269 8l-1.47 1.47a.75.75 0 1 0 1.06 1.06l1.47-1.47 1.47 1.47a.75.75 0 0 0 1.06-1.06L12.39 8l1.47-1.47a.75.75 0 0 0 0-1.06z"
-                                    fill="black"
-                                    stroke="black"
-
+                                    fill="#b3b3b3"
+                                    stroke="#b3b3b3"
+                                    strokeWidth={0.1}
                                 >
                                 </path>
-                                <svg width="16" height="16" viewBox="0 0 17 16" >
-                                    <path d="M13.86 5.47a.75.75 0 0 0-1.061 0l-1.47 1.47-1.47-1.47A.75.75 0 0 0 8.8 6.53L10.269 8l-1.47 1.47a.75.75 0 1 0 1.06 1.06l1.47-1.47 1.47 1.47a.75.75 0 0 0 1.06-1.06L12.39 8l1.47-1.47a.75.75 0 0 0 0-1.06z"
-                                        fill="#b3b3b3"
-                                        stroke="#b3b3b3"
-                                        strokeWidth={0.1}
-                                    >
-                                    </path>
-                                    <path d="M10.116 1.5A.75.75 0 0 0 8.991.85l-6.925 4a3.642 3.642 0 0 0-1.33 4.967 3.639 3.639 0 0 0 1.33 1.332l6.925 4a.75.75 0 0 0 1.125-.649v-1.906a4.73 4.73 0 0 1-1.5-.694v1.3L2.817 9.852a2.141 2.141 0 0 1-.781-2.92c.187-.324.456-.594.78-.782l5.8-3.35v1.3c.45-.313.956-.55 1.5-.694V1.5z"
-                                        fill="#b3b3b3"
-                                        stroke="#b3b3b3"
-                                        strokeWidth={0.1}
-                                    >
-                                    </path>
-                                </svg>
-                            </svg>
-                        ) : volume < 0.33 ? (
-                            <svg width="16" height="16" viewBox="0 0 17 16">
-                                <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
+                                <path d="M10.116 1.5A.75.75 0 0 0 8.991.85l-6.925 4a3.642 3.642 0 0 0-1.33 4.967 3.639 3.639 0 0 0 1.33 1.332l6.925 4a.75.75 0 0 0 1.125-.649v-1.906a4.73 4.73 0 0 1-1.5-.694v1.3L2.817 9.852a2.141 2.141 0 0 1-.781-2.92c.187-.324.456-.594.78-.782l5.8-3.35v1.3c.45-.313.956-.55 1.5-.694V1.5z"
                                     fill="#b3b3b3"
                                     stroke="#b3b3b3"
                                     strokeWidth={0.1}
                                 >
                                 </path>
                             </svg>
-                        ) : volume < 0.65 ? (
-                            <svg width="16" height="16" viewBox="0 0 17 16">
-                                <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z"
-                                    fill="#b3b3b3"
-                                    stroke="#b3b3b3"
-                                    strokeWidth={0.1}
-                                >
-                                </path>
-                            </svg>
-                        ) : (
-                            <svg width="16" height="16" viewBox="0 0 17 16">
-                                <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
-                                    fill="#b3b3b3"
-                                    stroke="#b3b3b3"
-                                    strokeWidth={0.1}
-                                >
-                                </path>
-                                <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"
-                                    fill="#b3b3b3"
-                                    stroke="#b3b3b3"
-                                    strokeWidth={0.1}
-                                >
-                                </path>
-                            </svg>
-                        )}
+                        </svg>
+                    ) : volume < 0.33 ? (
+                        <svg width="16" height="16" viewBox="0 0 17 16">
+                            <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
+                                fill="#b3b3b3"
+                                stroke="#b3b3b3"
+                                strokeWidth={0.1}
+                            >
+                            </path>
+                        </svg>
+                    ) : volume < 0.65 ? (
+                        <svg width="16" height="16" viewBox="0 0 17 16">
+                            <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z"
+                                fill="#b3b3b3"
+                                stroke="#b3b3b3"
+                                strokeWidth={0.1}
+                            >
+                            </path>
+                        </svg>
+                    ) : (
+                        <svg width="16" height="16" viewBox="0 0 17 16">
+                            <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
+                                fill="#b3b3b3"
+                                stroke="#b3b3b3"
+                                strokeWidth={0.1}
+                            >
+                            </path>
+                            <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"
+                                fill="#b3b3b3"
+                                stroke="#b3b3b3"
+                                strokeWidth={0.1}
+                            >
+                            </path>
+                        </svg>
+                    )}
                 </button>
                 <div className="progress-container">
                     <progress hidden className="prog progress-bar" max="100"></progress>
@@ -259,6 +248,7 @@ export function Player() {
             </div>
 
             <ReactPlayer
+                className='react-player'
                 ref={playerRef}
                 url={`https://www.youtube.com/watch?v=${videoId}`}
                 playing={isPlaying}
@@ -268,7 +258,6 @@ export function Player() {
                 height="0"
                 width="0"
             />
-            {/* <iframe width="0" height="0" src={`https://www.youtube.com/embed/${videoId}`}></iframe> */}
 
         </section>
     )

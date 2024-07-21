@@ -12,7 +12,7 @@ export function SideMenu() {
     }
 
     return (
-        <div className="side-menu">
+        <div className={`side-menu ${isCollapsed ? 'collapsed' : ''}`}>
             <SideNav isCollapsed={isCollapsed} />
             <SideLib stations={stations} isCollapsed={isCollapsed} onCollapse={handleCollapse} />
         </div>

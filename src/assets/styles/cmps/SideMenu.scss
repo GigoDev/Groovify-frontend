@@ -1,20 +1,26 @@
-.side-lib,
-.side-nav {
-    
+.side-menu {
     &.collapsed {
         width: 70px;
-        overflow: hidden;
-
-        span,
-        .side-sort-container,
-        .side-search-library,
-        .side-filter-menu,
-        .side-filter,
-        .add-btn {
-            display: none;
-        }
-
-
     }
-}
+    
+    .side-lib,
+    .side-nav {
 
+        &.collapsed {
+            width: 70px;
+            overflow: hidden;
+
+            span,
+            .side-sort-container,
+            .side-search-library,
+            .side-filter-menu,
+            .side-filter,
+            .add-btn {
+                display: none;
+            }
+
+
+        }
+    }
+
+}

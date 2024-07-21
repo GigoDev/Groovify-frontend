@@ -1,12 +1,11 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-import PauseIcon from "../assets/icons/PauseIcon.svg"
 
 export function TrackList({ tracks, onAddTrack }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
     const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
-    const [numContent, setNumContent] = useState(null)
+    
 
     function handleMoreLessClick() {
         if (tracks.length < 5) return

@@ -1,8 +1,8 @@
-
+//REACT
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-
 import { Link } from 'react-router-dom';
+
 
 export function SideNav({ isCollapsed }) {
     const [isWhiteFill, setIsWhiteFill] = useState(true)
@@ -24,7 +24,7 @@ export function SideNav({ isCollapsed }) {
             <Link className="home-link"
                 to="/"
                 onClick={handleHomeButtonClick}>
-
+                    
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

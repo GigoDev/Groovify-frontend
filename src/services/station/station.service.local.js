@@ -43,23 +43,10 @@ async function remove(stationId) {
 
 async function save(station) {
     var savedStation
-    if (station._id) {
-        const stationToSave = {
-            _id: station._id,
-            price: station.price,
-            speed: station.speed,
-        }
-        savedStation = await storageService.put(STORAGE_KEY, stationToSave)
+    if (station.id) {
+        savedStation = await storageService.put(STORAGE_KEY, station)
     } else {
-        const stationToSave = {
-            vendor: station.vendor,
-            price: station.price,
-            speed: station.speed,
-            // Later, owner is set by the backend
-            owner: userService.getLoggedinUser(),
-            msgs: []
-        }
-        savedStation = await storageService.post(STORAGE_KEY, stationToSave)
+        savedStation = await storageService.post(STORAGE_KEY, station)
     }
     return savedStation
 }

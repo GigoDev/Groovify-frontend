@@ -6,12 +6,15 @@ import { stationService as local } from './station.service.local'
 import { stationService as remote } from './station.service.remote'
 
 
-function getEmptyStation(){
+function getEmptyPlaylist(){
     return {
-        name: 'New station',
+        type: 'playlist',
+        name: 'New playlist',
+        imgs: [{url:''},{url:''},{url:''}],
+        tracks:[],
+        
         createdBy: {},
-        likedByUsers:{},
-        songs: {},
+        createdAt: Date.now()
     }
 }
 
@@ -25,7 +28,7 @@ function getDefaultFilter() {
 }
 
 const service = VITE_LOCAL === 'true' ? local : remote
-export const stationService = { getEmptyStation, getDefaultFilter, ...service }
+export const stationService = { getEmptyPlaylist, getDefaultFilter, ...service }
 
 // Easy access to this service from the dev tools console
 // when using script - dev / dev:local

@@ -16,9 +16,26 @@
         &:hover {
             background-color: $clr06;
 
+            .track-number{
+                display: none;
+            }
+
+            .play-icon{
+                display: inline-block;
+            }
+
             .listeners {
                 color: white;
             }
+        }
+
+        .track-number,.play-icon {
+            grid-column: 1;
+            cursor: pointer;
+        }
+        
+        .play-icon{
+            display: none;
         }
 
         .title {

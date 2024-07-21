@@ -10,10 +10,8 @@ const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
 export const spotifyService = {
     getToken,
     getArtist,
-    getArtistTopTracks,
     getAlbum,
     getAlbumTracks,
-    getAlbums,
     getRecommendationsByArtist,
     getRecommendationsByGeners,
     getRecommendationTopTracks,
@@ -78,7 +76,7 @@ async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
             listeners: resp.data.followers.total,
         }
 
-        const topTracks = await getArtistTopTracks(artistId)
+        const topTracks = await _getArtistTopTracks(artistId)
         
 
         station.tracks = topTracks
@@ -93,7 +91,7 @@ async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
 
 }
 
-async function getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') {
+async function _getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market = 'IL') {
     const token = loadFromStorage('access_token')
     try {
         const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${market}`;

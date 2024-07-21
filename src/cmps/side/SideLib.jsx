@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 //CMP
 import { SideFilter } from "./SideFilter";
 import { SideList } from "./SideList";
-import { SideSort } from "./SideSort";
 
 import {stationService} from '../../services/station'
 import { addStation } from "../../store/actions/station.actions";
@@ -14,13 +13,15 @@ import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
 
 export function SideLib({ isCollapsed, onCollapse }) {
     const stations = useSelector(storeState => storeState.stationModule.stations)
-    const [filterBy,setFilterBy] = useState('')
+    const [filterBy,setFilterBy] = useState({type:'artist',txt:''})
+    const [filtered,setFiltered] = useState(stations)
 
     useEffect(() => {
-        //to filter the station list by sideFilterValue   
+        setFiltered(stations.filter(station => station.type === filterBy.type))
+        console.log('filterBy',filterBy)
+    }, [filterBy]);
 
-    }, []);
-
+   
     function onAddPlaylist(){
         const newPlaylist = stationService.getEmptyPlaylist()
         const savedPlaylist = addStation(newPlaylist)
@@ -41,7 +42,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
                 </button>
             </div>
             <SideFilter setFilterBy={setFilterBy}/>
-            <SideList stations={stations} />
+            <SideList stations={filtered} />
         </section>
     )
 }

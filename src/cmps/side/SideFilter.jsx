@@ -1,20 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
 
-export function SideFilter(setFilterBy) {
+export function SideFilter({ setFilterBy }) {
 
     const [isInputVisible, setIsInputVisible] = useState(false)
     const [isButtonClicked, setIsButtonClicked] = useState(false)
+    const [searchInput, setSearchInput] = useState('')
 
     function toggleInputVisibility() {
         setIsInputVisible(!isInputVisible)
         setIsButtonClicked(true)
     }
 
+    const handleInput = (ev) => {
+        const { target } = ev
+        setSearchInput(target.value)
+
+    }
+
+    useEffect(() => {
+        const debounceTimeout = setTimeout(() => {
+            if (searchInput) {
+                setFilterBy(filterBy => ({ ...filterBy, txt: searchInput }))
+            }
+        }, 500);
+
+        return () => clearTimeout(debounceTimeout);
+    }, [searchInput]);
+
     return (
         <section className='side-filter'>
             <div className={'side-filter-btns'}>
-                <button className="btn">Playlists</button>
-                <button className="btn">Artists</button>
+                <button className="btn" onClick={() => setFilterBy(filterBy => ({ ...filterBy, type: 'playlist' }))}>Playlists</button>
+                <button className="btn" onClick={() => setFilterBy(filterBy => ({ ...filterBy, type: 'artist' }))}>Artists</button>
             </div>
 
             <div className="side-search-container">
@@ -31,6 +49,8 @@ export function SideFilter(setFilterBy) {
                             id="txt"
                             placeholder="Search in Your Library"
                             className={isInputVisible ? 'input-visible' : ''}
+                            value={searchInput}
+                            onInput={handleInput}
                         />
                     )}
                 </div>

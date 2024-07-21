@@ -1,0 +1,54 @@
+.playlist-list {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 20px;
+
+   li {
+      display: grid;
+      grid-template-columns: 20px 40px 1fr 1fr 200px 1fr;
+      padding: 10px;
+      align-items: center;
+      color: $clr02;
+      font-size: 1rem;
+
+      &:hover {
+         background-color: $clr06;
+
+         
+      }
+
+      .name {
+         display: flex;
+         flex-direction: column;
+         padding-inline-start: 10px;
+         height: 50px;
+         justify-content: space-around;
+      }
+
+      .createdAt{
+         justify-self: end;
+         padding-inline-end: 4em;
+      }
+
+      .title {
+         color: white;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+
+      img {
+         width: 40px;
+         height: 40px;
+         object-fit: cover;
+         border-radius: 4px;
+      }
+
+
+      .add-btn svg:hover {
+         cursor: pointer;
+         fill: white;
+      }
+   }
+}

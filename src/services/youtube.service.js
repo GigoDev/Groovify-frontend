@@ -2,32 +2,35 @@ import axios from "axios"
 import { loadFromStorage, saveToStorage } from "./util.service"
 
 export const youtubeService = {
-    getVideoId,
-    getCurrSong
+    getTrackId,
 }
 
+const STORAGE_KEY = 'tracks_ids_DB'
 const YT_KEY = 'AIzaSyBSWt3 - m0mxFxo3zs2yYCRSomPyGt1kRKI'
 
 window.youtubeService = youtubeService
 
-async function getVideoId(search) {
+async function getTrackId(trackToFind) {
     try {
-        let videoId = loadFromStorage(search)
+        const tracks = loadFromStorage(STORAGE_KEY) || []
 
-        if (videoId) {   // Load from cache
-            console.log('Load from cache')
-            console.log(videoId)
-            return videoId
+        let track = tracks.find(currTrack => currTrack.trackName === trackToFind.name)
+        if (track) return track
+    
+        console.log('trackToFind',trackToFind);
+        console.log('`${trackToFind.artists[0].name} - ${trackToFind.trackName}`',`${trackToFind.artists[0].name} - ${trackToFind.name}`);
+        const url = _getUrl(`${trackToFind.artists[0].name} - ${trackToFind.name}`)
+        const res = await axios.get(url)
+        console.log('track from youtube', res.data.items[0].id.videoId);
+        track = {
+            youtubeId :res.data.items[0].id.videoId,
+            ...trackToFind
+
         }
-
-        const url = _getUrl(search)
-        const res = await axios.get(url) // AJAX req
-        console.log('AJAX req')
-        videoId = res.data.items[0].id.videoId
-
-        saveToStorage(search, videoId)
-
-        return videoId
+        console.log('track',track);
+        tracks.push(track)
+        saveToStorage(STORAGE_KEY, tracks)
+        return track
 
     } catch (error) {
         console.log('err:', error)
@@ -35,23 +38,11 @@ async function getVideoId(search) {
 
 }
 
-function _getUrl(search) {
+function _getUrl(trackName) {
     return `https://www.googleapis.com/youtube/v3/search?` +
         `part=snippet&` +
         `videoEmbeddable=true&` +
         `type=video&` +
-        `key=${YT_KEY}&q=${search}`
+        `key=${YT_KEY}&q=${trackName}`
 }
 
-async function getCurrSong(track) {
-    const song ={
-        artist: track.artists[0].name,
-        name: track.name,
-        youtubeUrl: ''
-    }
-    
-    await getVideoId(`${song.artist} ${song.name}`).then(res => song.youtubeUrl = `https://www.youtube.com/watch?v=${res}`)
-
-    console.log(song)
-    return song
-}

@@ -9,13 +9,19 @@ export function ArtistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  
+
 
   useEffect(() => {
     loadStation(id) // get station on load / when id changed
-    
+
     return clearStation() // clear station when unmount
   }, [id])
+
+  function onPlay(ev, track) {
+    ev.stopPropagation()
+    setTrack(track)
+    togglePlaying()
+  }
 
   function onAddTrack() {
     console.log('add')
@@ -44,7 +50,7 @@ export function ArtistDetails() {
         </div>
 
         <h2>Popular</h2>
-        <TrackList tracks={tracks} onAddTrack={onAddTrack}/>
+        <TrackList tracks={tracks} onAddTrack={onAddTrack} onPlay={onPlay} />
       </section>
     </section>
   )

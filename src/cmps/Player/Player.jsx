@@ -32,11 +32,10 @@ import { PlayerRight } from './PlayerRight'
 
 
 export function Player() {
-    const stations = useSelector(storeState => storeState.stationModule.stations)
-    const currSongIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
-    const currStationIdx = useSelector(storeState => storeState.playerModule.currStationIdx)
     const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
-
+    const currTrackId = useSelector(storeState => storeState.playerModule.currTrackId)
+    const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
+    
     const [volume, setVolume] = useState(0.5)
     const [volumeSnapshot, setVolumeSnapshot] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
@@ -119,7 +118,7 @@ export function Player() {
     }
 
 
-    const videoId = 'tvTRZJ-4EyI'
+    const trackId = 'tvTRZJ-4EyI'
     return (
         <section className="player-container">
 
@@ -175,17 +174,7 @@ export function Player() {
                     </span>
                 </div>
             </div>
-            {/* <PlayerRight
-                isMuted={isMuted}
-                volume={volume}
-                handleMute={handleMute}
-                ref={playerRef}
-                url={`https://www.youtube.com/watch?v=${videoId}`}
-                playing={isPlaying}
-                muted={isMuted}
-                onProgress={handleProgress}
-                onEnded={handleEnd}
-            /> */}
+ 
             <div className="right-controls">
                 <button className="lyrics-btn">
                     <LyricsIcon />
@@ -225,7 +214,7 @@ export function Player() {
             <ReactPlayer
                 className='react-player'
                 ref={playerRef}
-                url={`https://www.youtube.com/watch?v=${videoId}`}
+                url={`https://www.youtube.com/watch?v=${currTrack?.youtubeId}`}
                 playing={isPlaying}
                 muted={isMuted}
                 onProgress={handleProgress}
@@ -233,7 +222,6 @@ export function Player() {
                 height="0"
                 width="0"
             />
-
         </section>
     )
 }

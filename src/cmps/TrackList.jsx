@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
+import { setTrack, togglePlaying } from "../store/actions/player.action"
 
-export function TrackList({tracks, onAddTrack}) {
 
-    if(!tracks) return <div>Loading...</div>
+export function TrackList({ tracks, onAddTrack, onPlay }) {
+
+    if (!tracks) return <div>Loading...</div>
     return (
         <ul className='track-list clean-list'> {//track list rendering
             tracks.map((track, idx) => (
                 <li key={track.id}>
+
                     <span className='track-number'>{idx + 1}</span>
                     <img src={track.album.images[2].url} />
                     <Link className='title'>{track.name}</Link>

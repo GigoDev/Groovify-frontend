@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { setTrack, togglePlaying } from "../store/actions/player.action"
 
 
-export function TrackList({ tracks, onAddTrack }) {
+
+export function TrackList({ tracks, onAddTrack, onPlay }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
     const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
     

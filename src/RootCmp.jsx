@@ -25,8 +25,8 @@ export function RootCmp() {
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="artist/:id" element={<ArtistDetails />} />
-                    {/* <Route path="playlist/:id" element={<PlaylistDetails />} />
-                    <Route path="album/:id" element={<AlbumDetails />} /> */}
+                    {/* <Route path="playlist/:id" element={<PlaylistDetails />} /> */}
+                    {/* <Route path="album/:id" element={<AlbumDetails />} /> */}
                 </Routes>
                 <AppFooter />
             </main>

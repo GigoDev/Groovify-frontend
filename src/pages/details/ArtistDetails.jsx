@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
+import { spotifyService } from '../../services/spotify.service'
 
 import { loadStation, clearStation } from '../../store/actions/station.actions'
 import { setTrack, togglePlaying } from '../../store/actions/player.action'
@@ -10,10 +11,10 @@ export function ArtistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-
+  
 
   useEffect(() => {
-    loadStation(id) // get station on load / when id changed
+  loadStation(id) // get station on load / when id changed
 
     return clearStation() // clear station when unmount
   }, [id])

@@ -1,28 +1,29 @@
 //REACT
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 //CMP
 import { SideFilter } from "./SideFilter";
 import { SideList } from "./SideList";
 import { SideSort } from "./SideSort";
 
 import {stationService} from '../../services/station'
+import { addStation } from "../../store/actions/station.actions";
 //ICONS
 import PlusIcon from "../../assets/icons/PlusIcon.svg"
 import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
 
 export function SideLib({ isCollapsed, onCollapse }) {
     const stations = useSelector(storeState => storeState.stationModule.stations)
-
+    const [filterBy,setFilterBy] = useState('')
 
     useEffect(() => {
         //to filter the station list by sideFilterValue   
 
     }, []);
 
-    async function onAddPlaylist(){
+    function onAddPlaylist(){
         const newPlaylist = stationService.getEmptyPlaylist()
-        const savedPlaylist = await stationService.save(newPlaylist)
+        const savedPlaylist = addStation(newPlaylist)
         console.log(savedPlaylist)
         //store for global updates
     }
@@ -40,7 +41,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
                 </button>
             </div>
             <SideSort />
-            <SideFilter />
+            <SideFilter setFilterBy={setFilterBy}/>
 
             <SideList stations={stations} />
         </section>

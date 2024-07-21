@@ -1,4 +1,5 @@
 .side-menu {
+    height: calc(100vh - 80px);
     &.collapsed {
         width: 70px;
     }

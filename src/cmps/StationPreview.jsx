@@ -5,7 +5,7 @@ export function StationPreview({ station }) {
     return (
         <article className="card">
             <div className="card-img-container square-ratio">
-                <img className="card-img" src={imgs[2].url} />
+                <img className="card-img" src={imgs[(imgs.length-1)].url} />
             </div>
             <span className='card-title'>{name}</span>
         </article>

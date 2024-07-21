@@ -7,7 +7,7 @@ export function SideList({ stations }) {
 
     function handleClick(id, type) {
         setActiveId(id)
-        // navigate(`/${type}/${id}`)
+        navigate(`/${type}/${id}`)
     }
 
     if (!stations) return null
@@ -19,7 +19,7 @@ export function SideList({ stations }) {
                     key={station.id}
                     onClick={() => handleClick(station.id, station.type)}>
                     <div className="img-container square-ratio">
-                        <img src={station.imgs[2].url} />
+                        <img src={station.imgs[(station.imgs.length-1)].url} />
                     </div>
                     <span className='card-title'>{station.name}</span>
                 </article>

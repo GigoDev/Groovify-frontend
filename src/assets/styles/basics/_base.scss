@@ -9,7 +9,13 @@ html {
 
 .app-container{
     color: $clr01;
+
+    .main-container{
+        background-color: $clr07;
+    }
 }
+
+
 
 body {
     font-size: rem(18px);

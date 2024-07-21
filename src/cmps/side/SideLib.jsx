@@ -40,9 +40,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
                     <PlusIcon onClick={onAddPlaylist}/>
                 </button>
             </div>
-            <SideSort />
             <SideFilter setFilterBy={setFilterBy}/>
-
             <SideList stations={stations} />
         </section>
     )

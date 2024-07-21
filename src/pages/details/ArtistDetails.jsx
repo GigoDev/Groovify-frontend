@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
 
 import { loadStation, clearStation } from '../../store/actions/station.actions'
+import { setTrack, togglePlaying } from '../../store/actions/player.action'
 
 export function ArtistDetails() {
 

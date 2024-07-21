@@ -19,9 +19,10 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
         console.log('TODO: add track to liked songs', track)
     }
 
-    function onPlay(track) {
-        console.log('TODO: play track:', track)
-    }
+    // function handlePlay(ev,track) {
+    //     onPlay(ev,track)
+    //     console.log('TODO: play track:', track)
+    // }
 
 
     if (!tracks) return <div>Loading...</div>
@@ -29,7 +30,7 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (
                 <li key={track.id}>
-                    <span className='play-icon' onClick={() => onPlay(track)}>
+                    <span className='play-icon' onClick={(event)=>onPlay(event,track)}>
                         <svg width="17" height="17" viewBox="0 0 16 16" >
                             <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
                                 fill='white'

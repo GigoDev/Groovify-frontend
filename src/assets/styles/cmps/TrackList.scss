@@ -1,38 +1,56 @@
 .track-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 
     li {
-       display: grid;
-       grid-template-columns: 25px 40px 2fr 1fr 50px 100px;
-       align-items: center;
-       justify-items: left;
+        display: grid;
+        grid-template-columns: 30px 40px 2fr 1fr 50px 100px;
+        align-items: center;
+        justify-items: left;
+        padding-block: 10px;
+        padding-inline-start: 20px;
 
-       color: $clr02;
-       font-size: 1rem;
+        color: $clr02;
+        font-size: 1rem;
 
-       &:hover {
-          background-color: $clr06;
+        &:hover {
+            background-color: $clr06;
 
-          .listeners {
-             color: white;
-          }
-       }
+            .listeners {
+                color: white;
+            }
+        }
 
-       .title {
-          justify-self: left;
-          padding-inline-start: 10px;
-          color: white;
+        .title {
+            justify-self: left;
+            padding-inline-start: 10px;
+            color: white;
 
-          &:hover {
-             text-decoration: underline;
-          }
-       }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
-       .add-btn svg:hover{
-             cursor: pointer;
-             fill: white;
-       }
+        .add-btn svg:hover {
+            cursor: pointer;
+            fill: white;
+        }
+    }
+
+    .btn.show-more {
+        display: flex;
+        justify-content: start;
+        width: 100px;
+        padding-block: 20px;
+
+        cursor: pointer;
+        border: none;
+        color: $clr02;
+        background-color: transparent;
+        font-family: 'circular-bold';
+
+        &:hover {
+            color: $clr01
+        }
     }
 }

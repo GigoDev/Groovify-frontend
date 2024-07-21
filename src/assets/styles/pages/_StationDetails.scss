@@ -7,10 +7,11 @@
 
    .hero {
       position: fixed;
-      // z-index: 0;
+      z-index: 0;
 
       height: $hero-img-height;
       width: 100%;
+      padding-top: 12px;
 
       img {
          width: 100%;
@@ -21,10 +22,11 @@
 
    .hero-info {
       position: relative;
-      // z-index: 0;
+      z-index: 0;
       height: $hero-img-height;
       padding: 0px 0px 24px 24px;
       align-content: end;
+      background-color: transparent;
       
       .title {
          font-family: circular-bold;
@@ -35,8 +37,11 @@
       .listeners {}
    }
 
+
    .station-content {
+      position: relative;
       background-color: black; // gradient
+      padding-inline-start: 10px;
 
       .controlls {
          display: flex;
@@ -55,11 +60,12 @@
          }
 
          .follow {
-            padding: 6px 25px;
+            padding: 7px 25px;
             background-color: transparent;
             border: 1px solid rgba(255, 255, 255, 0.5);
             color: white;
             cursor: pointer;
+            font-family: circular-bold;
 
             &:hover {
                scale: 1.05;

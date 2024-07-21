@@ -40,7 +40,7 @@ export function StationDetails() {
           <button className='btn play'>
             <svg role="img" fill="black" height="20" width="20" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.12L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
           </button>
-          <button className='btn pill follow'>follow</button>
+          <button className='btn pill follow'>Follow</button>
         </div>
 
         <h2>Popular</h2>

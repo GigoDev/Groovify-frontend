@@ -1,11 +1,21 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
-export function TrackList({tracks, onAddTrack}) {
+export function TrackList({ tracks, onAddTrack }) {
+    const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
+    const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
 
-    if(!tracks) return <div>Loading...</div>
+    function handleMoreLessClick() {
+        if (tracks.length < 5) return
+        else if (visibleTracks === 5) setVisibleTracks(tracks.length)
+        else if (visibleTracks > 5) setVisibleTracks(5)
+    }
+
+
+    if (!tracks) return <div>Loading...</div>
     return (
         <ul className='track-list clean-list'> {//track list rendering
-            tracks.map((track, idx) => (
+            tracks.slice(0, visibleTracks).map((track, idx) => (
                 <li key={track.id}>
                     <span className='track-number'>{idx + 1}</span>
                     <img src={track.album.images[2].url} />
@@ -16,6 +26,10 @@ export function TrackList({tracks, onAddTrack}) {
                 </li>
             ))
         }
+
+            <button className="btn show-more" onClick={handleMoreLessClick}>
+                {visibleTracks > 5 ? 'Show less' : 'See more'}
+            </button>
         </ul>
 
     )

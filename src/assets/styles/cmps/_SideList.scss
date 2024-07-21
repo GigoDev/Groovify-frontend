@@ -6,6 +6,14 @@
         padding: 8px 10px;
         background-color: $clr07;
 
+        &:hover {
+            background-color: $clr06;
+        }
+
+        &.active {
+            background-color: $clr05;
+        }
+
         
         .img-container{
            width: 50px;

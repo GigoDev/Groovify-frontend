@@ -6,8 +6,7 @@ import { useSelector } from "react-redux";
 export function SideMenu() {
     const [isCollapsed, setIsCollapsed] = useState(false)
     const stations = useSelector(storeState => storeState.stationModule.stations)
-    console.log('stations', stations)
-
+    
     function handleCollapse() {
         setIsCollapsed(prevState => !prevState)
     }

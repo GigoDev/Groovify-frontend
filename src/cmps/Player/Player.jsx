@@ -49,16 +49,13 @@ export function Player() {
     const [totalSongTime, setTotalSongTime] = useState(0)
 
     const playerRef = useRef(null)
-    let shuffleSongs = [] 
+    let shuffleSongs = []
 
-    let TrackDuration = getDuration()
-
-    useEffectUpdate(() => { 
+    useEffectUpdate(() => {
         togglePlay()
     }, [currTrack])
 
     function onPlay() {
-        console.log(isPlaying)
         togglePlay(!isPlaying)
     }
 
@@ -141,14 +138,6 @@ export function Player() {
                 album={album}
                 name={name} />
 
-            {/* <PlayerCenter
-                setShuffle={setShuffle}
-                setLoop={setLoop}
-                setShowRemainder={setShowRemainder}
-                formatTime={formatTime}
-                playerRef={playerRef}
-            /> */}
-
             <div className="center-controls">
 
                 <div className="top-center-controls">
@@ -177,23 +166,18 @@ export function Player() {
                 </div>
 
                 <div className="bottom-center-controls">
-                    <span className="time-progress-1">{formatTime(currSongTime)}</span>
-                    <div className="progress-bar" style={{ width: `${progress / totalSongTime * 100}%` }}></div>
-                    <div className="progress-container" >
-                        <input
-                            className="prog progress-bar timestamp"
-                            type="range"
-                            id='progressRange'
-                            name='progressRange'
-                            min="0"
-                            step={0.1}
-                            value={progress}
-                            onChange={handleSeek}
-                            max={playerRef.current ? playerRef.current.getDuration() : 0} />
-                    </div>
-                    <span className="time-progress-2">
-                        {formatTime(totalSongTime)}
-                    </span>
+                    <span className="time-progress">{formatTime(currSongTime)}</span>
+
+                    <input
+                        className="progress-bar "
+                        type="range"
+                        min="0"
+                        step={1}
+                        value={progress}
+                        onChange={handleSeek}
+                        max={totalSongTime} />
+
+                    <span className="time-progress"> {formatTime(totalSongTime)} </span>
                 </div>
             </div>
 

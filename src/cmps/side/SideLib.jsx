@@ -18,8 +18,8 @@ export function SideLib({ isCollapsed, onCollapse }) {
 
     useEffect(() => {
         setFiltered(stations.filter(station => station.type === filterBy.type))
-        console.log('filterBy',filterBy)
-    }, [filterBy]);
+        // console.log('filterBy',filterBy)
+    }, [filterBy,stations]);
 
    
     function onAddPlaylist(){

@@ -1,12 +1,20 @@
-import { ImgUploader } from "../../cmps/ImgUploader";
-import { PlaylistList } from "../../cmps/PlaylistList";
+//REACT&READUX
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { clearStation, loadStation } from "../../store/actions/station.actions";
+
+
+import { ImgUploader } from "../../cmps/ImgUploader";
+import { formatDuration } from "../../services/util.service";
+//CMPS
+import { PlaylistList } from "../../cmps/PlaylistList";
+import { UpdateStationModal } from '../../cmps/UpdateStationModal';
+
+//ICONS
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import DurationIcon from '../../assets/icons/DurationIcon.svg'
-import { useEffect } from "react";
-import { clearStation, loadStation } from "../../store/actions/station.actions";
-import { formatDuration } from "../../services/util.service";
+
 
 export function PlaylistDetails() {
 
@@ -14,13 +22,16 @@ export function PlaylistDetails() {
   const station = useSelector(storeState => storeState.stationModule.station)
   const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     loadStation(id)
     return clearStation()
   }, [id])
 
-  
+  function openEditModal() {
+    setIsModalOpen(true)
+  }
 
   if (!station) return <h1>Loading...</h1>
   const { imgs, listeners, name, type, tracks, likes } = station
@@ -30,21 +41,20 @@ export function PlaylistDetails() {
   const formattedDuration = formatDuration(totalDuration)
   return (
     <section className="playlist-details">
-
       <section className="station-preview flex full">
         <ImgUploader imgUrl={imgUrl} className="img-uploader-container" />
         <div className="station-summary">
           <p className="summary-title">{type}</p>
-          <h1 className="pointer">{name}</h1>
+          <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           <div className="mini-dashboard">
             John Doe • {likes.toLocaleString()} likes • {tracks.total} songs
             <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
           </div>
         </div>
       </section>
+
       <section className="song-list-container content-layout">
         <section className="playlist-actions">
-
           <button className="btn-play-green">
             <PlayIcon />
           </button>
@@ -54,16 +64,23 @@ export function PlaylistDetails() {
             </button>
           </div>
         </section>
-        <div className="list-titles">
-          <span>#</span>
-          <span>Title</span>
-          <span>Album</span>
-          <span>Date Added</span>
-          <DurationIcon className="duration" />
-        </div>
-        <PlaylistList items={tracks.items}/>
 
+
+        {tracks.items.length > 0 ? (
+          <div className="list-titles">
+            <span>#</span>
+            <span>Title</span>
+            <span>Album</span>
+            <span>Date Added</span>
+            <DurationIcon className="duration" />
+          </div>
+        ) : (null)}
+
+        <PlaylistList items={tracks.items} />
       </section>
+      <UpdateStationModal
+        isModalOpen={isModalOpen} 
+        setIsModalOpen={setIsModalOpen}/>
     </section>
 
   )

@@ -5,13 +5,16 @@ import { TrackList } from '../../cmps/TrackList'
 import { spotifyService } from '../../services/spotify.service'
 
 import { loadStation, clearStation } from '../../store/actions/station.actions'
-import { setTrack, togglePlaying } from '../../store/actions/player.action'
+import { setTrack, togglePlay } from '../../store/actions/player.action'
+import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
 
 export function ArtistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  
+  const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
+  const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+
 
   useEffect(() => {
   loadStation(id) // get station on load / when id changed
@@ -19,10 +22,13 @@ export function ArtistDetails() {
     return clearStation() // clear station when unmount
   }, [id])
 
+
+
   function onPlay(ev, track) {
     ev.stopPropagation()
+    if (track.id === currTrack.id) return togglePlay(!isPlaying)
+
     setTrack(track)
-    togglePlaying()
   }
 
   function onAddTrack() {

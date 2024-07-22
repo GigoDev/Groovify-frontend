@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { setTrack, togglePlaying } from "../store/actions/player.action"
 
 
 
@@ -18,12 +17,6 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
     function onAddTrack(track) {
         console.log('TODO: add track to liked songs', track)
     }
-
-    // function handlePlay(ev,track) {
-    //     onPlay(ev,track)
-    //     console.log('TODO: play track:', track)
-    // }
-
 
     if (!tracks) return <div>Loading...</div>
     return (

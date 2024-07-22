@@ -1,15 +1,16 @@
 // React:
-
 import React, { useRef, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useDispatch, useSelector } from 'react-redux'
+import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
 
 
-import { togglePlaying } from '../../store/actions/player.action'
+import { togglePlay } from '../../store/actions/player.action'
 import { formatTime } from '../../services/util.service'
 
 // Player controls:
 import { PlayerLeft } from './PlayerLeft'
+// import { PlayerCenter } from './PlayerCenter'
 
 // SVGs:
 import ShuffleIcon from '../../assets/icons/ShuffleIcon.svg'
@@ -18,6 +19,7 @@ import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import PauseIcon from '../../assets/icons/PauseIcon.svg'
 import NextSong from '../../assets/icons/NextSong.svg'
 import LoopIcon from '../../assets/icons/LoopIcon.svg'
+
 import LyricsIcon from '../../assets/icons/LyricsIcon.svg'
 import PlayerViewerIcon from '../../assets/icons/PlayerViewerIcon.svg'
 import QueueIcon from '../../assets/icons/QueueIcon.svg'
@@ -28,14 +30,12 @@ import Volume033Icon from '../../assets/icons/Volume033Icon.svg'
 import Volume066Icon from '../../assets/icons/Volume066Icon.svg'
 import MiniPlayerIcon from '../../assets/icons/MiniPlayerIcon.svg'
 import FullScreenIcon from '../../assets/icons/FullScreenIcon.svg'
-import { PlayerRight } from './PlayerRight'
 
 
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
-    const currTrackId = useSelector(storeState => storeState.playerModule.currTrackId)
     const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
-    
+
     const [volume, setVolume] = useState(0.5)
     const [volumeSnapshot, setVolumeSnapshot] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
@@ -47,22 +47,16 @@ export function Player() {
     const [progress, setProgress] = useState(0)
     const [currSongTime, setCurrSongTime] = useState(0)
     const [totalSongTime, setTotalSongTime] = useState(0)
-    const [currSongRemainder, setCurrSongRemainder] = useState(0)
-    const [showRemainder, setShowRemainder] = useState(false)
-    const [prevSongIdx, setPrevSongIdx] = useState(null)
-
-    const dispatch = useDispatch()
 
     const playerRef = useRef(null)
     let shuffleSongs = []
-    useEffect(() => {
-        setCurrSongRemainder(totalSongTime - currSongTime) // updates the remaining time whenever the progress or total time changes
-    }, [currSongTime, totalSongTime])
 
-
+    useEffectUpdate(() => {
+        togglePlay()
+    }, [currTrack])
 
     function onPlay() {
-        dispatch(togglePlaying(isPlaying))
+        togglePlay(!isPlaying)
     }
 
     function handleProgress(state) {
@@ -110,6 +104,10 @@ export function Player() {
         setIsMuted(!isMuted)
     }
 
+    function getDuration(duration) {
+        return duration
+    }
+
     function handleVolumeChange(ev) {
         if (isMuted) setIsMuted(!isMuted)
         const newVolume = parseFloat(ev.target.value)
@@ -117,12 +115,28 @@ export function Player() {
         setVolumeSnapshot(volume)
     }
 
-
-    const trackId = 'tvTRZJ-4EyI'
+    const { album, name } = currTrack
     return (
+
+
         <section className="player-container">
 
-            <PlayerLeft />
+            <ReactPlayer
+                className='react-player'
+                ref={playerRef}
+                url={`https://www.youtube.com/watch?v=${currTrack?.youtubeId}`}
+                playing={isPlaying}
+                muted={isMuted}
+                onProgress={handleProgress}
+                onEnded={handleEnd}
+                onDuration={getDuration}
+                height="0"
+                width="0"
+            />
+
+            <PlayerLeft
+                album={album}
+                name={name} />
 
             <div className="center-controls">
 
@@ -152,29 +166,21 @@ export function Player() {
                 </div>
 
                 <div className="bottom-center-controls">
-                    <span className="time-progress-1">{formatTime(currSongTime)}</span>
-                    <div className="progress-bar" style={{ width: `${progress / totalSongTime * 100}%` }}></div>
-                    <div className="progress-container" >
-                        <input
-                            className="prog progress-bar timestamp"
-                            type="range"
-                            id='progressRange'
-                            name='progressRange'
-                            min="0"
-                            step={0.1}
-                            value={progress}
-                            onChange={handleSeek}
-                            max={playerRef.current ? playerRef.current.getDuration() : 0} />
-                    </div>
-                    <span className="time-progress-2" onClick={() => {
-                        setShowRemainder(!showRemainder)
-                        setCurrSongRemainder(totalSongTime - currSongTime)
-                    }}>
-                        {isPlaying ? showRemainder ? '-' + formatTime(currSongRemainder) : formatTime(totalSongTime) : '-:--'}
-                    </span>
+                    <span className="time-progress">{formatTime(currSongTime)}</span>
+
+                    <input
+                        className="progress-bar "
+                        type="range"
+                        min="0"
+                        step={1}
+                        value={progress}
+                        onChange={handleSeek}
+                        max={totalSongTime} />
+
+                    <span className="time-progress"> {formatTime(totalSongTime)} </span>
                 </div>
             </div>
- 
+
             <div className="right-controls">
                 <button className="lyrics-btn">
                     <LyricsIcon />
@@ -211,17 +217,7 @@ export function Player() {
                 </button>
             </div>
 
-            <ReactPlayer
-                className='react-player'
-                ref={playerRef}
-                url={`https://www.youtube.com/watch?v=${currTrack?.youtubeId}`}
-                playing={isPlaying}
-                muted={isMuted}
-                onProgress={handleProgress}
-                onEnded={handleEnd}
-                height="0"
-                width="0"
-            />
+
         </section>
     )
 }

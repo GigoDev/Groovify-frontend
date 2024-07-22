@@ -5,7 +5,7 @@ export const youtubeService = {
     getTrackId,
 }
 
-const STORAGE_KEY = 'tracks_ids_DB'
+const STORAGE_KEY = 'tracks_DB'
 const YT_KEY = 'AIzaSyBSWt3 - m0mxFxo3zs2yYCRSomPyGt1kRKI'
 
 window.youtubeService = youtubeService
@@ -13,19 +13,14 @@ window.youtubeService = youtubeService
 async function getTrackId(trackToFind) {
     try {
         const tracks = loadFromStorage(STORAGE_KEY) || []
-
-        let track = tracks.find(currTrack => currTrack.trackName === trackToFind.name)
+        let track = tracks.find(currTrack => currTrack.name === trackToFind.name)
         if (track) return track
     
-        console.log('trackToFind',trackToFind);
-        console.log('`${trackToFind.artists[0].name} - ${trackToFind.trackName}`',`${trackToFind.artists[0].name} - ${trackToFind.name}`);
         const url = _getUrl(`${trackToFind.artists[0].name} - ${trackToFind.name}`)
         const res = await axios.get(url)
-        console.log('track from youtube', res.data.items[0].id.videoId);
         track = {
-            youtubeId :res.data.items[0].id.videoId,
-            ...trackToFind
-
+            ...trackToFind,
+            youtubeId :res.data.items[0].id.videoId
         }
         console.log('track',track);
         tracks.push(track)

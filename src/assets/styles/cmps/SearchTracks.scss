@@ -1,41 +1,43 @@
 .station-song-search {
-    padding-top: 30px;
-    border-top: 1px solid #323232;
-    justify-content: space-between;
-    margin-block-end: 20px;
-
-    h1 {
-        margin-bottom: rem(30px);
-        font-size: rem(24px);
-    }
-
-    button {
-        background-color: unset;
-    }
+    display: flex;
+    flex-direction: column;
+    font-family: circular-bold;
+    gap: 1rem;
 
     .search-input {
         position: relative;
+        width: 320px;
 
-        .search-svg {
-            fill: #c0c0c0;
+        svg {
             position: absolute;
-            height: 16px;
-            width: 16px;
-            top: 12px;
-            left: 0;
-            margin-inline-start: 10px;
+            fill: $clr02;
+            left: 9px;
+            top: 13px;
         }
 
         input {
-            background-color: $clr10;
-            color: #c0c0c0;
+            height: 43px;
+            border-radius: 20px;
+            width: 100%; 
+            background-color: $clr13;
+            padding: 10px 0 8px 33px;
             border: 0;
-            border-radius: 4px;
-            padding: rem(8px) rem(32px);
-            width: 100%;
-            height: 40px;
 
+            &::placeholder {
+                color: $clr12;
+            }
         }
     }
 
+    .track-previews {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; 
+
+        p {
+            color: #888; 
+            text-align: center; 
+            margin: 0;
+        }
+    }
 }

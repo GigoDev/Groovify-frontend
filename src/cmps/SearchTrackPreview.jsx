@@ -1,19 +1,19 @@
 
 import PlayIcon from '../assets/icons/PlayIcon.svg'
 
-export function SearchTrackPreview() {
+export function SearchTrackPreview({ track }) {
     return (
         <li className="station-search-preview">
             <div className="song-img-container">
                 <div className="song-img">
-                    <img src="http://res.cloudinary.com/dmbgmvobl/image/upload/v1721056820/dkdgpdfddmrsvnyfrjdn.png" alt="" />
+                    <img src={track.thumbnail} alt="" />
                 </div>
                 <div className="btn-play-pause">
                     <PlayIcon />
                 </div>
             </div>
             <div className="song-title">
-                <span className="artist-name">John Doe</span>
+                <span className="artist-name">{track.title}</span>
             </div>
             <button className="btn-add-song">Add</button>
         </li>

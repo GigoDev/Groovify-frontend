@@ -1,7 +1,7 @@
 import { storageService } from '../async-storage.service.js'
 import { makeId, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
-import { stations as dataStations} from '../../../data/stations.js'
+import { stations as dataStations, stations } from '../../../data/stations.js'
 
 //local storage keys
 const STORAGE_KEY = 'station'
@@ -12,7 +12,8 @@ export const stationService = {
     save,
     remove,
     addStationMsg,
-    getDefaultTrack
+    getDefaultTrack,
+    setPrevNextTrack
 }
 // window.cs = stationService
 
@@ -20,7 +21,7 @@ async function query(filterBy = { txt: '' }) {
     let stations = await storageService.query(STORAGE_KEY)
     if (!stations || stations.length === 0) {
         saveToStorage(STORAGE_KEY, dataStations)
-        
+
         stations = dataStations.slice()
     }
     const { txt } = filterBy
@@ -67,8 +68,15 @@ async function addStationMsg(stationId, txt) {
     return msg
 }
 
-function getDefaultTrack(){
-    
+function setPrevNextTrack({ tracks }) {
+    tracks.forEach((track, idx) => {
+        track.nextId = tracks[idx + 1] || null
+        track.prevId = tracks[idx - 1] || null
+    })
+}
+
+function getDefaultTrack() {
+
     return {
         id: "1uvyZBs4IZYRebHIB1747m",
         name: "Purple Rain",

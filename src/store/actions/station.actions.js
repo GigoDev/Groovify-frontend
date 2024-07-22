@@ -16,6 +16,7 @@ export async function loadStations(filterBy) {
 export async function loadStation(stationId) {
     try {
         const station = await stationService.getById(stationId)
+        stationService.setPrevNextTrack(station)
         store.dispatch(getCmdSetStation(station))
         return station
     } catch (err) {

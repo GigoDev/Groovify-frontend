@@ -1,7 +1,7 @@
 // React:
 import React, { useRef, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player/youtube'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
 
 
@@ -152,8 +152,7 @@ export function Player() {
                     </button>
 
                     <button className="play-btn" onClick={onPlay} >
-                        {isPlaying ? (<PlayIcon />) : (<PauseIcon />)
-                        }
+                        {isPlaying ? <PauseIcon /> : <PlayIcon /> }
                     </button>
                     <button className="next-btn " onClick={onNext}>
                         <NextSong />

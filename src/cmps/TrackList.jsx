@@ -1,12 +1,16 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import PlayIcon from '.././assets/icons/PlayIcon.svg'
+import PauseIcon from '.././assets/icons/PauseIcon.svg'
+import { useSelector } from 'react-redux'
 
 
 
 export function TrackList({ tracks, onAddTrack, onPlay }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
     const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
-    
+    const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+
 
     function handleMoreLessClick() {
         if (tracks.length < 5) return
@@ -23,14 +27,8 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (
                 <li key={track.id}>
-                    <span className='play-icon' onClick={(event)=>onPlay(event,track)}>
-                        <svg width="17" height="17" viewBox="0 0 16 16" >
-                            <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-                                fill='white'
-                                stroke='white'
-                                strokeWidth={1}>
-                            </path>
-                        </svg>
+                    <span className='play-btn' onClick={(event) => onPlay(event, track)}>
+                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </span>
                     <span className='track-number'>{idx + 1}</span>
                     <img src={track.album.images[2].url} />

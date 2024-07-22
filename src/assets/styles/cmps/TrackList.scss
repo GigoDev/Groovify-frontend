@@ -20,8 +20,13 @@
                 display: none;
             }
 
-            .play-icon{
+            .play-btn{
                 display: inline-block;
+                cursor: pointer;
+
+                svg path{
+                    fill: white;
+                }
             }
 
             .listeners {
@@ -34,7 +39,7 @@
             cursor: pointer;
         }
         
-        .play-icon{
+        .play-btn{
             display: none;
         }
 

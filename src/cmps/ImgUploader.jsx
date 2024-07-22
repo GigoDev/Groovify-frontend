@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { uploadService } from '../services/upload.service'
 
+import MusicNoteIcon from '../assets/icons/MusicNoteIcon.svg'
+import LoaderIcon from '../assets/icons/LoaderIcon.svg'
+import PencilIcon from '../assets/icons/PencilIcon.svg'
+
 export function ImgUploader({ onUploaded = null }) {
   const [imgData, setImgData] = useState({
     imgUrl: null,
@@ -23,10 +27,36 @@ export function ImgUploader({ onUploaded = null }) {
   }
 
   return (
-    <div className="upload-preview">
-      {imgData.imgUrl && <img src={imgData.imgUrl} style={{ maxWidth: '200px', float: 'right' }} />}
-      <label htmlFor="imgUpload">{getUploadLabel()}</label>
-      <input type="file" onChange={uploadImg} accept="img/*" id="imgUpload" />
+    <div className="img-uploader-container">
+      {imgData.imgUrl ? (
+        <img src={imgData.imgUrl} className="fit-img" />
+      ) : (
+        <div className="alt-img">
+          {!isUploading && <MusicNoteIcon />}
+        </div>
+      )}
+
+      {isUploading && (
+        <div className="loader-container">
+          <LoaderIcon />
+        </div>
+      )}
+
+      <label className="img-uploader">
+        <div className="img-change-cover">
+          <div>
+            <PencilIcon />
+            <h4 className="light">{getUploadLabel()}</h4>
+          </div>
+        </div>
+        <input
+          type="file"
+          accept=".jpg, .jpeg, .png"
+          onChange={uploadImg}
+          style={{ display: 'none'}}
+          id="imgUpload"
+        />
+      </label>
     </div>
   )
 }

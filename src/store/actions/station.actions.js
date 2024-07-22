@@ -110,8 +110,8 @@ export function setTracks() {
 
 export function playNextPrev(i) {
     const { currTrack, currPlayingTracks } = store.getState().stationModule
-    const nextIdx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id)
-    setTrack(currPlayingTracks[nextIdx])
+    const Idx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id)
+    setTrack(currPlayingTracks[Idx])
 }
 
 

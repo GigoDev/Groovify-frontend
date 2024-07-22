@@ -77,6 +77,8 @@
         align-items: center;
         gap: 10px;
 
+        margin-inline: 1rem;
+
         .top-center-controls {
             display: flex;
             gap: 10px;
@@ -96,12 +98,22 @@
 
                 }
             }
+
+            .loop-btn {
+
+                &.active svg {
+                    fill: $clrGreen;
+                }
+            }
         }
 
         .bottom-center-controls {
             display: flex;
             align-items: center;
             gap: 10px;
+
+            width: 100%;
+            max-width: 600px;
 
             .time-progress {
                 color: white;

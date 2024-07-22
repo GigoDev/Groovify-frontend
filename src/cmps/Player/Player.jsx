@@ -35,12 +35,14 @@ import FullScreenIcon from '../../assets/icons/FullScreenIcon.svg'
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    const currPlayingTracks = useSelector(storeState => storeState.stationModule.currPlayingTracks)
+
 
     const [volume, setVolume] = useState(0.5)
     const [volumeSnapshot, setVolumeSnapshot] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
 
-    const [loop, setLoop] = useState(false)
+    const [isLoop, setLoop] = useState(false)
     const [shuffle, setShuffle] = useState(false)
 
     // Time states
@@ -74,19 +76,6 @@ export function Player() {
         playerRef.current.seekTo(seekProgress)
     }
 
-    function handleEnd() {
-        if (loop) {
-            setProgress(0)
-            playerRef.current.SeekTo(0)
-            if (isPlaying) {
-                playerRef.current.play()
-            }
-        } else {
-            onNext()
-        }
-    }
-
-
     function handleMute() {
         if (isMuted || volume === 0) {
             setVolume(volumeSnapshot)
@@ -119,9 +108,10 @@ export function Player() {
                 ref={playerRef}
                 url={`https://www.youtube.com/watch?v=${currTrack?.youtubeId}`}
                 playing={isPlaying}
+                loop={isLoop}
                 muted={isMuted}
                 onProgress={handleProgress}
-                onEnded={handleEnd}
+                onEnded={() => playNextPrev(1)}
                 onDuration={getDuration}
                 height="0"
                 width="0"
@@ -150,8 +140,8 @@ export function Player() {
                     <button className="next-btn " onClick={() => playNextPrev(1)}>
                         <NextSong />
                     </button>
-                    <button className={'loop-btn' + (loop ? ' active' : '')} onClick={() => {
-                        setLoop(!loop)
+                    <button className={'loop-btn' + (isLoop ? ' active' : '')} onClick={() => {
+                        setLoop(!isLoop)
                     }}>
                         <LoopIcon />
                     </button>

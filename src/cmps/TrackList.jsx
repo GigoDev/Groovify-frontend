@@ -10,6 +10,7 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
     const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
     const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+    const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
 
 
     function handleMoreLessClick() {
@@ -22,13 +23,14 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
         console.log('TODO: add track to liked songs', track)
     }
 
+
     if (!tracks) return <div>Loading...</div>
     return (
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (
                 <li key={track.id}>
                     <span className='play-btn' onClick={(event) => onPlay(event, track)}>
-                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                        {isPlaying && currTrack.id === track.id ? <PauseIcon /> : <PlayIcon />}
                     </span>
                     <span className='track-number'>{idx + 1}</span>
                     <img src={track.album.images[2].url} />

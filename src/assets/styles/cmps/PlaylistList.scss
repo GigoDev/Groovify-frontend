@@ -6,7 +6,7 @@
 
    li {
       display: grid;
-      grid-template-columns: 20px 40px 1fr 1fr 200px 1fr;
+      grid-template-columns: 30px 40px 1fr 1fr 260px 1fr;
       padding: 10px;
       align-items: center;
       color: $clr02;
@@ -27,7 +27,7 @@
             display: inline-block;
             cursor: pointer;
             
-            svg{
+            svg {
                width: 14px;
                height: 14px;
             }
@@ -47,8 +47,14 @@
          padding-inline-end: 4em;
       }
 
+      .date{
+         justify-self: center;
+         padding-inline-end: 4.5em;
+      }
+
       .title {
          color: white;
+         
 
          &:hover {
             text-decoration: underline;
@@ -61,7 +67,6 @@
          object-fit: cover;
          border-radius: 4px;
       }
-
 
       .add-btn svg:hover {
          cursor: pointer;

@@ -1,17 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { uploadService } from '../services/upload.service'
 
 import MusicNoteIcon from '../assets/icons/MusicNoteIcon.svg'
 import LoaderIcon from '../assets/icons/LoaderIcon.svg'
 import PencilIcon from '../assets/icons/PencilIcon.svg'
 
-export function ImgUploader({ onUploaded = null }) {
+export function ImgUploader({ imgUrl = null, onUploaded = null }) {
   const [imgData, setImgData] = useState({
-    imgUrl: null,
+    imgUrl: imgUrl,
     height: 500,
     width: 500,
   })
   const [isUploading, setIsUploading] = useState(false)
+
+  useEffect(() => {
+    if (imgUrl) {
+      setImgData((prevState) => ({
+        ...prevState,
+        imgUrl: imgUrl,
+      }))
+    }
+  }, [imgUrl])
 
   async function uploadImg(ev) {
     setIsUploading(true)

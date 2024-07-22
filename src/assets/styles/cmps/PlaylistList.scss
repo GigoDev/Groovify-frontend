@@ -12,10 +12,26 @@
       color: $clr02;
       font-size: 1rem;
 
+      .play-icon {
+         display: none;
+      }
+
       &:hover {
          background-color: $clr06;
 
-         
+         .playlist-number {
+            display: none;
+         }
+
+         .play-icon {
+            display: inline-block;
+            cursor: pointer;
+            
+            svg{
+               width: 14px;
+               height: 14px;
+            }
+         }
       }
 
       .name {
@@ -26,13 +42,14 @@
          justify-content: space-around;
       }
 
-      .createdAt{
+      .createdAt {
          justify-self: end;
          padding-inline-end: 4em;
       }
 
       .title {
          color: white;
+
          &:hover {
             text-decoration: underline;
          }

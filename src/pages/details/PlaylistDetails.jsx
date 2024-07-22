@@ -12,8 +12,8 @@ export function PlaylistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
-  const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+  const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+  const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
   useEffect(() => {
     loadStation(id)
@@ -26,7 +26,7 @@ export function PlaylistDetails() {
   const { imgs, listeners, name, type, tracks, likes } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
-  const totalDuration = tracks.items.reduce((acc, track) => acc + track.duration, 0)
+  const totalDuration = tracks.items?.reduce((acc, track) => acc + track.duration, 0)
   const formattedDuration = formatDuration(totalDuration)
   return (
     <section className="playlist-details">

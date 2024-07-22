@@ -22,7 +22,6 @@ async function getTrackId(trackToFind) {
             ...trackToFind,
             youtubeId :res.data.items[0].id.videoId
         }
-        console.log('track',track);
         tracks.push(track)
         saveToStorage(STORAGE_KEY, tracks)
         return track

@@ -1,8 +1,10 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
-import { ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG } from '../reducers/station.reducer'
+import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_TRACKS, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
+import { youtubeService } from '../../services/youtube.service.js'
 
+// Station actions:
 export async function loadStations(filterBy) {
     try {
         const stations = await stationService.query(filterBy)
@@ -72,11 +74,46 @@ export function clearStation() {
     store.dispatch(getCmdSetStation())
 }
 
-export function toggleLibraryAction(){
+export function toggleLibraryAction() {
     return {
         type: MENU_TOGGLE
     }
 }
+
+// Station actions:
+export async function togglePlay(isPlaying = true) {
+    try {
+        store.dispatch(getActionIsPlaying(isPlaying))
+    } catch (err) {
+        console.log('cannot play/pause', err)
+        throw err
+    }
+}
+
+export async function setTrack(track) {
+    try {
+        const newTrack = await youtubeService.getTrackId(track)
+        store.dispatch(getActionSetTrack(newTrack))
+    } catch (err) {
+        console.log('cannot play/pause', err)
+        throw err
+    }
+}
+export function setTracks() {
+    try {
+        store.dispatch({ type: SET_CURR_TRACKS })
+    } catch (err) {
+        console.log('cannot play/pause', err)
+        throw err
+    }
+}
+
+export function playNextPrev(i) {
+    const { currTrack, currPlayingTracks } = store.getState().stationModule
+    const nextIdx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id)
+    setTrack(currPlayingTracks[nextIdx])
+}
+
 
 // Command Creators:
 function getCmdSetStations(stations) {
@@ -115,6 +152,21 @@ function getCmdAddStationMsg(msg) {
         msg
     }
 }
+
+export function getActionIsPlaying(isPlaying) {
+    return {
+        type: IS_PLAYING,
+        isPlaying
+    }
+}
+
+export function getActionSetTrack(track) {
+    return {
+        type: SET_CURR_TRACK,
+        currTrack: track
+    }
+}
+
 
 // unitTestActions()
 async function unitTestActions() {

@@ -1,3 +1,6 @@
+import { stationService } from "../../services/station/station.service.local"
+
+// Station CMDs
 export const SET_STATIONS = 'SET_STATIONS'
 export const SET_STATION = 'SET_STATION'
 export const REMOVE_STATION = 'REMOVE_STATION'
@@ -5,15 +8,24 @@ export const ADD_STATION = 'ADD_STATION'
 export const UPDATE_STATION = 'UPDATE_STATION'
 export const ADD_STATION_MSG = 'ADD_STATION_MSG'
 
+// Player CMDs
+export const SET_CURR_TRACK = 'SET_CURR_TRACK'
+export const SET_CURR_TRACKS = 'SET_CURR_TRACKS'
+export const IS_PLAYING = 'IS_PLAYING'
+
 const initialState = {
     stations: [],
-    station: null
+    station: null,
+    isPlaying: false,
+    currTrack: stationService.getDefaultTrack(),
+    currPlayingTracks: null
 }
 
 export function stationReducer(state = initialState, action) {
     var newState = state
     var stations
     switch (action.type) {
+        // Station:
         case SET_STATIONS:
             newState = { ...state, stations: action.stations }
             break
@@ -35,7 +47,19 @@ export function stationReducer(state = initialState, action) {
         case ADD_STATION_MSG:
             newState = { ...state, station: { ...state.station, msgs: [...state.station.msgs || [], action.msg] } }
             break
+
+        // Player:
+        case SET_CURR_TRACK:
+            newState = { ...state, currTrack: action.currTrack }
+            break
+        case SET_CURR_TRACKS:
+            newState = { ...state, currPlayingTracks: state.station.tracks }
+            break
+        case IS_PLAYING:
+            newState = { ...state, isPlaying: action.isPlaying }
+            break
         default:
+            return state
     }
     return newState
 }

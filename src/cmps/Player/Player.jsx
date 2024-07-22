@@ -1,11 +1,11 @@
 // React:
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
 import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
 
 
-import { togglePlay } from '../../store/actions/player.action'
+import { playNextPrev, togglePlay } from '../..//store/actions/station.actions'
 import { formatTime } from '../../services/util.service'
 
 // Player controls:
@@ -33,8 +33,8 @@ import FullScreenIcon from '../../assets/icons/FullScreenIcon.svg'
 
 
 export function Player() {
-    const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
-    const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
     const [volume, setVolume] = useState(0.5)
     const [volumeSnapshot, setVolumeSnapshot] = useState(0.5)
@@ -86,13 +86,6 @@ export function Player() {
         }
     }
 
-    function onNext() {
-
-    }
-
-    function onPrev() {
-
-    }
 
     function handleMute() {
         if (isMuted || volume === 0) {
@@ -147,14 +140,14 @@ export function Player() {
                         <ShuffleIcon />
                     </button>
 
-                    <button className="prev-btn" onClick={onPrev}>
+                    <button className="prev-btn" onClick={() => playNextPrev(-1)}>
                         <PrevSongIcon />
                     </button>
 
                     <button className="play-btn" onClick={onPlay} >
-                        {isPlaying ? <PauseIcon /> : <PlayIcon /> }
+                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className="next-btn " onClick={onNext}>
+                    <button className="next-btn " onClick={() => playNextPrev(1)}>
                         <NextSong />
                     </button>
                     <button className={'loop-btn' + (loop ? ' active' : '')} onClick={() => {
@@ -204,10 +197,7 @@ export function Player() {
                         <VolumeNormalIcon />
                     )}
                 </button>
-                <div className="progress-container">
-                    <progress hidden className="prog progress-bar" max="100"></progress>
-                    <input className="prog input-bar sound" type="range" max="100" />
-                </div>
+                <input onChange={handleVolumeChange} className="sound" type="range" max="100" />
                 <button className="miniplayer-btn">
                     <MiniPlayerIcon />
                 </button>

@@ -9,8 +9,8 @@ import { useSelector } from 'react-redux'
 export function TrackList({ tracks, onAddTrack, onPlay }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
     const [visibleTracks, setVisibleTracks] = useState(initialTrackLength)
-    const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
-    const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
 
     function handleMoreLessClick() {

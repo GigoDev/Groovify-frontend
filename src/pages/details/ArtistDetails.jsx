@@ -2,18 +2,15 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
-import { spotifyService } from '../../services/spotify.service'
 
-import { loadStation, clearStation } from '../../store/actions/station.actions'
-import { setTrack, togglePlay } from '../../store/actions/player.action'
-import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
+import { loadStation, clearStation,setTrack, togglePlay, setTracks } from '../../store/actions/station.actions'
 
 export function ArtistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
-  const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+  const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+  const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
 
   useEffect(() => {
@@ -29,6 +26,7 @@ export function ArtistDetails() {
     if (track.id === currTrack.id) return togglePlay(!isPlaying)
 
     setTrack(track)
+    setTracks()
   }
 
   function onAddTrack() {
@@ -46,7 +44,7 @@ export function ArtistDetails() {
 
       <div className='hero-info'>
         <div className='title'>{title}</div>
-        <div className='listeners'><span>{listeners.toLocaleString()}</span> monthly listeners</div>
+        <div className='listeners'><span>{listeners?.toLocaleString()}</span> monthly listeners</div>
       </div>
 
       <section className='station-content'>

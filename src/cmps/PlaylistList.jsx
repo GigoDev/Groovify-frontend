@@ -1,4 +1,4 @@
-import { formatDate, formatDuration, formatDuration2 } from "../services/util.service"
+import { formatDate, formatDuration2 } from "../services/util.service"
 
 export function PlaylistList({ items }) {
     return (

@@ -1,10 +1,14 @@
 .side-menu {
+    height: calc(100vh - 80px);
     &.collapsed {
         width: 70px;
     }
+    .side-lib.collapsed{
+        grid-template-rows: 55px auto 125px;
+    }
     
     .side-lib,
-    .side-nav {
+    .side-nav{
 
         &.collapsed {
             width: 70px;

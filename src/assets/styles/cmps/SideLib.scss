@@ -3,8 +3,9 @@
     border-radius: 7px;
     margin-block: .4em;
     display: grid;
-    grid-template-rows: repeat(3, auto) 1fr;
-    // height: 100%;
+    grid-template-rows: repeat(3, auto) 125px; // control the side lib vertical layout [your lib, filter buttons, search, list]
+    height: 100%;
+    
 
     .top-bar {
         display: flex;

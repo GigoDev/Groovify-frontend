@@ -9,8 +9,11 @@ const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
 
 export const spotifyService = {
     getToken,
+
     getArtist,
     getAlbum,
+    getPlaylist,
+
     getAlbumTracks,
     getRecommendationsByArtist,
     getRecommendationsByGeners,
@@ -53,21 +56,17 @@ async function getToken() {
 
 //getArtist()
 async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
-    const token = loadFromStorage('access_token')
+    
     try {
+        const token = loadFromStorage('access_token')
         const url = `https://api.spotify.com/v1/artists/${artistId}`;
+        const headers = {'Authorization': `Bearer ${token}`}
 
-        // Define headers correctly
-        const headers = {
-            'Authorization': `Bearer ${token}`
-        };
-
-        // Make the GET request with axios
-        const resp = await axios.get(url, { headers })
-
-        // Log the response data
-        console.log(resp.data)
-
+        const[resp,topTracks] = await Promise.all([
+            axios.get(url, { headers }),
+            _getArtistTopTracks(artistId)
+        ])
+        
         const station = {
             type: resp.data.type,
             id: resp.data.id,
@@ -75,19 +74,15 @@ async function getArtist(artistId = '1IAEef07H0fd9aA8aUHUlL') {
             imgs: resp.data.images,
             listeners: resp.data.followers.total,
         }
-
-        const topTracks = await _getArtistTopTracks(artistId)
-        
-
         station.tracks = topTracks
-        // console.log(station)
-        return station
+
+        console.log(station)
+        // return station
 
     } catch (error) {
         // Handle any errors that occur during the request
         console.error('Error fetching artist:', error)
     }
-
 
 }
 
@@ -109,20 +104,78 @@ async function _getArtistTopTracks(artistId = '1IAEef07H0fd9aA8aUHUlL', market =
             id: track.id,
             name: track.name,
             artists: track.artists.map(artist => ({ id: artist.id, name: artist.name, url: artist.href })),
-            // album: track.album.map(album => ({ id: album.id, name: album.name, artists: album.artists.map(artist => ({ id: artist.id, name: artist.name, url: artist.href })), imgs: album.images, releaseDate: album.releaseDate, totalTracks: album.total_tracks })),
+            album: {id: track.album.id, name: track.album.name, totalTrack: track.album.total_tracks,imgs: track.album.images, url: track.album.href}
         }))
 
-        tracks.forEach(track => {
-           _getYoutubeUrl(track)
-           .then(res => track.youtubeUrl = `https://www.youtube.com/watch?v=${res}`)
-        })
-
-        console.log(tracks)
-        return (tracks)
+        // console.log(tracks)
+        return tracks
 
     } catch (error) {
         // Handle any errors that occur during the request
         console.error('Error fetching artist tracks:', error)
+    }
+}
+
+//getPlaylist
+async function getPlaylist(id) {
+    //cache
+    try {
+        const stations = await loadFromStorage('station')
+        const res = stations.find(station => station.id === id)
+        if (res) {
+            console.log('from cache',res)
+            return res
+        }
+    } catch (error) {
+        console.log('cant find id in cache, getting from spotify')
+    }
+    
+    console.log('from spotify')
+    const token = loadFromStorage('access_token')
+    try {
+        const fields = 'description,followers,href,id,images,name,type,tracks(href,total,items())'
+        const url = `https://api.spotify.com/v1/playlists/${id}?fields=${fields}`
+
+        const headers = {
+            'Authorization': `Bearer ${token}`
+        };
+
+        // Make the GET request with axios
+        const resp = await axios.get(url, { headers })
+        const items = resp.data.tracks.items
+        // Log the response data
+        // console.log(resp.data) // playlist
+
+        const playlist = {
+            id: resp.data.id,
+            type: resp.data.type,
+            name: resp.data.name,
+            description: resp.data.description,
+            imgs: resp.data.images,
+            id: resp.data.id,
+            url: resp.data.href,
+            tracks: {
+                total: resp.data.tracks.total,
+                url: resp.data.tracks.href,
+                items: items.map(item => ({
+                    id: item.track.id,
+                    type: item.track.type,
+                    name: item.track.name,
+                    album: { name: item.track.album.name, id: item.track.album.id, totalTracks: item.track.album.total_tracks, url: item.track.album.href },
+                    artist: { id: item.track.artists[0].id, name: item.track.artists[0].name, url: item.track.artists[0].href },
+                    duration: item.track.duration_ms,
+                    addedAt: item.added_at,
+                    primaryColor: item.primary_color
+                }))
+            }
+        }
+
+        console.log(playlist)
+
+
+    } catch (error) {
+        // Handle any errors that occur during the request
+        console.error('Error fetching album:', error)
     }
 }
 
@@ -387,9 +440,3 @@ async function getPopularArtists() {
 //     }
 
 // }
-
-async function _getYoutubeUrl(track) {
-    const res = await youtubeService.getVideoId(`${track.artists[0].name} ${track.name}`)
-    console.log(res)
-    return res
-}

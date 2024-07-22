@@ -18,12 +18,14 @@
 @import "pages/UserDetails";
 @import "pages/StationDetails";
 @import "pages/SearchPage";
+@import "pages/PlaylistDetails";
 
 // Components
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
 @import "cmps/UpdateStation";
+@import "cmps/ImgUploader";
 
 @import "cmps/SearchCategoryList";
 @import "cmps/SearchCategoryPreview";
@@ -34,11 +36,11 @@
 @import "cmps/StationList";
 @import "cmps/StationPreview";
 @import "cmps/TrackList";
+@import "cmps/PlaylistList";
 
 @import "cmps/SideMenu";
 @import "cmps/SideNav";
 @import "cmps/SideLib";
-@import "cmps/SideSort";
 @import "cmps/SideFilter";
 @import "cmps/SideList";
 

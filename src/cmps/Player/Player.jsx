@@ -47,21 +47,18 @@ export function Player() {
     const [progress, setProgress] = useState(0)
     const [currSongTime, setCurrSongTime] = useState(0)
     const [totalSongTime, setTotalSongTime] = useState(0)
-    const [showRemainder, setShowRemainder] = useState(false)
-
-    const dispatch = useDispatch()
 
     const playerRef = useRef(null)
-    let shuffleSongs = []
+    let shuffleSongs = [] 
 
-    useEffect(() => {
-    }, [currSongTime, totalSongTime])
-    
-    useEffectUpdate(() => {
+    let TrackDuration = getDuration()
+
+    useEffectUpdate(() => { 
         togglePlay()
     }, [currTrack])
 
     function onPlay() {
+        console.log(isPlaying)
         togglePlay(!isPlaying)
     }
 
@@ -110,6 +107,10 @@ export function Player() {
         setIsMuted(!isMuted)
     }
 
+    function getDuration(duration) {
+        return duration
+    }
+
     function handleVolumeChange(ev) {
         if (isMuted) setIsMuted(!isMuted)
         const newVolume = parseFloat(ev.target.value)
@@ -117,7 +118,7 @@ export function Player() {
         setVolumeSnapshot(volume)
     }
 
-  const {album , name} = currTrack
+    const { album, name } = currTrack
     return (
 
 
@@ -131,13 +132,14 @@ export function Player() {
                 muted={isMuted}
                 onProgress={handleProgress}
                 onEnded={handleEnd}
+                onDuration={getDuration}
                 height="0"
                 width="0"
             />
 
             <PlayerLeft
-            album={album} 
-            name={name}/>
+                album={album}
+                name={name} />
 
             {/* <PlayerCenter
                 setShuffle={setShuffle}
@@ -189,11 +191,8 @@ export function Player() {
                             onChange={handleSeek}
                             max={playerRef.current ? playerRef.current.getDuration() : 0} />
                     </div>
-                    <span className="time-progress-2" onClick={() => {
-                        setShowRemainder(!showRemainder)
-                        setCurrSongRemainder(totalSongTime - currSongTime)
-                    }}>
-                        {formatTime(totalSongTime) }
+                    <span className="time-progress-2">
+                        {formatTime(totalSongTime)}
                     </span>
                 </div>
             </div>

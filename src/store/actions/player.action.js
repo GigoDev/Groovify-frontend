@@ -4,7 +4,6 @@ import { youtubeService } from '../../services/youtube.service.js'
 
 export async function togglePlay(isPlaying = true) {
   try {
-    console.log(isPlaying)
     store.dispatch(getActionIsPlaying(isPlaying))
   } catch (err) {
     console.log('cannot play/pause', err)

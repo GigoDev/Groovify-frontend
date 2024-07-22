@@ -1,10 +1,11 @@
+import { stationService } from "../../services/station/station.service.local"
+
 export const SET_CURR_TRACK = 'SET_CURR_TRACK'
 export const IS_PLAYING = 'IS_PLAYING'
-import { stations } from "../../../data/stations"
 
 const initialState = {
     isPlaying: false,
-    currTrack: stations[0].tracks[0]
+    currTrack: stationService.getDefaultTrack()
 }
 
 export function playerReducer(state = initialState, action) {

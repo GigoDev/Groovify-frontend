@@ -1,7 +1,6 @@
 import LikeIcon from '../../assets/icons/LikeIcon.svg'
 
 export function PlayerLeft({ album, name }) {
-    console.log(album)
     return (
         <div className="left-controls">
             <img className="media-img fit-img" src={`${album.images[2].url}`}/>

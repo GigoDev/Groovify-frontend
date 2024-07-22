@@ -15,7 +15,7 @@ export function HomePage() {
     return (
         <>
             <section  className="home-container">
-                <StationList stations={stations}/>
+                <StationList stations={stations.slice(0,8)}/>
             </section>
         </>
     )

@@ -1,7 +1,11 @@
 .side-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     height: 550px; /* Fixed height */
     padding-block-end: 10px;
     overflow-y: auto; /* Vertical scrollbar */
+
     .side-card{
         display: flex;
         align-items: center;

@@ -1,4 +1,7 @@
-export function SearchCategory() {
+export function SearchCategory({setSearch}) {
+    function handleChange({ target }) {
+        setSearch(target.value)
+    }
     return (
         <section className="main-search">
             <div className="input-container">
@@ -11,6 +14,7 @@ export function SearchCategory() {
                 <input
                     type="text"
                     placeholder="What do you want to play?"
+                    onChange={handleChange}
                 />
             </div>
         </section>

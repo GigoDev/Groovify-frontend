@@ -1,0 +1,41 @@
+.station-song-search {
+    padding-top: 30px;
+    border-top: 1px solid #323232;
+    justify-content: space-between;
+    margin-block-end: 20px;
+
+    h1 {
+        margin-bottom: rem(30px);
+        font-size: rem(24px);
+    }
+
+    button {
+        background-color: unset;
+    }
+
+    .search-input {
+        position: relative;
+
+        .search-svg {
+            fill: #c0c0c0;
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            top: 12px;
+            left: 0;
+            margin-inline-start: 10px;
+        }
+
+        input {
+            background-color: $clr10;
+            color: #c0c0c0;
+            border: 0;
+            border-radius: 4px;
+            padding: rem(8px) rem(32px);
+            width: 100%;
+            height: 40px;
+
+        }
+    }
+
+}

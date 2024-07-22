@@ -7,6 +7,7 @@ import DurationIcon from '../../assets/icons/DurationIcon.svg'
 import { useEffect } from "react";
 import { clearStation, loadStation } from "../../store/actions/station.actions";
 import { formatDuration } from "../../services/util.service";
+import { SearchTracks } from "../../cmps/SearchTracks";
 
 export function PlaylistDetails() {
 
@@ -62,6 +63,8 @@ export function PlaylistDetails() {
           <DurationIcon className="duration" />
         </div>
         <PlaylistList items={tracks.items}/>
+
+        <SearchTracks/>
 
       </section>
     </section>

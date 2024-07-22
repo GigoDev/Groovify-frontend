@@ -1,23 +1,20 @@
 .side-nav {
     display: grid;
-    gap: 10px;
-    grid-template-rows: auto 1fr;
-    background-color: $clr07;
-    font-family: circular-bold;
+    grid-template-rows: 50px 50px;
     width: 100%;
-    padding: 12px;
-    
-    padding: 16px;
     margin-block: 7px;
     border-radius: 7px;
+    background-color: $clr07;
+    font-family: circular-bold;
 
     .home-link,
     .search-link {
-        text-decoration: none;
         display: flex;
+        gap: 5px;
         align-items: center;
+        padding: 5px 0px 5px 24px;
         color: $clr03;
-        padding: 5px;
+        text-decoration: none;
 
         svg {
             width: 20px;

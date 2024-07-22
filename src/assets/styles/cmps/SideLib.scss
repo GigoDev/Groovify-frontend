@@ -1,26 +1,25 @@
 .side-lib {
     background-color: $clr07;
     border-radius: 7px;
-    margin-block: .4em;
+    // margin-block: .4em;
     display: grid;
-    grid-template-rows: repeat(3, auto) 125px; // control the side lib vertical layout [your lib, filter buttons, search, list]
+    align-items: start;
+    grid-template-rows: 70px 80px auto 110px; // control the side lib vertical layout [your lib, filter buttons, search, list]
     height: 100%;
     
 
     .top-bar {
+        align-self: center;
         display: flex;
         justify-content: space-between;
-        height: 48px;
         align-items: center;
-        padding: 8px 2px;
-        margin-bottom: 8px;
         white-space: nowrap;
 
         .your-library {
             display: flex;
             background-color: $clr07;
             align-items: center;
-            padding: 10px 16px;
+            padding: 8px 16px;
             border-radius: 10px;
             border: 0;
             font-size: rem(16px);

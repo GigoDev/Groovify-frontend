@@ -1,9 +1,10 @@
 .side-filter {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
     .side-filter-btns {
-        display: flex;
-        align-items: center;
-        margin: 0 0 10px 3px;
-        height: 37px;
     
         .btn:first-child {
             margin-left: 4px;
@@ -36,7 +37,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 13px;
+        padding-inline: 13px 0;
     
         .side-search-btn {
             display: flex;

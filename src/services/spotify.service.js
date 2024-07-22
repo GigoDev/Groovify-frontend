@@ -135,24 +135,18 @@ async function getPlaylist(id) {
     try {
         const fields = 'description,followers,href,id,images,name,type,tracks(href,total,items())'
         const url = `https://api.spotify.com/v1/playlists/${id}?fields=${fields}`
+        const headers = {'Authorization': `Bearer ${token}`}
 
-        const headers = {
-            'Authorization': `Bearer ${token}`
-        };
-
-        // Make the GET request with axios
         const resp = await axios.get(url, { headers })
-        const items = resp.data.tracks.items
-        // Log the response data
+       
         // console.log(resp.data) // playlist
-
+        const items = resp.data.tracks.items
         const playlist = {
             id: resp.data.id,
             type: resp.data.type,
             name: resp.data.name,
             description: resp.data.description,
             imgs: resp.data.images,
-            id: resp.data.id,
             url: resp.data.href,
             tracks: {
                 total: resp.data.tracks.total,
@@ -171,11 +165,12 @@ async function getPlaylist(id) {
         }
 
         console.log(playlist)
+        return playlist
 
 
     } catch (error) {
         // Handle any errors that occur during the request
-        console.error('Error fetching album:', error)
+        console.error('Error fetching playlist:', error)
     }
 }
 

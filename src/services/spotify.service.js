@@ -133,7 +133,7 @@ async function getPlaylist(id) {
     console.log('from spotify')
     const token = loadFromStorage('access_token')
     try {
-        const fields = 'description,followers,href,id,images,name,type,tracks(href,total,items())'
+        const fields = 'description,followers,href,id,images,name,type,followers,tracks(href,total,items())'
         const url = `https://api.spotify.com/v1/playlists/${id}?fields=${fields}`
         const headers = {'Authorization': `Bearer ${token}`}
 
@@ -148,6 +148,7 @@ async function getPlaylist(id) {
             description: resp.data.description,
             imgs: resp.data.images,
             url: resp.data.href,
+            likes: resp.data.followers.total,
             tracks: {
                 total: resp.data.tracks.total,
                 url: resp.data.tracks.href,
@@ -155,7 +156,7 @@ async function getPlaylist(id) {
                     id: item.track.id,
                     type: item.track.type,
                     name: item.track.name,
-                    album: { name: item.track.album.name, id: item.track.album.id, totalTracks: item.track.album.total_tracks, url: item.track.album.href },
+                    album: { name: item.track.album.name, id: item.track.album.id, totalTracks: item.track.album.total_tracks, url: item.track.album.href, imgs:item.track.album.images},
                     artist: { id: item.track.artists[0].id, name: item.track.artists[0].name, url: item.track.artists[0].href },
                     duration: item.track.duration_ms,
                     addedAt: item.added_at,

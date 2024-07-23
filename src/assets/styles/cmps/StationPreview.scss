@@ -1,7 +1,7 @@
 .card {
     display: flex;
     align-items: center;
-
+    
     background-color: $clr06;
     border-radius: 4px;
 
@@ -16,6 +16,6 @@
 
     .card-title {
         padding-inline: .5rem;
-        font-size: 1rem;
+        font-size: .8rem;
     }
 }

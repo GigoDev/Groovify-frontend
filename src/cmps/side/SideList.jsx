@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 
 export function SideList({ stations }) {
     const navigate = useNavigate()
@@ -19,7 +20,11 @@ export function SideList({ stations }) {
                     key={station.id}
                     onClick={() => handleClick(station.id, station.type)}>
                     <div className="img-container square-ratio">
-                        <img src={station.imgs[(station.imgs.length-1)].url} />
+                        {station.imgs[(station.imgs.length - 1)].url ?
+                         <img src={station.imgs[(station.imgs.length - 1)].url} />
+                          :
+                          <MusicNoteIcon/>
+                         }
                     </div>
                     <span className='card-title'>{station.name}</span>
                 </article>

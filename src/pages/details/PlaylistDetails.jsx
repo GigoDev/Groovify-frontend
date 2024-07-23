@@ -14,36 +14,30 @@ import { UpdateStationModal } from '../../cmps/UpdateStationModal';
 //ICONS
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import DurationIcon from '../../assets/icons/DurationIcon.svg'
+import { SearchTracks } from '../../cmps/SearchTracks';
 
 
 export function PlaylistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
+
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     loadStation(id)
-    return async ()=>{
-      await clear()
-      console.log('unmount');
-    }
+    return clearStation()
   }, [id])
-  async function clear(){
-    await clearStation()
-
-  }
 
   function openEditModal() {
     setIsModalOpen(true)
   }
 
-  console.log(station);
-  if (!station || station.type !== 'playlist') return <h1>Loading...</h1>
-  const { imgs, listeners, name, type, tracks, likes,total } = station
+  if (!station) return <h1>Loading...</h1>
+  const { imgs, listeners, name, type, tracks, likes } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
-  const totalDuration = tracks?.reduce((acc, track) => acc + track.duration, 0)
+  const totalDuration = tracks.items?.reduce((acc, track) => acc + track.duration, 0)
   const formattedDuration = formatDuration(totalDuration)
   return (
     <section className="playlist-details">
@@ -53,7 +47,7 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           <div className="mini-dashboard">
-            John Doe • {likes.toLocaleString()} likes • {total} songs
+            John Doe • {likes.toLocaleString()} likes • {tracks.total} songs
             <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
           </div>
         </div>
@@ -72,7 +66,7 @@ export function PlaylistDetails() {
         </section>
 
 
-        {tracks.length > 0 ? (
+        {tracks.items.length > 0 ? (
           <div className="list-titles">
             <span>#</span>
             <span>Title</span>
@@ -82,8 +76,9 @@ export function PlaylistDetails() {
           </div>
         ) : (null)}
 
-        <PlaylistList items={tracks} />
+        <PlaylistList items={tracks.items} />
       </section>
+      <SearchTracks />
       <UpdateStationModal
         isModalOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen}/>

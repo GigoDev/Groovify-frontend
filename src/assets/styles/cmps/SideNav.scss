@@ -3,6 +3,7 @@
     grid-template-rows: 50px 50px;
     width: 100%;
     margin-block: 7px;
+    padding-inline-start: 3px;
     border-radius: 7px;
     background-color: $clr07;
     font-family: circular-bold;
@@ -10,9 +11,9 @@
     .home-link,
     .search-link {
         display: flex;
-        gap: 5px;
+        gap: 10px;
         align-items: center;
-        padding: 5px 0px 5px 24px;
+        padding: 8px 0px 2px 24px;
         color: $clr03;
         text-decoration: none;
 
@@ -34,9 +35,9 @@
         }
     }
 
-    .search-link {
+    .search-link,.home-link {
         span {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
     }
 }

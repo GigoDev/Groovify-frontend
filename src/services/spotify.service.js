@@ -11,7 +11,6 @@ export const spotifyService = {
     getAlbum,
     getCategoryPlaylists,
     searchFor,
-
 }
 
 window.spotifyService = spotifyService

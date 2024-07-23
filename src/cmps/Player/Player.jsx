@@ -61,6 +61,7 @@ export function Player() {
 
     function handleSeek(ev) {
         const seekProgress = ev.target.value
+        console.log(seekProgress)
         setProgress(seekProgress)
         playerRef.current.seekTo(seekProgress)
     }
@@ -134,13 +135,15 @@ export function Player() {
                     <span className="time-progress">{formatTime(currSongTime)}</span>
 
                     <input
-                        className="progress-bar "
+                        className="progress-bar"
                         type="range"
                         min="0"
                         step={1}
                         value={progress}
                         onChange={handleSeek}
-                        max={totalSongTime} />
+                        max={totalSongTime}
+                        style={{ background: `linear-gradient(to right, white ${progress / totalSongTime * 100}%,  rgba(255, 255, 255, 0.3) ${progress / totalSongTime * 100}%)` }}
+                    />
 
                     <span className="time-progress"> {formatTime(totalSongTime)} </span>
                 </div>
@@ -170,7 +173,13 @@ export function Player() {
                         <VolumeNormalIcon />
                     )}
                 </button>
-                <input onChange={handleVolumeChange} className="sound" type="range" step="0.01"  max="1" />
+                <input onChange={handleVolumeChange}
+                    className="sound"
+                    type="range"
+                    step="0.01"
+                    max="1"
+                    style={{ background: `linear-gradient(to right, white ${volume * 100}%,  rgba(255, 255, 255, 0.3) ${volume * 100}%)` }}
+                />
                 <button className="miniplayer-btn">
                     <MiniPlayerIcon />
                 </button>

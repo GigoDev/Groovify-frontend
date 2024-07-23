@@ -118,29 +118,25 @@ input {
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
-    background: transparent;
-    cursor: pointer;
     width: 100%;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
     height: 0.2rem;
 
-    background: $clr04;
+    outline: none;
     border-radius: 2px;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
-    position: relative;
+    cursor: pointer;
 
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -5px; /* Centers thumb on the track */
-    background-color: $clr01;
-    height: .8rem;
-    width: .8rem; 
-    border-radius: 50%;   
+    &::-webkit-slider-thumb {
+        position: relative;
 
- }
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        height: .8rem;
+        width: .8rem;
+        border-radius: 50%;
+    }
 
- 
+    &:hover::-webkit-slider-thumb {
+        background-color: $clr01;
+    }
+}

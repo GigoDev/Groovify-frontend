@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { saveToStorage, loadFromStorage, formatTime } from './util.service'
+import { stationService } from './station'
 
 const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
 const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
@@ -40,16 +41,16 @@ async function getToken() {
 async function getArtist(artistId) {
     var artist
     //local storage
-    try {
-        const stations = await loadFromStorage('station')
-        artist = stations.find(station => station.id === artistId)
-        if (artist) {
-            console.log('from local storage', artist)
-            return artist
-        }
-    } catch (error) {
-        console.log('cant find id in cache, getting playlist from spotify')
-    }
+    // try {
+    //     const stations = await loadFromStorage('station')
+    //     artist = stations.find(station => station.id === artistId)
+    //     if (artist) {
+    //         console.log('from local storage', artist)
+    //         return artist
+    //     }
+    // } catch (error) {
+    //     console.log('cant find id in cache, getting playlist from spotify')
+    // }
 
     //from spotify
     try {
@@ -68,6 +69,7 @@ async function getArtist(artistId) {
         artist.tracks = topTracks
 
         console.log(artist)
+        stationService.save(artist)
         return artist
 
     } catch (error) {

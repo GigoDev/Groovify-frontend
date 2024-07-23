@@ -37,7 +37,7 @@ export function PlaylistDetails() {
   const { imgs, listeners, name, type, tracks, likes } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
-  const totalDuration = tracks.items.reduce((acc, track) => acc + track.duration, 0)
+  const totalDuration = tracks.items?.reduce((acc, track) => acc + track.duration, 0)
   const formattedDuration = formatDuration(totalDuration)
   return (
     <section className="playlist-details">

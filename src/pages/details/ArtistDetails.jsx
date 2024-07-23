@@ -13,10 +13,15 @@ export function ArtistDetails() {
 
 
   useEffect(() => {
+    clear()
   loadStation(id) // get station on load / when id changed
 
     return clearStation() // clear station when unmount
   }, [id])
+
+   async function clear(){
+   await  clearStation()
+   }
 
 
 
@@ -32,7 +37,8 @@ export function ArtistDetails() {
     console.log('add')
   }
 
-  if (!station) return <h1>Loading...</h1>
+  if (!station || station.type !== 'artist') return <h1>Loading...</h1>
+  console.log('station',station);
   const { imgs, listeners, name: title, type, tracks } = station
   return (
     <section className="station-details-container">

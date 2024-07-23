@@ -149,20 +149,17 @@ async function getPlaylist(id) {
             imgs: resp.data.images,
             url: resp.data.href,
             likes: resp.data.followers.total,
-            tracks: {
-                total: resp.data.tracks.total,
-                url: resp.data.tracks.href,
-                items: items.map(item => ({
-                    id: item.track.id,
-                    type: item.track.type,
-                    name: item.track.name,
-                    album: { name: item.track.album.name, id: item.track.album.id, totalTracks: item.track.album.total_tracks, url: item.track.album.href, imgs:item.track.album.images},
-                    artist: { id: item.track.artists[0].id, name: item.track.artists[0].name, url: item.track.artists[0].href },
-                    duration: item.track.duration_ms,
-                    addedAt: item.added_at,
-                    primaryColor: item.primary_color
-                }))
-            }
+            total: resp.data.tracks.total,
+            tracks:  items.map(item => ({
+                id: item.track.id,
+                type: item.track.type,
+                name: item.track.name,
+                album: { name: item.track.album.name, id: item.track.album.id, totalTracks: item.track.album.total_tracks, url: item.track.album.href, imgs:item.track.album.images},
+                artist: { id: item.track.artists[0].id, name: item.track.artists[0].name, url: item.track.artists[0].href },
+                duration: item.track.duration_ms,
+                addedAt: item.added_at,
+                primaryColor: item.primary_color
+            }))
         }
 
         console.log(playlist)

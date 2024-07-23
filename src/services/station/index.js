@@ -14,8 +14,8 @@ function getEmptyPlaylist(){
         description: 'Description',
         likes:'',
         imgs: [{url:''},{url:''},{url:''}],
-        tracks:[],
-        total:'',
+        tracks:{total:'', items:[]},
+        
         createdBy: {},
         createdAt: Date.now()
     }

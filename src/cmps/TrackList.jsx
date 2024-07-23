@@ -25,7 +25,6 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
 
 
     if (!tracks) return <div>Loading...</div>
-    // console.log(tracks);
     return (
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (

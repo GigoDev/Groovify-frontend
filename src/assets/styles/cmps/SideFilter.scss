@@ -1,26 +1,27 @@
 .side-filter {
-    align-self: center;
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 10px;
    
     .side-filter-btns {
     
         .btn:first-child {
-            margin-left: 4px;
+            margin-left: 18px;
         }
     
         .btn {
             height: 32px;
+            margin-inline: 4px;
+            padding: 0px 14px;
             border-radius: 20px;
-            padding: 4px 12px;
-            font-size: 13px;
-            font-weight: 400;
             background-color: $clr06;
+            font-size: 14px;
+            font-weight: 400;
             color: $clr01;
-            margin-inline: 5px;
             transition: 0.3s ease;
             cursor: pointer;
+            font-family: circular-light;
             
             &:hover {
                 background-color: $clr11;
@@ -37,7 +38,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-inline: 13px 0;
+        padding-inline: 18px 15px;
     
         .side-search-btn {
             display: flex;

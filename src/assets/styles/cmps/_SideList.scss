@@ -9,7 +9,9 @@
     .side-card{
         display: flex;
         align-items: center;
-        padding: 8px 10px;
+        padding-block: 10px 6px;
+        padding-inline: 18px;
+        
         background-color: $clr07;
         cursor: pointer;
 
@@ -23,17 +25,35 @@
 
         
         .img-container{
-           width: 50px;
+           width: 48px;
            border-radius: 5px;
-           
-            img{
+        
+        }
+
+        .card-details{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 48px;
+            align-items: start;
+            padding-inline-start: 12px;
+            padding-block: 3px;
+            
+            
+            
+            font-family: circular;
+            font-size: 1rem;
+            .card-title {
+                color: $clr01;
+            }
+            .card-type{
+                padding-block: 1px 0;
+                color: $clr03;
+                font-size: 0.9rem;
 
             }
         }
-        .card-title {
-            padding-inline-start: 10px;
-
-        }
+       
     }
    
 }

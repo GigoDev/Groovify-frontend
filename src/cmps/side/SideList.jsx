@@ -21,12 +21,15 @@ export function SideList({ stations }) {
                     onClick={() => handleClick(station.id, station.type)}>
                     <div className="img-container square-ratio">
                         {station.imgs[(station.imgs.length - 1)].url ?
-                         <img src={station.imgs[(station.imgs.length - 1)].url} />
-                          :
-                          <MusicNoteIcon/>
-                         }
+                            <img src={station.imgs[(station.imgs.length - 1)].url} />
+                            :
+                            <MusicNoteIcon />
+                        }
                     </div>
-                    <span className='card-title'>{station.name}</span>
+                    <div className="card-details">
+                        <span className='card-title'>{station.name}</span>
+                        <span className="card-type">{station.type}</span>
+                    </div>
                 </article>
             ))
         }

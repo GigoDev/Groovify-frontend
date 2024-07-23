@@ -5,6 +5,7 @@
 
     .station-preview {
         gap: 25px;
+
         background: linear-gradient(transparent 0, rgba(0, 0, 0, .5) 100%);
         background-color: $clr04;
         padding: 60px 35px 24px;
@@ -12,6 +13,7 @@
         .img-uploader-container {
             aspect-ratio: 1;
             height: 100%;
+            width: 100%;
             box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
         }
 
@@ -20,8 +22,6 @@
             flex-direction: column;
             justify-content: end;
             
-            
-
             h1 {
                 font-size: 65px;
                 margin: 20px 0;

@@ -1,7 +1,5 @@
 import axios from 'axios'
 import { saveToStorage, loadFromStorage, formatTime } from './util.service'
-import { youtubeService } from './youtube.service'
-
 
 const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
 const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
@@ -11,6 +9,7 @@ export const spotifyService = {
     getArtist,
     getPlaylist,
     getAlbum,
+    getCategoryPlaylists,
 }
 
 window.spotifyService = spotifyService
@@ -201,7 +200,20 @@ async function getCategoryPlaylists(category){// in work------------------------
     const url = `https://api.spotify.com/v1/browse/categories/${category}/playlists`
     const headers = { 'Authorization': `Bearer ${token}` }
     const resp = await axios.get(url, { headers })
-    const playlists = resp.data
+    console.log(resp)
+    const playlists = resp.data.playlists.items.map(playlist => ({
+        id: playlist.id,
+        type: playlist.type,
+        name: playlist.name,
+        description: playlist.description,
+        imgs: playlist.images,
+        owner: {id: playlist.owner.id, name: playlist.owner.display_name},
+        category: category
+
+    }))
+
+    console.log('playlists:', playlists)
+    return playlists
     
 }
 

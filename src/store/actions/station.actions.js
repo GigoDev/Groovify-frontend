@@ -80,10 +80,10 @@ export function toggleLibraryAction() {
     }
 }
 
-// Station actions:
-export async function togglePlay(isPlaying = true) {
+// Player actions:
+export async function togglePlay() {
     try {
-        store.dispatch(getActionIsPlaying(isPlaying))
+        store.dispatch(getActionIsPlaying())
     } catch (err) {
         console.log('cannot play/pause', err)
         throw err
@@ -111,6 +111,8 @@ export function setTracks() {
 export function playNextPrev(i) {
     const { currTrack, currPlayingTracks } = store.getState().stationModule
     const Idx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id)
+
+    if (Idx === currPlayingTracks.length || Idx < 0) Idx = 0
     setTrack(currPlayingTracks[Idx])
 }
 

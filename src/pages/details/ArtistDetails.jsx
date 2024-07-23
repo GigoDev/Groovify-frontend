@@ -10,7 +10,6 @@ export function ArtistDetails() {
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
-  const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
 
   useEffect(() => {
@@ -23,7 +22,7 @@ export function ArtistDetails() {
 
   function onPlay(ev, track) {
     ev.stopPropagation()
-    if (track.id === currTrack.id) return togglePlay(!isPlaying)
+    if (track.id === currTrack.id) return togglePlay()
 
     setTrack(track)
     setTracks()

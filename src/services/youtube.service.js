@@ -12,6 +12,7 @@ window.youtubeService = youtubeService
 
 async function getTrackId(trackToFind) {
     try {
+        console.log(trackToFind)
         const tracks = loadFromStorage(STORAGE_KEY) || []
         let track = tracks.find(currTrack => currTrack.name === trackToFind.name)
         if (track) return track

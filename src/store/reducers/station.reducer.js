@@ -50,13 +50,13 @@ export function stationReducer(state = initialState, action) {
 
         // Player:
         case SET_CURR_TRACK:
-            newState = { ...state, currTrack: action.currTrack }
+            newState = { ...state, currTrack: action.currTrack, isPlaying: true }
             break
         case SET_CURR_TRACKS:
             newState = { ...state, currPlayingTracks: state.station.tracks }
             break
         case IS_PLAYING:
-            newState = { ...state, isPlaying: action.isPlaying }
+            newState = { ...state, isPlaying: !state.isPlaying }
             break
         default:
             return state

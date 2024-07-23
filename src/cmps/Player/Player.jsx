@@ -35,15 +35,13 @@ import FullScreenIcon from '../../assets/icons/FullScreenIcon.svg'
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
-    const currPlayingTracks = useSelector(storeState => storeState.stationModule.currPlayingTracks)
 
 
     const [volume, setVolume] = useState(0.5)
-    const [volumeSnapshot, setVolumeSnapshot] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
 
     const [isLoop, setLoop] = useState(false)
-    const [shuffle, setShuffle] = useState(false)
+    const [isShuffle, setShuffle] = useState(false)
 
     // Time states
     const [progress, setProgress] = useState(0)
@@ -51,15 +49,6 @@ export function Player() {
     const [totalSongTime, setTotalSongTime] = useState(0)
 
     const playerRef = useRef(null)
-    let shuffleSongs = []
-
-    useEffectUpdate(() => {
-        togglePlay()
-    }, [currTrack])
-
-    function onPlay() {
-        togglePlay(!isPlaying)
-    }
 
     function handleProgress(state) {
         if (!state.loaded) return
@@ -77,12 +66,6 @@ export function Player() {
     }
 
     function handleMute() {
-        if (isMuted || volume === 0) {
-            setVolume(volumeSnapshot)
-        } else {
-            setVolumeSnapshot(volume)
-            setVolume(0)
-        }
         setIsMuted(!isMuted)
     }
 
@@ -91,15 +74,14 @@ export function Player() {
     }
 
     function handleVolumeChange(ev) {
-        if (isMuted) setIsMuted(!isMuted)
         const newVolume = parseFloat(ev.target.value)
+        if (!newVolume && isMuted) setIsMuted(false)
+
         setVolume(newVolume)
-        setVolumeSnapshot(volume)
     }
 
     const { album, name } = currTrack
     return (
-
 
         <section className="player-container">
 
@@ -109,6 +91,7 @@ export function Player() {
                 url={`https://www.youtube.com/watch?v=${currTrack?.youtubeId}`}
                 playing={isPlaying}
                 loop={isLoop}
+                volume={volume}
                 muted={isMuted}
                 onProgress={handleProgress}
                 onEnded={() => playNextPrev(1)}
@@ -124,8 +107,8 @@ export function Player() {
             <div className="center-controls">
 
                 <div className="top-center-controls">
-                    <button className={'shuffle-btn' + (shuffle ? ' active' : '')} onClick={() => {
-                        setShuffle(!shuffle)
+                    <button className={'shuffle-btn' + (isShuffle ? ' active' : '')} onClick={() => {
+                        setShuffle(!isShuffle)
                     }}>
                         <ShuffleIcon />
                     </button>
@@ -134,7 +117,7 @@ export function Player() {
                         <PrevSongIcon />
                     </button>
 
-                    <button className="play-btn" onClick={onPlay} >
+                    <button className="play-btn" onClick={togglePlay} >
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
                     <button className="next-btn " onClick={() => playNextPrev(1)}>
@@ -187,7 +170,7 @@ export function Player() {
                         <VolumeNormalIcon />
                     )}
                 </button>
-                <input onChange={handleVolumeChange} className="sound" type="range" max="100" />
+                <input onChange={handleVolumeChange} className="sound" type="range" step="0.01"  max="1" />
                 <button className="miniplayer-btn">
                     <MiniPlayerIcon />
                 </button>

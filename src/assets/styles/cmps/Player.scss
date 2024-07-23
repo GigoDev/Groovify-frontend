@@ -8,8 +8,9 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
 
-    height: 80px;
+    height: 85px;
     padding-inline: 1rem;
+    padding-block: .9rem;
 
     background-color: $clr08;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -79,6 +80,7 @@
 
         margin-inline: 1rem;
 
+
         .top-center-controls {
             display: flex;
             gap: 10px;
@@ -99,9 +101,9 @@
                 }
             }
 
-            .loop-btn {
+            .loop-btn.active ,.shuffle-btn.active {
 
-                &.active svg {
+                svg {
                     fill: $clrGreen;
                 }
             }

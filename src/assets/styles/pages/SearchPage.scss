@@ -1,7 +1,12 @@
-.search-container{
-    margin-block: 7rem;
-    margin-inline: 0.4rem;
+.search-container {
+    margin-inline: 4.3rem;
     font-family: circular-bold;
     font-size: 14px;
     grid-row: 1;
+
+    .station-search-header {
+        padding: 17px;
+        
+
+    }
 }

@@ -1,0 +1,43 @@
+.station-song-search {
+    display: flex;
+    flex-direction: column;
+    font-family: circular-bold;
+    gap: 1rem;
+
+    .search-input {
+        position: relative;
+        width: 320px;
+
+        svg {
+            position: absolute;
+            fill: $clr02;
+            left: 9px;
+            top: 13px;
+        }
+
+        input {
+            height: 43px;
+            border-radius: 20px;
+            width: 100%; 
+            background-color: $clr13;
+            padding: 10px 0 8px 33px;
+            border: 0;
+
+            &::placeholder {
+                color: $clr12;
+            }
+        }
+    }
+
+    .track-previews {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; 
+
+        p {
+            color: #888; 
+            text-align: center; 
+            margin: 0;
+        }
+    }
+}

@@ -76,7 +76,6 @@ function setPrevNextTrack({ tracks }) {
 }
 
 function getDefaultTrack() {
-
     return {
         id: "1uvyZBs4IZYRebHIB1747m",
         name: "Purple Rain",

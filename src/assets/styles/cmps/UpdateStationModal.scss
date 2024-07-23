@@ -1,0 +1,139 @@
+.update-modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: circular;
+
+    background-color: rgba(20, 20, 20, 0.8);
+
+    .modal {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 525px;
+        height: 380px;
+
+        border-radius: 10px;
+        padding: 25px 30px;
+        background-color: $clr06;
+
+
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            padding-block-end: 15px;
+            font-size: 24px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 50px;
+            column-gap: 15px;
+            row-gap: 5px;
+
+            .img-container {
+                background-color: $clr05;
+                width: 180px;
+                height: 180px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                .tone-icon,
+                .edit-img-icon {
+                    width: 50%;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                }
+
+                .edit-img-icon {
+                    display: none;
+                }
+
+                &:hover {
+                    .tone-icon {
+                        display: none;
+                    }
+
+                    .edit-img-icon {
+                        display: block;
+                    }
+                }
+
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .inputs {
+                display: grid;
+                grid-template-rows: 1fr 4fr;
+                gap: 15px;
+                width: 100%;
+                height: 100%;
+
+                * {
+                    padding-inline: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $clr05;
+                }
+
+                .title {
+                    color: $clr01;
+
+                    &:focus-visible {
+                        outline: 1px solid $clr04;
+                        background-color: rgba(64, 64, 64, 0.5);
+                    }
+                }
+
+                .description {
+                    font-family: circular;
+                    color: $clr01;
+                    resize: none;
+
+                    &:focus-visible {
+                        outline: 1px solid $clr04;
+                        background-color: rgba(64, 64, 64, 0.5);
+                    }
+                }
+            }
+
+            .save-btn {
+                border-radius: 25px;
+                width: 100px;
+                justify-self: end;
+                grid-column: 2;
+                cursor: pointer;
+            }
+        }
+
+        span {
+            padding-block: 5px;
+            width: 100%;
+            font-size: 12px;
+            color: $clr01;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 30px;
+            border: none;
+            font-size: 15px;
+            background-color: transparent;
+            color: $clr02;
+            cursor: pointer;
+        }
+
+    }
+}

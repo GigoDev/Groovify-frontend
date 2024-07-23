@@ -32,7 +32,6 @@ export function AppHeader() {
 				<button className="forward-btn btn">
 					<NextPageIcon />
 				</button>
-				<SearchCategory />
 			</nav>
 			<section className='header-menu flex align-center'>
 				<button className='btn pill install-btn'><i className="fa-regular fa-circle-down"></i>Install App</button>

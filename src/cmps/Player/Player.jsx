@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
-import { useEffectUpdate } from '../../customHooks/useEffectUpdate'
+
 
 
 import { playNextPrev, togglePlay } from '../..//store/actions/station.actions'
@@ -80,7 +80,6 @@ export function Player() {
 
         setVolume(newVolume)
     }
-
     const { album, name } = currTrack
     return (
 
@@ -95,7 +94,7 @@ export function Player() {
                 volume={volume}
                 muted={isMuted}
                 onProgress={handleProgress}
-                onEnded={() => playNextPrev(1)}
+                onEnded={() => isShuffle ? playNextPrev(0) : playNextPrev(-1)}
                 onDuration={getDuration}
                 height="0"
                 width="0"
@@ -109,7 +108,7 @@ export function Player() {
 
                 <div className="top-center-controls">
                     <button className={'shuffle-btn' + (isShuffle ? ' active' : '')} onClick={() => {
-                        setShuffle(!isShuffle)
+                        setShuffle(prevIsShuffle => !prevIsShuffle)
                     }}>
                         <ShuffleIcon />
                     </button>
@@ -121,7 +120,7 @@ export function Player() {
                     <button className="play-btn" onClick={togglePlay} >
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className="next-btn " onClick={() => playNextPrev(1)}>
+                    <button className="next-btn " onClick={() => isShuffle ? playNextPrev(0) : playNextPrev(1)}>
                         <NextSong />
                     </button>
                     <button className={'loop-btn' + (isLoop ? ' active' : '')} onClick={() => {

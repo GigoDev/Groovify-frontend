@@ -14,14 +14,14 @@ import { UpdateStationModal } from '../../cmps/UpdateStationModal';
 //ICONS
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import DurationIcon from '../../assets/icons/DurationIcon.svg'
+import { SearchTracks } from '../../cmps/SearchTracks';
 
 
 export function PlaylistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  const currTrack = useSelector(storeState => storeState.playerModule.currTrack)
-  const isPlaying = useSelector(storeState => storeState.playerModule.isPlaying)
+
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
@@ -78,6 +78,7 @@ export function PlaylistDetails() {
 
         <PlaylistList items={tracks.items} />
       </section>
+      <SearchTracks />
       <UpdateStationModal
         isModalOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen}/>

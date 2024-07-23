@@ -5,7 +5,7 @@ export const youtubeService = {
     getTrackId,
     getTracks,
 }
-
+const YOUTUBE_DB = 'youtube_DB'
 const STORAGE_KEY = 'tracks_DB'
 const YT_KEY = 'AIzaSyCilqLL-8Izy6Fx59c3SKshxQkbcSnuG5I'
 

@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
 
-import { loadStation, clearStation,setTrack, togglePlay, setTracks } from '../../store/actions/station.actions'
+import { loadStation, clearStation, setTrack, togglePlay, setTracks, updateStation } from '../../store/actions/station.actions'
+import { stationService } from '../../services/station'
 
 export function ArtistDetails() {
 
@@ -12,22 +13,17 @@ export function ArtistDetails() {
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
 
-
-
   useEffect(() => {
     loadStation(id)
-    return async()=>{
-     await clear()
+    return async () => {
+      await clear()
     }
   }, [id])
 
-  async function clear(){
+  async function clear() {
     await clearStation()
 
   }
-
-
-
 
   function onPlay(ev, track) {
     ev.stopPropagation()
@@ -37,8 +33,11 @@ export function ArtistDetails() {
     setTracks()
   }
 
-  function onAddTrack() {
-    console.log('add')
+  async function onAddTrack(track, id = '2D2M9') {//liked songs id
+    const station = await stationService.getById(id) // id from somewhere or keep global
+    station.tracks.push(track) // local edit, push track
+    updateStation(station) // send to store action
+    console.log(`track id: ${track.id} add to playlist id:${id}`)
   }
 
   if (!station || station.type !== 'artist') return <h1>Loading...</h1>

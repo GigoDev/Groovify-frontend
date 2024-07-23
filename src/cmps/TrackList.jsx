@@ -19,13 +19,7 @@ export function TrackList({ tracks, onAddTrack, onPlay }) {
         else if (visibleTracks > 5) setVisibleTracks(5)
     }
 
-    function onAddTrack(track) {
-        console.log('TODO: add track to liked songs', track)
-    }
-
-
     if (!tracks) return <div>Loading...</div>
-    console.log(tracks)
     return (
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (

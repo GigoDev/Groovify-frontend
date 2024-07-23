@@ -4716,5 +4716,21 @@ export const stations = [
                 "primaryColor": null
             }
         ]
+    },
+    {
+        "type": "playlist",
+        "name": "Liked Songs",
+        "description": "User liked songs",
+        "likes": "",
+        "imgs": [
+            {
+                "url": "https://misc.scdn.co/liked-songs/liked-songs-64.png"
+            }
+        ],
+        "tracks": [],
+        "total": "",
+        "createdBy": {id:'userId',name:'user name'},
+        "createdAt": 1721766961546,
+        "id": "2D2M9"
     }
 ]

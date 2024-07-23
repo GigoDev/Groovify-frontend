@@ -41,16 +41,16 @@ async function getToken() {
 async function getArtist(artistId) {
     var artist
     //local storage
-    // try {
-    //     const stations = await loadFromStorage('station')
-    //     artist = stations.find(station => station.id === artistId)
-    //     if (artist) {
-    //         console.log('from local storage', artist)
-    //         return artist
-    //     }
-    // } catch (error) {
-    //     console.log('cant find id in cache, getting playlist from spotify')
-    // }
+    try {
+        const stations = await loadFromStorage('station')
+        artist = stations.find(station => station.id === artistId)
+        if (artist) {
+            console.log('from local storage', artist)
+            return artist
+        }
+    } catch (error) {
+        console.log('cant find id in cache, getting playlist from spotify')
+    }
 
     //from spotify
     try {

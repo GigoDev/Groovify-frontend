@@ -10,6 +10,8 @@ export const spotifyService = {
     getPlaylist,
     getAlbum,
     getCategoryPlaylists,
+    searchFor,
+
 }
 
 window.spotifyService = spotifyService
@@ -194,7 +196,7 @@ async function getAlbum(albumId, market = 'IL') {
     }
 }
 
-async function getCategoryPlaylists(category){// in work---------------------------------------
+async function getCategoryPlaylists(category) {
 
     const token = loadFromStorage('access_token')
     const url = `https://api.spotify.com/v1/browse/categories/${category}/playlists`
@@ -207,14 +209,38 @@ async function getCategoryPlaylists(category){// in work------------------------
         name: playlist.name,
         description: playlist.description,
         imgs: playlist.images,
-        owner: {id: playlist.owner.id, name: playlist.owner.display_name},
+        owner: { id: playlist.owner.id, name: playlist.owner.display_name },
         category: category
 
     }))
 
     console.log('playlists:', playlists)
     return playlists
-    
+
+}
+
+async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL') {//type values: "album", "artist", "playlist", "track"
+
+    try {
+        const typesStr = types.join('%2C')
+        const token = loadFromStorage('access_token')
+        const url = `https://api.spotify.com/v1/search?q=${searchStr}&type=${typesStr}&market=${market}&limit=${limit}`
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const resp = await axios.get(url, { headers })
+
+        const tracks = resp.data.tracks.items.map(track => ({
+            id: track.id,
+            name: track.name,
+            type: track.type,
+            duration: formatTime(track.duration_ms / 1000),
+            album: {id: track.album.id, name: track.album.name, imgs:track.album.images ,artist: {id: track.album.artists[0].id, name: track.album.artists[0].name}},
+            artists: track.artists.map(artist=> ({id: artist.id,name: artist.name,}))
+
+        }))
+        console.log(tracks)
+    } catch (error) {
+        console.error('Error in searching:', error)
+    }
 }
 
 async function _getAlbumTracks(id, limit = 10, offset = 0, market = 'IL') {
@@ -247,21 +273,6 @@ async function getAlbums(ids = ['382ObEPsp2rxGrnsizN5TX', '2C1A2GTWGtFfWp7KSQTwW
 
     } catch (error) {
         console.error('Error fetching albums:', error)
-    }
-}
-
-async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL') {//type values: "album", "artist", "playlist", "track"
-
-    try {
-        const typesStr = types.join('%2C')
-        const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/search?q=${searchStr}&type=${typesStr}&market=${market}&limit=${limit}`
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const resp = await axios.get(url, { headers })
-        console.log(resp.data.tracks.items)
-
-    } catch (error) {
-        console.error('Error in searching:', error)
     }
 }
 

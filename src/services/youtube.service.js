@@ -6,7 +6,7 @@ export const youtubeService = {
 }
 
 const STORAGE_KEY = 'tracks_DB'
-const YT_KEY = 'AIzaSyBSWt3 - m0mxFxo3zs2yYCRSomPyGt1kRKI'
+const YT_KEY = 'AIzaSyCilqLL-8Izy6Fx59c3SKshxQkbcSnuG5I'
 
 window.youtubeService = youtubeService
 

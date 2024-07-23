@@ -149,10 +149,8 @@ async function getPlaylist(id) {
             imgs: resp.data.images,
             url: resp.data.href,
             likes: resp.data.followers.total,
-            tracks: {
-                total: resp.data.tracks.total,
-                url: resp.data.tracks.href,
-                items: items.map(item => ({
+            total: resp.data.tracks.total,
+            tracks: items.map(item => ({
                     id: item.track.id,
                     type: item.track.type,
                     name: item.track.name,
@@ -162,7 +160,6 @@ async function getPlaylist(id) {
                     addedAt: item.added_at,
                     primaryColor: item.primary_color
                 }))
-            }
         }
 
         console.log(playlist)

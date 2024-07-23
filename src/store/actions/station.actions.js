@@ -71,7 +71,8 @@ export async function addStationMsg(stationId, txt) {
 }
 
 export function clearStation() {
-    store.dispatch(getCmdSetStation())
+    store.dispatch(getCmdSetStation(null))
+
 }
 
 export function toggleLibraryAction() {

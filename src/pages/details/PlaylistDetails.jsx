@@ -26,18 +26,26 @@ export function PlaylistDetails() {
 
   useEffect(() => {
     loadStation(id)
-    return clearStation()
+    return async()=>{
+     await clear()
+    }
   }, [id])
+
+  async function clear(){
+    await clearStation()
+
+  }
+
 
   function openEditModal() {
     setIsModalOpen(true)
   }
 
-  if (!station) return <h1>Loading...</h1>
-  const { imgs, listeners, name, type, tracks, likes } = station
+  if (!station || station.type !== 'playlist') return <h1>Loading...</h1>
+  const { imgs, listeners, name, type, tracks, likes,total } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
-  const totalDuration = tracks.items?.reduce((acc, track) => acc + track.duration, 0)
+  const totalDuration = tracks.reduce((acc, track) => acc + track.duration, 0)
   const formattedDuration = formatDuration(totalDuration)
   return (
     <section className="playlist-details">
@@ -47,7 +55,7 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           <div className="mini-dashboard">
-            John Doe • {likes.toLocaleString()} likes • {tracks.total} songs
+            John Doe • {likes.toLocaleString()} likes • {total} songs
             <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
           </div>
         </div>
@@ -66,7 +74,7 @@ export function PlaylistDetails() {
         </section>
 
 
-        {tracks.items.length > 0 ? (
+        {tracks.length > 0 ? (
           <div className="list-titles">
             <span>#</span>
             <span>Title</span>
@@ -76,7 +84,7 @@ export function PlaylistDetails() {
           </div>
         ) : (null)}
 
-        <PlaylistList items={tracks.items} />
+        <PlaylistList items={tracks} />
       </section>
       <SearchTracks />
       <UpdateStationModal

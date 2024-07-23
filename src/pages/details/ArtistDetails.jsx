@@ -46,7 +46,7 @@ export function ArtistDetails() {
 
       <div className='hero-info'>
         <div className='title'>{title}</div>
-        <div className='listeners'><span>{listeners.toLocaleString()}</span> monthly listeners</div>
+        <div className='listeners'><span>{listeners?.toLocaleString()}</span> monthly listeners</div>
       </div>
 
       <section className='station-content'>

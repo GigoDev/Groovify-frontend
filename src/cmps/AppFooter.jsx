@@ -45,7 +45,7 @@ export function AppFooter() {
 					</section>
 				</div>
 			</div>
-			<hr className="horizontal-line"></hr>
+			<span className="horizontal-line"></span>
 
 			<section className="policies-container">
 				<span>Legal </span>

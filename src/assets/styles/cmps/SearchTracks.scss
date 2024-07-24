@@ -3,6 +3,7 @@
     flex-direction: column;
     font-family: circular-bold;
     gap: 1rem;
+    padding: 20px;
 
     .search-input {
         position: relative;
@@ -21,6 +22,7 @@
             width: 100%; 
             background-color: $clr13;
             padding: 10px 0 8px 33px;
+            color: $clr01;
             border: 0;
 
             &::placeholder {
@@ -33,6 +35,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem; 
+        padding-block: 1em;
 
         p {
             color: #888; 

@@ -1,16 +1,20 @@
 .playlist-list {
    display: flex;
    flex-direction: column;
-   gap: 20px;
-   padding: 20px;
+   gap: 10px;
+   padding-block: 20px;
+
 
    li {
       display: grid;
-      grid-template-columns: 30px 40px 1fr 1fr 260px 1fr;
-      padding: 10px;
+      grid-template-columns: 30px 40px 2fr 1.5fr 1fr 40px;
       align-items: center;
       color: $clr02;
       font-size: 1rem;
+      padding-inline: 20px;
+      gap: 10px;
+      
+
 
       .play-icon {
          display: none;
@@ -19,6 +23,7 @@
       &:hover {
          background-color: $clr06;
 
+
          .playlist-number {
             display: none;
          }
@@ -26,7 +31,7 @@
          .play-icon {
             display: inline-block;
             cursor: pointer;
-            
+
             svg {
                width: 14px;
                height: 14px;
@@ -37,28 +42,22 @@
       .name {
          display: flex;
          flex-direction: column;
-         padding-inline-start: 10px;
+
          height: 50px;
          justify-content: space-around;
-      }
 
-      .createdAt {
-         justify-self: end;
-         padding-inline-end: 4em;
-      }
-
-      .date{
-         justify-self: center;
-         padding-inline-end: 4.5em;
       }
 
       .title {
          color: white;
-         
 
          &:hover {
             text-decoration: underline;
          }
+      }
+
+      .album{
+         grid-column: 4;
       }
 
       img {
@@ -70,6 +69,7 @@
 
       .add-btn svg:hover {
          cursor: pointer;
+
          fill: white;
       }
    }

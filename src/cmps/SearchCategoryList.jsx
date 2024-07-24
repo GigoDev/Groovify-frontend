@@ -6,7 +6,7 @@ export function SearchCategoryList() {
 
 
     return (
-        <section className="search-category-list content-layout">
+        <section className="search-category-list">
             <h1>Browse all</h1>
             <div className="category-container">
                 {Array.from({ length: 25 }, (_, i) => (

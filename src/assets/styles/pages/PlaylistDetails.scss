@@ -1,27 +1,31 @@
 .playlist-details {
-    padding: 20px;
     margin-block: 2rem;
+    background: transparent;
     background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
+
 
     .station-preview {
         gap: 25px;
-
         background: linear-gradient(transparent 0, rgba(0, 0, 0, .5) 100%);
         background-color: $clr04;
-        padding: 60px 35px 24px;
+        padding: 100px 100px 24px;
 
         .img-uploader-container {
-            aspect-ratio: 1;
-            height: 100%;
-            width: 100%;
             box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+
+            img {
+                aspect-ratio: 1;
+                width: 200px;
+                height: 100%;
+            }
         }
 
         .station-summary {
             display: flex;
             flex-direction: column;
             justify-content: end;
-            
+
+
             h1 {
                 font-size: 65px;
                 margin: 20px 0;
@@ -32,7 +36,15 @@
             .summary-title {
                 font-size: .75rem;
                 margin-bottom: 0;
+                position: relative;
+            }
+
+            .summary-title::first-letter {
                 text-transform: uppercase;
+            }
+
+            .summary-title {
+                text-transform: lowercase;
             }
 
             .mini-dashboard {
@@ -81,7 +93,7 @@
             padding: 0;
             border: 0;
             display: inline-flex;
-            align-items: center;
+            margin-block: .5em;
             cursor: pointer;
             transition: color 0.3s; // Smooth transition
 
@@ -98,15 +110,16 @@
 
     .list-titles {
         display: grid;
-        grid-template-columns: 20px 1fr 1fr 1fr 180px;
-        gap: 20px;
-        align-items: start;
+        grid-template-columns: 30px 2.1fr 1.5fr 1fr 30px;
+        gap: 10px;
         padding: 10px 20px;
         color: $clr02;
-        font-weight: bold;
+        font-size: .9rem;
         border-bottom: 1px solid $clr05;
 
-        svg{
+        grid-template-areas: "icon title artist album date"
+
+        svg {
             align-self: center;
             justify-self: center;
         }

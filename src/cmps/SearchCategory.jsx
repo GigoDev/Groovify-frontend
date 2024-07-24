@@ -13,6 +13,7 @@ export function SearchCategory({setSearch}) {
                 </svg>
                 <input
                     type="text"
+                    className="btn"
                     placeholder="What do you want to play?"
                     onChange={handleChange}
                 />

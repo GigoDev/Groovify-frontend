@@ -20,7 +20,7 @@
 
     .content-layout {
         display: grid;
-        grid-template-columns: 10px 1fr 10px;
+        grid-template-columns: 100px 1fr 100px;
 
         >* {
             grid-column: 2;

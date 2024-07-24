@@ -48,7 +48,7 @@ export function PlaylistDetails() {
   const totalDuration = tracks.reduce((acc, track) => acc + track.duration, 0)
   const formattedDuration = formatDuration(totalDuration)
   return (
-    <section className="playlist-details">
+    <section className="playlist-details content-layout ">
       <section className="station-preview flex full">
         <ImgUploader imgUrl={imgUrl} className="img-uploader-container" />
         <div className="station-summary">
@@ -76,7 +76,7 @@ export function PlaylistDetails() {
 
         {tracks.length > 0 ? (
           <div className="list-titles">
-            <span>#</span>
+            <span className="hashtag">#</span>
             <span>Title</span>
             <span>Album</span>
             <span>Date Added</span>

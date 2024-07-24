@@ -9,23 +9,23 @@
     margin-block: .5em;
     border-radius: 10px;
     background-color: $clr07;
-    padding: rem(10px) 1rem;
+    padding: rem(10px) 4.2rem;
 
     .btn {
         background-color: rgba(0, 0, 0, 0.6);
-        color: white;
+        color: $clr01;
     }
 
     nav {
         display: flex;
         align-items: center;
-        gap: .3em;
+        gap: .4em;
 
         svg {
             fill: $clr09;
             background: none;
             border: none;
-            color: white;
+            color: $clr01;
             cursor: pointer;
             font-size: 14px;
         }

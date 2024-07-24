@@ -1,33 +1,44 @@
 .main-search {
     display: flex;
     font-family: circular-bold;
+    padding: 0 4em;
 
     .input-container {
         position: relative;
         width: 100%;
-        
 
         svg {
             position: absolute;
-
             fill: $clr02;
             left: 9px;
             top: 13px;
+            
         }
 
         input {
             height: 43px;
             border-radius: 20px;
             width: 320px;
+            color: $clr01;
             background-color: $clr13;
             padding: 10px 0 8px 33px;
-            border: 0;
+            border: 1px solid transparent;
             
+
+            &:focus {
+                border: 2px solid $clr01;
+            }
+
+            &:hover {
+                border-color: gray;
+                &:focus {
+                    border: 2px solid $clr01;
+                }
+            }
 
             &::placeholder {
                 color: $clr12;
-                
             }
-        }
+        }        
     }
 }

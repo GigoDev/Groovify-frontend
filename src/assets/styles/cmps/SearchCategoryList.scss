@@ -1,14 +1,17 @@
 .search-category-list {
     display: grid;
+    gap: 20px;
+    padding-block: 2.5em;
 
     h1 {
         font-size: 1.5rem;
         font-family: circular-bold;
+        margin: 0;
     }
 
     .category-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
     }
 }

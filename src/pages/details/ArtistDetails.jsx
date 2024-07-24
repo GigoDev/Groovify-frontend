@@ -33,6 +33,13 @@ export function ArtistDetails() {
     setTracks()
   }
 
+  async function onAddTrack(track, id = '2D2M9') {//liked songs id
+    // const station = await stationService.getById(id) // id from somewhere or keep global
+    // station.tracks.push(track) // local edit, push track
+    // updateStation(station) // send to store action
+    // console.log(`track id: ${track.id} add to playlist id:${id}`)
+  }
+
   if (!station || station.type !== 'artist') return <h1>Loading...</h1>
   const { imgs, listeners, name: title, type, tracks } = station
   return (

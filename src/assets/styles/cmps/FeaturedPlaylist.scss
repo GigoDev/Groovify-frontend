@@ -1,37 +1,51 @@
 .featured-playlist-container {
-    // background-color: red;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-inline-start: 15px;
 
-    .list-title{
-        font-size: 24px;
+
+    .list-title {
+        font-size: 1.5rem;
         margin-bottom: 25px;
+        // margin-inline: 25px 0;
 
     }
 
-    .lists-container{
-        // background-color: red;
-        display: flex;
+    .lists-container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+        justify-items: left;
+        gap: 15px;
 
-        .list-item-container{
-            background-color: red;
-            width: 500px;
-            height: 300px;
+        .list-item {
+            // background-color: red;
+            max-width: 220px;
 
         }
 
     }
 
-    .img-container{
-        width: 200px;
-        img{
+    .img-container {
+
+        img {
+            border-radius: 10px;
 
         }
 
     }
-    .title{
+
+    .title {
+        font-size: 14px;
+        text-align: left;
 
     }
-    .description{
+
+    .description {
+        // display: none;
+        font-size: 12px;
+        color: $clr02;
 
     }
 }

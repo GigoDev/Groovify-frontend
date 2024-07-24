@@ -17,7 +17,10 @@ export function HomePage() {
         <>
             <section  className="home-container">
                 <StationList stations={stations.slice(0,8)}/>
-                <FeaturedPlaylist from={0} to={5} title={'List title'}/>
+                <FeaturedPlaylist from={0} to={7} title={'Top playlists'}/>
+                <FeaturedPlaylist from={7} to={14} title={'Recommanded for you'}/>
+                <FeaturedPlaylist from={14} to={21} title={'Mood'}/>
+                {/* <FeaturedPlaylist from={18} to={24} title={'List title3'}/> */}
             </section>
         </>
     )

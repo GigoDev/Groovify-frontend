@@ -1,13 +1,14 @@
 .track-list {
     display: flex;
     flex-direction: column;
+    margin-inline-start: 15px;
 
     li {
         display: grid;
         grid-template-columns: 30px 40px 2fr 1fr 50px 100px;
         align-items: center;
         justify-items: left;
-        padding-block: 10px;
+        padding-block: 9px;
         padding-inline-start: 20px;
 
         color: $clr02;
@@ -63,7 +64,8 @@
         display: flex;
         justify-content: start;
         width: 100px;
-        padding-block: 20px;
+        padding-block: 15px;
+        margin-inline-start: 11px;
 
         cursor: pointer;
         border: none;

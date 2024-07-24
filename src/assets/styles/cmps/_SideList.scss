@@ -50,7 +50,16 @@
                 // padding-block: 1px 0;
                 color: $clr03;
                 font-size: 0.9rem;
+                position: relative;
+            }
 
+
+            .card-type::first-letter {
+                text-transform: uppercase;
+            }
+
+            .card-type {
+                text-transform: lowercase;
             }
         }
 

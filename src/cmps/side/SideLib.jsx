@@ -15,12 +15,12 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const stations = useSelector(storeState => storeState.stationModule.stations)
     const [filterBy,setFilterBy] = useState({type:'playlist',txt:''})
     const [filtered,setFiltered] = useState(stations)
-
+    
     useEffect(() => {
         setFiltered(stations.filter(station => station.type === filterBy.type))
         // console.log('filterBy',filterBy)
     }, [filterBy,stations]);
-
+    
    
     function onAddPlaylist(){
         const newPlaylist = stationService.getEmptyPlaylist()
@@ -42,7 +42,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
                 </button>
             </div>
             <SideFilter setFilterBy={setFilterBy}/>
-            <SideList stations={filtered} />
+            <SideList filtered={filtered} />
         </section>
     )
 }

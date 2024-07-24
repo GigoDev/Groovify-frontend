@@ -6,8 +6,8 @@
         display: grid;
         grid-template-columns: 3fr 1fr;
         justify-content: space-between;
-        
-        
+
+
 
         .info {
             display: flex;
@@ -85,7 +85,7 @@
     }
 
     .links-container {
-        
+
         .social-links {
             display: flex;
             justify-content: end;
@@ -120,7 +120,15 @@
         }
     }
 
-   
+    hr.horizontal-line {
+        margin-block-start: 1.5em;
+        margin-block-end: 1.5em;
+        height: 1px;
+        background-color: $clr04;
+        border: none;
+        transform: scaleY(0.7);
+    }
+
 
     .policies-container {
         display: grid;

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
@@ -11,19 +11,30 @@ export function ArtistDetails() {
     const { id } = useParams()
     const station = useSelector(storeState => storeState.stationModule.station)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    const [opacity, setOpacity] = useState(1);
 
+    const handleScroll = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollTop / maxScroll;
+        setOpacity(1 - scrollFraction);
+      };
 
     useEffect(() => {
         loadStation(id)
+        window.addEventListener('scroll', handleScroll);
+
         return async () => {
+            window.removeEventListener('scroll', handleScroll);
             await clear()
         }
     }, [id])
 
     async function clear() {
         await clearStation()
-
     }
+
+   
 
     function onPlay(ev, track) {
         ev.stopPropagation()
@@ -53,7 +64,7 @@ export function ArtistDetails() {
     return (
         <section className="station-details-container">
 
-            <div className='hero'>
+            <div className='hero' style={{opacity}}>
                 <img src={imgs[0].url} alt="hero img" />
             </div>
 

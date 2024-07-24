@@ -13,7 +13,7 @@ import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
 
 export function SideLib({ isCollapsed, onCollapse }) {
     const stations = useSelector(storeState => storeState.stationModule.stations)
-    const [filterBy,setFilterBy] = useState({type:'artist',txt:''})
+    const [filterBy,setFilterBy] = useState({type:'playlist',txt:''})
     const [filtered,setFiltered] = useState(stations)
 
     useEffect(() => {

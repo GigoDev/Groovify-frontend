@@ -12,6 +12,7 @@ export const spotifyService = {
     getAlbum,
     getCategoryPlaylists,
     searchFor,
+    getFeaturedPlaylists
 }
 
 window.spotifyService = spotifyService
@@ -69,7 +70,6 @@ async function getArtist(artistId) {
         artist.tracks = topTracks
 
         console.log(artist)
-        stationService.save(artist)
         return artist
 
     } catch (error) {
@@ -119,7 +119,7 @@ async function getPlaylist(playlistId) {
     try {
         const token = loadFromStorage('access_token')
         const fields = 'description,followers,href,id,images,name,type,followers,tracks(href,total,items())'
-        const url = `https://api.spotify.com/v1/playlists/${id}?fields=${fields}`
+        const url = `https://api.spotify.com/v1/playlists/${playlistId}?fields=${fields}`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
 

@@ -3,6 +3,7 @@ import { store } from '../store'
 import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_TRACKS, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
+import { getRandomIntInclusive } from '../../services/util.service.js'
 
 // Station actions:
 export async function loadStations(filterBy) {
@@ -71,8 +72,7 @@ export async function addStationMsg(stationId, txt) {
 }
 
 export function clearStation() {
-    store.dispatch(getCmdSetStation(null))
-
+    store.dispatch(getCmdSetStation())
 }
 
 export function toggleLibraryAction() {
@@ -109,13 +109,30 @@ export function setTracks() {
     }
 }
 
-export function playNextPrev(i) {
+export function next() {
     const { currTrack, currPlayingTracks } = store.getState().stationModule
-    const Idx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id)
+    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
 
-    if (Idx === currPlayingTracks.length || Idx < 0) Idx = 0
+    if (Idx === currPlayingTracks.length) Idx = 0 // End of playlist
+    setTrack(currPlayingTracks[++Idx])
+}
+
+export function prev() {
+
+    const { currTrack, currPlayingTracks } = store.getState().stationModule
+    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
+
+    if (Idx === 0) return // Start of playlist
+    setTrack(currPlayingTracks[--Idx])
+}
+
+export function shuffle() {
+    const { currPlayingTracks } = store.getState().stationModule
+
+    const Idx = getRandomIntInclusive(0, currPlayingTracks.length - 1) // Shuffle
     setTrack(currPlayingTracks[Idx])
 }
+
 
 
 // Command Creators:

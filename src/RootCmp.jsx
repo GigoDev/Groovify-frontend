@@ -10,7 +10,7 @@ import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'
 import { SearchPage } from './pages/SearchPage.jsx'
 import { SideMenu } from './cmps/side/SideMenu.jsx'
-import { Player } from './cmps/Player/Player.jsx'
+import { Player } from './cmps/Player.jsx'
 import { ArtistDetails } from './pages/details/ArtistDetails.jsx'
 import { PlaylistDetails } from './pages/details/PlaylistDetails.jsx'
 

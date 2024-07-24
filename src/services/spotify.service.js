@@ -281,7 +281,7 @@ async function getFeaturedPlaylists() {//get top 10 playlists in IL
 
     try {
         const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/browse/featured-playlists?limit=10`
+        const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
 

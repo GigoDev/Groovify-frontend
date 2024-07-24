@@ -1,0 +1,37 @@
+.featured-playlist-container {
+    // background-color: red;
+    margin-top: 50px;
+
+    .list-title{
+        font-size: 24px;
+        margin-bottom: 25px;
+
+    }
+
+    .lists-container{
+        // background-color: red;
+        display: flex;
+
+        .list-item-container{
+            background-color: red;
+            width: 500px;
+            height: 300px;
+
+        }
+
+    }
+
+    .img-container{
+        width: 200px;
+        img{
+
+        }
+
+    }
+    .title{
+
+    }
+    .description{
+
+    }
+}

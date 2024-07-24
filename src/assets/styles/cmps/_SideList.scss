@@ -2,16 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    height: 100%;
-    padding-block-end: 10px;
-    overflow-y: auto; /* Vertical scrollbar */
 
-    .side-card{
+    .side-card {
         display: flex;
         align-items: center;
-        padding-block: 10px 6px;
-        padding-inline: 18px;
-        
+        margin-inline: .2rem;
+        // padding: .4rem;
+
         background-color: $clr07;
         cursor: pointer;
 
@@ -23,37 +20,40 @@
             background-color: $clr05;
         }
 
-        
-        .img-container{
-           width: 48px;
-           border-radius: 5px;
-        
+
+        .img-container {
+            width: 46px;
+            height: 46px;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-inline: 12px;
+            margin-block: 8px;
+            
         }
 
-        .card-details{
+        .card-details {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 48px;
+
             align-items: start;
-            padding-inline-start: 12px;
-            padding-block: 3px;
-            
-            
-            
+            // padding-block: 3px;
+
             font-family: circular;
             font-size: 1rem;
+
             .card-title {
                 color: $clr01;
             }
-            .card-type{
-                padding-block: 1px 0;
+
+            .card-type {
+                // padding-block: 1px 0;
                 color: $clr03;
                 font-size: 0.9rem;
 
             }
         }
-       
+
     }
-   
+
 }

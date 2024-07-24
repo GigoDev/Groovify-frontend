@@ -1,21 +1,18 @@
 .app-container {
     display: grid;
     grid-template-columns: auto 1fr;
-    min-height: 100vh;
+    height: 100vh;
+    gap: .4rem;
 
     .side-menu {
-        padding: 6px;
-        position: fixed;
-        width: 350px;
         grid-column: 1;
     }
 
     .main-container {
         grid-column: 2;
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: auto 1fr;
         gap: 1rem;
-        margin-inline-start: 19.5em;
     }
 
     .content-layout {

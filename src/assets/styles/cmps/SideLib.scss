@@ -2,9 +2,9 @@
     display: grid;
     grid-template-rows: 60px 85px auto 110px; // control the side lib vertical layout [your lib, filter buttons, search, list]
     align-items: start;
-    height: 100%;
     border-radius: 7px;
     background-color: $clr07;
+    
     
 
     .top-bar {

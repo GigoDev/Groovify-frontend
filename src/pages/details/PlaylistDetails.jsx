@@ -73,6 +73,8 @@ export function PlaylistDetails() {
           </div>
         </section>
 
+<div>
+
 
         {tracks.length > 0 ? (
           <div className="list-titles">
@@ -85,6 +87,7 @@ export function PlaylistDetails() {
         ) : (null)}
 
         <PlaylistList items={tracks} />
+</div>
       </section>
       <SearchTracks />
       <UpdateStationModal

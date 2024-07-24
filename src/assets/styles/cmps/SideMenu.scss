@@ -1,20 +1,10 @@
 .side-menu {
-    height: calc(100vh - 80px);
 
-    &.collapsed {
-        width: 70px;
-    }
-
-    .side-lib.collapsed {
-        grid-template-rows: 55px auto 125px;
-    }
 
     .side-lib,
     .side-nav {
 
         &.collapsed {
-            width: 74px;
-            overflow: hidden;
 
             span,
             .side-sort-container,
@@ -25,15 +15,14 @@
                 display: none;
             }
 
-            .side-list-container .side-card{
+            .side-list-container .side-card {
                 align-self: center;
-                
-                    padding-inline-start: 12px;
-                    // padding-block: 10;
-                .card-details{
+
+                // padding-inline-start: 12px;
+
+                .card-details {
                     display: none;
                 }
-
 
             }
 

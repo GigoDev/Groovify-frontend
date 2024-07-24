@@ -3,11 +3,12 @@
     grid-template-columns: auto 1fr;
     height: 100vh;
     gap: .4rem;
-
+    grid-template-rows:1fr auto;
+    
     .side-menu {
         grid-column: 1;
     }
-
+    
     .main-container {
         grid-column: 2;
         display: grid;

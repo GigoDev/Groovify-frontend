@@ -3,34 +3,23 @@ import React, { useRef, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
 
+import { next, prev, shuffle, togglePlay } from '../store/actions/station.actions'
+import { formatTime } from '../services/util.service'
 
-
-import { playNextPrev, togglePlay } from '../..//store/actions/station.actions'
-import { formatTime } from '../../services/util.service'
-
-// Player controls:
-import { PlayerLeft } from './PlayerLeft'
-// import { PlayerCenter } from './PlayerCenter'
 
 // SVGs:
-import ShuffleIcon from '../../assets/icons/ShuffleIcon.svg'
-import PrevSongIcon from '../../assets/icons/PrevSongIcon.svg'
-import PlayIcon from '../../assets/icons/PlayIcon.svg'
-import PauseIcon from '../../assets/icons/PauseIcon.svg'
-import NextSong from '../../assets/icons/NextSong.svg'
-import LoopIcon from '../../assets/icons/LoopIcon.svg'
+import ShuffleIcon from '../assets/icons/ShuffleIcon.svg'
+import PrevSongIcon from '../assets/icons/PrevSongIcon.svg'
+import PlayIcon from '../assets/icons/PlayIcon.svg'
+import PauseIcon from '../assets/icons/PauseIcon.svg'
+import NextSong from '../assets/icons/NextSong.svg'
+import LoopIcon from '../assets/icons/LoopIcon.svg'
 
-import LyricsIcon from '../../assets/icons/LyricsIcon.svg'
-import PlayerViewerIcon from '../../assets/icons/PlayerViewerIcon.svg'
-import QueueIcon from '../../assets/icons/QueueIcon.svg'
-import DeviceConnectorIcon from '../../assets/icons/DeviceConnectorIcon.svg'
-import VolumeMutedIcon from '../../assets/icons/VolumeMutedIcon.svg'
-import VolumeNormalIcon from '../../assets/icons/VolumeNormalIcon.svg'
-import Volume033Icon from '../../assets/icons/Volume033Icon.svg'
-import Volume066Icon from '../../assets/icons/Volume066Icon.svg'
-import MiniPlayerIcon from '../../assets/icons/MiniPlayerIcon.svg'
-import FullScreenIcon from '../../assets/icons/FullScreenIcon.svg'
-
+import VolumeMutedIcon from '../assets/icons/VolumeMutedIcon.svg'
+import VolumeNormalIcon from '../assets/icons/VolumeNormalIcon.svg'
+import Volume033Icon from '../assets/icons/Volume033Icon.svg'
+import Volume066Icon from '../assets/icons/Volume066Icon.svg'
+import LikeIcon from '../assets/icons/LikeIcon.svg'
 
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
@@ -80,6 +69,7 @@ export function Player() {
 
         setVolume(newVolume)
     }
+
     const { album, name } = currTrack
     return (
 
@@ -94,15 +84,22 @@ export function Player() {
                 volume={volume}
                 muted={isMuted}
                 onProgress={handleProgress}
-                onEnded={() => isShuffle ? playNextPrev(0) : playNextPrev(-1)}
+                onEnded={() => isShuffle ? shuffle() : next()}
                 onDuration={getDuration}
                 height="0"
                 width="0"
             />
 
-            <PlayerLeft
-                album={album}
-                name={name} />
+            <div className="left-controls">
+                <img className="media-img fit-img" src={`${album.images[2].url}`} />
+                <div className="artist-details">
+                    <span className="player-song-name">{name}</span>
+                </div>
+                <button className="like-btn">
+                    <LikeIcon />
+                </button>
+            </div>
+
 
             <div className="center-controls">
 
@@ -113,14 +110,14 @@ export function Player() {
                         <ShuffleIcon />
                     </button>
 
-                    <button className="prev-btn" onClick={() => playNextPrev(-1)}>
+                    <button className="prev-btn" onClick={prev}>
                         <PrevSongIcon />
                     </button>
 
                     <button className="play-btn" onClick={togglePlay} >
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className="next-btn " onClick={() => isShuffle ? playNextPrev(0) : playNextPrev(1)}>
+                    <button className="next-btn " onClick={() => isShuffle ? shuffle() : next()}>
                         <NextSong />
                     </button>
                     <button className={'loop-btn' + (isLoop ? ' active' : '')} onClick={() => {
@@ -149,18 +146,7 @@ export function Player() {
             </div>
 
             <div className="right-controls">
-                <button className="lyrics-btn">
-                    <LyricsIcon />
-                </button>
-                <button className="player-viewer-btn">
-                    <PlayerViewerIcon />
-                </button>
-                <button className="queue-btn">
-                    <QueueIcon />
-                </button>
-                <button className="device-connector">
-                    <DeviceConnectorIcon />
-                </button>
+
                 <button className="sound-btn" onClick={handleMute}>
                     {isMuted || volume === 0 ? (
                         <VolumeMutedIcon />
@@ -179,12 +165,7 @@ export function Player() {
                     max="1"
                     style={{ background: `linear-gradient(to right, white ${volume * 100}%,  rgba(255, 255, 255, 0.3) ${volume * 100}%)` }}
                 />
-                <button className="miniplayer-btn">
-                    <MiniPlayerIcon />
-                </button>
-                <button className="fullscreen-btn">
-                    <FullScreenIcon />
-                </button>
+
             </div>
 
 

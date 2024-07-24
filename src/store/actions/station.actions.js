@@ -109,15 +109,30 @@ export function setTracks() {
     }
 }
 
-export function playNextPrev(i) {
-    console.log(i)
+export function next() {
     const { currTrack, currPlayingTracks } = store.getState().stationModule
-    let Idx = i + currPlayingTracks.findIndex(track => currTrack.id === track.id) // get next or prev index
+    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
 
-    if (Idx === currPlayingTracks.length || Idx < 0) Idx = 0 // Protect from edge cases
-    if (!i) Idx = getRandomIntInclusive(0, currPlayingTracks.length - 1) // Shuffle
+    if (Idx === currPlayingTracks.length) Idx = 0 // End of playlist
+    setTrack(currPlayingTracks[++Idx])
+}
+
+export function prev() {
+
+    const { currTrack, currPlayingTracks } = store.getState().stationModule
+    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
+
+    if (Idx === 0) return // Start of playlist
+    setTrack(currPlayingTracks[--Idx])
+}
+
+export function shuffle() {
+    const { currPlayingTracks } = store.getState().stationModule
+
+    const Idx = getRandomIntInclusive(0, currPlayingTracks.length - 1) // Shuffle
     setTrack(currPlayingTracks[Idx])
 }
+
 
 
 // Command Creators:

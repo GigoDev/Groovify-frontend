@@ -1,18 +1,22 @@
 .side-nav {
     display: grid;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 53px 53px;
     width: 100%;
     margin-block: 7px;
     border-radius: 7px;
     background-color: $clr07;
     font-family: circular-bold;
 
+    .search-link{
+        padding-block: 0px 9px;
+    }
+
     .home-link,
     .search-link {
         display: flex;
-        gap: 5px;
+        gap: 20px;
         align-items: center;
-        padding: 5px 0px 5px 24px;
+        padding-inline: 25px;
         color: $clr03;
         text-decoration: none;
 
@@ -22,10 +26,9 @@
         }
 
         span {
-            margin-left: 5px;
-            padding: 5px;
+            padding-block: 3px 0px;
             color: $clr02;
-            font-size: 0.85rem;
+            font-size: 1rem;
         }
 
         &:hover {
@@ -34,9 +37,4 @@
         }
     }
 
-    .search-link {
-        span {
-            font-size: 0.9rem;
-        }
-    }
 }

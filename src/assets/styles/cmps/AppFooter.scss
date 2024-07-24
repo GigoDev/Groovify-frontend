@@ -127,6 +127,8 @@
         grid-template-columns: repeat(6, auto) 1fr;
         gap: 10px;
         justify-content: start;
+
+        height: 150px;
         margin-block: 3rem;
 
         span:last-child {

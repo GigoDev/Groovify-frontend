@@ -54,7 +54,7 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
     if (textInput) stationToUpdate.name = textInput
     if (descInput) stationToUpdate.description = descInput
     if (stationImg) stationToUpdate.imgs = [{ url: stationImg }]
-    
+
     stationService.save(stationToUpdate)
 
     closeModal()
@@ -82,7 +82,7 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
               type="text"
               name="title"
               className="title"
-              placeholder="Title"
+              placeholder="My Playlist #"
               value={textInput}
               onChange={handleInputChange}
             />
@@ -90,7 +90,7 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
               type="text"
               name="description"
               className="description"
-              placeholder="Description"
+              placeholder="Add an optional description"
               value={descInput}
               onChange={handleInputChange}
             />
@@ -98,7 +98,9 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
           <button className="btn save-btn" type="submit">Save</button>
         </form>
         <span>By proceeding, you agree to give Groovify access to the image you choose to upload. Please make sure you have the right to upload the image.</span>
-        <button className="close-btn" onClick={closeModal}>X</button>
+        <button className="close-btn" onClick={closeModal}>
+          <svg data-encore-id="icon" role="img" aria-label="Close" fill="white" aria-hidden="true" viewBox="0 0 16 16" className="Svg-close-btn"><path d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z"></path></svg>
+        </button>
 
         <input type="file"
           name="img"

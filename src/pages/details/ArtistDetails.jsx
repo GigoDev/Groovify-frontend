@@ -12,20 +12,21 @@ export function ArtistDetails() {
     const station = useSelector(storeState => storeState.stationModule.station)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const [opacity, setOpacity] = useState(1);
-
+    
+    const elMainContainer = document.querySelector('.main-container')
     const handleScroll = () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = elMainContainer.scrollTop;
+        const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
         const scrollFraction = scrollTop / maxScroll;
         setOpacity(1 - scrollFraction);
       };
 
     useEffect(() => {
         loadStation(id)
-        window.addEventListener('scroll', handleScroll);
+        elMainContainer.addEventListener('scroll', handleScroll);
 
         return async () => {
-            window.removeEventListener('scroll', handleScroll);
+            elMainContainer.removeEventListener('scroll', handleScroll);
             await clear()
         }
     }, [id])

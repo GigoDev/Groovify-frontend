@@ -89,7 +89,7 @@ async function _getArtistTopTracks(artistId, market = 'IL') {
             id: track.id,
             name: track.name,
             duration: formatTime(track.duration_ms / 1000),
-            artists: track.artists.map(artist => ({ id: artist.id, name: artist.name })),
+            artist: {id: track.artists[0].id, name: track.artists[0].name},
             album: { id: track.album.id, name: track.album.name, totalTrack: track.album.total_tracks, imgs: track.album.images }
         }))
 
@@ -180,12 +180,12 @@ async function getAlbum(albumId, market = 'IL') {
             imgs: resp.data.images,
             total: resp.data.tracks.total, // the number of tracks in the album
             releaseDate: resp.data.release_date,
-            artists: resp.data.artists.map(artist => ({ id: artist.id, name: artist.name })),
+            artist: {id: resp.data.artist[0].id, name: resp.data.artist[0].name},
             tracks: resp.data.tracks.items.map(item => ({
                 id: item.id,
                 name: item.name,
                 duration: item.duration_ms,
-                artists: item.artists.map(artist => ({ id: artist.id, name: artist.name }))
+                artist: {id: item.artists[0].id, name: item.artists[0].name}
             }))
 
         }

@@ -110,7 +110,7 @@ function getDefaultTrack() {
             },
             href: "https://api.spotify.com/v1/albums/2umoqwMrmjBBPeaqgYu6J9",
             id: "2umoqwMrmjBBPeaqgYu6J9",
-            images: [
+            imgs: [
                 {
                     height: 640,
                     url: "https://i.scdn.co/image/ab67616d0000b2738a2ce3f148f57584269c3782",

@@ -91,7 +91,7 @@ export function Player() {
             />
 
             <div className="left-controls">
-                <img className="media-img fit-img" src={`${album.images[2].url}`} />
+                <img className="media-img fit-img" src={`${album.imgs[2].url}`} />
                 <div className="artist-details">
                     <span className="player-song-name">{name}</span>
                 </div>

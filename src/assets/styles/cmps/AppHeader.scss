@@ -1,18 +1,17 @@
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     bottom: 0;
     justify-content: space-between;
     height: 3.5rem;
     width: 100%;
-    margin-inline: .1em;
-    margin-block: .5em;
-    border-radius: 10px;
     background-color: $clr07;
     padding: rem(10px) 4.2rem;
+    // background-color: green;
+    z-index: 333;
 
     .btn {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: $clr07;
         color: $clr01;
     }
 
@@ -61,6 +60,15 @@
 
             width: 10em;
             font-weight: bold;
+        }
+
+        .user-btn{
+            background-color: #E07A9F ;
+            color: black;
+        }
+
+        .notification-btn{
+            color: $clr02;
         }
 
 

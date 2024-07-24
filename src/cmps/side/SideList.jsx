@@ -19,7 +19,7 @@ export function SideList({ filtered }) {
                     className={activeId === station.id ? 'side-card active' : 'side-card'}
                     key={station.id}
                     onClick={() => handleClick(station.id, station.type)}>
-                    <div className="img-container square-ratio">
+                    <div className="img-container">
                         {station.imgs[(station.imgs.length - 1)].url ?
                             <img src={station.imgs[(station.imgs.length - 1)].url} />
                             :

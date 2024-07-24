@@ -9,9 +9,13 @@ html {
 
 .app-container {
     color: $clr01;
+    padding: 6px;
+    overflow: hidden;
 
     .main-container {
         background-color: $clr07;
+        overflow: hidden;
+        overflow-y: auto;
     }
 }
 

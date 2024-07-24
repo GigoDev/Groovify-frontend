@@ -22,7 +22,7 @@ export function PlaylistList({ items }) {
                 </div>
 
                 <span className='album'>{item.album.name}</span>
-                <span className='date'>{item.addedAt? formatDate(item.addedAt) : 'no date'}</span>
+                <span className='date'>{item.addedAt? formatDate(item.addedAt) : ''}</span>
                 <span className='createdAt'>{item.duration}</span>
             </li>
         ))}

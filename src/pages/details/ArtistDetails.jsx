@@ -46,6 +46,7 @@ export function ArtistDetails() {
 
     async function onAddTrack(track, stationId = '2D2M9') {
         const stationToEdit = await stationService.getById(stationId)
+        track.addedAt = new Date().toISOString()
         stationToEdit.tracks.unshift(track)
         const savedStation = await stationService.save(stationToEdit)
         console.log(`${track.name} added to ${stationToEdit.name}`)

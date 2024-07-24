@@ -48,7 +48,7 @@ export async function getTracks(searchVal) {
 	  return Promise.resolve(itemMap[searchVal])
 	}
   
-	const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&videoEmbeddable=true&type=video&key=${import.meta.env.VITE_YT_API_KEY}&q=${searchVal}`;
+	const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&videoEmbeddable=true&type=video&key=${import.meta.env.VITE_YT_API_KEY}&q=${searchVal}`;
   
 	try {
 	  const res = await axios.get(url)

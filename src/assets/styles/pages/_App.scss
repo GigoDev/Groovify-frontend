@@ -8,6 +8,12 @@
         overflow: hidden;
         overflow-y: auto;
         padding-inline: 15px;
+
+        &:hover{
+            &::-webkit-scrollbar-thumb{
+            background: rgba(136, 136, 136, 0.5);
+            }
+        }
         
 
         &::-webkit-scrollbar {
@@ -26,7 +32,6 @@
             /* Handle on hover */
             &-thumb:hover {
             background: rgba(136, 136, 136, 0.5);
-            background: #555;
             }
         
             @media(max-width:$narrow-breakpoint) {

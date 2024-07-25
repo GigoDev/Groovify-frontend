@@ -4,7 +4,6 @@
     overflow: hidden;
 
     .main-container {
-        position: relative;
         background-color: $clr07;
         overflow: hidden;
         overflow-y: auto;
@@ -12,9 +11,6 @@
         
 
         &::-webkit-scrollbar {
-            position: absolute;
-            right: 0;
-            
             width: 10px;
             
             /* Track */

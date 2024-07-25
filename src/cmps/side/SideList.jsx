@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 
-export function SideList({ stations }) {
+export function SideList({ filtered }) {
     const navigate = useNavigate()
     const [activeId, setActiveId] = useState(null)
 
@@ -11,10 +11,10 @@ export function SideList({ stations }) {
         navigate(`/${type}/${id}`)
     }
 
-    if (!stations) return null
+    if (!filtered) return null
     return (
         <ul className='side-list-container clean-list'>{
-            stations.map(station => (
+            filtered.map(station => (
                 <article
                     className={activeId === station.id ? 'side-card active' : 'side-card'}
                     key={station.id}

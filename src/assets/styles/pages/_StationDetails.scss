@@ -10,8 +10,8 @@
       z-index: 0;
 
       height: $hero-img-height;
-      width: 100%;
-      padding-top: 12px;
+      width: calc(100% - 370px);
+      
 
       img {
          width: 100%;

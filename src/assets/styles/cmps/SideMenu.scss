@@ -1,11 +1,11 @@
 .side-menu {
 
-
     .side-lib,
     .side-nav {
+        width: 350px; // open width
 
         &.collapsed {
-
+            width: auto; //close width
             span,
             .side-sort-container,
             .side-search-library,

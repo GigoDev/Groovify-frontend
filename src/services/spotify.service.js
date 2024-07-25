@@ -12,6 +12,7 @@ export const spotifyService = {
     getAlbum,
     getCategoryPlaylists,
     searchFor,
+    getFeaturedPlaylists
 }
 
 window.spotifyService = spotifyService
@@ -69,7 +70,6 @@ async function getArtist(artistId) {
         artist.tracks = topTracks
 
         console.log(artist)
-        stationService.save(artist)
         return artist
 
     } catch (error) {
@@ -119,7 +119,7 @@ async function getPlaylist(playlistId) {
     try {
         const token = loadFromStorage('access_token')
         const fields = 'description,followers,href,id,images,name,type,followers,tracks(href,total,items())'
-        const url = `https://api.spotify.com/v1/playlists/${id}?fields=${fields}`
+        const url = `https://api.spotify.com/v1/playlists/${playlistId}?fields=${fields}`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
 
@@ -169,24 +169,29 @@ async function getAlbum(albumId, market = 'IL') {
     //from spotify
     try {
         const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/albums/${id}?market=${market}`
+        const url = `https://api.spotify.com/v1/albums/${albumId}?market=${market}`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
-
+        console.log(resp.data)
         album = {
-            id: resp.data.id,
+            spotifyId: resp.data.id,
             type: resp.data.type,
             name: resp.data.name,
             imgs: resp.data.images,
             total: resp.data.tracks.total, // the number of tracks in the album
             releaseDate: resp.data.release_date,
-            artist: {id: resp.data.artist[0].id, name: resp.data.artist[0].name},
+            artist: {id: resp.data.artists[0].id, name: resp.data.artists[0].name},
             tracks: resp.data.tracks.items.map(item => ({
-                id: item.id,
+                spotifyId: item.id,
                 name: item.name,
                 duration: item.duration_ms,
-                artist: {id: item.artists[0].id, name: item.artists[0].name}
-            }))
+                artist: {id: item.artists[0].id, name: item.artists[0].name},
+                addedAt:null,
+            })),
+            listeners: null,
+            description:null,
+            likes:null,
+            owner:null,
 
         }
         console.log(album)
@@ -281,7 +286,7 @@ async function getFeaturedPlaylists() {//get top 10 playlists in IL
 
     try {
         const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/browse/featured-playlists?limit=10`
+        const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
 

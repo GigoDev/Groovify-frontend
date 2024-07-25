@@ -1,4 +1,4 @@
-import { formatDate, formatDuration2 } from "../services/util.service"
+import { formatDate } from "../services/util.service"
 
 export function PlaylistList({ items }) {
     return (
@@ -22,8 +22,8 @@ export function PlaylistList({ items }) {
                 </div>
 
                 <span className='album'>{item.album.name}</span>
-                <span className='date'>{formatDate(item.addedAt)}</span>
-                <span className='createdAt'>{formatDuration2(item.duration)}</span>
+                <span className='date'>{item.addedAt? formatDate(item.addedAt) : ''}</span>
+                <span className='createdAt'>{item.duration}</span>
             </li>
         ))}
         </ul>

@@ -10,20 +10,23 @@
         svg {
             position: absolute;
             fill: $clr02;
-            left: 9px;
-            top: 13px;
-            
+            left: 12px;
+            top: 16px;
+            scale: 1.1;
         }
 
         input {
-            height: 43px;
+            height: 50px;
+            width: 360px;
+
+            padding: 10px 0 8px 33px;
+
             border-radius: 20px;
-            width: 320px;
             color: $clr01;
             background-color: $clr13;
-            padding: 10px 0 8px 33px;
             border: 1px solid transparent;
             
+            font-size: 1rem;
 
             &:focus {
                 border: 2px solid $clr01;

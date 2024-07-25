@@ -39,8 +39,8 @@ export function ArtistDetails() {
 
     function onPlay(ev, track) {
         ev.stopPropagation()
-        if (track.id === currTrack.id) return togglePlay()
-
+        if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
+            
         setTrack(track)
         setTracks()
     }
@@ -55,7 +55,7 @@ export function ArtistDetails() {
 
     async function onRemoveTrack(trackToRemove, stationId = '2D2M9'){
         const stationToEdit = await stationService.getById(stationId)
-        const newTracks = stationToEdit.tracks.filter(track => track.id !== trackToRemove.id)
+        const newTracks = stationToEdit.tracks.filter(track => track.spotifyId !== trackToRemove.spotifyId)
         stationToEdit.tracks = newTracks
         const savedStation = await stationService.save(stationToEdit)
         console.log(`${trackToRemove.name} removed from ${stationToEdit.name}`)

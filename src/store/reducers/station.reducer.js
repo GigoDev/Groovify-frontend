@@ -38,7 +38,7 @@ export function stationReducer(state = initialState, action) {
             newState = { ...state, stations, lastRemovedStation }
             break
         case ADD_STATION:
-            newState = { ...state, stations: [action.station,...state.stations ] }
+            newState = { ...state, stations: [action.station, ...state.stations] }
 
             break
         case UPDATE_STATION:

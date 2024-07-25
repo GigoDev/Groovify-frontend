@@ -83,7 +83,8 @@ function getDefaultTrack() {
         duration: "8:41",
         artist: { spotifyId: "5a2EaR3hamoenG9rDuVn8j", name: "Prince" },
         album: {
-            spotifyId: "2umoqwMrmjBBPeaqgYu6J9", name: "Purple Rain", imgs: [
+            spotifyId: "2umoqwMrmjBBPeaqgYu6J9", name: "Purple Rain", imgs: 
+            [
                 {
                     height: 640,
                     url: "https://i.scdn.co/image/ab67616d0000b2738a2ce3f148f57584269c3782",

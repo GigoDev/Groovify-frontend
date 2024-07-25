@@ -25,7 +25,6 @@ export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
-
     const [volume, setVolume] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
 

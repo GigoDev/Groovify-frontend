@@ -38,7 +38,6 @@ export function formatTime(seconds) {
     return `${minutes}:${formattedSeconds.split('.')[0]}`
 }
 
-
 export function randomPastTime() {
     const HOUR = 1000 * 60 * 60
     const DAY = 1000 * 60 * 60 * 24
@@ -50,6 +49,14 @@ export function randomPastTime() {
 
 export function formatDuration(ms) {
     const totalSeconds = Math.floor(ms / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return `${hours}h ${minutes}m ${seconds}s`;
+}
+export function formatDurationSec(sec) {
+    const totalSeconds = sec;
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;

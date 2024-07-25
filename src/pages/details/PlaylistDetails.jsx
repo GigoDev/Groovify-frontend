@@ -6,7 +6,7 @@ import { clearStation, loadStation } from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
-import { formatDuration } from "../../services/util.service";
+import { formatDuration, formatDuration2, formatDurationSec, formatTime } from "../../services/util.service";
 //CMPS
 import { PlaylistList } from "../../cmps/PlaylistList";
 import { UpdateStationModal } from '../../cmps/UpdateStationModal';
@@ -45,8 +45,11 @@ export function PlaylistDetails() {
   const { imgs, listeners, name, type, tracks, likes, total } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
-  const totalDuration = tracks.reduce((acc, track) => acc + track.duration, 0)
-  const formattedDuration = formatDuration(totalDuration)
+  const totalDuration = tracks.reduce((acc, track) => {
+    const [minutes, seconds] = track.duration.split(':').map(Number)
+    return acc + (minutes * 60 + seconds)
+  }, 0)
+  const formattedDuration = formatDurationSec(totalDuration)
   return (
     <section className="playlist-details content-layout">
       <section className="station-preview flex full">

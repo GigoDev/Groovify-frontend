@@ -13,6 +13,7 @@
 
 
 // pages
+@import "pages/App";
 @import "pages/HomePage";
 @import "pages/StationIndex";
 @import "pages/UserDetails";
@@ -38,10 +39,9 @@
 @import "cmps/SearchTrackPreview";
 
 
-@import "cmps/StationList";
+@import "cmps/MiniStationList";
 @import "cmps/StationFilter";
-@import "cmps/StationList";
-@import "cmps/StationPreview";
+@import "cmps/MiniStationPreview";
 @import "cmps/TrackList";
 @import "cmps/PlaylistList";
 @import "cmps/AlbumList.scss";

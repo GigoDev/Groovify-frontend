@@ -1,15 +1,15 @@
-import { StationPreview } from "./StationPreview"
+import { MiniStationPreview } from "./MiniStationPreview"
 import { Link } from 'react-router-dom';
 
 
-export function StationList({stations}) {
+export function MiniStationList({stations}) {
 
     if (!stations) return <div>Loading..</div>
     return (
-            <ul className='cards-container clean-list'>{
+            <ul className='mini-cards-container clean-list'>{
                     stations.map(station => (
                         <Link to={`${station.type}/${station.id}`} key={station.id}>
-                            <StationPreview station={station}/> 
+                            <MiniStationPreview station={station}/> 
                         </Link>
                     ))
                 }

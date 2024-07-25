@@ -7,20 +7,6 @@ html {
     font-family: circular, gotham, rubik;
 }
 
-.app-container {
-    color: $clr01;
-    padding: 6px;
-    overflow: hidden;
-
-    .main-container {
-        background-color: $clr07;
-        overflow: hidden;
-        overflow-y: auto;
-    }
-}
-
-
-
 body {
     font-size: rem(18px);
     margin: 0;
@@ -91,32 +77,6 @@ input {
 }
 
 /* width */
-::-webkit-scrollbar {
-    position: absolute;
-    right: 0;
-    width: 10px;
-    height: 0;
-
-    /* Track */
-    &-track {
-        background: transparent;
-    }
-
-    /* Handle */
-    &-thumb {
-        background: transparent;
-    }
-
-    /* Handle on hover */
-    // &-thumb:hover {
-    // background: rgba(136, 136, 136, 0.5);
-    // background: #555;
-    // }
-
-    @media(max-width:$narrow-breakpoint) {
-        display: none;
-    }
-}
 
 // Range input:
 input[type="range"] {

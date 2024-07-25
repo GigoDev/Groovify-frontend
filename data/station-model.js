@@ -1,4 +1,5 @@
 const station = {
+    _id: makeId(),
     type: "artist", //all
     spotifyId: "5a2EaR3hamoenG9rDuVn8j", //all
     name: "Prince", //all
@@ -32,11 +33,11 @@ const station = {
             name: "Kiss", //all
             duration: "3:46", //all
             artist: {
-                id: "5a2EaR3hamoenG9rDuVn8j",
+                spotifyId: "5a2EaR3hamoenG9rDuVn8j",
                 name: "Prince"
             },
             album: {
-                id: "54DjkEN3wdCQgfCTZ9WjdB",
+                spotifyId: "54DjkEN3wdCQgfCTZ9WjdB",
                 name: "Parade - Music from the Motion Picture Under the Cherry Moon",
                 imgs: [
                     {

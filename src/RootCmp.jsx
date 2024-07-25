@@ -13,6 +13,7 @@ import { SideMenu } from './cmps/side/SideMenu.jsx'
 import { Player } from './cmps/Player.jsx'
 import { ArtistDetails } from './pages/details/ArtistDetails.jsx'
 import { PlaylistDetails } from './pages/details/PlaylistDetails.jsx'
+import { AlbumDetails } from './pages/details/AlbumDetails.jsx'
 
 
 export function RootCmp() {
@@ -28,7 +29,8 @@ export function RootCmp() {
                     <Route path="artist/:id" element={<ArtistDetails />} />
                     <Route path="playlist/:id" element={<PlaylistDetails />} />
                     <Route path="playlist/" element={<PlaylistDetails />} />
-                    {/* <Route path="album/:id" element={<AlbumDetails />} /> */}
+                    <Route path="album/:id" element={<AlbumDetails />} />
+                    <Route path="album/" element={<AlbumDetails />} />
                 </Routes>
                 <AppFooter />
             </main>

@@ -19,6 +19,7 @@
 @import "pages/StationDetails";
 @import "pages/SearchPage";
 @import "pages/PlaylistDetails";
+@import "pages/AlbumDetails.scss";
 
 // Components
 @import "cmps/AppHeader";
@@ -42,6 +43,7 @@
 @import "cmps/StationPreview";
 @import "cmps/TrackList";
 @import "cmps/PlaylistList";
+@import "cmps/AlbumList.scss";
 
 @import "cmps/SideMenu";
 @import "cmps/SideNav";

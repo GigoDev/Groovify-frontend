@@ -103,3 +103,8 @@ export function writeJsonFile(path, data) {
         })
     })
 }
+
+export function isInternalUrl(url) {
+    const internalUrlPattern = /^\/(?!\/)/
+    return internalUrlPattern.test(url)
+}

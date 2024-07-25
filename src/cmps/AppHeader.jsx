@@ -1,15 +1,15 @@
-import { Link, NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
-import { SearchCategory } from './SearchCategory'
 import BackPageIcon from '../assets/icons/BackPageIcon.svg'
 import NextPageIcon from '../assets/icons/NextPageIcon.svg'
+
 
 export function AppHeader() {
 	const user = useSelector(storeState => storeState.userModule.user)
 	const navigate = useNavigate()
+	
 
 	async function onLogout() {
 		try {
@@ -21,15 +21,15 @@ export function AppHeader() {
 		}
 	}
 
+
 	return (
 		<header className="header flex full">
 			<nav className='flex'>
 
-				<button className="back-btn btn">
+				<button className="back-btn btn" onClick={() => navigate(-1)}>
 					<BackPageIcon />
 				</button>
-
-				<button className="forward-btn btn">
+				<button className="forward-btn btn" onClick={() => navigate(1)}>
 					<NextPageIcon />
 				</button>
 			</nav>
@@ -41,3 +41,4 @@ export function AppHeader() {
 		</header>
 	)
 }
+

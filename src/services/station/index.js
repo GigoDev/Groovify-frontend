@@ -6,19 +6,22 @@ import { stationService as local } from './station.service.local'
 import { stationService as remote } from './station.service.remote'
 
 
-function getEmptyPlaylist(){
-    return {
-        //id from storage service
-        type: 'playlist',
-        name: 'New playlist',
-        description: 'Description',
-        likes:'',
-        imgs: [{url:''},{url:''},{url:''}],
-        tracks:[],
-        total:'',
-        createdBy: {},
+function getEmptyPlaylist() {
+   
+    return ({
+        type: 'playlist', //all
+        spotifyId: null, //all
+        name: 'New playlist', //all
+        listeners: null, //artist
+        description: 'Description', // playlist
+        likes: null, // playlist
+        owner: true, //all
+        total: null, //playlist , album
+        releaseDate: null, //album
+        imgs: [{ url: '' }, { url: '' }, { url: '' }], //all
+        tracks: [],//all
         createdAt: Date.now()
-    }
+    })
 }
 
 function getDefaultFilter() {

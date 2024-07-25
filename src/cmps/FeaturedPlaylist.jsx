@@ -37,7 +37,7 @@ export function FeaturedPlaylist({ from, to, title }) {
             <h1 className='list-title'>{title}</h1>
             <div className='lists-container'>
                 {list.map(item => (
-                    <div className='list-item' key={item.id}>
+                    <div className='list-item' key={item.spotifyId}>
                         <div className='img-container'>
                             <img src={item.imgs[0].url} alt="" />
                         </div>

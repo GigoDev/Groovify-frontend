@@ -43,7 +43,7 @@ async function getArtist(stationId) {//refactored
     //local storage
     try {
         const stations = await loadFromStorage('station')
-        station = stations.find(item => item.id === stationId)
+        station = stations.find(item => item._id === stationId)
         if (station) {
             console.log('from local storage', station)
             return station
@@ -81,7 +81,7 @@ async function getPlaylist(stationId) {//refactored
     var station
     try {
         const stations = await loadFromStorage('station')
-        station = stations.find(item => item.id === stationId)
+        station = stations.find(item => item._id === stationId)
         if (station) {
             console.log('from local storage', station)
             return station
@@ -130,7 +130,7 @@ async function getAlbum(stationId, market = 'US') {//refactored
     //from local storage
     try {
         const stations = await loadFromStorage('station')
-        station = stations.find(item => item.id === stationId)
+        station = stations.find(item => item._id === stationId)
         if (station) {
             console.log('from local storage', station)
             return station
@@ -206,12 +206,12 @@ async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL'
         const resp = await axios.get(url, { headers })
 
         const tracks = resp.data.tracks.items.map(track => ({
-            id: track.id,
+            spotifyId: track.id,
             name: track.name,
             type: track.type,
             duration: formatTime(track.duration_ms / 1000),
-            album: { id: track.album.id, name: track.album.name, imgs: track.album.images, artist: { id: track.album.artists[0].id, name: track.album.artists[0].name } },
-            artists: track.artists.map(artist => ({ id: artist.id, name: artist.name, }))
+            album: { spotifyId: track.album.id, name: track.album.name, imgs: track.album.images, artist: { spotifyId: track.album.artists[0].id, name: track.album.artists[0].name } },
+            artists: track.artists.map(artist => ({ spotifyId: artist.id, name: artist.name, }))
 
         }))
         console.log(tracks)
@@ -230,7 +230,7 @@ async function getFeaturedPlaylists() {//get top 10 playlists in IL
 
         const playlists = resp.data.playlists.items
         const featuredPlaylists = playlists.map(playlist => ({
-            id: playlist.id,
+            spotifyId: playlist.id,
             type: playlist.type,
             name: playlist.name,
             description: playlist.description,
@@ -335,7 +335,7 @@ async function getRecommendationTopTracks(limit = '10') {
         const resp = await axios.get(url, { headers })
         const topTracks = resp.data.tracks.map(track => ({
             artist: track.artists[0],
-            id: track.id,
+            spotifyId: track.id,
             name: track.name
         }))
 

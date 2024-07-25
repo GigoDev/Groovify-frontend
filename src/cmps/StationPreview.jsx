@@ -1,7 +1,7 @@
 import MusicNoteIcon from '../assets/icons/MusicNoteIcon.svg'
 
 export function StationPreview({ station }) {
-    const { imgs, id, listeners, name, type, tracks } = station
+    const { imgs, _id, listeners, name, type, tracks } = station
 
     return (
         <article className="card">

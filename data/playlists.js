@@ -1,6 +1,6 @@
 export const playlists = [
     {
-        "id": "37i9dQZF1DWSYF6geMtQMW",
+        "spotifyId": "37i9dQZF1DWSYF6geMtQMW",
         "type": "playlist",
         "name": "הלהיטים הגדולים של ישראל",
         "description": "הפלייליסט הכי גדול בישראל, עם השירים הכי חמים של היום ומחר. קאבר: פאר טסי  ",
@@ -14,7 +14,7 @@ export const playlists = [
         "total": 50
     },
     {
-        "id": "37i9dQZF1DWT9L7hoCDtjB",
+        "spotifyId": "37i9dQZF1DWT9L7hoCDtjB",
         "type": "playlist",
         "name": "ים תיכוני חדש",
         "description": "השירים הכי חדשים בז׳אנר הכי ישראלי. קאבר: עדן בן זקן ",
@@ -28,7 +28,7 @@ export const playlists = [
         "total": 60
     },
     {
-        "id": "37i9dQZF1DXcBWIGoYBM5M",
+        "spotifyId": "37i9dQZF1DXcBWIGoYBM5M",
         "type": "playlist",
         "name": "Today’s Top Hits",
         "description": "Benson Boone is on top of the Hottest 50!",
@@ -42,7 +42,7 @@ export const playlists = [
         "total": 50
     },
     {
-        "id": "37i9dQZF1DX9sLipKPkV9T",
+        "spotifyId": "37i9dQZF1DX9sLipKPkV9T",
         "type": "playlist",
         "name": "פופ ישראלי חדש",
         "description": "כל הפופ היפה והמרגש של ישראל. קאבר: אנה זק",
@@ -56,7 +56,7 @@ export const playlists = [
         "total": 60
     },
     {
-        "id": "37i9dQZF1DX5mMspCVmB8S",
+        "spotifyId": "37i9dQZF1DX5mMspCVmB8S",
         "type": "playlist",
         "name": "צ'יל ישראלי",
         "description": "תורידו הילוך עם שירים ישראליים נעימים ומרגשים. קאבר: ענבל ביבי   ",
@@ -70,7 +70,7 @@ export const playlists = [
         "total": 75
     },
     {
-        "id": "37i9dQZF1DX2kUCiHidQRK",
+        "spotifyId": "37i9dQZF1DX2kUCiHidQRK",
         "type": "playlist",
         "name": "להיטים ויראליים",
         "description": "כל מה שרותח בישראל 🔥קאבר: קניה גרייס",
@@ -84,7 +84,7 @@ export const playlists = [
         "total": 70
     },
     {
-        "id": "37i9dQZF1DWUCy47lptxiG",
+        "spotifyId": "37i9dQZF1DWUCy47lptxiG",
         "type": "playlist",
         "name": "ים תיכוני: הלהיטים",
         "description": "הלהיטים הים-תיכוניים הגדולים של ישראל. קאבר: איתי לוי  \n ",
@@ -98,7 +98,7 @@ export const playlists = [
         "total": 70
     },
     {
-        "id": "37i9dQZF1DZ06evO0XEWbA",
+        "spotifyId": "37i9dQZF1DZ06evO0XEWbA",
         "type": "playlist",
         "name": "This Is Omer Adam",
         "description": "This is Omer Adam. The essential tracks, all in one playlist.",
@@ -112,7 +112,7 @@ export const playlists = [
         "total": 50
     },
     {
-        "id": "37i9dQZF1DX3zGuzLhXjyK",
+        "spotifyId": "37i9dQZF1DX3zGuzLhXjyK",
         "type": "playlist",
         "name": "המיטב של העשור בשבילכם",
         "description": "כמה מהשירים המובילים מ-10 השנים האחרונות, בפלייליסט אחד שמכוון לטעם שלכם.",
@@ -126,7 +126,7 @@ export const playlists = [
         "total": 100
     },
     {
-        "id": "37i9dQZF1DXbYM3nMM0oPk",
+        "spotifyId": "37i9dQZF1DXbYM3nMM0oPk",
         "type": "playlist",
         "name": "Mega Hit Mix",
         "description": "A mega mix of 75 favorites from the last few years! ",
@@ -140,7 +140,7 @@ export const playlists = [
         "total": 75
     },
     {
-        "id": "37i9dQZF1DWWY64wDtewQt",
+        "spotifyId": "37i9dQZF1DWWY64wDtewQt",
         "type": "playlist",
         "name": "phonk",
         "description": "the beat of your drift",
@@ -154,7 +154,7 @@ export const playlists = [
         "total": 99
     },
     {
-        "id": "37i9dQZF1DWZd79rJ6a7lp",
+        "spotifyId": "37i9dQZF1DWZd79rJ6a7lp",
         "type": "playlist",
         "name": "Sleep",
         "description": "Gentle Ambient piano to help you fall asleep. ",
@@ -168,7 +168,7 @@ export const playlists = [
         "total": 197
     },
     {
-        "id": "37i9dQZF1DX439u9DYdMGc",
+        "spotifyId": "37i9dQZF1DX439u9DYdMGc",
         "type": "playlist",
         "name": "אהבה",
         "description": "שירי אהבה יפים 💘\n",
@@ -182,7 +182,7 @@ export const playlists = [
         "total": 70
     },
     {
-        "id": "37i9dQZF1DWYbUY40ZDAwb",
+        "spotifyId": "37i9dQZF1DWYbUY40ZDAwb",
         "type": "playlist",
         "name": "להיטים שמחים",
         "description": "להיטים שעושים מצב רוח. באחריות!",
@@ -196,7 +196,7 @@ export const playlists = [
         "total": 75
     },
     {
-        "id": "37i9dQZF1DXbmiyBesoBFy",
+        "spotifyId": "37i9dQZF1DXbmiyBesoBFy",
         "type": "playlist",
         "name": "נושמים רגע",
         "description": "מוזיקה רגועה להורדת הלחץ",
@@ -210,7 +210,7 @@ export const playlists = [
         "total": 75
     },
     {
-        "id": "37i9dQZF1DX0XUsuxWHRQd",
+        "spotifyId": "37i9dQZF1DX0XUsuxWHRQd",
         "type": "playlist",
         "name": "RapCaviar",
         "description": "New music from Childish Gambino, Eminem and GloRilla. ",
@@ -224,7 +224,7 @@ export const playlists = [
         "total": 50
     },
     {
-        "id": "37i9dQZF1DZ06evO1H2c8R",
+        "spotifyId": "37i9dQZF1DZ06evO1H2c8R",
         "type": "playlist",
         "name": "This Is Shlomo Artzi",
         "description": "This is Shlomo Artzi. The essential tracks, all in one playlist.",
@@ -238,7 +238,7 @@ export const playlists = [
         "total": 50
     },
     {
-        "id": "37i9dQZF1DWVCKO3xAlT1Q",
+        "spotifyId": "37i9dQZF1DWVCKO3xAlT1Q",
         "type": "playlist",
         "name": "Eurovision 2024",
         "description": "Congratulations to the winner of Eurovision Song Contest 2024 - Nemo 🩷",
@@ -252,7 +252,7 @@ export const playlists = [
         "total": 37
     },
     {
-        "id": "37i9dQZF1DX41IYVoQd4Sa",
+        "spotifyId": "37i9dQZF1DX41IYVoQd4Sa",
         "type": "playlist",
         "name": "האלטרנטיב של ישראל",
         "description": "מאינדי ועד רוק, קבלו את השירים היפים של הסצנה האלטרנטיבית בישראל. קאבר: דודו טסה",
@@ -266,7 +266,7 @@ export const playlists = [
         "total": 60
     },
     {
-        "id": "37i9dQZF1DZ06evO2YEFEe",
+        "spotifyId": "37i9dQZF1DZ06evO2YEFEe",
         "type": "playlist",
         "name": "This Is Eyal Golan",
         "description": "This is Eyal Golan. The essential tracks, all in one playlist.",

@@ -23,9 +23,9 @@ export function TrackList({ tracks, onAddTrack, onPlay ,onRemoveTrack}) {
     return (
         <ul className='track-list clean-list'> {//track list rendering
             tracks.slice(0, visibleTracks).map((track, idx) => (
-                <li key={track.id}>
+                <li key={track.spotifyId}>
                     <span className='play-btn' onClick={(event) => onPlay(event, track)}>
-                        {isPlaying && currTrack.id === track.id ? <PauseIcon /> : <PlayIcon />}
+                        {isPlaying && currTrack.spotifyId === track.spotifyId ? <PauseIcon /> : <PlayIcon />}
                     </span>
                     <span className='track-number'>{idx + 1}</span>
                     <img src={track.album.imgs.at(-1).url} />

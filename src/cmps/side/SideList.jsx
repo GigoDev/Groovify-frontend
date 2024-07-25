@@ -16,9 +16,9 @@ export function SideList({ filtered }) {
         <ul className='side-list-container clean-list'>{
             filtered.map(station => (
                 <article
-                    className={activeId === station.id ? 'side-card active' : 'side-card'}
-                    key={station.id}
-                    onClick={() => handleClick(station.id, station.type)}>
+                    className={activeId === station._id ? 'side-card active' : 'side-card'}
+                    key={station._id}
+                    onClick={() => handleClick(station._id, station.type)}>
                     <div className="img-container">
                         {station.imgs[(station.imgs.length - 1)].url ?
                             <img src={station.imgs[(station.imgs.length - 1)].url} />

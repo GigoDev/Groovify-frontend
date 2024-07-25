@@ -1,8 +1,14 @@
 export const stations = [
     {
         "type": "artist",
-        "id": "5a2EaR3hamoenG9rDuVn8j",
+        "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
         "name": "Prince",
+        "listeners": 7361169,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -20,20 +26,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 7359817,
         "tracks": [
             {
-                "id": "62LJFaYihsdVrrkgUOJC05",
+                "spotifyId": "62LJFaYihsdVrrkgUOJC05",
+                "addedAt": null,
                 "name": "Kiss",
                 "duration": "3:46",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "54DjkEN3wdCQgfCTZ9WjdB",
+                    "spotifyId": "54DjkEN3wdCQgfCTZ9WjdB",
                     "name": "Parade - Music from the Motion Picture Under the Cherry Moon",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -54,17 +59,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1uvyZBs4IZYRebHIB1747m",
+                "spotifyId": "1uvyZBs4IZYRebHIB1747m",
+                "addedAt": null,
                 "name": "Purple Rain",
                 "duration": "8:41",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "2umoqwMrmjBBPeaqgYu6J9",
+                    "spotifyId": "2umoqwMrmjBBPeaqgYu6J9",
                     "name": "Purple Rain",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -85,17 +90,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6sby78fghipoXHQLeeZFFH",
+                "spotifyId": "6sby78fghipoXHQLeeZFFH",
+                "addedAt": null,
                 "name": "When Doves Cry",
                 "duration": "5:54",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "2umoqwMrmjBBPeaqgYu6J9",
+                    "spotifyId": "2umoqwMrmjBBPeaqgYu6J9",
                     "name": "Purple Rain",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -116,17 +121,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5jSz894ljfWE0IcHBSM39i",
+                "spotifyId": "5jSz894ljfWE0IcHBSM39i",
+                "addedAt": null,
                 "name": "Raspberry Beret",
                 "duration": "3:35",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "5FbrTPPlaNSOsChhKUZxcu",
+                    "spotifyId": "5FbrTPPlaNSOsChhKUZxcu",
                     "name": "Around the World in a Day",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -147,17 +152,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6FMIVQPZg9cmMY8hPxAacD",
+                "spotifyId": "6FMIVQPZg9cmMY8hPxAacD",
+                "addedAt": null,
                 "name": "Let's Go Crazy",
                 "duration": "4:39",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "2umoqwMrmjBBPeaqgYu6J9",
+                    "spotifyId": "2umoqwMrmjBBPeaqgYu6J9",
                     "name": "Purple Rain",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -178,17 +183,17 @@ export const stations = [
                 }
             },
             {
-                "id": "2H7PHVdQ3mXqEHXcvclTB0",
+                "spotifyId": "2H7PHVdQ3mXqEHXcvclTB0",
+                "addedAt": null,
                 "name": "1999",
                 "duration": "6:19",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "3U1ht9EdWEI9nMvaqdQI67",
+                    "spotifyId": "3U1ht9EdWEI9nMvaqdQI67",
                     "name": "1999",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -209,17 +214,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4yrM5BVyJzy5Ed4GPO6e8j",
+                "spotifyId": "4yrM5BVyJzy5Ed4GPO6e8j",
+                "addedAt": null,
                 "name": "I Wanna Be Your Lover",
                 "duration": "5:47",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "6k7RVZ7bSL9ryReb8RLYRI",
+                    "spotifyId": "6k7RVZ7bSL9ryReb8RLYRI",
                     "name": "Prince",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -240,17 +245,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3QszJeuSyyZQmD9pY1tqpo",
+                "spotifyId": "3QszJeuSyyZQmD9pY1tqpo",
+                "addedAt": null,
                 "name": "I Would Die 4 U",
                 "duration": "2:49",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "2umoqwMrmjBBPeaqgYu6J9",
+                    "spotifyId": "2umoqwMrmjBBPeaqgYu6J9",
                     "name": "Purple Rain",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -271,17 +276,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4iozhXt27eMl39W5z7R8H6",
+                "spotifyId": "4iozhXt27eMl39W5z7R8H6",
+                "addedAt": null,
                 "name": "Little Red Corvette",
                 "duration": "4:56",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "3U1ht9EdWEI9nMvaqdQI67",
+                    "spotifyId": "3U1ht9EdWEI9nMvaqdQI67",
                     "name": "1999",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -302,17 +307,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0aPaGIX2QIMAH5SMp0VEMe",
+                "spotifyId": "0aPaGIX2QIMAH5SMp0VEMe",
+                "addedAt": null,
                 "name": "The Most Beautiful Girl In the World",
                 "duration": "4:25",
                 "artist": {
-                    "id": "5a2EaR3hamoenG9rDuVn8j",
+                    "spotifyId": "5a2EaR3hamoenG9rDuVn8j",
                     "name": "Prince"
                 },
                 "album": {
-                    "id": "7JdnQ7zCfqETcLgS94d3ks",
+                    "spotifyId": "7JdnQ7zCfqETcLgS94d3ks",
                     "name": "The Gold Experience",
-                    "totalTrack": 18,
                     "imgs": [
                         {
                             "height": 640,
@@ -332,13 +337,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "uHX2t6"
     }
     ,
     {
         "type": "artist",
-        "id": "13saZpZnCDWOI9D4IJhp1f",
+        "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
         "name": "Lily Allen",
+        "listeners": 2045307,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -356,20 +368,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 2044965,
         "tracks": [
             {
-                "id": "79z9QkhHePTFsSeVw9uyj0",
+                "spotifyId": "79z9QkhHePTFsSeVw9uyj0",
+                "addedAt": null,
                 "name": "Smile",
                 "duration": "3:16",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "5ySBiY0v4b03yw98oRDKtS",
+                    "spotifyId": "5ySBiY0v4b03yw98oRDKtS",
                     "name": "Alright, Still (Deluxe)",
-                    "totalTrack": 19,
                     "imgs": [
                         {
                             "height": 640,
@@ -390,17 +401,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5st5644IlBmKiiRE73UsoZ",
+                "spotifyId": "5st5644IlBmKiiRE73UsoZ",
+                "addedAt": null,
                 "name": "Fuck You",
                 "duration": "3:39",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "2OUL7ZpAvUaWyylZ1lXpe0",
+                    "spotifyId": "2OUL7ZpAvUaWyylZ1lXpe0",
                     "name": "It's Not Me, It's You",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -421,17 +432,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1cDRpJiJa94Voj0Ayc9iGJ",
+                "spotifyId": "1cDRpJiJa94Voj0Ayc9iGJ",
+                "addedAt": null,
                 "name": "Not Fair",
                 "duration": "3:22",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "2OUL7ZpAvUaWyylZ1lXpe0",
+                    "spotifyId": "2OUL7ZpAvUaWyylZ1lXpe0",
                     "name": "It's Not Me, It's You",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -452,17 +463,17 @@ export const stations = [
                 }
             },
             {
-                "id": "56N9s9PS6VwGolUnx1CJkv",
+                "spotifyId": "56N9s9PS6VwGolUnx1CJkv",
+                "addedAt": null,
                 "name": "Somewhere Only We Know",
                 "duration": "3:28",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "4NX5W3fZmCOzXoLTKO1tIb",
+                    "spotifyId": "4NX5W3fZmCOzXoLTKO1tIb",
                     "name": "Sheezus",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -483,17 +494,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7lIyBKp2KX7ABDjDfo9EtL",
+                "spotifyId": "7lIyBKp2KX7ABDjDfo9EtL",
+                "addedAt": null,
                 "name": "The Fear",
                 "duration": "3:27",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "2OUL7ZpAvUaWyylZ1lXpe0",
+                    "spotifyId": "2OUL7ZpAvUaWyylZ1lXpe0",
                     "name": "It's Not Me, It's You",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -514,17 +525,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5wD6de7Fz1QfxVNkv1SEy7",
+                "spotifyId": "5wD6de7Fz1QfxVNkv1SEy7",
+                "addedAt": null,
                 "name": "LDN",
                 "duration": "3:10",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "5ySBiY0v4b03yw98oRDKtS",
+                    "spotifyId": "5ySBiY0v4b03yw98oRDKtS",
                     "name": "Alright, Still (Deluxe)",
-                    "totalTrack": 19,
                     "imgs": [
                         {
                             "height": 640,
@@ -545,17 +556,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6FzUX4kFBss56SSjAsLi7t",
+                "spotifyId": "6FzUX4kFBss56SSjAsLi7t",
+                "addedAt": null,
                 "name": "Hard out Here",
                 "duration": "3:31",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "4NX5W3fZmCOzXoLTKO1tIb",
+                    "spotifyId": "4NX5W3fZmCOzXoLTKO1tIb",
                     "name": "Sheezus",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -576,17 +587,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0gO2I7dgwORBIys7ZtIYw8",
+                "spotifyId": "0gO2I7dgwORBIys7ZtIYw8",
+                "addedAt": null,
                 "name": "Roll The Dice (feat. Stamina MC & Lily Allen)",
                 "duration": "3:28",
                 "artist": {
-                    "id": "5oDtp2FC8VqBjTx1aT4P5j",
+                    "spotifyId": "5oDtp2FC8VqBjTx1aT4P5j",
                     "name": "SHY FX"
                 },
                 "album": {
-                    "id": "5CZ869wDUrKqvtmJXRZxkl",
+                    "spotifyId": "5CZ869wDUrKqvtmJXRZxkl",
                     "name": "Raggamuffin SoundTape",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -607,17 +618,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1sFKcUH5sMAV4Qs0E99OLq",
+                "spotifyId": "1sFKcUH5sMAV4Qs0E99OLq",
+                "addedAt": null,
                 "name": "22",
                 "duration": "3:05",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "3hVR63Y2ElBoxmzThy80nG",
+                    "spotifyId": "3hVR63Y2ElBoxmzThy80nG",
                     "name": "It's Not Me, It's You",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -638,17 +649,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3Ah7nOXSkbkejpI2yWKzSF",
+                "spotifyId": "3Ah7nOXSkbkejpI2yWKzSF",
+                "addedAt": null,
                 "name": "Littlest Things",
                 "duration": "3:02",
                 "artist": {
-                    "id": "13saZpZnCDWOI9D4IJhp1f",
+                    "spotifyId": "13saZpZnCDWOI9D4IJhp1f",
                     "name": "Lily Allen"
                 },
                 "album": {
-                    "id": "5ySBiY0v4b03yw98oRDKtS",
+                    "spotifyId": "5ySBiY0v4b03yw98oRDKtS",
                     "name": "Alright, Still (Deluxe)",
-                    "totalTrack": 19,
                     "imgs": [
                         {
                             "height": 640,
@@ -668,13 +679,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "cCvpgH"
     }
     ,
     {
         "type": "artist",
-        "id": "4gzpq5DPGxSnKTe4SA8HAU",
+        "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
         "name": "Coldplay",
+        "listeners": 51599777,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -692,20 +710,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 51580082,
         "tracks": [
             {
-                "id": "1mea3bSkSGXuIRvnydlB5b",
+                "spotifyId": "1mea3bSkSGXuIRvnydlB5b",
+                "addedAt": null,
                 "name": "Viva La Vida",
                 "duration": "4:02",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "1CEODgTmTwLyabvwd7HBty",
+                    "spotifyId": "1CEODgTmTwLyabvwd7HBty",
                     "name": "Viva La Vida or Death and All His Friends",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -726,17 +743,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3AJwUDP919kvQ9QcozQPxg",
+                "spotifyId": "3AJwUDP919kvQ9QcozQPxg",
+                "addedAt": null,
                 "name": "Yellow",
                 "duration": "4:26",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "6ZG5lRT77aJ3btmArcykra",
+                    "spotifyId": "6ZG5lRT77aJ3btmArcykra",
                     "name": "Parachutes",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -757,17 +774,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6RUKPb4LETWmmr3iAEQktW",
+                "spotifyId": "6RUKPb4LETWmmr3iAEQktW",
+                "addedAt": null,
                 "name": "Something Just Like This",
                 "duration": "4:07",
                 "artist": {
-                    "id": "69GGBxA162lTqCwzJG5jLp",
+                    "spotifyId": "69GGBxA162lTqCwzJG5jLp",
                     "name": "The Chainsmokers"
                 },
                 "album": {
-                    "id": "4JPguzRps3kuWDD5GS6oXr",
+                    "spotifyId": "4JPguzRps3kuWDD5GS6oXr",
                     "name": "Memories...Do Not Open",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -788,17 +805,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0FDzzruyVECATHXKHFs9eJ",
+                "spotifyId": "0FDzzruyVECATHXKHFs9eJ",
+                "addedAt": null,
                 "name": "A Sky Full of Stars",
                 "duration": "4:27",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "2G4AUqfwxcV1UdQjm2ouYr",
+                    "spotifyId": "2G4AUqfwxcV1UdQjm2ouYr",
                     "name": "Ghost Stories",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -819,17 +836,17 @@ export const stations = [
                 }
             },
             {
-                "id": "75JFxkI2RXiU7L9VXzMkle",
+                "spotifyId": "75JFxkI2RXiU7L9VXzMkle",
+                "addedAt": null,
                 "name": "The Scientist",
                 "duration": "5:09",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "0RHX9XECH8IVI3LNgWDpmQ",
+                    "spotifyId": "0RHX9XECH8IVI3LNgWDpmQ",
                     "name": "A Rush of Blood to the Head",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -850,17 +867,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1YsU8rW2u8z4F0pwOBQ4Ea",
+                "spotifyId": "1YsU8rW2u8z4F0pwOBQ4Ea",
+                "addedAt": null,
                 "name": "feelslikeimfallinginlove",
                 "duration": "3:57",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "6RjTapeTvms8jSeIRGc5Ve",
+                    "spotifyId": "6RjTapeTvms8jSeIRGc5Ve",
                     "name": "feelslikeimfallinginlove",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -881,17 +898,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3RiPr603aXAoi4GHyXx0uy",
+                "spotifyId": "3RiPr603aXAoi4GHyXx0uy",
+                "addedAt": null,
                 "name": "Hymn for the Weekend",
                 "duration": "4:18",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "3cfAM8b8KqJRoIzt3zLKqw",
+                    "spotifyId": "3cfAM8b8KqJRoIzt3zLKqw",
                     "name": "A Head Full of Dreams",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -912,17 +929,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7D0RhFcb3CrfPuTJ0obrod",
+                "spotifyId": "7D0RhFcb3CrfPuTJ0obrod",
+                "addedAt": null,
                 "name": "Sparks",
                 "duration": "3:47",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "6ZG5lRT77aJ3btmArcykra",
+                    "spotifyId": "6ZG5lRT77aJ3btmArcykra",
                     "name": "Parachutes",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -943,17 +960,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6nek1Nin9q48AVZcWs9e9D",
+                "spotifyId": "6nek1Nin9q48AVZcWs9e9D",
+                "addedAt": null,
                 "name": "Paradise",
                 "duration": "4:38",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "2R7iJz5uaHjLEVnMkloO18",
+                    "spotifyId": "2R7iJz5uaHjLEVnMkloO18",
                     "name": "Mylo Xyloto",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -974,17 +991,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7LVHVU3tWfcxj5aiPFEW4Q",
+                "spotifyId": "7LVHVU3tWfcxj5aiPFEW4Q",
+                "addedAt": null,
                 "name": "Fix You",
                 "duration": "4:55",
                 "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
                     "name": "Coldplay"
                 },
                 "album": {
-                    "id": "4E7bV0pzG0LciBSWTszra6",
+                    "spotifyId": "4E7bV0pzG0LciBSWTszra6",
                     "name": "X&Y",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -1004,13 +1021,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "dUErAh"
     }
     ,
     {
         "type": "artist",
-        "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+        "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
         "name": "Billie Eilish",
+        "listeners": 96329507,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -1028,20 +1052,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 96297869,
         "tracks": [
             {
-                "id": "6dOtVTDdiauQNBQEDOtlAB",
+                "spotifyId": "6dOtVTDdiauQNBQEDOtlAB",
+                "addedAt": null,
                 "name": "BIRDS OF A FEATHER",
                 "duration": "3:30",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1062,17 +1085,17 @@ export const stations = [
                 }
             },
             {
-                "id": "629DixmZGHc7ILtEntuiWE",
+                "spotifyId": "629DixmZGHc7ILtEntuiWE",
+                "addedAt": null,
                 "name": "LUNCH",
                 "duration": "2:59",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1093,17 +1116,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7BRD7x5pt8Lqa1eGYC4dzj",
+                "spotifyId": "7BRD7x5pt8Lqa1eGYC4dzj",
+                "addedAt": null,
                 "name": "CHIHIRO",
                 "duration": "5:03",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1124,17 +1147,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3QaPy1KgI7nu9FJEQUgn6h",
+                "spotifyId": "3QaPy1KgI7nu9FJEQUgn6h",
+                "addedAt": null,
                 "name": "WILDFLOWER",
                 "duration": "4:21",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1155,17 +1178,17 @@ export const stations = [
                 }
             },
             {
-                "id": "2prqm9sPLj10B4Wg0wE5x9",
+                "spotifyId": "2prqm9sPLj10B4Wg0wE5x9",
+                "addedAt": null,
                 "name": "BLUE",
                 "duration": "5:43",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1186,17 +1209,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6fPan2saHdFaIHuTSatORv",
+                "spotifyId": "6fPan2saHdFaIHuTSatORv",
+                "addedAt": null,
                 "name": "L’AMOUR DE MA VIE",
                 "duration": "5:33",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1217,48 +1240,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6wf7Yu7cxBSPrRlWeSeK0Q",
-                "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
-                "duration": "3:42",
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "album": {
-                    "id": "3AafSrFIbJPH6BJHiJm1Cd",
-                    "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
-                    "totalTrack": 1,
-                    "imgs": [
-                        {
-                            "height": 640,
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ed317ec13d3de9e01fb99c9e",
-                            "width": 640
-                        },
-                        {
-                            "height": 300,
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ed317ec13d3de9e01fb99c9e",
-                            "width": 300
-                        },
-                        {
-                            "height": 64,
-                            "url": "https://i.scdn.co/image/ab67616d00004851ed317ec13d3de9e01fb99c9e",
-                            "width": 64
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "0u2P5u6lvoDfwTYjAADbn4",
+                "spotifyId": "0u2P5u6lvoDfwTYjAADbn4",
+                "addedAt": null,
                 "name": "lovely (with Khalid)",
                 "duration": "3:20",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "2sBB17RXTamvj7Ncps15AK",
+                    "spotifyId": "2sBB17RXTamvj7Ncps15AK",
                     "name": "lovely (with Khalid)",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -1279,17 +1271,48 @@ export const stations = [
                 }
             },
             {
-                "id": "6TGd66r0nlPaYm3KIoI7ET",
-                "name": "THE GREATEST",
-                "duration": "4:53",
+                "spotifyId": "6wf7Yu7cxBSPrRlWeSeK0Q",
+                "addedAt": null,
+                "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+                "duration": "3:42",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "3AafSrFIbJPH6BJHiJm1Cd",
+                    "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+                    "imgs": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ed317ec13d3de9e01fb99c9e",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ed317ec13d3de9e01fb99c9e",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851ed317ec13d3de9e01fb99c9e",
+                            "width": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6TGd66r0nlPaYm3KIoI7ET",
+                "addedAt": null,
+                "name": "THE GREATEST",
+                "duration": "4:53",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1310,17 +1333,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1CsMKhwEmNnmvHUuO5nryA",
+                "spotifyId": "1CsMKhwEmNnmvHUuO5nryA",
+                "addedAt": null,
                 "name": "SKINNY",
                 "duration": "3:39",
                 "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
                     "name": "Billie Eilish"
                 },
                 "album": {
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
                     "name": "HIT ME HARD AND SOFT",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1340,13 +1363,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "WQ274O"
     }
     ,
     {
         "type": "artist",
-        "id": "74KM79TiuVKeVCqs8QtB0B",
+        "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
         "name": "Sabrina Carpenter",
+        "listeners": 10506213,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -1364,20 +1394,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 10476606,
         "tracks": [
             {
-                "id": "2qSkIjg1o9h3YT9RAgYN75",
+                "spotifyId": "2qSkIjg1o9h3YT9RAgYN75",
+                "addedAt": null,
                 "name": "Espresso",
                 "duration": "2:55",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5quMTd5zeI9yW5UDua8wS4",
+                    "spotifyId": "5quMTd5zeI9yW5UDua8wS4",
                     "name": "Espresso",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -1398,17 +1427,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5N3hjp1WNayUPZrA8kJmJP",
+                "spotifyId": "5N3hjp1WNayUPZrA8kJmJP",
+                "addedAt": null,
                 "name": "Please Please Please",
                 "duration": "3:06",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5bBaoign62r1i7OV8w7mi9",
+                    "spotifyId": "5bBaoign62r1i7OV8w7mi9",
                     "name": "Please Please Please",
-                    "totalTrack": 2,
                     "imgs": [
                         {
                             "height": 640,
@@ -1429,17 +1458,17 @@ export const stations = [
                 }
             },
             {
-                "id": "2Zo1PcszsT9WQ0ANntJbID",
+                "spotifyId": "2Zo1PcszsT9WQ0ANntJbID",
+                "addedAt": null,
                 "name": "Feather",
                 "duration": "3:05",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "2g4aJTa5ejGpp0O0GKzWAQ",
+                    "spotifyId": "2g4aJTa5ejGpp0O0GKzWAQ",
                     "name": "emails i can’t send fwd:",
-                    "totalTrack": 17,
                     "imgs": [
                         {
                             "height": 640,
@@ -1460,17 +1489,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6dgUya35uo964z7GZXM07g",
+                "spotifyId": "6dgUya35uo964z7GZXM07g",
+                "addedAt": null,
                 "name": "Nonsense",
                 "duration": "2:43",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5kDmlA2g9Y1YCbNo2Ufxlz",
+                    "spotifyId": "5kDmlA2g9Y1YCbNo2Ufxlz",
                     "name": "emails i can't send",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -1491,17 +1520,17 @@ export const stations = [
                 }
             },
             {
-                "id": "32FhTAAjKZaBein150o3Px",
+                "spotifyId": "32FhTAAjKZaBein150o3Px",
+                "addedAt": null,
                 "name": "because i liked a boy",
                 "duration": "3:16",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5kDmlA2g9Y1YCbNo2Ufxlz",
+                    "spotifyId": "5kDmlA2g9Y1YCbNo2Ufxlz",
                     "name": "emails i can't send",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -1522,17 +1551,17 @@ export const stations = [
                 }
             },
             {
-                "id": "59tskctgqUmjCWAwhzYAFm",
+                "spotifyId": "59tskctgqUmjCWAwhzYAFm",
+                "addedAt": null,
                 "name": "Looking at Me",
                 "duration": "3:01",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "19KilSbbeHRFFZM7ChwTdP",
+                    "spotifyId": "19KilSbbeHRFFZM7ChwTdP",
                     "name": "Singular Act II",
-                    "totalTrack": 9,
                     "imgs": [
                         {
                             "height": 640,
@@ -1553,17 +1582,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3BomnHfqKZCdPJC9bkGBjE",
+                "spotifyId": "3BomnHfqKZCdPJC9bkGBjE",
+                "addedAt": null,
                 "name": "On My Way",
                 "duration": "3:13",
                 "artist": {
-                    "id": "7vk5e3vY1uw9plTHJAMwjN",
+                    "spotifyId": "7vk5e3vY1uw9plTHJAMwjN",
                     "name": "Alan Walker"
                 },
                 "album": {
-                    "id": "3KrkQ77DF9OUB0aOzKFYOF",
+                    "spotifyId": "3KrkQ77DF9OUB0aOzKFYOF",
                     "name": "World Of Walker",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -1584,17 +1613,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4Wos0h9ECU2Z3oJMTQxpbc",
+                "spotifyId": "4Wos0h9ECU2Z3oJMTQxpbc",
+                "addedAt": null,
                 "name": "Read your Mind",
                 "duration": "3:27",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5kDmlA2g9Y1YCbNo2Ufxlz",
+                    "spotifyId": "5kDmlA2g9Y1YCbNo2Ufxlz",
                     "name": "emails i can't send",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -1615,17 +1644,17 @@ export const stations = [
                 }
             },
             {
-                "id": "2qLyo5FeWquE7HBUbcVnEy",
+                "spotifyId": "2qLyo5FeWquE7HBUbcVnEy",
+                "addedAt": null,
                 "name": "emails i can’t send",
                 "duration": "1:44",
                 "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
                     "name": "Sabrina Carpenter"
                 },
                 "album": {
-                    "id": "5kDmlA2g9Y1YCbNo2Ufxlz",
+                    "spotifyId": "5kDmlA2g9Y1YCbNo2Ufxlz",
                     "name": "emails i can't send",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -1646,17 +1675,17 @@ export const stations = [
                 }
             },
             {
-                "id": "34qaGPDvfWqp3F4iD5nGhf",
+                "spotifyId": "34qaGPDvfWqp3F4iD5nGhf",
+                "addedAt": null,
                 "name": "You Need Me Now? (feat. Sabrina Carpenter)",
                 "duration": "3:06",
                 "artist": {
-                    "id": "3uwAm6vQy7kWPS2bciKWx9",
+                    "spotifyId": "3uwAm6vQy7kWPS2bciKWx9",
                     "name": "girl in red"
                 },
                 "album": {
-                    "id": "5QaKu3YoUJNglyaKixaegf",
+                    "spotifyId": "5QaKu3YoUJNglyaKixaegf",
                     "name": "I'M DOING IT AGAIN BABY!",
-                    "totalTrack": 10,
                     "imgs": [
                         {
                             "height": 640,
@@ -1676,13 +1705,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "WLFvgT"
     }
     ,
     {
         "type": "artist",
-        "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+        "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
         "name": "Kendrick Lamar",
+        "listeners": 31066660,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -1700,20 +1736,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 31037846,
         "tracks": [
             {
-                "id": "6AI3ezQ4o3HUoP6Dhudph3",
+                "spotifyId": "6AI3ezQ4o3HUoP6Dhudph3",
+                "addedAt": null,
                 "name": "Not Like Us",
                 "duration": "4:34",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "5JjnoGJyOxfSZUZtk2rRwZ",
+                    "spotifyId": "5JjnoGJyOxfSZUZtk2rRwZ",
                     "name": "Not Like Us",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -1734,17 +1769,17 @@ export const stations = [
                 }
             },
             {
-                "id": "2tudvzsrR56uom6smgOcSf",
+                "spotifyId": "2tudvzsrR56uom6smgOcSf",
+                "addedAt": null,
                 "name": "Like That",
                 "duration": "4:27",
                 "artist": {
-                    "id": "1RyvyyTE3xzB2ZywiAwp0i",
+                    "spotifyId": "1RyvyyTE3xzB2ZywiAwp0i",
                     "name": "Future"
                 },
                 "album": {
-                    "id": "4iqbFIdGOTzXeDtt9owjQn",
+                    "spotifyId": "4iqbFIdGOTzXeDtt9owjQn",
                     "name": "WE DON'T TRUST YOU",
-                    "totalTrack": 17,
                     "imgs": [
                         {
                             "height": 640,
@@ -1765,17 +1800,17 @@ export const stations = [
                 }
             },
             {
-                "id": "77DRzu7ERs0TX3roZcre7Q",
+                "spotifyId": "77DRzu7ERs0TX3roZcre7Q",
+                "addedAt": null,
                 "name": "euphoria",
                 "duration": "6:23",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "32bR4LcEc1PvJEhaKoo4ZN",
+                    "spotifyId": "32bR4LcEc1PvJEhaKoo4ZN",
                     "name": "euphoria",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -1796,17 +1831,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3GCdLUSnKSMJhs4Tj6CV3s",
+                "spotifyId": "3GCdLUSnKSMJhs4Tj6CV3s",
+                "addedAt": null,
                 "name": "All The Stars (with SZA)",
                 "duration": "3:52",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "3pLdWdkj83EYfDN6H2N8MR",
+                    "spotifyId": "3pLdWdkj83EYfDN6H2N8MR",
                     "name": "Black Panther The Album Music From And Inspired By",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -1827,17 +1862,17 @@ export const stations = [
                 }
             },
             {
-                "id": "74tLlkN3rgVzRqQJgPfink",
+                "spotifyId": "74tLlkN3rgVzRqQJgPfink",
+                "addedAt": null,
                 "name": "Money Trees",
                 "duration": "6:26",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "0Oq3mWfexhsjUh0aNNBB5u",
+                    "spotifyId": "0Oq3mWfexhsjUh0aNNBB5u",
                     "name": "good kid, m.A.A.d city",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -1858,17 +1893,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7KXjTSCq5nL1LoYtL7XAwS",
+                "spotifyId": "7KXjTSCq5nL1LoYtL7XAwS",
+                "addedAt": null,
                 "name": "HUMBLE.",
                 "duration": "2:57",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "4eLPsYPBmXABThSJ821sqY",
+                    "spotifyId": "4eLPsYPBmXABThSJ821sqY",
                     "name": "DAMN.",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -1889,17 +1924,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6IZvVAP7VPPnsGX6bvgkqg",
+                "spotifyId": "6IZvVAP7VPPnsGX6bvgkqg",
+                "addedAt": null,
                 "name": "PRIDE.",
                 "duration": "4:35",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "4eLPsYPBmXABThSJ821sqY",
+                    "spotifyId": "4eLPsYPBmXABThSJ821sqY",
                     "name": "DAMN.",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -1920,17 +1955,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6PGoSes0D9eUDeeAafB2As",
+                "spotifyId": "6PGoSes0D9eUDeeAafB2As",
+                "addedAt": null,
                 "name": "LOVE. FEAT. ZACARI.",
                 "duration": "3:33",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "4eLPsYPBmXABThSJ821sqY",
+                    "spotifyId": "4eLPsYPBmXABThSJ821sqY",
                     "name": "DAMN.",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -1951,17 +1986,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3QFInJAm9eyaho5vBzxInN",
+                "spotifyId": "3QFInJAm9eyaho5vBzxInN",
+                "addedAt": null,
                 "name": "family ties (with Kendrick Lamar)",
                 "duration": "4:12",
                 "artist": {
-                    "id": "5SXuuuRpukkTvsLuUknva1",
+                    "spotifyId": "5SXuuuRpukkTvsLuUknva1",
                     "name": "Baby Keem"
                 },
                 "album": {
-                    "id": "3r46DPIQeBQbjvjjV5mXGg",
+                    "spotifyId": "3r46DPIQeBQbjvjjV5mXGg",
                     "name": "The Melodic Blue",
-                    "totalTrack": 16,
                     "imgs": [
                         {
                             "height": 640,
@@ -1982,17 +2017,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4S8PxReB1UiDR2F5x1lyIR",
+                "spotifyId": "4S8PxReB1UiDR2F5x1lyIR",
+                "addedAt": null,
                 "name": "meet the grahams",
                 "duration": "6:32",
                 "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
                     "name": "Kendrick Lamar"
                 },
                 "album": {
-                    "id": "5PGH88Cwual1Nj8d2RsKP0",
+                    "spotifyId": "5PGH88Cwual1Nj8d2RsKP0",
                     "name": "meet the grahams",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -2012,13 +2047,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "tOHXzT"
     }
     ,
     {
         "type": "artist",
-        "id": "22wbnEMDvgVIAGdFeek6ET",
+        "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
         "name": "Benson Boone",
+        "listeners": 3080820,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -2036,20 +2078,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 3073064,
         "tracks": [
             {
-                "id": "3xkHsmpQCBMytMJNiDf3Ii",
+                "spotifyId": "3xkHsmpQCBMytMJNiDf3Ii",
+                "addedAt": null,
                 "name": "Beautiful Things",
                 "duration": "3:00",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2070,17 +2111,17 @@ export const stations = [
                 }
             },
             {
-                "id": "51eSHglvG1RJXtL3qI5trr",
+                "spotifyId": "51eSHglvG1RJXtL3qI5trr",
+                "addedAt": null,
                 "name": "Slow It Down",
                 "duration": "2:41",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2101,17 +2142,17 @@ export const stations = [
                 }
             },
             {
-                "id": "315aBOUD3xtj7sUMXtRgMV",
+                "spotifyId": "315aBOUD3xtj7sUMXtRgMV",
+                "addedAt": null,
                 "name": "In The Stars",
                 "duration": "3:36",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2132,17 +2173,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3h76tbaYIamSeJL81X7ZwI",
+                "spotifyId": "3h76tbaYIamSeJL81X7ZwI",
+                "addedAt": null,
                 "name": "Cry",
                 "duration": "3:06",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2163,17 +2204,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6HuHyXviAdpmnQu73JHfBz",
+                "spotifyId": "6HuHyXviAdpmnQu73JHfBz",
+                "addedAt": null,
                 "name": "Ghost Town",
                 "duration": "3:13",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2194,17 +2235,17 @@ export const stations = [
                 }
             },
             {
-                "id": "33vZRjxJScapmRShRJq8I0",
+                "spotifyId": "33vZRjxJScapmRShRJq8I0",
+                "addedAt": null,
                 "name": "NIGHTS LIKE THESE",
                 "duration": "2:52",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "02J3tX2gpJqKArEzWsFYTz",
+                    "spotifyId": "02J3tX2gpJqKArEzWsFYTz",
                     "name": "Walk Me Home...",
-                    "totalTrack": 8,
                     "imgs": [
                         {
                             "height": 640,
@@ -2225,17 +2266,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5ZzaQW3InamKZ0KdJVQ1GO",
+                "spotifyId": "5ZzaQW3InamKZ0KdJVQ1GO",
+                "addedAt": null,
                 "name": "Sugar Sweet",
                 "duration": "2:49",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "6h8eeLIwHI3VhP0GAorO3c",
+                    "spotifyId": "6h8eeLIwHI3VhP0GAorO3c",
                     "name": "Sugar Sweet",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -2256,17 +2297,17 @@ export const stations = [
                 }
             },
             {
-                "id": "523f4oSjrZx83XDtRLnsIw",
+                "spotifyId": "523f4oSjrZx83XDtRLnsIw",
+                "addedAt": null,
                 "name": "Before You",
                 "duration": "3:07",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "5daRbOcG3hGi60yaXm5PXM",
+                    "spotifyId": "5daRbOcG3hGi60yaXm5PXM",
                     "name": "Before You",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -2287,17 +2328,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3PsHulD1zewglcTPcEPnlk",
+                "spotifyId": "3PsHulD1zewglcTPcEPnlk",
+                "addedAt": null,
                 "name": "To Love Someone",
                 "duration": "3:16",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "2hOxnlaUHGvYa7pisKzVdC",
+                    "spotifyId": "2hOxnlaUHGvYa7pisKzVdC",
                     "name": "To Love Someone",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -2318,17 +2359,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1j2iMeSWdsEP5ITCrZqbIL",
+                "spotifyId": "1j2iMeSWdsEP5ITCrZqbIL",
+                "addedAt": null,
                 "name": "Be Someone",
                 "duration": "3:44",
                 "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
                     "name": "Benson Boone"
                 },
                 "album": {
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "totalTrack": 15,
                     "imgs": [
                         {
                             "height": 640,
@@ -2348,13 +2389,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "BqlKFN"
     }
     ,
     {
         "type": "artist",
-        "id": "2FXC3k01G6Gw61bmprjgqS",
+        "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
         "name": "Hozier",
+        "listeners": 7454129,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -2372,20 +2420,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 7449409,
         "tracks": [
             {
-                "id": "5Z0UnEtpLDQyYlWwgi8m9C",
+                "spotifyId": "5Z0UnEtpLDQyYlWwgi8m9C",
+                "addedAt": null,
                 "name": "Too Sweet",
                 "duration": "4:11",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "3P4SQqMMgjqfqVxgLwtYRk",
+                    "spotifyId": "3P4SQqMMgjqfqVxgLwtYRk",
                     "name": "Unreal Unearth: Unheard",
-                    "totalTrack": 20,
                     "imgs": [
                         {
                             "height": 640,
@@ -2406,17 +2453,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3dYD57lRAUcMHufyqn9GcI",
+                "spotifyId": "3dYD57lRAUcMHufyqn9GcI",
+                "addedAt": null,
                 "name": "Take Me To Church",
                 "duration": "4:01",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0Uv83rRhY5QvHKkQoULRKk",
+                    "spotifyId": "0Uv83rRhY5QvHKkQoULRKk",
                     "name": "Hozier",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -2437,17 +2484,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6pBeLF2GZS3NNwV4DBvtg5",
+                "spotifyId": "6pBeLF2GZS3NNwV4DBvtg5",
+                "addedAt": null,
                 "name": "Northern Attitude (with Hozier)",
                 "duration": "4:27",
                 "artist": {
-                    "id": "2RQXRUsr4IW1f3mKyKsy4B",
+                    "spotifyId": "2RQXRUsr4IW1f3mKyKsy4B",
                     "name": "Noah Kahan"
                 },
                 "album": {
-                    "id": "3qBWNcWifNhUKJAWzswdJY",
+                    "spotifyId": "3qBWNcWifNhUKJAWzswdJY",
                     "name": "Stick Season (Forever)",
-                    "totalTrack": 30,
                     "imgs": [
                         {
                             "height": 640,
@@ -2468,17 +2515,17 @@ export const stations = [
                 }
             },
             {
-                "id": "35PKfoynRpVFoAUE3D5Kc6",
+                "spotifyId": "35PKfoynRpVFoAUE3D5Kc6",
+                "addedAt": null,
                 "name": "Work Song",
                 "duration": "3:49",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0Uv83rRhY5QvHKkQoULRKk",
+                    "spotifyId": "0Uv83rRhY5QvHKkQoULRKk",
                     "name": "Hozier",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -2499,48 +2546,17 @@ export const stations = [
                 }
             },
             {
-                "id": "7uttm8Iurm5uK67Vr9G2Sp",
-                "name": "Almost (Sweet Music)",
-                "duration": "3:37",
-                "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
-                    "name": "Hozier"
-                },
-                "album": {
-                    "id": "5j1ZsFyNCsnt62prbs85eE",
-                    "name": "Wasteland, Baby!",
-                    "totalTrack": 14,
-                    "imgs": [
-                        {
-                            "height": 640,
-                            "url": "https://i.scdn.co/image/ab67616d0000b273299e8e9983e2b0455e5e8505",
-                            "width": 640
-                        },
-                        {
-                            "height": 300,
-                            "url": "https://i.scdn.co/image/ab67616d00001e02299e8e9983e2b0455e5e8505",
-                            "width": 300
-                        },
-                        {
-                            "height": 64,
-                            "url": "https://i.scdn.co/image/ab67616d00004851299e8e9983e2b0455e5e8505",
-                            "width": 64
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "22sS7JkzeVeq4vOPCB6Fbj",
+                "spotifyId": "22sS7JkzeVeq4vOPCB6Fbj",
+                "addedAt": null,
                 "name": "Someone New",
                 "duration": "3:42",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0Uv83rRhY5QvHKkQoULRKk",
+                    "spotifyId": "0Uv83rRhY5QvHKkQoULRKk",
                     "name": "Hozier",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -2561,17 +2577,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0L3oQdYUvVbsOOPJSkZ3C3",
-                "name": "Would That I",
-                "duration": "4:28",
+                "spotifyId": "7uttm8Iurm5uK67Vr9G2Sp",
+                "addedAt": null,
+                "name": "Almost (Sweet Music)",
+                "duration": "3:37",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "5j1ZsFyNCsnt62prbs85eE",
+                    "spotifyId": "5j1ZsFyNCsnt62prbs85eE",
                     "name": "Wasteland, Baby!",
-                    "totalTrack": 14,
                     "imgs": [
                         {
                             "height": 640,
@@ -2592,17 +2608,48 @@ export const stations = [
                 }
             },
             {
-                "id": "3hbKcj640iYmPQgecainOr",
-                "name": "Eat Your Young",
-                "duration": "4:03",
+                "spotifyId": "0L3oQdYUvVbsOOPJSkZ3C3",
+                "addedAt": null,
+                "name": "Would That I",
+                "duration": "4:28",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0TFpENEamBfIfGISdSTXFB",
+                    "spotifyId": "5j1ZsFyNCsnt62prbs85eE",
+                    "name": "Wasteland, Baby!",
+                    "imgs": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273299e8e9983e2b0455e5e8505",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02299e8e9983e2b0455e5e8505",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851299e8e9983e2b0455e5e8505",
+                            "width": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3hbKcj640iYmPQgecainOr",
+                "addedAt": null,
+                "name": "Eat Your Young",
+                "duration": "4:03",
+                "artist": {
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
+                    "name": "Hozier"
+                },
+                "album": {
+                    "spotifyId": "0TFpENEamBfIfGISdSTXFB",
                     "name": "Unreal Unearth",
-                    "totalTrack": 16,
                     "imgs": [
                         {
                             "height": 640,
@@ -2623,17 +2670,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4LGJ2pLDvTRnul3EcZoYkX",
+                "spotifyId": "4LGJ2pLDvTRnul3EcZoYkX",
+                "addedAt": null,
                 "name": "Like Real People Do",
                 "duration": "3:18",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0Uv83rRhY5QvHKkQoULRKk",
+                    "spotifyId": "0Uv83rRhY5QvHKkQoULRKk",
                     "name": "Hozier",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -2654,17 +2701,17 @@ export const stations = [
                 }
             },
             {
-                "id": "5xo1Gj4WTssjQgQ0w03cf2",
+                "spotifyId": "5xo1Gj4WTssjQgQ0w03cf2",
+                "addedAt": null,
                 "name": "Jackie And Wilson",
                 "duration": "3:43",
                 "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
                     "name": "Hozier"
                 },
                 "album": {
-                    "id": "0Uv83rRhY5QvHKkQoULRKk",
+                    "spotifyId": "0Uv83rRhY5QvHKkQoULRKk",
                     "name": "Hozier",
-                    "totalTrack": 13,
                     "imgs": [
                         {
                             "height": 640,
@@ -2684,13 +2731,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "9YqnIa"
     }
     ,
     {
         "type": "artist",
-        "id": "4dpARuHxo51G3z768sgnrY",
+        "spotifyId": "4dpARuHxo51G3z768sgnrY",
         "name": "Adele",
+        "listeners": 56588816,
+        "description": null,
+        "likes": null,
+        "owner": null,
+        "total": null,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": 640,
@@ -2708,20 +2762,19 @@ export const stations = [
                 "width": 160
             }
         ],
-        "listeners": 56569524,
         "tracks": [
             {
-                "id": "3di5hcvxxciiqwMH1jarhY",
+                "spotifyId": "3di5hcvxxciiqwMH1jarhY",
+                "addedAt": null,
                 "name": "Set Fire to the Rain",
                 "duration": "4:02",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "5duyQokC4FMcWPYTV9Gpf9",
+                    "spotifyId": "5duyQokC4FMcWPYTV9Gpf9",
                     "name": "21",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2742,17 +2795,17 @@ export const stations = [
                 }
             },
             {
-                "id": "46IZ0fSY2mpAiktS3KOqds",
+                "spotifyId": "46IZ0fSY2mpAiktS3KOqds",
+                "addedAt": null,
                 "name": "Easy On Me",
                 "duration": "3:44",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "21jF5jlMtzo94wbxmJ18aa",
+                    "spotifyId": "21jF5jlMtzo94wbxmJ18aa",
                     "name": "30",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -2773,17 +2826,17 @@ export const stations = [
                 }
             },
             {
-                "id": "3bNv3VuUOKgrf5hu3YcuRo",
+                "spotifyId": "3bNv3VuUOKgrf5hu3YcuRo",
+                "addedAt": null,
                 "name": "Someone Like You",
                 "duration": "4:45",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "5duyQokC4FMcWPYTV9Gpf9",
+                    "spotifyId": "5duyQokC4FMcWPYTV9Gpf9",
                     "name": "21",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2804,17 +2857,17 @@ export const stations = [
                 }
             },
             {
-                "id": "4OSBTYWVwsQhGLF9NHvIbR",
+                "spotifyId": "4OSBTYWVwsQhGLF9NHvIbR",
+                "addedAt": null,
                 "name": "Rolling in the Deep",
                 "duration": "3:48",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "5duyQokC4FMcWPYTV9Gpf9",
+                    "spotifyId": "5duyQokC4FMcWPYTV9Gpf9",
                     "name": "21",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2835,17 +2888,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6VObnIkLVruX4UVyxWhlqm",
+                "spotifyId": "6VObnIkLVruX4UVyxWhlqm",
+                "addedAt": null,
                 "name": "Skyfall",
                 "duration": "4:46",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "6TwN6Lq9glwnG8kNp6chHY",
+                    "spotifyId": "6TwN6Lq9glwnG8kNp6chHY",
                     "name": "Skyfall",
-                    "totalTrack": 1,
                     "imgs": [
                         {
                             "height": 640,
@@ -2866,17 +2919,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0DuWDLjriRPjDRoPgaCslY",
+                "spotifyId": "0DuWDLjriRPjDRoPgaCslY",
+                "addedAt": null,
                 "name": "Love In The Dark",
                 "duration": "4:45",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "6TVfiWmo8KtflUAmkK9gGF",
+                    "spotifyId": "6TVfiWmo8KtflUAmkK9gGF",
                     "name": "25",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2897,17 +2950,17 @@ export const stations = [
                 }
             },
             {
-                "id": "6O5TrlFWTYvznd9fMC0VvU",
+                "spotifyId": "6O5TrlFWTYvznd9fMC0VvU",
+                "addedAt": null,
                 "name": "When We Were Young",
                 "duration": "4:50",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "6TVfiWmo8KtflUAmkK9gGF",
+                    "spotifyId": "6TVfiWmo8KtflUAmkK9gGF",
                     "name": "25",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2928,17 +2981,17 @@ export const stations = [
                 }
             },
             {
-                "id": "273QnyCvJB65rScHJ1nPZb",
+                "spotifyId": "273QnyCvJB65rScHJ1nPZb",
+                "addedAt": null,
                 "name": "Make You Feel My Love",
                 "duration": "3:32",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "5awrJZBt3rP9RO5hlYdZB0",
+                    "spotifyId": "5awrJZBt3rP9RO5hlYdZB0",
                     "name": "19",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -2959,17 +3012,17 @@ export const stations = [
                 }
             },
             {
-                "id": "1Yk0cQdMLx5RzzFTYwmuld",
+                "spotifyId": "1Yk0cQdMLx5RzzFTYwmuld",
+                "addedAt": null,
                 "name": "Hello",
                 "duration": "4:55",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "6TVfiWmo8KtflUAmkK9gGF",
+                    "spotifyId": "6TVfiWmo8KtflUAmkK9gGF",
                     "name": "25",
-                    "totalTrack": 11,
                     "imgs": [
                         {
                             "height": 640,
@@ -2990,17 +3043,17 @@ export const stations = [
                 }
             },
             {
-                "id": "0Z5ok0QLLttAKsujOZYOXf",
+                "spotifyId": "0Z5ok0QLLttAKsujOZYOXf",
+                "addedAt": null,
                 "name": "Chasing Pavements",
                 "duration": "3:30",
                 "artist": {
-                    "id": "4dpARuHxo51G3z768sgnrY",
+                    "spotifyId": "4dpARuHxo51G3z768sgnrY",
                     "name": "Adele"
                 },
                 "album": {
-                    "id": "5awrJZBt3rP9RO5hlYdZB0",
+                    "spotifyId": "5awrJZBt3rP9RO5hlYdZB0",
                     "name": "19",
-                    "totalTrack": 12,
                     "imgs": [
                         {
                             "height": 640,
@@ -3020,14 +3073,20 @@ export const stations = [
                     ]
                 }
             }
-        ]
+        ],
+        "_id": "j4kpOp"
     }
     ,
     {
-        "id": "37i9dQZEVXbMDoHDwVN2tF",
         "type": "playlist",
+        "spotifyId": "37i9dQZEVXbMDoHDwVN2tF",
         "name": "50 המובילים — בינלאומי",
+        "listeners": null,
         "description": "העדכון היומי עם הטראקים המושמעים ביותר עכשיו — בינלאומי.",
+        "likes": 17031700,
+        "owner": null,
+        "total": 50,
+        "releaseDate": null,
         "imgs": [
             {
                 "height": null,
@@ -3035,116 +3094,19 @@ export const stations = [
                 "width": null
             }
         ],
-        "likes": 17031039,
-        "total": 50,
         "tracks": [
             {
-                "id": "6dOtVTDdiauQNBQEDOtlAB",
-                "type": "track",
-                "name": "BIRDS OF A FEATHER",
-                "album": {
-                    "name": "HIT ME HARD AND SOFT",
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "3:30",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2qSkIjg1o9h3YT9RAgYN75",
-                "type": "track",
-                "name": "Espresso",
-                "album": {
-                    "name": "Espresso",
-                    "id": "5quMTd5zeI9yW5UDua8wS4",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02659cd4673230913b3918e0d5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851659cd4673230913b3918e0d5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
-                    "name": "Sabrina Carpenter"
-                },
-                "duration": "2:55",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "5N3hjp1WNayUPZrA8kJmJP",
-                "type": "track",
-                "name": "Please Please Please",
-                "album": {
-                    "name": "Please Please Please",
-                    "id": "5bBaoign62r1i7OV8w7mi9",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273de84adf0e48248ea2d769c3e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02de84adf0e48248ea2d769c3e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851de84adf0e48248ea2d769c3e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
-                    "name": "Sabrina Carpenter"
-                },
-                "duration": "3:06",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7tI8dRuH2Yc6RuoTjxo4dU",
-                "type": "track",
+                "spotifyId": "7tI8dRuH2Yc6RuoTjxo4dU",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "Who",
+                "duration": "2:50",
+                "artist": {
+                    "spotifyId": "1oSPZhvZMIrWW5I41kPkkY",
+                    "name": "Jimin"
+                },
                 "album": {
+                    "spotifyId": "15XcLhiVMlSOipUddTNDnr",
                     "name": "MUSE",
-                    "id": "15XcLhiVMlSOipUddTNDnr",
-                    "totalTracks": 7,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273f02c451189a709b9a952aaec",
@@ -3162,22 +3124,113 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "1oSPZhvZMIrWW5I41kPkkY",
-                    "name": "Jimin"
-                },
-                "duration": "2:50",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "6AI3ezQ4o3HUoP6Dhudph3",
-                "type": "track",
-                "name": "Not Like Us",
+                "spotifyId": "6dOtVTDdiauQNBQEDOtlAB",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "BIRDS OF A FEATHER",
+                "duration": "3:30",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
                 "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "name": "HIT ME HARD AND SOFT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2qSkIjg1o9h3YT9RAgYN75",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Espresso",
+                "duration": "2:55",
+                "artist": {
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
+                    "name": "Sabrina Carpenter"
+                },
+                "album": {
+                    "spotifyId": "5quMTd5zeI9yW5UDua8wS4",
+                    "name": "Espresso",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02659cd4673230913b3918e0d5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851659cd4673230913b3918e0d5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5N3hjp1WNayUPZrA8kJmJP",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Please Please Please",
+                "duration": "3:06",
+                "artist": {
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
+                    "name": "Sabrina Carpenter"
+                },
+                "album": {
+                    "spotifyId": "5bBaoign62r1i7OV8w7mi9",
+                    "name": "Please Please Please",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273de84adf0e48248ea2d769c3e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02de84adf0e48248ea2d769c3e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851de84adf0e48248ea2d769c3e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6AI3ezQ4o3HUoP6Dhudph3",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Not Like Us",
+                "duration": "4:34",
+                "artist": {
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "name": "Kendrick Lamar"
+                },
+                "album": {
+                    "spotifyId": "5JjnoGJyOxfSZUZtk2rRwZ",
                     "name": "Not Like Us",
-                    "id": "5JjnoGJyOxfSZUZtk2rRwZ",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
@@ -3195,22 +3248,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
-                    "name": "Kendrick Lamar"
-                },
-                "duration": "4:34",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "6XjDF6nds4DE2BBbagZol6",
-                "type": "track",
+                "spotifyId": "6XjDF6nds4DE2BBbagZol6",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "Gata Only",
+                "duration": "3:42",
+                "artist": {
+                    "spotifyId": "7CvTknweLr9feJtRGrpDBy",
+                    "name": "FloyyMenor"
+                },
                 "album": {
+                    "spotifyId": "5tSQtQGkrCJx3hoQxmLgfM",
                     "name": "Gata Only",
-                    "id": "5tSQtQGkrCJx3hoQxmLgfM",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273c4583f3ad76630879a75450a",
@@ -3228,55 +3279,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "7CvTknweLr9feJtRGrpDBy",
-                    "name": "FloyyMenor"
-                },
-                "duration": "3:42",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "0WbMK4wrZ1wFSty9F7FCgu",
-                "type": "track",
-                "name": "Good Luck, Babe!",
-                "album": {
-                    "name": "Good Luck, Babe!",
-                    "id": "1WAjjRMfZjEXtB0lQrAw6Q",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27391b4bc7c88d91a42e0f3a8b7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0291b4bc7c88d91a42e0f3a8b7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485191b4bc7c88d91a42e0f3a8b7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7GlBOeep6PqTfFi59PTUUN",
-                    "name": "Chappell Roan"
-                },
-                "duration": "3:38",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "6WatFBLVB0x077xWeoVc2k",
-                "type": "track",
+                "spotifyId": "6WatFBLVB0x077xWeoVc2k",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "Si Antes Te Hubiera Conocido",
+                "duration": "3:15",
+                "artist": {
+                    "spotifyId": "790FomKkXshlbRYZFtlgla",
+                    "name": "KAROL G"
+                },
                 "album": {
+                    "spotifyId": "5ylbxH7EqpsmHZCRuiYewS",
                     "name": "Si Antes Te Hubiera Conocido",
-                    "id": "5ylbxH7EqpsmHZCRuiYewS",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273491678beaffcefac517a699e",
@@ -3294,22 +3310,51 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "790FomKkXshlbRYZFtlgla",
-                    "name": "KAROL G"
-                },
-                "duration": "3:15",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "3xkHsmpQCBMytMJNiDf3Ii",
-                "type": "track",
-                "name": "Beautiful Things",
+                "spotifyId": "0WbMK4wrZ1wFSty9F7FCgu",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Good Luck, Babe!",
+                "duration": "3:38",
+                "artist": {
+                    "spotifyId": "7GlBOeep6PqTfFi59PTUUN",
+                    "name": "Chappell Roan"
+                },
                 "album": {
+                    "spotifyId": "1WAjjRMfZjEXtB0lQrAw6Q",
+                    "name": "Good Luck, Babe!",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27391b4bc7c88d91a42e0f3a8b7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0291b4bc7c88d91a42e0f3a8b7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485191b4bc7c88d91a42e0f3a8b7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3xkHsmpQCBMytMJNiDf3Ii",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Beautiful Things",
+                "duration": "3:00",
+                "artist": {
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
+                    "name": "Benson Boone"
+                },
+                "album": {
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
                     "name": "Fireworks & Rollerblades",
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
-                    "totalTracks": 15,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
@@ -3327,55 +3372,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
-                    "name": "Benson Boone"
-                },
-                "duration": "3:00",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "5AJ9hqTS2wcFQCELCFRO7A",
-                "type": "track",
-                "name": "MILLION DOLLAR BABY",
-                "album": {
-                    "name": "MILLION DOLLAR BABY",
-                    "id": "2Z1gnUf3nbn6DtwZSUIH54",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27301c0cd5da820e6128655854f",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0201c0cd5da820e6128655854f",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485101c0cd5da820e6128655854f",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1WaFQSHVGZQJTbf0BdxdNo",
-                    "name": "Tommy Richman"
-                },
-                "duration": "2:35",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "5fZJQrFKWQLb7FpJXZ1g7K",
-                "type": "track",
+                "spotifyId": "5fZJQrFKWQLb7FpJXZ1g7K",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "A Bar Song (Tipsy)",
+                "duration": "2:51",
+                "artist": {
+                    "spotifyId": "3y2cIKLjiOlp1Np37WiUdH",
+                    "name": "Shaboozey"
+                },
                 "album": {
+                    "spotifyId": "0DLvFVIfwt3OHdK9kGeEM3",
                     "name": "Where I've Been, Isn't Where I'm Going",
-                    "id": "0DLvFVIfwt3OHdK9kGeEM3",
-                    "totalTracks": 12,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b27360df033c8f8b17384387666a",
@@ -3393,22 +3403,51 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "3y2cIKLjiOlp1Np37WiUdH",
-                    "name": "Shaboozey"
-                },
-                "duration": "2:51",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "5496lks6V3fh1mZAB6IAap",
-                "type": "track",
-                "name": "Alibi (with Pabllo Vittar & Yseult)",
+                "spotifyId": "5AJ9hqTS2wcFQCELCFRO7A",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "MILLION DOLLAR BABY",
+                "duration": "2:35",
+                "artist": {
+                    "spotifyId": "1WaFQSHVGZQJTbf0BdxdNo",
+                    "name": "Tommy Richman"
+                },
                 "album": {
+                    "spotifyId": "2Z1gnUf3nbn6DtwZSUIH54",
+                    "name": "MILLION DOLLAR BABY",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27301c0cd5da820e6128655854f",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0201c0cd5da820e6128655854f",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485101c0cd5da820e6128655854f",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5496lks6V3fh1mZAB6IAap",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Alibi (with Pabllo Vittar & Yseult)",
+                "duration": "2:41",
+                "artist": {
+                    "spotifyId": "5MraexJKZDrQYzS98kNwie",
+                    "name": "Sevdaliza"
+                },
+                "album": {
+                    "spotifyId": "2m0euKZUDcoyEXHIS5MFCq",
                     "name": "Alibi (with Pabllo Vittar & Yseult)",
-                    "id": "2m0euKZUDcoyEXHIS5MFCq",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2734ee35e37bc21fe929a4d3605",
@@ -3426,22 +3465,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "5MraexJKZDrQYzS98kNwie",
-                    "name": "Sevdaliza"
-                },
-                "duration": "2:41",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "5Z0UnEtpLDQyYlWwgi8m9C",
-                "type": "track",
+                "spotifyId": "5Z0UnEtpLDQyYlWwgi8m9C",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "Too Sweet",
+                "duration": "4:11",
+                "artist": {
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
+                    "name": "Hozier"
+                },
                 "album": {
+                    "spotifyId": "3P4SQqMMgjqfqVxgLwtYRk",
                     "name": "Unreal Unearth: Unheard",
-                    "id": "3P4SQqMMgjqfqVxgLwtYRk",
-                    "totalTracks": 20,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2733e1b212546dac35443735241",
@@ -3459,22 +3496,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
-                    "name": "Hozier"
-                },
-                "duration": "4:11",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "7221xIgOnuakPdLqT0F3nP",
-                "type": "track",
+                "spotifyId": "7221xIgOnuakPdLqT0F3nP",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "I Had Some Help (Feat. Morgan Wallen)",
+                "duration": "2:58",
+                "artist": {
+                    "spotifyId": "246dkjvS1zLTtiykXe5h60",
+                    "name": "Post Malone"
+                },
                 "album": {
+                    "spotifyId": "1woYXxyyxTQJ0E0AhZE6mj",
                     "name": "I Had Some Help",
-                    "id": "1woYXxyyxTQJ0E0AhZE6mj",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b27397306976e3eb8aad53b754eb",
@@ -3492,22 +3527,82 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "246dkjvS1zLTtiykXe5h60",
-                    "name": "Post Malone"
-                },
-                "duration": "2:58",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "1CDQzbCz4KSQxHe7LMEgRM",
-                "type": "track",
-                "name": "Houdini",
+                "spotifyId": "17phhZDn6oGtzMe56NuWvj",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Lose Control",
+                "duration": "3:30",
+                "artist": {
+                    "spotifyId": "33qOK5uJ8AR2xuQQAhHump",
+                    "name": "Teddy Swims"
+                },
                 "album": {
+                    "spotifyId": "7nacKlk586eLRBSIsrk9DB",
+                    "name": "I've Tried Everything But Therapy (Part 1)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2731a0323cc23419360a34a3ace",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e021a0323cc23419360a34a3ace",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048511a0323cc23419360a34a3ace",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3Vr3zh0r7ALn8VLqCiRR10",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Stargazing",
+                "duration": "2:52",
+                "artist": {
+                    "spotifyId": "3bO19AOone0ubCsfDXDtYt",
+                    "name": "Myles Smith"
+                },
+                "album": {
+                    "spotifyId": "3VNxRarx9HUI5w7DHv0TBj",
+                    "name": "Stargazing",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27381b12e1a0584e8ea7ba2ae4a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0281b12e1a0584e8ea7ba2ae4a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485181b12e1a0584e8ea7ba2ae4a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1CDQzbCz4KSQxHe7LMEgRM",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Houdini",
+                "duration": "3:47",
+                "artist": {
+                    "spotifyId": "7dGJo4pcD2V6oG8kP0tJRR",
+                    "name": "Eminem"
+                },
+                "album": {
+                    "spotifyId": "3kjHLu1pL7tdY88GFwEkl6",
                     "name": "The Death of Slim Shady (Coup De Grâce)",
-                    "id": "3kjHLu1pL7tdY88GFwEkl6",
-                    "totalTracks": 19,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2731633c43b5695735f7de36487",
@@ -3525,88 +3620,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "7dGJo4pcD2V6oG8kP0tJRR",
-                    "name": "Eminem"
-                },
-                "duration": "3:47",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "17phhZDn6oGtzMe56NuWvj",
-                "type": "track",
-                "name": "Lose Control",
-                "album": {
-                    "name": "I've Tried Everything But Therapy (Part 1)",
-                    "id": "7nacKlk586eLRBSIsrk9DB",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2731a0323cc23419360a34a3ace",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e021a0323cc23419360a34a3ace",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048511a0323cc23419360a34a3ace",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "33qOK5uJ8AR2xuQQAhHump",
-                    "name": "Teddy Swims"
-                },
-                "duration": "3:30",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "3Vr3zh0r7ALn8VLqCiRR10",
-                "type": "track",
-                "name": "Stargazing",
-                "album": {
-                    "name": "Stargazing",
-                    "id": "3VNxRarx9HUI5w7DHv0TBj",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27381b12e1a0584e8ea7ba2ae4a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0281b12e1a0584e8ea7ba2ae4a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485181b12e1a0584e8ea7ba2ae4a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3bO19AOone0ubCsfDXDtYt",
-                    "name": "Myles Smith"
-                },
-                "duration": "2:52",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "3qhlB30KknSejmIvZZLjOD",
-                "type": "track",
+                "spotifyId": "3qhlB30KknSejmIvZZLjOD",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "End of Beginning",
+                "duration": "2:39",
+                "artist": {
+                    "spotifyId": "5p9HO3XC5P3BLxJs5Mtrhm",
+                    "name": "Djo"
+                },
                 "album": {
+                    "spotifyId": "4JDXBZdRPId4devseaAOKH",
                     "name": "DECIDE",
-                    "id": "4JDXBZdRPId4devseaAOKH",
-                    "totalTracks": 13,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1",
@@ -3624,88 +3651,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "5p9HO3XC5P3BLxJs5Mtrhm",
-                    "name": "Djo"
-                },
-                "duration": "2:39",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "1BxfuPKGuaTgP7aM0Bbdwr",
-                "type": "track",
-                "name": "Cruel Summer",
-                "album": {
-                    "name": "Lover",
-                    "id": "1NAmidJlEaVgA3MpcPFYGq",
-                    "totalTracks": 18,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "2:58",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "4Dvkj6JhhA12EX05fT7y2e",
-                "type": "track",
-                "name": "As It Was",
-                "album": {
-                    "name": "Harry's House",
-                    "id": "5r36AJ6VOJtp00oxSkBZ5h",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "2:47",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "3JG1uFc40wfyrqaWC7iv0e",
-                "type": "track",
+                "spotifyId": "3JG1uFc40wfyrqaWC7iv0e",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "i like the way you kiss me",
+                "duration": "2:22",
+                "artist": {
+                    "spotifyId": "0PCCGZ0wGLizHt2KZ7hhA2",
+                    "name": "Artemas"
+                },
                 "album": {
+                    "spotifyId": "5nzSCZ7NhKvAysI0tmNOdD",
                     "name": "yustyna",
-                    "id": "5nzSCZ7NhKvAysI0tmNOdD",
-                    "totalTracks": 14,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2738fe69d8df304ff053693653e",
@@ -3723,55 +3682,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "0PCCGZ0wGLizHt2KZ7hhA2",
-                    "name": "Artemas"
-                },
-                "duration": "2:22",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "51ZQ1vr10ffzbwIjDCwqm4",
-                "type": "track",
-                "name": "we can't be friends (wait for your love)",
-                "album": {
-                    "name": "eternal sunshine",
-                    "id": "5EYKrEDnKhhcNxGedaRQeK",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738b58d20f1b77295730db15b4",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028b58d20f1b77295730db15b4",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518b58d20f1b77295730db15b4",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "66CXWjxzNUsdJxJ2JdwvnR",
-                    "name": "Ariana Grande"
-                },
-                "duration": "3:48",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "1pymWRCuZfCd0zdiBJo0Hj",
-                "type": "track",
+                "spotifyId": "1pymWRCuZfCd0zdiBJo0Hj",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "REAL GANGSTA LOVE",
+                "duration": "2:25",
+                "artist": {
+                    "spotifyId": "2x7PC78TmgqpEIjaGAZ0Oz",
+                    "name": "Trueno"
+                },
                 "album": {
+                    "spotifyId": "3EWJoKrG9XnCjvAPzkQZ88",
                     "name": "EL ÚLTIMO BAILE",
-                    "id": "3EWJoKrG9XnCjvAPzkQZ88",
-                    "totalTracks": 13,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b27368a450f7bcdc187e20f0ba0a",
@@ -3789,4678 +3713,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "2x7PC78TmgqpEIjaGAZ0Oz",
-                    "name": "Trueno"
-                },
-                "duration": "2:25",
-                "addedAt": "2024-07-23T10:07:15Z"
+                }
             },
             {
-                "id": "3hRV0jL3vUpRrcy398teAU",
-                "type": "track",
-                "name": "The Night We Met",
-                "album": {
-                    "name": "Strange Trails",
-                    "id": "4sD1qg4jwTZR4mvR4Iflk5",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27317875a0610c23d8946454583",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0217875a0610c23d8946454583",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485117875a0610c23d8946454583",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6ltzsmQQbmdoHHbLZ4ZN25",
-                    "name": "Lord Huron"
-                },
-                "duration": "3:28",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7CyPwkp0oE8Ro9Dd5CUDjW",
-                "type": "track",
-                "name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
-                "album": {
-                    "name": "The Idol Episode 4 (Music from the HBO Original Series)",
-                    "id": "7tzVd1fwkxsorytCBjEJkU",
-                    "totalTracks": 3,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851b0dd6a5cd1dec96c4119c262",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-                    "name": "The Weeknd"
-                },
-                "duration": "4:04",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "629DixmZGHc7ILtEntuiWE",
-                "type": "track",
-                "name": "LUNCH",
-                "album": {
-                    "name": "HIT ME HARD AND SOFT",
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "2:59",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "1BJJbSX6muJVF2AK7uH1x4",
-                "type": "track",
-                "name": "Move",
-                "album": {
-                    "name": "Move",
-                    "id": "4M8ThNHbNjda2cPwL8XZHS",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27317a013a00d0a33f3dd49974d",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0217a013a00d0a33f3dd49974d",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485117a013a00d0a33f3dd49974d",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2loEsOijJ6XiGzWYFXMIRk",
-                    "name": "Adam Port"
-                },
-                "duration": "2:57",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "1mea3bSkSGXuIRvnydlB5b",
-                "type": "track",
-                "name": "Viva La Vida",
-                "album": {
-                    "name": "Viva La Vida or Death and All His Friends",
-                    "id": "1CEODgTmTwLyabvwd7HBty",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e21cc1db05580b6f2d2a3b6e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e21cc1db05580b6f2d2a3b6e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e21cc1db05580b6f2d2a3b6e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
-                    "name": "Coldplay"
-                },
-                "duration": "4:02",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2uqYupMHANxnwgeiXTZXzd",
-                "type": "track",
-                "name": "Austin (Boots Stop Workin')",
-                "album": {
-                    "name": "What Happens Now?",
-                    "id": "40HsqPqeSR9Xe3IyAJWr6e",
-                    "totalTracks": 8,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2734ccf88b66e04cfd247f287eb",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e024ccf88b66e04cfd247f287eb",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048514ccf88b66e04cfd247f287eb",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7Ez6lTtSMjMf2YSYpukP1I",
-                    "name": "Dasha"
-                },
-                "duration": "2:51",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "6vvPecFTmWxDfEJ6cYT1wa",
-                "type": "track",
-                "name": "Rockstar",
-                "album": {
-                    "name": "Rockstar",
-                    "id": "7wIIhHPyaxAHRvdNQQO2G9",
-                    "totalTracks": 5,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27397265410628ab7f94a380c9d",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0297265410628ab7f94a380c9d",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485197265410628ab7f94a380c9d",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5L1lO4eRHmJ7a0Q6csE5cT",
-                    "name": "LISA"
-                },
-                "duration": "2:18",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "5uQ7de4EWjb3rkcFxyEOpu",
-                "type": "track",
-                "name": "Belong Together",
-                "album": {
-                    "name": "Belong Together",
-                    "id": "3PlCMwyq6nuQYtoYproV1o",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ed71b8008aaa879622f8c3b5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ed71b8008aaa879622f8c3b5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ed71b8008aaa879622f8c3b5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "11p2E654TTU8e0nZWBR4AL",
-                    "name": "Mark Ambor"
-                },
-                "duration": "2:28",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "5XeFesFbtLpXzIVDNQP22n",
-                "type": "track",
-                "name": "I Wanna Be Yours",
-                "album": {
-                    "name": "AM",
-                    "id": "78bpIziExqiI9qztvNFlQu",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7Ln80lUS6He07XvHI8qqHH",
-                    "name": "Arctic Monkeys"
-                },
-                "duration": "3:03",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2QjOHCTQ1Jl3zawyYOpxh6",
-                "type": "track",
-                "name": "Sweater Weather",
-                "album": {
-                    "name": "I Love You.",
-                    "id": "4xkM0BwLM9H2IUcbYzpcBI",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738265a736a1eb838ad5a0b921",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028265a736a1eb838ad5a0b921",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518265a736a1eb838ad5a0b921",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "77SW9BnxLY8rJ0RciFqkHh",
-                    "name": "The Neighbourhood"
-                },
-                "duration": "4:00",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2OzhQlSqBEmt7hmkYxfT6m",
-                "type": "track",
-                "name": "Fortnight (feat. Post Malone)",
-                "album": {
-                    "name": "THE TORTURED POETS DEPARTMENT",
-                    "id": "1Mo4aZ8pdj6L1jx8zSwJnt",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:48",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7bywjHOc0wSjGGbj04XbVi",
-                "type": "track",
-                "name": "LUNA",
-                "album": {
-                    "name": "FERXXOCALIPSIS",
-                    "id": "0lgs2Sa82lyX89nBUWyUy6",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273f1aad814a40ec7419c234242",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02f1aad814a40ec7419c234242",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851f1aad814a40ec7419c234242",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2LRoIwlKmHjgvigdNGBHNo",
-                    "name": "Feid"
-                },
-                "duration": "3:16",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "0GqAWZe1A5ecKadZrHk6XH",
-                "type": "track",
-                "name": "Chk Chk Boom",
-                "album": {
-                    "name": "ATE",
-                    "id": "1uLAcaywb5673rQ2lJ1UG7",
-                    "totalTracks": 8,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273092c3001ef2d0a4f81372078",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02092c3001ef2d0a4f81372078",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851092c3001ef2d0a4f81372078",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2dIgFjalVxs4ThymZ67YCE",
-                    "name": "Stray Kids"
-                },
-                "duration": "2:28",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7BRD7x5pt8Lqa1eGYC4dzj",
-                "type": "track",
-                "name": "CHIHIRO",
-                "album": {
-                    "name": "HIT ME HARD AND SOFT",
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "5:03",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "5b3XJ1pjrHO5JtY2PcTjnI",
-                "type": "track",
-                "name": "Mamushi (feat. Yuki Chiba)",
-                "album": {
-                    "name": "MEGAN",
-                    "id": "0FzWvaeMBfKBCqxHTLVlB8",
-                    "totalTracks": 18,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732538afd3580d0424bbe28a01",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022538afd3580d0424bbe28a01",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512538afd3580d0424bbe28a01",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "181bsRPaVXVlUKXrxwZfHK",
-                    "name": "Megan Thee Stallion"
-                },
-                "duration": "2:36",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "4xdBrk0nFZaP54vvZj0yx7",
-                "type": "track",
-                "name": "HOT TO GO!",
-                "album": {
-                    "name": "The Rise and Fall of a Midwest Princess",
-                    "id": "0EiI8ylL0FmWWpgHVTsZjZ",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27396fa88fb1789be437d5cb4b6",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0296fa88fb1789be437d5cb4b6",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485196fa88fb1789be437d5cb4b6",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7GlBOeep6PqTfFi59PTUUN",
-                    "name": "Chappell Roan"
-                },
-                "duration": "3:04",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7iabz12vAuVQYyekFIWJxD",
-                "type": "track",
-                "name": "BAND4BAND (feat. Lil Baby)",
-                "album": {
-                    "name": "BAND4BAND (feat. Lil Baby)",
-                    "id": "4AzPr5SUpNF553eC1d3aRy",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2737b588bf0555bde606f8b27c7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e027b588bf0555bde606f8b27c7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048517b588bf0555bde606f8b27c7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5H4yInM5zmHqpKIoMNAx4r",
-                    "name": "Central Cee"
-                },
-                "duration": "2:20",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "57lsYy0OZLNb5OQ7fEa3Hs",
-                "type": "track",
-                "name": "Did It First (with Central Cee)",
-                "album": {
-                    "name": "Did It First (with Central Cee)",
-                    "id": "1SiWjniEb94wSFZ5YjZDHr",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273dc9f83f20038d54b78c48aeb",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02dc9f83f20038d54b78c48aeb",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851dc9f83f20038d54b78c48aeb",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3LZZPxNDGDFVSIPqf4JuEf",
-                    "name": "Ice Spice"
-                },
-                "duration": "1:58",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "51eSHglvG1RJXtL3qI5trr",
-                "type": "track",
-                "name": "Slow It Down",
-                "album": {
-                    "name": "Fireworks & Rollerblades",
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02cc04ff3e70e146ba9abacf40",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851cc04ff3e70e146ba9abacf40",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
-                    "name": "Benson Boone"
-                },
-                "duration": "2:41",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "6a9Z1jUms915w4O7N1PxjY",
-                "type": "track",
-                "name": "Santa",
-                "album": {
-                    "name": "Santa",
-                    "id": "3uzutRS5qX4ng5Skjh5S6W",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273edf307a421ee80c9262f8dc8",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02edf307a421ee80c9262f8dc8",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851edf307a421ee80c9262f8dc8",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1fctva4kpRbg2k3v7kwRuS",
-                    "name": "Rvssian"
-                },
-                "duration": "3:13",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "42VsgItocQwOQC3XWZ8JNA",
-                "type": "track",
-                "name": "FE!N (feat. Playboi Carti)",
-                "album": {
-                    "name": "UTOPIA",
-                    "id": "18NOKLkZETa4sWwLMIm0UZ",
-                    "totalTracks": 19,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02881d8d8378cd01099babcd44",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851881d8d8378cd01099babcd44",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0Y5tJX1MQlPlqiwlOH1tJY",
-                    "name": "Travis Scott"
-                },
-                "duration": "3:11",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2btNsI4OvcVl7SAHQQDHFB",
-                "type": "track",
-                "name": "Mirame",
-                "album": {
-                    "name": "Mirame",
-                    "id": "5oCAS6VzHoESewtXUGMqbz",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273b62a2ec2d61d48f34a368144",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02b62a2ec2d61d48f34a368144",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851b62a2ec2d61d48f34a368144",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1TA5sGRlKUJXBN4ZyJuDIX",
-                    "name": "Blessd"
-                },
-                "duration": "2:37",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "2HRgqmZQC0MC7GeNuDIXHN",
-                "type": "track",
-                "name": "Seven (feat. Latto) (Explicit Ver.)",
-                "album": {
-                    "name": "GOLDEN",
-                    "id": "5pSk3c3wVwnb2arb6ohCPU",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273741fd4807f442af3f7359316",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851741fd4807f442af3f7359316",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6HaGTQPmzraVmaVxvz6EUc",
-                    "name": "Jung Kook"
-                },
-                "duration": "3:03",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "22DH8NChecsgPxDjA4pqer",
-                "type": "track",
-                "name": "Tough",
-                "album": {
-                    "name": "Tough",
-                    "id": "58XIBpQOAw7E2qCL1jxWCd",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e1a7ec3a606b52b7328d3e78",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e1a7ec3a606b52b7328d3e78",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e1a7ec3a606b52b7328d3e78",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0VRj0yCOv2FXJNP47XQnx5",
-                    "name": "Quavo"
-                },
-                "duration": "3:08",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "7KA4W4McWYRpgf0fWsJZWB",
-                "type": "track",
-                "name": "See You Again (feat. Kali Uchis)",
-                "album": {
-                    "name": "Flower Boy",
-                    "id": "2nkto6YNI4rUYTLqEwWJ3o",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028940ac99f49e44f59e6f7fb3",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518940ac99f49e44f59e6f7fb3",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4V8LLVI7PbaPR0K2TGSxFF",
-                    "name": "Tyler, The Creator"
-                },
-                "duration": "3:00",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "331l3xABO0HMr1Kkyh2LZq",
-                "type": "track",
-                "name": "I Don't Wanna Wait",
-                "album": {
-                    "name": "I Don't Wanna Wait",
-                    "id": "0wCLHkBRKcndhMQQpeo8Ji",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732f479a6c1825c1f29e0a3d49",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022f479a6c1825c1f29e0a3d49",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512f479a6c1825c1f29e0a3d49",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Cs0zKBU1kc0i8ypK3B9ai",
-                    "name": "David Guetta"
-                },
-                "duration": "2:29",
-                "addedAt": "2024-07-23T10:07:15Z"
-            },
-            {
-                "id": "1agDCV4zQqaFwJQNsTgmL1",
-                "type": "track",
-                "name": "Smeraldo Garden Marching Band (feat. Loco)",
-                "album": {
-                    "name": "MUSE",
-                    "id": "15XcLhiVMlSOipUddTNDnr",
-                    "totalTracks": 7,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273f02c451189a709b9a952aaec",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1oSPZhvZMIrWW5I41kPkkY",
-                    "name": "Jimin"
-                },
-                "duration": "3:02",
-                "addedAt": "2024-07-23T10:07:15Z"
-            }
-        ]
-    }
-    ,
-    {
-        "id": "37i9dQZF1DXbYM3nMM0oPk",
-        "type": "playlist",
-        "name": "Mega Hit Mix",
-        "description": "A mega mix of 75 favorites from the last few years! ",
-        "imgs": [
-            {
-                "height": null,
-                "url": "https://i.scdn.co/image/ab67706f00000002523900c130e847665a66b9d8",
-                "width": null
-            }
-        ],
-        "likes": 7940571,
-        "total": 75,
-        "tracks": [
-            {
-                "id": "6zSpb8dQRaw0M1dK8PBwQz",
-                "type": "track",
-                "name": "Cold Heart - PNAU Remix",
-                "album": {
-                    "name": "Cold Heart (PNAU Remix)",
-                    "id": "5D8Rdb09BkmHscEGSWAlA6",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2739f5cce8304c42d3a5463fd23",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e029f5cce8304c42d3a5463fd23",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048519f5cce8304c42d3a5463fd23",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3PhoLpVuITZKcymswpck5b",
-                    "name": "Elton John"
-                },
-                "duration": "3:22",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1BxfuPKGuaTgP7aM0Bbdwr",
-                "type": "track",
-                "name": "Cruel Summer",
-                "album": {
-                    "name": "Lover",
-                    "id": "1NAmidJlEaVgA3MpcPFYGq",
-                    "totalTracks": 18,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "2:58",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "0mflMxspEfB0VbI1kyLiAv",
-                "type": "track",
-                "name": "Stick Season",
-                "album": {
-                    "name": "Stick Season",
-                    "id": "50ZenUP4O2Q5eCy2NRNvuz",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2RQXRUsr4IW1f3mKyKsy4B",
-                    "name": "Noah Kahan"
-                },
-                "duration": "3:02",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "7DSAEUvxU8FajXtRloy8M0",
-                "type": "track",
-                "name": "Flowers",
-                "album": {
-                    "name": "Endless Summer Vacation",
-                    "id": "5DvJgsMLbaR1HmAI6VhfcQ",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273cd222052a2594be29a6616b5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02cd222052a2594be29a6616b5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851cd222052a2594be29a6616b5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5YGY8feqx7naU7z4HrwZM6",
-                    "name": "Miley Cyrus"
-                },
-                "duration": "3:20",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "7igeByaBM0MgGsgXtNxDJ7",
-                "type": "track",
-                "name": "positions",
-                "album": {
-                    "name": "positions",
-                    "id": "3jqEvfiu2ENgmgzZq27zbi",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2737368325f5998ef48d4fb5401",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e027368325f5998ef48d4fb5401",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048517368325f5998ef48d4fb5401",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "66CXWjxzNUsdJxJ2JdwvnR",
-                    "name": "Ariana Grande"
-                },
-                "duration": "2:52",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0VjIjW4GlUZAMYd2vXMi3b",
-                "type": "track",
-                "name": "Blinding Lights",
-                "album": {
-                    "name": "After Hours",
-                    "id": "4yP0hdKOZPNshxUOjY0cZj",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-                    "name": "The Weeknd"
-                },
-                "duration": "3:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4iZ4pt7kvcaH6Yo8UoZ4s2",
-                "type": "track",
-                "name": "Snooze",
-                "album": {
-                    "name": "SOS",
-                    "id": "07w0rG5TETcyihsEIZR3qG",
-                    "totalTracks": 23,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27370dbc9f47669d120ad874ec1",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0270dbc9f47669d120ad874ec1",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485170dbc9f47669d120ad874ec1",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7tYKF4w9nC0nq9CsPZTHyP",
-                    "name": "SZA"
-                },
-                "duration": "3:21",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "6UelLqGlWMcVH1E5c4H7lY",
-                "type": "track",
-                "name": "Watermelon Sugar",
-                "album": {
-                    "name": "Fine Line",
-                    "id": "7xV2TzoaVc0ycW7fwBwAml",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "2:54",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "3USxtqRwSYz57Ewm6wWRMp",
-                "type": "track",
-                "name": "Heat Waves",
-                "album": {
-                    "name": "Dreamland",
-                    "id": "5bfpRtBW7RNRdsm3tRyl3R",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273712701c5e263efc8726b1464",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02712701c5e263efc8726b1464",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851712701c5e263efc8726b1464",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4yvcSjfu4PC0CYQyLy4wSq",
-                    "name": "Glass Animals"
-                },
-                "duration": "3:58",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4uUG5RXrOk84mYEfFvj3cK",
-                "type": "track",
-                "name": "I'm Good (Blue)",
-                "album": {
-                    "name": "I'm Good (Blue)",
-                    "id": "7M842DMhYVALrXsw3ty7B3",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273933c036cd61cd40d3f17a9c4",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02933c036cd61cd40d3f17a9c4",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851933c036cd61cd40d3f17a9c4",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Cs0zKBU1kc0i8ypK3B9ai",
-                    "name": "David Guetta"
-                },
-                "duration": "2:55",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "7qEHsqek33rTcFNT9PFqLf",
-                "type": "track",
-                "name": "Someone You Loved",
-                "album": {
-                    "name": "Divinely Uninspired To A Hellish Extent",
-                    "id": "5658aM19fA3JVwTK6eQX70",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fc2101e6889d6ce9025f85f2",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fc2101e6889d6ce9025f85f2",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fc2101e6889d6ce9025f85f2",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4GNC7GD6oZMSxPGyXy4MNB",
-                    "name": "Lewis Capaldi"
-                },
-                "duration": "3:02",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6wf7Yu7cxBSPrRlWeSeK0Q",
-                "type": "track",
-                "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
-                "album": {
-                    "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
-                    "id": "3AafSrFIbJPH6BJHiJm1Cd",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ed317ec13d3de9e01fb99c9e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ed317ec13d3de9e01fb99c9e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ed317ec13d3de9e01fb99c9e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "3:42",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "3WMj8moIAXJhHsyLaqIIHI",
-                "type": "track",
-                "name": "Something in the Orange",
-                "album": {
-                    "name": "Something in the Orange",
-                    "id": "1CmTOKCeyz1aHH04OwvTPv",
-                    "totalTracks": 4,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273b2b6670e3aca9bcd55fbabbb",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02b2b6670e3aca9bcd55fbabbb",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851b2b6670e3aca9bcd55fbabbb",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "40ZNYROS4zLfyyBSs2PGe2",
-                    "name": "Zach Bryan"
-                },
-                "duration": "3:48",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4h9wh7iOZ0GGn8QVp4RAOB",
-                "type": "track",
-                "name": "I Ain't Worried",
-                "album": {
-                    "name": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
-                    "id": "04PEOM6kIEeq9lRp1asNP2",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ec96e006b8bdfc582610ec13",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ec96e006b8bdfc582610ec13",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5Pwc4xIPtQLFEnJriah9YJ",
-                    "name": "OneRepublic"
-                },
-                "duration": "2:28",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "50nfwKoDiSYg8zOCREWAm5",
-                "type": "track",
-                "name": "Shivers",
-                "album": {
-                    "name": "=",
-                    "id": "32iAEBstCjauDhyKpGjTuq",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ef24c3fdbf856340d55cfeb2",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ef24c3fdbf856340d55cfeb2",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ef24c3fdbf856340d55cfeb2",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6eUKZXaKkcviH0Ku9w2n3V",
-                    "name": "Ed Sheeran"
-                },
-                "duration": "3:27",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1dGr1c8CrMLDpV6mPbImSI",
-                "type": "track",
-                "name": "Lover",
-                "album": {
-                    "name": "Lover",
-                    "id": "1NAmidJlEaVgA3MpcPFYGq",
-                    "totalTracks": 18,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:41",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2HRgqmZQC0MC7GeNuDIXHN",
-                "type": "track",
-                "name": "Seven (feat. Latto) (Explicit Ver.)",
-                "album": {
-                    "name": "GOLDEN",
-                    "id": "5pSk3c3wVwnb2arb6ohCPU",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273741fd4807f442af3f7359316",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851741fd4807f442af3f7359316",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6HaGTQPmzraVmaVxvz6EUc",
-                    "name": "Jung Kook"
-                },
-                "duration": "3:03",
-                "addedAt": "2024-05-22T11:00:00Z"
-            },
-            {
-                "id": "1kuGVB7EU95pJObxwvfwKS",
-                "type": "track",
-                "name": "vampire",
-                "album": {
-                    "name": "GUTS",
-                    "id": "1xJHno7SmdVtZAtXbdbDZp",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e85259a1cae29a8d91f2093d",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e85259a1cae29a8d91f2093d",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e85259a1cae29a8d91f2093d",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1McMsnEElThX1knmY4oliG",
-                    "name": "Olivia Rodrigo"
-                },
-                "duration": "3:39",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "4xhsWYTOGcal8zt0J161CU",
-                "type": "track",
-                "name": "Lovin On Me",
-                "album": {
-                    "name": "Lovin On Me",
-                    "id": "6VCO0fDBGbRW8mCEvV95af",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fcf4adae77baba5d0169e8e8",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fcf4adae77baba5d0169e8e8",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fcf4adae77baba5d0169e8e8",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2LIk90788K0zvyj2JJVwkJ",
-                    "name": "Jack Harlow"
-                },
-                "duration": "2:18",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "4Dvkj6JhhA12EX05fT7y2e",
-                "type": "track",
-                "name": "As It Was",
-                "album": {
-                    "name": "Harry's House",
-                    "id": "5r36AJ6VOJtp00oxSkBZ5h",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "2:47",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "21jGcNKet2qwijlDFuPiPb",
-                "type": "track",
-                "name": "Circles",
-                "album": {
-                    "name": "Hollywood's Bleeding",
-                    "id": "4g1ZRSobMefqF6nelkgibi",
-                    "totalTracks": 17,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2739478c87599550dd73bfa7e02",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e029478c87599550dd73bfa7e02",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048519478c87599550dd73bfa7e02",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "246dkjvS1zLTtiykXe5h60",
-                    "name": "Post Malone"
-                },
-                "duration": "3:35",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0u2P5u6lvoDfwTYjAADbn4",
-                "type": "track",
-                "name": "lovely (with Khalid)",
-                "album": {
-                    "name": "lovely (with Khalid)",
-                    "id": "2sBB17RXTamvj7Ncps15AK",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738a3f0a3ca7929dea23cd274c",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028a3f0a3ca7929dea23cd274c",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518a3f0a3ca7929dea23cd274c",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "3:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "7ef4DlsgrMEH11cDZd32M6",
-                "type": "track",
-                "name": "One Kiss (with Dua Lipa)",
-                "album": {
-                    "name": "One Kiss (with Dua Lipa)",
-                    "id": "7GEzhoTiqcPYkOprWQu581",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273d09f96d82310d4d77c14c108",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02d09f96d82310d4d77c14c108",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851d09f96d82310d4d77c14c108",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7CajNmpbOovFoOoasH2HaY",
-                    "name": "Calvin Harris"
-                },
-                "duration": "3:34",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0tgVpDi06FyKpA1z0VMD4v",
-                "type": "track",
-                "name": "Perfect",
-                "album": {
-                    "name": "÷ (Deluxe)",
-                    "id": "3T4tUhGYeRNVUGevb0wThu",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ba5db46f4b838ef6027e6f96",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ba5db46f4b838ef6027e6f96",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6eUKZXaKkcviH0Ku9w2n3V",
-                    "name": "Ed Sheeran"
-                },
-                "duration": "4:23",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5HCyWlXZPP0y6Gqq8TgA20",
-                "type": "track",
-                "name": "STAY (with Justin Bieber)",
-                "album": {
-                    "name": "STAY (with Justin Bieber)",
-                    "id": "4QLAtpLNUsHEYrcHXmMIZZ",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27341e31d6ea1d493dd77933ee5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0241e31d6ea1d493dd77933ee5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485141e31d6ea1d493dd77933ee5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2tIP7SsRs7vjIcLrU85W8J",
-                    "name": "The Kid LAROI"
-                },
-                "duration": "2:21",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5LrN7yUQAzvthd4QujgPFr",
-                "type": "track",
-                "name": "Here With Me",
-                "album": {
-                    "name": "Petals to Thorns",
-                    "id": "3rrrTOHiXGzuW4FP7t0O1A",
-                    "totalTracks": 9,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27364fa1bda999f4fbd2b7c4bb7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0264fa1bda999f4fbd2b7c4bb7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485164fa1bda999f4fbd2b7c4bb7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5y8tKLUfMvliMe8IKamR32",
-                    "name": "d4vd"
-                },
-                "duration": "4:02",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4xqrdfXkTW4T0RauPLv3WA",
-                "type": "track",
-                "name": "Heather",
-                "album": {
-                    "name": "Kid Krow",
-                    "id": "2CMlkzFI2oDAy5MbyV7OV5",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27388e3cda6d29b2552d4d6bc43",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0288e3cda6d29b2552d4d6bc43",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485188e3cda6d29b2552d4d6bc43",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4Uc8Dsxct0oMqx0P6i60ea",
-                    "name": "Conan Gray"
-                },
-                "duration": "3:18",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5CZ40GBx1sQ9agT82CLQCT",
-                "type": "track",
-                "name": "traitor",
-                "album": {
-                    "name": "SOUR",
-                    "id": "6s84u2TUpR3wdUv4NgKA2j",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a91c10fe9472d9bd89802e5a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a91c10fe9472d9bd89802e5a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1McMsnEElThX1knmY4oliG",
-                    "name": "Olivia Rodrigo"
-                },
-                "duration": "3:49",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0V3wPSX9ygBnCm8psDIegu",
-                "type": "track",
-                "name": "Anti-Hero",
-                "album": {
-                    "name": "Midnights",
-                    "id": "151w1FgRZfnKZA9FEcg9Z3",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02bb54dde68cd23e2a268ae0f5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4JNdwEfqwFRiAeEISC8RU8",
-                "type": "track",
-                "name": "Die For You (with Ariana Grande) - Remix",
-                "album": {
-                    "name": "Die For You",
-                    "id": "0YF085Qdh4HgdhZ8zjWkpo",
-                    "totalTracks": 4,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738b5a9e7c56f01bec356de9d5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028b5a9e7c56f01bec356de9d5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518b5a9e7c56f01bec356de9d5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-                    "name": "The Weeknd"
-                },
-                "duration": "3:52",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1vYXt7VSjH9JIM5oRRo7vA",
-                "type": "track",
-                "name": "Dance The Night - From Barbie The Album",
-                "album": {
-                    "name": "Dance The Night (From Barbie The Album)",
-                    "id": "5cH7FqB7JD5q1tJXJ7FHYu",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2737dd3ba455ee3390cb55b0192",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e027dd3ba455ee3390cb55b0192",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048517dd3ba455ee3390cb55b0192",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6M2wZ9GZgrQXHCFfjv46we",
-                    "name": "Dua Lipa"
-                },
-                "duration": "2:56",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "3Wrjm47oTz2sjIgck11l5e",
-                "type": "track",
-                "name": "Beggin'",
-                "album": {
-                    "name": "Chosen",
-                    "id": "2qJw6w5XwQO0PQlSWPu7Tw",
-                    "totalTracks": 7,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fa0ab3a28b5c52d8a5f97045",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fa0ab3a28b5c52d8a5f97045",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fa0ab3a28b5c52d8a5f97045",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0lAWpj5szCSwM4rUMHYmrr",
-                    "name": "Måneskin"
-                },
-                "duration": "3:31",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6HU7h9RYOaPRFeh0R3UeAr",
-                "type": "track",
-                "name": "deja vu",
-                "album": {
-                    "name": "SOUR",
-                    "id": "6s84u2TUpR3wdUv4NgKA2j",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a91c10fe9472d9bd89802e5a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a91c10fe9472d9bd89802e5a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1McMsnEElThX1knmY4oliG",
-                    "name": "Olivia Rodrigo"
-                },
-                "duration": "3:35",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4R2kfaDFhslZEMJqAFNpdd",
-                "type": "track",
-                "name": "cardigan",
-                "album": {
-                    "name": "folklore",
-                    "id": "2fenSS68JI1h4Fo296JfGr",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27395f754318336a07e85ec59bc",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0295f754318336a07e85ec59bc",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485195f754318336a07e85ec59bc",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:59",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2IGMVunIBsBLtEQyoI1Mu7",
-                "type": "track",
-                "name": "Paint The Town Red",
-                "album": {
-                    "name": "Paint The Town Red",
-                    "id": "54dZypaXHAIDzBe9ujAZ63",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2737acee948ecac8380c1b6ce30",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e027acee948ecac8380c1b6ce30",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048517acee948ecac8380c1b6ce30",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5cj0lLjcoR7YOSnhnX0Po5",
-                    "name": "Doja Cat"
-                },
-                "duration": "3:51",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "3jjujdWJ72nww5eGnfs2E7",
-                "type": "track",
-                "name": "Adore You",
-                "album": {
-                    "name": "Fine Line",
-                    "id": "7xV2TzoaVc0ycW7fwBwAml",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "3:27",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "76OGwb5RA9h4FxQPT33ekc",
-                "type": "track",
-                "name": "SNAP",
-                "album": {
-                    "name": "SNAP",
-                    "id": "4fb1QzgTJpTk9TBjFzjmlR",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2731391b1fdb63da53e5b112224",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e021391b1fdb63da53e5b112224",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048511391b1fdb63da53e5b112224",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "46xBNx0j6cwY6sD9LgMTm1",
-                    "name": "Rosa Linn"
-                },
-                "duration": "2:59",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2qxmye6gAegTMjLKEBoR3d",
-                "type": "track",
-                "name": "Let Me Down Slowly",
-                "album": {
-                    "name": "Narrated For You",
-                    "id": "6jKZplJpy21R5lHaYHHjmZ",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02459d675aa0b6f3b211357370",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851459d675aa0b6f3b211357370",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5IH6FPUwQTxPSXurCrcIov",
-                    "name": "Alec Benjamin"
-                },
-                "duration": "2:49",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2VxeLyX666F8uXCJ0dZF8B",
-                "type": "track",
-                "name": "Shallow",
-                "album": {
-                    "name": "A Star Is Born Soundtrack",
-                    "id": "4sLtOBOzn4s3GDUv3c5oJD",
-                    "totalTracks": 34,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e2d156fdc691f57900134342",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e2d156fdc691f57900134342",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e2d156fdc691f57900134342",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1HY2Jd0NmPuamShAr6KMms",
-                    "name": "Lady Gaga"
-                },
-                "duration": "3:35",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6Uj1ctrBOjOas8xZXGqKk4",
-                "type": "track",
-                "name": "Woman",
-                "album": {
-                    "name": "Planet Her",
-                    "id": "1nAQbHeOWTfQzbOoFrvndW",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273be841ba4bc24340152e3a79a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02be841ba4bc24340152e3a79a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851be841ba4bc24340152e3a79a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5cj0lLjcoR7YOSnhnX0Po5",
-                    "name": "Doja Cat"
-                },
-                "duration": "2:52",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2gMXnyrvIjhVBUZwvLZDMP",
-                "type": "track",
-                "name": "Before You Go",
-                "album": {
-                    "name": "Divinely Uninspired To A Hellish Extent (Extended Edition)",
-                    "id": "2wiPF3m0ylst0JSk1IvZL8",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2737b9639babbe96e25071ec1d4",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e027b9639babbe96e25071ec1d4",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048517b9639babbe96e25071ec1d4",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4GNC7GD6oZMSxPGyXy4MNB",
-                    "name": "Lewis Capaldi"
-                },
-                "duration": "3:35",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6tDDoYIxWvMLTdKpjFkc1B",
-                "type": "track",
-                "name": "telepatía",
-                "album": {
-                    "name": "Sin Miedo (del Amor y Otros Demonios) ∞",
-                    "id": "00wSTrFxoSzA7eeS1UxHgd",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273044a5466dac00f7b3c570b99",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02044a5466dac00f7b3c570b99",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851044a5466dac00f7b3c570b99",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1U1el3k54VvEUzo3ybLPlM",
-                    "name": "Kali Uchis"
-                },
-                "duration": "2:40",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5nujrmhLynf4yMoMtj8AQF",
-                "type": "track",
-                "name": "Levitating (feat. DaBaby)",
-                "album": {
-                    "name": "Future Nostalgia",
-                    "id": "5lKlFlReHOLShQKyRv6AL9",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732172b607853fa89cefa2beb4",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022172b607853fa89cefa2beb4",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512172b607853fa89cefa2beb4",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6M2wZ9GZgrQXHCFfjv46we",
-                    "name": "Dua Lipa"
-                },
-                "duration": "3:23",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0WtM2NBVQNNJLh6scP13H8",
-                "type": "track",
-                "name": "Calm Down (with Selena Gomez)",
-                "album": {
-                    "name": "Calm Down (with Selena Gomez)",
-                    "id": "2b2GHWESCWEuHiCZ2Skedp",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a3a7f38ea2033aa501afd4cf",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a3a7f38ea2033aa501afd4cf",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a3a7f38ea2033aa501afd4cf",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "46pWGuE3dSwY3bMMXGBvVS",
-                    "name": "Rema"
-                },
-                "duration": "3:59",
-                "addedAt": "2024-03-05T22:15:14Z"
-            },
-            {
-                "id": "3ZCTVFBt2Brf31RLEnCkWJ",
-                "type": "track",
-                "name": "everything i wanted",
-                "album": {
-                    "name": "everything i wanted",
-                    "id": "4i3rAwPw7Ln2YrKDusaWyT",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273f2248cf6dad1d6c062587249",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02f2248cf6dad1d6c062587249",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851f2248cf6dad1d6c062587249",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "4:05",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2tnVG71enUj33Ic2nFN6kZ",
-                "type": "track",
-                "name": "Ride It",
-                "album": {
-                    "name": "Ride It",
-                    "id": "4zOhjJfe0dwqsNdDYk622E",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2735c27813ae019011fcb370c78",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e025c27813ae019011fcb370c78",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048515c27813ae019011fcb370c78",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4ofCBoyEiGSePFAG500xev",
-                    "name": "Regard"
-                },
-                "duration": "2:37",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1rqqCSm0Qe4I9rUvWncaom",
-                "type": "track",
-                "name": "High Hopes",
-                "album": {
-                    "name": "Pray for the Wicked",
-                    "id": "6ApYSpXF8GxZAgBTHDzYge",
-                    "totalTracks": 11,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273c5148520a59be191eea16989",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02c5148520a59be191eea16989",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851c5148520a59be191eea16989",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "20JZFwl6HVl6yg8a4H3ZqK",
-                    "name": "Panic! At The Disco"
-                },
-                "duration": "3:10",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "3RauEVgRgj1IuWdJ9fDs70",
-                "type": "track",
-                "name": "The Man",
-                "album": {
-                    "name": "Lover",
-                    "id": "1NAmidJlEaVgA3MpcPFYGq",
-                    "totalTracks": 18,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:10",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5Z3GHaZ6ec9bsiI5BenrbY",
-                "type": "track",
-                "name": "Young Dumb & Broke",
-                "album": {
-                    "name": "American Teen",
-                    "id": "6kf46HbnYCZzP6rjvQHYzg",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02988ede5e1276e758b5f9e577",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851988ede5e1276e758b5f9e577",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6LuN9FCkKOj5PcnpouEgny",
-                    "name": "Khalid"
-                },
-                "duration": "3:22",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "3KkXRkHbMCARz0aVfEt68P",
-                "type": "track",
-                "name": "Sunflower - Spider-Man: Into the Spider-Verse",
-                "album": {
-                    "name": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
-                    "id": "35s58BRTGAEWztPo9WqCIs",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e2e352d89826aef6dbd5ff8f",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e2e352d89826aef6dbd5ff8f",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "246dkjvS1zLTtiykXe5h60",
-                    "name": "Post Malone"
-                },
-                "duration": "2:38",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4jPy3l0RUwlUI9T5XHBW2m",
-                "type": "track",
-                "name": "Mood (feat. iann dior)",
-                "album": {
-                    "name": "El Dorado",
-                    "id": "270o30h7cAlEhBnbuSpFZq",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27384c53fa832dfa265192419c5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0284c53fa832dfa265192419c5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485184c53fa832dfa265192419c5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6fWVd57NKTalqvmjRd2t8Z",
-                    "name": "24kGoldn"
-                },
-                "duration": "2:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2L9N0zZnd37dwF0clgxMGI",
-                "type": "track",
-                "name": "ceilings",
-                "album": {
-                    "name": "five seconds flat",
-                    "id": "68L5xVV9wydotfDXEik7eD",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273d370fdc4dbc47778b9b667c3",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02d370fdc4dbc47778b9b667c3",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851d370fdc4dbc47778b9b667c3",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1GmsPCcpKgF9OhlNXjOsbS",
-                    "name": "Lizzy McAlpine"
-                },
-                "duration": "3:02",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2Fxmhks0bxGSBdJ92vM42m",
-                "type": "track",
-                "name": "bad guy",
-                "album": {
-                    "name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
-                    "id": "0S0KGZnfBGSIssfF54WSJh",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0250a3147b4edd7701a876c6ce",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485150a3147b4edd7701a876c6ce",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "3:14",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2iUXsYOEPhVqEBwsqP70rE",
-                "type": "track",
-                "name": "Youngblood",
-                "album": {
-                    "name": "Youngblood (Deluxe)",
-                    "id": "2D0Hi3Jj6RFnpWDcSa0Otu",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27341aa6776dc15fbd71a2b4557",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0241aa6776dc15fbd71a2b4557",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485141aa6776dc15fbd71a2b4557",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5Rl15oVamLq7FbSb0NNBNy",
-                    "name": "5 Seconds of Summer"
-                },
-                "duration": "3:23",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6h5PAsRni4IRlxWr6uDPTP",
-                "type": "track",
-                "name": "More Than You Know",
-                "album": {
-                    "name": "More Than You Know",
-                    "id": "6Ei5WWek37m1x9AjpSXTcJ",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fba6de0b38b0168d480b1a27",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fba6de0b38b0168d480b1a27",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fba6de0b38b0168d480b1a27",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2XnBwblw31dfGnspMIwgWz",
-                    "name": "Axwell /\\ Ingrosso"
-                },
-                "duration": "3:23",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4qu63nuBpdn0qHUHuObEj1",
-                "type": "track",
-                "name": "Leave Before You Love Me (with Jonas Brothers)",
-                "album": {
-                    "name": "Leave Before You Love Me",
-                    "id": "66JuK41D3LpkbX3HCTGcQk",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ae40468931087f78919b86ce",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ae40468931087f78919b86ce",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ae40468931087f78919b86ce",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "64KEffDW9EtZ1y2vBYgq8T",
-                    "name": "Marshmello"
-                },
-                "duration": "2:34",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1qEmFfgcLObUfQm0j1W2CK",
-                "type": "track",
-                "name": "Late Night Talking",
-                "album": {
-                    "name": "Harry's House",
-                    "id": "5r36AJ6VOJtp00oxSkBZ5h",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "2:57",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5fwSHlTEWpluwOM0Sxnh5k",
-                "type": "track",
-                "name": "Pepas",
-                "album": {
-                    "name": "Pepas",
-                    "id": "2A5ksnhz7YWbRLvFMjX1j1",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2734239a6aa89738d8f798168ad",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e024239a6aa89738d8f798168ad",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048514239a6aa89738d8f798168ad",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "329e4yvIujISKGKz1BZZbO",
-                    "name": "Farruko"
-                },
-                "duration": "4:47",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "7eJMfftS33KTjuF7lTsMCx",
-                "type": "track",
-                "name": "death bed (coffee for your head)",
-                "album": {
-                    "name": "death bed (coffee for your head)",
-                    "id": "2p9gK2BcdrloHNJwarc9gc",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273bf01fd0986a195d485922167",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02bf01fd0986a195d485922167",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851bf01fd0986a195d485922167",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6bmlMHgSheBauioMgKv2tn",
-                    "name": "Powfu"
-                },
-                "duration": "2:53",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4iJyoBOLtHqaGxP12qzhQI",
-                "type": "track",
-                "name": "Peaches (feat. Daniel Caesar & Giveon)",
-                "album": {
-                    "name": "Justice",
-                    "id": "5dGWwsZ9iB2Xc3UKR0gif2",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e6f407c7f3a0ec98845e4431",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1uNFoZAHBGtllmzznpCI3s",
-                    "name": "Justin Bieber"
-                },
-                "duration": "3:18",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "21RzyxY3EFaxVy6K4RqaU9",
-                "type": "track",
-                "name": "Body",
-                "album": {
-                    "name": "Body",
-                    "id": "3HwBA7xp3XTbFiNzU7gjwp",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273af5e185b80d374b0c6beb10f",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02af5e185b80d374b0c6beb10f",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851af5e185b80d374b0c6beb10f",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6t1gpxYbY8OlLA7D2RiikQ",
-                    "name": "Loud Luxury"
-                },
-                "duration": "2:43",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1ZMiCix7XSAbfAJlEZWMCp",
-                "type": "track",
-                "name": "Falling",
-                "album": {
-                    "name": "Fine Line",
-                    "id": "7xV2TzoaVc0ycW7fwBwAml",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6KImCVD70vtIoJWnq6nGn3",
-                    "name": "Harry Styles"
-                },
-                "duration": "4:00",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0QHEIqNKsMoOY5urbzN48u",
-                "type": "track",
-                "name": "Made You Look",
-                "album": {
-                    "name": "Takin' It Back",
-                    "id": "4LVa9bljQRvLYpWr8qyaXs",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2731a4f1ada93881da4ca8060ff",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e021a4f1ada93881da4ca8060ff",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048511a4f1ada93881da4ca8060ff",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6JL8zeS1NmiOftqZTRgdTz",
-                    "name": "Meghan Trainor"
-                },
-                "duration": "2:14",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "1SOClUWhOi8vHZYMz3GluK",
-                "type": "track",
-                "name": "Infinity",
-                "album": {
-                    "name": "Feel Something",
-                    "id": "6MuWCR3WPjwyKhqsTKLZ3z",
-                    "totalTracks": 12,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a9897f65d1ead1be10a51e3f",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a9897f65d1ead1be10a51e3f",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a9897f65d1ead1be10a51e3f",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6QrQ7OrISRYIfS5mtacaw2",
-                    "name": "Jaymes Young"
-                },
-                "duration": "3:57",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "3uUuGVFu1V7jTQL60S1r8z",
-                "type": "track",
-                "name": "Where Are You Now",
-                "album": {
-                    "name": "Where Are You Now",
-                    "id": "5YrOK7zze6egKg9a8WRcnD",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2738d7a7f1855b04104ba59c18b",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e028d7a7f1855b04104ba59c18b",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048518d7a7f1855b04104ba59c18b",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7f5Zgnp2spUuuzKplmRkt7",
-                    "name": "Lost Frequencies"
-                },
-                "duration": "2:28",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5mHdCZtVyb4DcJw8799hZp",
-                "type": "track",
-                "name": "Escapism.",
-                "album": {
-                    "name": "My 21st Century Blues",
-                    "id": "3U8n8LzBx2o9gYXvvNq4uH",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5KKpBU5eC2tJDzf0wmlRp2",
-                    "name": "RAYE"
-                },
-                "duration": "4:32",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "53tfEupEzQRtVFOeZvk7xq",
-                "type": "track",
-                "name": "DESPECHÁ",
-                "album": {
-                    "name": "MOTOMAMI +",
-                    "id": "3zbiiu3JTibw0esC7eoMXr",
-                    "totalTracks": 24,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273efc0ef9dd996312ebaf0bf52",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02efc0ef9dd996312ebaf0bf52",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851efc0ef9dd996312ebaf0bf52",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7ltDVBr6mKbRvohxheJ9h1",
-                    "name": "ROSALÍA"
-                },
-                "duration": "2:36",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2RSHsoi04658QL5xgQVov3",
-                "type": "track",
-                "name": "Bad Liar",
-                "album": {
-                    "name": "Origins (Deluxe)",
-                    "id": "3JfSxDfmwS5OeHPwLSkrfr",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273da6f73a25f4c79d0e6b4a8bd",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02da6f73a25f4c79d0e6b4a8bd",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851da6f73a25f4c79d0e6b4a8bd",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "53XhwfbYqKCa1cC15pYq2q",
-                    "name": "Imagine Dragons"
-                },
-                "duration": "4:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "5w9c2J52mkdntKOmRLeM2m",
-                "type": "track",
-                "name": "Con Calma",
-                "album": {
-                    "name": "Con Calma",
-                    "id": "1otwHKoQ5KPaiekpYk4tWh",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273896ffcd42561c44fea2bae7b",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02896ffcd42561c44fea2bae7b",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851896ffcd42561c44fea2bae7b",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4VMYDCV2IEDYJArk749S6m",
-                    "name": "Daddy Yankee"
-                },
-                "duration": "3:13",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "4nrPB8O7Y7wsOCJdgXkthe",
-                "type": "track",
-                "name": "Shakira: Bzrp Music Sessions, Vol. 53",
-                "album": {
-                    "name": "Shakira: Bzrp Music Sessions, Vol. 53",
-                    "id": "1gi2iwr1l8IUyHYHxi01pg",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732b6d78c5a3f6247aa997b812",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022b6d78c5a3f6247aa997b812",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512b6d78c5a3f6247aa997b812",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "716NhGYqD1jl2wI1Qkgq36",
-                    "name": "Bizarrap"
-                },
-                "duration": "3:34",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "0O6u0VJ46W86TxN9wgyqDj",
-                "type": "track",
-                "name": "I Like You (A Happier Song) (with Doja Cat)",
-                "album": {
-                    "name": "Twelve Carat Toothache",
-                    "id": "3HHNR44YbP7XogMVwzbodx",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27334362676667a4322838ccc97",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0234362676667a4322838ccc97",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485134362676667a4322838ccc97",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "246dkjvS1zLTtiykXe5h60",
-                    "name": "Post Malone"
-                },
-                "duration": "3:12",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "6xGruZOHLs39ZbVccQTuPZ",
-                "type": "track",
-                "name": "Glimpse of Us",
-                "album": {
-                    "name": "Glimpse of Us",
-                    "id": "6ZZvx0aefZV3LKa053fn71",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27308596cc28b9f5b00bfe08ae7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0208596cc28b9f5b00bfe08ae7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485108596cc28b9f5b00bfe08ae7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3MZsBdqDrRTJihTHQrO6Dq",
-                    "name": "Joji"
-                },
-                "duration": "3:53",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "3nqQXoyQOWXiESFLlDF1hG",
-                "type": "track",
-                "name": "Unholy (feat. Kim Petras)",
-                "album": {
-                    "name": "Unholy (feat. Kim Petras)",
-                    "id": "0gX9tkL5njRax8ymWcXARi",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a935e4689f15953311772cc4",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a935e4689f15953311772cc4",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a935e4689f15953311772cc4",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2wY79sveU1sp5g7SokKOiI",
-                    "name": "Sam Smith"
-                },
-                "duration": "2:36",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "2BOqDYLOJBiMOXShCV1neZ",
-                "type": "track",
-                "name": "Dancing On My Own",
-                "album": {
-                    "name": "Only Human (Deluxe)",
-                    "id": "6Vip5A5NmEazvKuxj6GLYf",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273f2d671c22b70e01b78a618a8",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02f2d671c22b70e01b78a618a8",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851f2d671c22b70e01b78a618a8",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6ydoSd3N2mwgwBHtF6K7eX",
-                    "name": "Calum Scott"
-                },
-                "duration": "4:20",
-                "addedAt": "2023-11-07T15:29:23Z"
-            },
-            {
-                "id": "26b3oVLrRUaaybJulow9kz",
-                "type": "track",
-                "name": "People",
-                "album": {
-                    "name": "People",
-                    "id": "5Hmh6N8oisrcuZKa8EY5dn",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fc342f95f117d48dbdde9735",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fc342f95f117d48dbdde9735",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fc342f95f117d48dbdde9735",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7kjSuFGKhLm8b5qXoMhRkJ",
-                    "name": "Libianca"
-                },
-                "duration": "3:04",
-                "addedAt": "2023-11-07T15:29:23Z"
-            }
-        ]
-    }
-    ,
-    {
-        "id": "37i9dQZF1DXcBWIGoYBM5M",
-        "type": "playlist",
-        "name": "Today’s Top Hits",
-        "description": "Benson Boone is on top of the Hottest 50!",
-        "imgs": [
-            {
-                "height": null,
-                "url": "https://i.scdn.co/image/ab67706f000000024925acc4563e5fc176737be4",
-                "width": null
-            }
-        ],
-        "likes": 34779310,
-        "total": 50,
-        "tracks": [
-            {
-                "id": "51eSHglvG1RJXtL3qI5trr",
-                "type": "track",
-                "name": "Slow It Down",
-                "album": {
-                    "name": "Fireworks & Rollerblades",
-                    "id": "168CdR21lfn0TTyw1Pkdcm",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02cc04ff3e70e146ba9abacf40",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851cc04ff3e70e146ba9abacf40",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
-                    "name": "Benson Boone"
-                },
-                "duration": "2:41",
-                "addedAt": "2024-04-05T04:23:07Z"
-            },
-            {
-                "id": "6dOtVTDdiauQNBQEDOtlAB",
-                "type": "track",
-                "name": "BIRDS OF A FEATHER",
-                "album": {
-                    "name": "HIT ME HARD AND SOFT",
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "3:30",
-                "addedAt": "2024-05-31T04:00:00Z"
-            },
-            {
-                "id": "5N3hjp1WNayUPZrA8kJmJP",
-                "type": "track",
-                "name": "Please Please Please",
-                "album": {
-                    "name": "Please Please Please",
-                    "id": "5bBaoign62r1i7OV8w7mi9",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273de84adf0e48248ea2d769c3e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02de84adf0e48248ea2d769c3e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851de84adf0e48248ea2d769c3e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
-                    "name": "Sabrina Carpenter"
-                },
-                "duration": "3:06",
-                "addedAt": "2024-06-07T04:00:19Z"
-            },
-            {
-                "id": "2FQrifJ1N335Ljm3TjTVVf",
-                "type": "track",
-                "name": "A Bar Song (Tipsy)",
-                "album": {
-                    "name": "A Bar Song (Tipsy)",
-                    "id": "6egBeCLeGITzGSo5VyRjwZ",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27380d86d636244b72a3a1eede2",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0280d86d636244b72a3a1eede2",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485180d86d636244b72a3a1eede2",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3y2cIKLjiOlp1Np37WiUdH",
-                    "name": "Shaboozey"
-                },
-                "duration": "2:51",
-                "addedAt": "2024-04-26T04:00:00Z"
-            },
-            {
-                "id": "0WbMK4wrZ1wFSty9F7FCgu",
-                "type": "track",
-                "name": "Good Luck, Babe!",
-                "album": {
-                    "name": "Good Luck, Babe!",
-                    "id": "1WAjjRMfZjEXtB0lQrAw6Q",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27391b4bc7c88d91a42e0f3a8b7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0291b4bc7c88d91a42e0f3a8b7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485191b4bc7c88d91a42e0f3a8b7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7GlBOeep6PqTfFi59PTUUN",
-                    "name": "Chappell Roan"
-                },
-                "duration": "3:38",
-                "addedAt": "2024-04-19T04:01:02Z"
-            },
-            {
-                "id": "7fzHQizxTqy8wTXwlrgPQQ",
-                "type": "track",
-                "name": "MILLION DOLLAR BABY",
-                "album": {
-                    "name": "MILLION DOLLAR BABY",
-                    "id": "52TwRwdTUMtkpglbOE5IRz",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273210733c8f23a7172e6ef5705",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02210733c8f23a7172e6ef5705",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851210733c8f23a7172e6ef5705",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1WaFQSHVGZQJTbf0BdxdNo",
-                    "name": "Tommy Richman"
-                },
-                "duration": "2:35",
-                "addedAt": "2024-05-03T04:00:00Z"
-            },
-            {
-                "id": "6AI3ezQ4o3HUoP6Dhudph3",
-                "type": "track",
-                "name": "Not Like Us",
-                "album": {
-                    "name": "Not Like Us",
-                    "id": "5JjnoGJyOxfSZUZtk2rRwZ",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e021ea0c62b2339cbf493a999ad",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048511ea0c62b2339cbf493a999ad",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2YZyLoL8N0Wb9xBt1NhZWg",
-                    "name": "Kendrick Lamar"
-                },
-                "duration": "4:34",
-                "addedAt": "2024-05-07T00:52:08Z"
-            },
-            {
-                "id": "4IadxL6BUymXlh8RCJJu7T",
-                "type": "track",
-                "name": "Too Sweet",
-                "album": {
-                    "name": "Unheard",
-                    "id": "1KZC0cX0qq6hodR9YVgh9F",
-                    "totalTracks": 4,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a5aab55aa65e5f6bd19564a2",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a5aab55aa65e5f6bd19564a2",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a5aab55aa65e5f6bd19564a2",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2FXC3k01G6Gw61bmprjgqS",
-                    "name": "Hozier"
-                },
-                "duration": "4:11",
-                "addedAt": "2024-03-25T12:43:44Z"
-            },
-            {
-                "id": "6WatFBLVB0x077xWeoVc2k",
-                "type": "track",
-                "name": "Si Antes Te Hubiera Conocido",
-                "album": {
-                    "name": "Si Antes Te Hubiera Conocido",
-                    "id": "5ylbxH7EqpsmHZCRuiYewS",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273491678beaffcefac517a699e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02491678beaffcefac517a699e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851491678beaffcefac517a699e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "790FomKkXshlbRYZFtlgla",
-                    "name": "KAROL G"
-                },
-                "duration": "3:15",
-                "addedAt": "2024-06-28T04:00:00Z"
-            },
-            {
-                "id": "7221xIgOnuakPdLqT0F3nP",
-                "type": "track",
-                "name": "I Had Some Help (Feat. Morgan Wallen)",
-                "album": {
-                    "name": "I Had Some Help",
-                    "id": "1woYXxyyxTQJ0E0AhZE6mj",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27397306976e3eb8aad53b754eb",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0297306976e3eb8aad53b754eb",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485197306976e3eb8aad53b754eb",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "246dkjvS1zLTtiykXe5h60",
-                    "name": "Post Malone"
-                },
-                "duration": "2:58",
-                "addedAt": "2024-05-10T04:00:00Z"
-            },
-            {
-                "id": "2qSkIjg1o9h3YT9RAgYN75",
-                "type": "track",
-                "name": "Espresso",
-                "album": {
-                    "name": "Espresso",
-                    "id": "5quMTd5zeI9yW5UDua8wS4",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02659cd4673230913b3918e0d5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851659cd4673230913b3918e0d5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "74KM79TiuVKeVCqs8QtB0B",
-                    "name": "Sabrina Carpenter"
-                },
-                "duration": "2:55",
-                "addedAt": "2024-04-12T04:00:00Z"
-            },
-            {
-                "id": "6tNQ70jh4OwmPGpYy6R2o9",
-                "type": "track",
-                "name": "Beautiful Things",
-                "album": {
-                    "name": "Beautiful Things",
-                    "id": "29aSKB1qPEbN0Qf9OPSQpw",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273bef221ea02a821e7feeda9cf",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02bef221ea02a821e7feeda9cf",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851bef221ea02a821e7feeda9cf",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "22wbnEMDvgVIAGdFeek6ET",
-                    "name": "Benson Boone"
-                },
-                "duration": "3:00",
-                "addedAt": "2024-01-26T05:00:00Z"
-            },
-            {
-                "id": "3Vr3zh0r7ALn8VLqCiRR10",
-                "type": "track",
-                "name": "Stargazing",
-                "album": {
-                    "name": "Stargazing",
-                    "id": "3VNxRarx9HUI5w7DHv0TBj",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27381b12e1a0584e8ea7ba2ae4a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0281b12e1a0584e8ea7ba2ae4a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485181b12e1a0584e8ea7ba2ae4a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3bO19AOone0ubCsfDXDtYt",
-                    "name": "Myles Smith"
-                },
-                "duration": "2:52",
-                "addedAt": "2024-05-17T04:00:00Z"
-            },
-            {
-                "id": "629DixmZGHc7ILtEntuiWE",
-                "type": "track",
-                "name": "LUNCH",
-                "album": {
-                    "name": "HIT ME HARD AND SOFT",
-                    "id": "7aJuG4TFXa2hmE4z1yxc3n",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
-                    "name": "Billie Eilish"
-                },
-                "duration": "2:59",
-                "addedAt": "2024-05-17T04:00:00Z"
-            },
-            {
-                "id": "2GxrNKugF82CnoRFbQfzPf",
-                "type": "track",
-                "name": "i like the way you kiss me",
-                "album": {
-                    "name": "i like the way you kiss me",
-                    "id": "5HIWDdg3g9CTOtnevKDl1z",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e67611dbbf69a90d0b6cb738",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e67611dbbf69a90d0b6cb738",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e67611dbbf69a90d0b6cb738",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0PCCGZ0wGLizHt2KZ7hhA2",
-                    "name": "Artemas"
-                },
-                "duration": "2:22",
-                "addedAt": "2024-03-22T04:00:00Z"
-            },
-            {
-                "id": "22DH8NChecsgPxDjA4pqer",
-                "type": "track",
-                "name": "Tough",
-                "album": {
-                    "name": "Tough",
-                    "id": "58XIBpQOAw7E2qCL1jxWCd",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273e1a7ec3a606b52b7328d3e78",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02e1a7ec3a606b52b7328d3e78",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851e1a7ec3a606b52b7328d3e78",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0VRj0yCOv2FXJNP47XQnx5",
-                    "name": "Quavo"
-                },
-                "duration": "3:08",
-                "addedAt": "2024-07-05T04:00:00Z"
-            },
-            {
-                "id": "4q5YezDOIPcoLr8R81x9qy",
-                "type": "track",
-                "name": "I Can Do It With a Broken Heart",
-                "album": {
-                    "name": "THE TORTURED POETS DEPARTMENT",
-                    "id": "1Mo4aZ8pdj6L1jx8zSwJnt",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:38",
-                "addedAt": "2024-04-26T04:00:00Z"
-            },
-            {
-                "id": "3qhlB30KknSejmIvZZLjOD",
-                "type": "track",
-                "name": "End of Beginning",
-                "album": {
-                    "name": "DECIDE",
-                    "id": "4JDXBZdRPId4devseaAOKH",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02fddfffec51b4580acae727c1",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851fddfffec51b4580acae727c1",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "5p9HO3XC5P3BLxJs5Mtrhm",
-                    "name": "Djo"
-                },
-                "duration": "2:39",
-                "addedAt": "2024-03-01T05:00:00Z"
-            },
-            {
-                "id": "46kspZSY3aKmwQe7O77fCC",
-                "type": "track",
+                "spotifyId": "51ZQ1vr10ffzbwIjDCwqm4",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "we can't be friends (wait for your love)",
-                "album": {
-                    "name": "eternal sunshine",
-                    "id": "71PfP4E9roOXAudea1aPGw",
-                    "totalTracks": 13,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273c75a14e746ffe2030e8cd5da",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02c75a14e746ffe2030e8cd5da",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851c75a14e746ffe2030e8cd5da",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
+                "duration": "3:48",
                 "artist": {
-                    "id": "66CXWjxzNUsdJxJ2JdwvnR",
+                    "spotifyId": "66CXWjxzNUsdJxJ2JdwvnR",
                     "name": "Ariana Grande"
                 },
-                "duration": "3:48",
-                "addedAt": "2024-03-08T05:00:00Z"
-            },
-            {
-                "id": "17phhZDn6oGtzMe56NuWvj",
-                "type": "track",
-                "name": "Lose Control",
                 "album": {
-                    "name": "I've Tried Everything But Therapy (Part 1)",
-                    "id": "7nacKlk586eLRBSIsrk9DB",
-                    "totalTracks": 10,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2731a0323cc23419360a34a3ace",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e021a0323cc23419360a34a3ace",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048511a0323cc23419360a34a3ace",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "33qOK5uJ8AR2xuQQAhHump",
-                    "name": "Teddy Swims"
-                },
-                "duration": "3:30",
-                "addedAt": "2023-11-24T05:00:00Z"
-            },
-            {
-                "id": "4NJqhmkGN042BrvHoMKUrJ",
-                "type": "track",
-                "name": "Austin",
-                "album": {
-                    "name": "Austin",
-                    "id": "4JtlZzYJEa7bejLF0ASnk0",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273a73f6a4f17c58becc885efe2",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02a73f6a4f17c58becc885efe2",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851a73f6a4f17c58becc885efe2",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7Ez6lTtSMjMf2YSYpukP1I",
-                    "name": "Dasha"
-                },
-                "duration": "2:51",
-                "addedAt": "2024-03-15T04:00:00Z"
-            },
-            {
-                "id": "2HYFX63wP3otVIvopRS99Z",
-                "type": "track",
-                "name": "Houdini",
-                "album": {
-                    "name": "Houdini",
-                    "id": "6Xuu2z00jxRPZei4IJ9neK",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273810603c94c9246379604cf1a",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02810603c94c9246379604cf1a",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851810603c94c9246379604cf1a",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7dGJo4pcD2V6oG8kP0tJRR",
-                    "name": "Eminem"
-                },
-                "duration": "3:47",
-                "addedAt": "2024-06-03T16:40:46Z"
-            },
-            {
-                "id": "5uQ7de4EWjb3rkcFxyEOpu",
-                "type": "track",
-                "name": "Belong Together",
-                "album": {
-                    "name": "Belong Together",
-                    "id": "3PlCMwyq6nuQYtoYproV1o",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273ed71b8008aaa879622f8c3b5",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02ed71b8008aaa879622f8c3b5",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851ed71b8008aaa879622f8c3b5",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "11p2E654TTU8e0nZWBR4AL",
-                    "name": "Mark Ambor"
-                },
-                "duration": "2:28",
-                "addedAt": "2024-03-29T04:00:00Z"
-            },
-            {
-                "id": "57lsYy0OZLNb5OQ7fEa3Hs",
-                "type": "track",
-                "name": "Did It First (with Central Cee)",
-                "album": {
-                    "name": "Did It First (with Central Cee)",
-                    "id": "1SiWjniEb94wSFZ5YjZDHr",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273dc9f83f20038d54b78c48aeb",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02dc9f83f20038d54b78c48aeb",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851dc9f83f20038d54b78c48aeb",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "3LZZPxNDGDFVSIPqf4JuEf",
-                    "name": "Ice Spice"
-                },
-                "duration": "1:58",
-                "addedAt": "2024-07-19T04:00:00Z"
-            },
-            {
-                "id": "1BJJbSX6muJVF2AK7uH1x4",
-                "type": "track",
-                "name": "Move",
-                "album": {
-                    "name": "Move",
-                    "id": "4M8ThNHbNjda2cPwL8XZHS",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27317a013a00d0a33f3dd49974d",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0217a013a00d0a33f3dd49974d",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485117a013a00d0a33f3dd49974d",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2loEsOijJ6XiGzWYFXMIRk",
-                    "name": "Adam Port"
-                },
-                "duration": "2:57",
-                "addedAt": "2024-07-05T04:00:00Z"
-            },
-            {
-                "id": "3rUGC1vUpkDG9CZFHMur1t",
-                "type": "track",
-                "name": "greedy",
-                "album": {
-                    "name": "greedy",
-                    "id": "3UOV8XvCwMKaATRNXrYCjN",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27322fd802bc61db666c7c81aa8",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0222fd802bc61db666c7c81aa8",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485122fd802bc61db666c7c81aa8",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "45dkTj5sMRSjrmBSBeiHym",
-                    "name": "Tate McRae"
-                },
-                "duration": "2:11",
-                "addedAt": "2023-11-24T05:00:00Z"
-            },
-            {
-                "id": "4w2GLmK2wnioVnb5CPQeex",
-                "type": "track",
-                "name": "360",
-                "album": {
-                    "name": "BRAT",
-                    "id": "2lIZef4lzdvZkiiCzvPKj7",
-                    "totalTracks": 15,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27388e3822cccfb8f2832c70c2e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0288e3822cccfb8f2832c70c2e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485188e3822cccfb8f2832c70c2e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "25uiPmTg16RbhZWAqwLBy5",
-                    "name": "Charli xcx"
-                },
-                "duration": "2:13",
-                "addedAt": "2024-06-14T04:00:00Z"
-            },
-            {
-                "id": "4xdBrk0nFZaP54vvZj0yx7",
-                "type": "track",
-                "name": "HOT TO GO!",
-                "album": {
-                    "name": "The Rise and Fall of a Midwest Princess",
-                    "id": "0EiI8ylL0FmWWpgHVTsZjZ",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27396fa88fb1789be437d5cb4b6",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0296fa88fb1789be437d5cb4b6",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485196fa88fb1789be437d5cb4b6",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7GlBOeep6PqTfFi59PTUUN",
-                    "name": "Chappell Roan"
-                },
-                "duration": "3:04",
-                "addedAt": "2024-06-21T04:00:00Z"
-            },
-            {
-                "id": "6NjWCIYu1W8xa3HIvcIhd4",
-                "type": "track",
-                "name": "Nasty",
-                "album": {
-                    "name": "Nasty",
-                    "id": "1vMVDUsMWaD5eB4oahCboP",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27399068b5c52ec35ec2db977a7",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0299068b5c52ec35ec2db977a7",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485199068b5c52ec35ec2db977a7",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "0NIIxcxNHmOoyBx03SfTCD",
-                    "name": "Tinashe"
-                },
-                "duration": "2:56",
-                "addedAt": "2024-06-07T04:00:19Z"
-            },
-            {
-                "id": "7z3PblAN3dH1JMewiRydkZ",
-                "type": "track",
-                "name": "GIRLS",
-                "album": {
-                    "name": "GIRLS",
-                    "id": "17R63Sb8OrPikc2R4mlpdC",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273c8af7237bb25ad59488944c1",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02c8af7237bb25ad59488944c1",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851c8af7237bb25ad59488944c1",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2tIP7SsRs7vjIcLrU85W8J",
-                    "name": "The Kid LAROI"
-                },
-                "duration": "2:32",
-                "addedAt": "2024-07-05T04:00:00Z"
-            },
-            {
-                "id": "1bjeWoagtHmUKputLVyDxQ",
-                "type": "track",
-                "name": "Saturn",
-                "album": {
-                    "name": "Saturn",
-                    "id": "1fmBMCSSkSlvxyoy1vut2k",
-                    "totalTracks": 5,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273d70916ee9e40c90380ba5f07",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02d70916ee9e40c90380ba5f07",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851d70916ee9e40c90380ba5f07",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "7tYKF4w9nC0nq9CsPZTHyP",
-                    "name": "SZA"
-                },
-                "duration": "3:06",
-                "addedAt": "2024-02-23T05:00:00Z"
-            },
-            {
-                "id": "331l3xABO0HMr1Kkyh2LZq",
-                "type": "track",
-                "name": "I Don't Wanna Wait",
-                "album": {
-                    "name": "I Don't Wanna Wait",
-                    "id": "0wCLHkBRKcndhMQQpeo8Ji",
-                    "totalTracks": 2,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732f479a6c1825c1f29e0a3d49",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022f479a6c1825c1f29e0a3d49",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048512f479a6c1825c1f29e0a3d49",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Cs0zKBU1kc0i8ypK3B9ai",
-                    "name": "David Guetta"
-                },
-                "duration": "2:29",
-                "addedAt": "2024-04-12T04:00:00Z"
-            },
-            {
-                "id": "7Fzl7QaTu47WyP9R5S5mh5",
-                "type": "track",
-                "name": "Lies Lies Lies",
-                "album": {
-                    "name": "Lies Lies Lies",
-                    "id": "62ldGEkFUkQa34B8qsAFyc",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27337eedb840f9441959db3107e",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0237eedb840f9441959db3107e",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000485137eedb840f9441959db3107e",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "4oUHIQIBe0LHzYfvXNW4QM",
-                    "name": "Morgan Wallen"
-                },
-                "duration": "3:18",
-                "addedAt": "2024-07-12T04:00:00Z"
-            },
-            {
-                "id": "2OzhQlSqBEmt7hmkYxfT6m",
-                "type": "track",
-                "name": "Fortnight (feat. Post Malone)",
-                "album": {
-                    "name": "THE TORTURED POETS DEPARTMENT",
-                    "id": "1Mo4aZ8pdj6L1jx8zSwJnt",
-                    "totalTracks": 16,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "06HL4z0CvFAxyc27GXpf02",
-                    "name": "Taylor Swift"
-                },
-                "duration": "3:48",
-                "addedAt": "2024-04-19T04:01:02Z"
-            },
-            {
-                "id": "0mflMxspEfB0VbI1kyLiAv",
-                "type": "track",
-                "name": "Stick Season",
-                "album": {
-                    "name": "Stick Season",
-                    "id": "50ZenUP4O2Q5eCy2NRNvuz",
-                    "totalTracks": 14,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "2RQXRUsr4IW1f3mKyKsy4B",
-                    "name": "Noah Kahan"
-                },
-                "duration": "3:02",
-                "addedAt": "2023-11-24T05:00:00Z"
-            },
-            {
-                "id": "0h3Xy4V4apMraB5NuM8U7Z",
-                "type": "track",
-                "name": "Stumblin' In",
-                "album": {
-                    "name": "Stumblin' In",
-                    "id": "2HxzXLKO0AvkScWYHSspQc",
-                    "totalTracks": 1,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2739a903819d8a5d3c80c47734c",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e029a903819d8a5d3c80c47734c",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d000048519a903819d8a5d3c80c47734c",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "11kt6ggsdxvI8MhyeSMKom",
-                    "name": "CYRIL"
-                },
-                "duration": "3:33",
-                "addedAt": "2024-06-14T04:00:00Z"
-            },
-            {
-                "id": "7tI8dRuH2Yc6RuoTjxo4dU",
-                "type": "track",
-                "name": "Who",
-                "album": {
-                    "name": "MUSE",
-                    "id": "15XcLhiVMlSOipUddTNDnr",
-                    "totalTracks": 7,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273f02c451189a709b9a952aaec",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1oSPZhvZMIrWW5I41kPkkY",
-                    "name": "Jimin"
-                },
-                "duration": "2:50",
-                "addedAt": "2024-07-19T04:00:00Z"
-            },
-            {
-                "id": "7CyPwkp0oE8Ro9Dd5CUDjW",
-                "type": "track",
-                "name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
-                "album": {
-                    "name": "The Idol Episode 4 (Music from the HBO Original Series)",
-                    "id": "7tzVd1fwkxsorytCBjEJkU",
-                    "totalTracks": 3,
-                    "imgs": [
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
-                            "width": 640,
-                            "height": 640
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262",
-                            "width": 300,
-                            "height": 300
-                        },
-                        {
-                            "url": "https://i.scdn.co/image/ab67616d00004851b0dd6a5cd1dec96c4119c262",
-                            "width": 64,
-                            "height": 64
-                        }
-                    ]
-                },
-                "artist": {
-                    "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-                    "name": "The Weeknd"
-                },
-                "duration": "4:04",
-                "addedAt": "2023-11-24T05:00:00Z"
-            },
-            {
-                "id": "0Lmbke3KNVFXtoH2mMSHCw",
-                "type": "track",
-                "name": "the boy is mine",
-                "album": {
+                    "spotifyId": "5EYKrEDnKhhcNxGedaRQeK",
                     "name": "eternal sunshine",
-                    "id": "5EYKrEDnKhhcNxGedaRQeK",
-                    "totalTracks": 13,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2738b58d20f1b77295730db15b4",
@@ -8478,154 +3744,299 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "66CXWjxzNUsdJxJ2JdwvnR",
-                    "name": "Ariana Grande"
-                },
-                "duration": "2:53",
-                "addedAt": "2024-06-14T04:00:00Z"
+                }
             },
             {
-                "id": "5b3XJ1pjrHO5JtY2PcTjnI",
-                "type": "track",
-                "name": "Mamushi (feat. Yuki Chiba)",
+                "spotifyId": "1BxfuPKGuaTgP7aM0Bbdwr",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Cruel Summer",
+                "duration": "2:58",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
                 "album": {
-                    "name": "MEGAN",
-                    "id": "0FzWvaeMBfKBCqxHTLVlB8",
-                    "totalTracks": 18,
+                    "spotifyId": "1NAmidJlEaVgA3MpcPFYGq",
+                    "name": "Lover",
                     "imgs": [
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000b2732538afd3580d0424bbe28a01",
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
                             "width": 640,
                             "height": 640
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00001e022538afd3580d0424bbe28a01",
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
                             "width": 300,
                             "height": 300
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d000048512538afd3580d0424bbe28a01",
+                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
                             "width": 64,
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "181bsRPaVXVlUKXrxwZfHK",
-                    "name": "Megan Thee Stallion"
-                },
-                "duration": "2:36",
-                "addedAt": "2024-07-19T04:00:00Z"
+                }
             },
             {
-                "id": "5iJKGpnFfvbjZJeAtwXfCj",
-                "type": "track",
-                "name": "28",
+                "spotifyId": "4Dvkj6JhhA12EX05fT7y2e",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "As It Was",
+                "duration": "2:47",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
                 "album": {
-                    "name": "The Great American Bar Scene",
-                    "id": "1U0Z7QjSzlg3gMeUOuUldz",
-                    "totalTracks": 19,
+                    "spotifyId": "5r36AJ6VOJtp00oxSkBZ5h",
+                    "name": "Harry's House",
                     "imgs": [
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273647ad18a07e9e939e399e5a1",
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
                             "width": 640,
                             "height": 640
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02647ad18a07e9e939e399e5a1",
+                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
                             "width": 300,
                             "height": 300
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00004851647ad18a07e9e939e399e5a1",
+                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
                             "width": 64,
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "40ZNYROS4zLfyyBSs2PGe2",
-                    "name": "Zach Bryan"
-                },
-                "duration": "3:53",
-                "addedAt": "2024-07-12T04:00:00Z"
+                }
             },
             {
-                "id": "3Pbp7cUCx4d3OAkZSCoNvn",
-                "type": "track",
-                "name": "Scared To Start",
+                "spotifyId": "7CyPwkp0oE8Ro9Dd5CUDjW",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+                "duration": "4:04",
+                "artist": {
+                    "spotifyId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                },
                 "album": {
-                    "name": "Scared To Start",
-                    "id": "3NpeIWhWsxU7d3XL5KEh39",
-                    "totalTracks": 1,
+                    "spotifyId": "7tzVd1fwkxsorytCBjEJkU",
+                    "name": "The Idol Episode 4 (Music from the HBO Original Series)",
                     "imgs": [
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27351ef67c49732e45cd2b26fbe",
+                            "url": "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
                             "width": 640,
                             "height": 640
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0251ef67c49732e45cd2b26fbe",
+                            "url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262",
                             "width": 300,
                             "height": 300
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000485151ef67c49732e45cd2b26fbe",
+                            "url": "https://i.scdn.co/image/ab67616d00004851b0dd6a5cd1dec96c4119c262",
                             "width": 64,
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "4j96cMcT8GRi11qbvo1cLQ",
-                    "name": "Michael Marcagi"
-                },
-                "duration": "2:39",
-                "addedAt": "2024-02-02T05:00:00Z"
+                }
             },
             {
-                "id": "5MPi9e7z46wopyad10R6qx",
-                "type": "track",
-                "name": "Close To You",
+                "spotifyId": "3hRV0jL3vUpRrcy398teAU",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "The Night We Met",
+                "duration": "3:28",
+                "artist": {
+                    "spotifyId": "6ltzsmQQbmdoHHbLZ4ZN25",
+                    "name": "Lord Huron"
+                },
                 "album": {
-                    "name": "Close To You",
-                    "id": "2gxGzfvXQvjVbQiuVcfKDM",
-                    "totalTracks": 1,
+                    "spotifyId": "4sD1qg4jwTZR4mvR4Iflk5",
+                    "name": "Strange Trails",
                     "imgs": [
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000b27305120ec42445d23764388857",
+                            "url": "https://i.scdn.co/image/ab67616d0000b27317875a0610c23d8946454583",
                             "width": 640,
                             "height": 640
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00001e0205120ec42445d23764388857",
+                            "url": "https://i.scdn.co/image/ab67616d00001e0217875a0610c23d8946454583",
                             "width": 300,
                             "height": 300
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000485105120ec42445d23764388857",
+                            "url": "https://i.scdn.co/image/ab67616d0000485117875a0610c23d8946454583",
                             "width": 64,
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "4tuJ0bMpJh08umKkEXKUI5",
-                    "name": "Gracie Abrams"
-                },
-                "duration": "3:45",
-                "addedAt": "2024-06-14T04:00:00Z"
+                }
             },
             {
-                "id": "6vvPecFTmWxDfEJ6cYT1wa",
-                "type": "track",
+                "spotifyId": "629DixmZGHc7ILtEntuiWE",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "LUNCH",
+                "duration": "2:59",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "name": "HIT ME HARD AND SOFT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1BJJbSX6muJVF2AK7uH1x4",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Move",
+                "duration": "2:57",
+                "artist": {
+                    "spotifyId": "2loEsOijJ6XiGzWYFXMIRk",
+                    "name": "Adam Port"
+                },
+                "album": {
+                    "spotifyId": "4M8ThNHbNjda2cPwL8XZHS",
+                    "name": "Move",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27317a013a00d0a33f3dd49974d",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0217a013a00d0a33f3dd49974d",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485117a013a00d0a33f3dd49974d",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2uqYupMHANxnwgeiXTZXzd",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Austin (Boots Stop Workin')",
+                "duration": "2:51",
+                "artist": {
+                    "spotifyId": "7Ez6lTtSMjMf2YSYpukP1I",
+                    "name": "Dasha"
+                },
+                "album": {
+                    "spotifyId": "40HsqPqeSR9Xe3IyAJWr6e",
+                    "name": "What Happens Now?",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2734ccf88b66e04cfd247f287eb",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e024ccf88b66e04cfd247f287eb",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048514ccf88b66e04cfd247f287eb",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5uQ7de4EWjb3rkcFxyEOpu",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Belong Together",
+                "duration": "2:28",
+                "artist": {
+                    "spotifyId": "11p2E654TTU8e0nZWBR4AL",
+                    "name": "Mark Ambor"
+                },
+                "album": {
+                    "spotifyId": "3PlCMwyq6nuQYtoYproV1o",
+                    "name": "Belong Together",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ed71b8008aaa879622f8c3b5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ed71b8008aaa879622f8c3b5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ed71b8008aaa879622f8c3b5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7bywjHOc0wSjGGbj04XbVi",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "LUNA",
+                "duration": "3:16",
+                "artist": {
+                    "spotifyId": "2LRoIwlKmHjgvigdNGBHNo",
+                    "name": "Feid"
+                },
+                "album": {
+                    "spotifyId": "0lgs2Sa82lyX89nBUWyUy6",
+                    "name": "FERXXOCALIPSIS",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273f1aad814a40ec7419c234242",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02f1aad814a40ec7419c234242",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851f1aad814a40ec7419c234242",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6vvPecFTmWxDfEJ6cYT1wa",
+                "addedAt": "2024-07-25T09:24:59Z",
                 "name": "Rockstar",
+                "duration": "2:18",
+                "artist": {
+                    "spotifyId": "5L1lO4eRHmJ7a0Q6csE5cT",
+                    "name": "LISA"
+                },
                 "album": {
+                    "spotifyId": "7wIIhHPyaxAHRvdNQQO2G9",
                     "name": "Rockstar",
-                    "id": "7wIIhHPyaxAHRvdNQQO2G9",
-                    "totalTracks": 5,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b27397265410628ab7f94a380c9d",
@@ -8643,55 +4054,361 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "5L1lO4eRHmJ7a0Q6csE5cT",
-                    "name": "LISA"
-                },
-                "duration": "2:18",
-                "addedAt": "2024-07-05T04:00:00Z"
+                }
             },
             {
-                "id": "6XjDF6nds4DE2BBbagZol6",
-                "type": "track",
-                "name": "Gata Only",
+                "spotifyId": "2QjOHCTQ1Jl3zawyYOpxh6",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Sweater Weather",
+                "duration": "4:00",
+                "artist": {
+                    "spotifyId": "77SW9BnxLY8rJ0RciFqkHh",
+                    "name": "The Neighbourhood"
+                },
                 "album": {
-                    "name": "Gata Only",
-                    "id": "5tSQtQGkrCJx3hoQxmLgfM",
-                    "totalTracks": 1,
+                    "spotifyId": "4xkM0BwLM9H2IUcbYzpcBI",
+                    "name": "I Love You.",
                     "imgs": [
                         {
-                            "url": "https://i.scdn.co/image/ab67616d0000b273c4583f3ad76630879a75450a",
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738265a736a1eb838ad5a0b921",
                             "width": 640,
                             "height": 640
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00001e02c4583f3ad76630879a75450a",
+                            "url": "https://i.scdn.co/image/ab67616d00001e028265a736a1eb838ad5a0b921",
                             "width": 300,
                             "height": 300
                         },
                         {
-                            "url": "https://i.scdn.co/image/ab67616d00004851c4583f3ad76630879a75450a",
+                            "url": "https://i.scdn.co/image/ab67616d000048518265a736a1eb838ad5a0b921",
                             "width": 64,
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "7CvTknweLr9feJtRGrpDBy",
-                    "name": "FloyyMenor"
-                },
-                "duration": "3:42",
-                "addedAt": "2024-04-05T04:00:00Z"
+                }
             },
             {
-                "id": "7iabz12vAuVQYyekFIWJxD",
-                "type": "track",
-                "name": "BAND4BAND (feat. Lil Baby)",
+                "spotifyId": "2OzhQlSqBEmt7hmkYxfT6m",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Fortnight (feat. Post Malone)",
+                "duration": "3:48",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
                 "album": {
+                    "spotifyId": "1Mo4aZ8pdj6L1jx8zSwJnt",
+                    "name": "THE TORTURED POETS DEPARTMENT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5XeFesFbtLpXzIVDNQP22n",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "I Wanna Be Yours",
+                "duration": "3:03",
+                "artist": {
+                    "spotifyId": "7Ln80lUS6He07XvHI8qqHH",
+                    "name": "Arctic Monkeys"
+                },
+                "album": {
+                    "spotifyId": "78bpIziExqiI9qztvNFlQu",
+                    "name": "AM",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1mea3bSkSGXuIRvnydlB5b",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Viva La Vida",
+                "duration": "4:02",
+                "artist": {
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "name": "Coldplay"
+                },
+                "album": {
+                    "spotifyId": "1CEODgTmTwLyabvwd7HBty",
+                    "name": "Viva La Vida or Death and All His Friends",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e21cc1db05580b6f2d2a3b6e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e21cc1db05580b6f2d2a3b6e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e21cc1db05580b6f2d2a3b6e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7BRD7x5pt8Lqa1eGYC4dzj",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "CHIHIRO",
+                "duration": "5:03",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "name": "HIT ME HARD AND SOFT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "42VsgItocQwOQC3XWZ8JNA",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "FE!N (feat. Playboi Carti)",
+                "duration": "3:11",
+                "artist": {
+                    "spotifyId": "0Y5tJX1MQlPlqiwlOH1tJY",
+                    "name": "Travis Scott"
+                },
+                "album": {
+                    "spotifyId": "18NOKLkZETa4sWwLMIm0UZ",
+                    "name": "UTOPIA",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02881d8d8378cd01099babcd44",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851881d8d8378cd01099babcd44",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6a9Z1jUms915w4O7N1PxjY",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Santa",
+                "duration": "3:13",
+                "artist": {
+                    "spotifyId": "1fctva4kpRbg2k3v7kwRuS",
+                    "name": "Rvssian"
+                },
+                "album": {
+                    "spotifyId": "3uzutRS5qX4ng5Skjh5S6W",
+                    "name": "Santa",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273edf307a421ee80c9262f8dc8",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02edf307a421ee80c9262f8dc8",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851edf307a421ee80c9262f8dc8",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0GqAWZe1A5ecKadZrHk6XH",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Chk Chk Boom",
+                "duration": "2:28",
+                "artist": {
+                    "spotifyId": "2dIgFjalVxs4ThymZ67YCE",
+                    "name": "Stray Kids"
+                },
+                "album": {
+                    "spotifyId": "1uLAcaywb5673rQ2lJ1UG7",
+                    "name": "ATE",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273092c3001ef2d0a4f81372078",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02092c3001ef2d0a4f81372078",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851092c3001ef2d0a4f81372078",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "57lsYy0OZLNb5OQ7fEa3Hs",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Did It First (with Central Cee)",
+                "duration": "1:58",
+                "artist": {
+                    "spotifyId": "3LZZPxNDGDFVSIPqf4JuEf",
+                    "name": "Ice Spice"
+                },
+                "album": {
+                    "spotifyId": "1SiWjniEb94wSFZ5YjZDHr",
+                    "name": "Did It First (with Central Cee)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273dc9f83f20038d54b78c48aeb",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02dc9f83f20038d54b78c48aeb",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851dc9f83f20038d54b78c48aeb",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4xdBrk0nFZaP54vvZj0yx7",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "HOT TO GO!",
+                "duration": "3:04",
+                "artist": {
+                    "spotifyId": "7GlBOeep6PqTfFi59PTUUN",
+                    "name": "Chappell Roan"
+                },
+                "album": {
+                    "spotifyId": "0EiI8ylL0FmWWpgHVTsZjZ",
+                    "name": "The Rise and Fall of a Midwest Princess",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27396fa88fb1789be437d5cb4b6",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0296fa88fb1789be437d5cb4b6",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485196fa88fb1789be437d5cb4b6",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "51eSHglvG1RJXtL3qI5trr",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Slow It Down",
+                "duration": "2:41",
+                "artist": {
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
+                    "name": "Benson Boone"
+                },
+                "album": {
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
+                    "name": "Fireworks & Rollerblades",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02cc04ff3e70e146ba9abacf40",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851cc04ff3e70e146ba9abacf40",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7iabz12vAuVQYyekFIWJxD",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "BAND4BAND (feat. Lil Baby)",
+                "duration": "2:20",
+                "artist": {
+                    "spotifyId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                },
+                "album": {
+                    "spotifyId": "4AzPr5SUpNF553eC1d3aRy",
                     "name": "BAND4BAND (feat. Lil Baby)",
-                    "id": "4AzPr5SUpNF553eC1d3aRy",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2737b588bf0555bde606f8b27c7",
@@ -8709,22 +4426,4032 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "5H4yInM5zmHqpKIoMNAx4r",
-                    "name": "Central Cee"
-                },
-                "duration": "2:20",
-                "addedAt": "2024-05-31T04:00:00Z"
+                }
             },
             {
-                "id": "5496lks6V3fh1mZAB6IAap",
-                "type": "track",
-                "name": "Alibi (with Pabllo Vittar & Yseult)",
+                "spotifyId": "5b3XJ1pjrHO5JtY2PcTjnI",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Mamushi (feat. Yuki Chiba)",
+                "duration": "2:36",
+                "artist": {
+                    "spotifyId": "181bsRPaVXVlUKXrxwZfHK",
+                    "name": "Megan Thee Stallion"
+                },
                 "album": {
+                    "spotifyId": "0FzWvaeMBfKBCqxHTLVlB8",
+                    "name": "MEGAN",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732538afd3580d0424bbe28a01",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022538afd3580d0424bbe28a01",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512538afd3580d0424bbe28a01",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2btNsI4OvcVl7SAHQQDHFB",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Mirame",
+                "duration": "2:37",
+                "artist": {
+                    "spotifyId": "1TA5sGRlKUJXBN4ZyJuDIX",
+                    "name": "Blessd"
+                },
+                "album": {
+                    "spotifyId": "5oCAS6VzHoESewtXUGMqbz",
+                    "name": "Mirame",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273b62a2ec2d61d48f34a368144",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02b62a2ec2d61d48f34a368144",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851b62a2ec2d61d48f34a368144",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "331l3xABO0HMr1Kkyh2LZq",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "I Don't Wanna Wait",
+                "duration": "2:29",
+                "artist": {
+                    "spotifyId": "1Cs0zKBU1kc0i8ypK3B9ai",
+                    "name": "David Guetta"
+                },
+                "album": {
+                    "spotifyId": "0wCLHkBRKcndhMQQpeo8Ji",
+                    "name": "I Don't Wanna Wait",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732f479a6c1825c1f29e0a3d49",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022f479a6c1825c1f29e0a3d49",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512f479a6c1825c1f29e0a3d49",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0mflMxspEfB0VbI1kyLiAv",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Stick Season",
+                "duration": "3:02",
+                "artist": {
+                    "spotifyId": "2RQXRUsr4IW1f3mKyKsy4B",
+                    "name": "Noah Kahan"
+                },
+                "album": {
+                    "spotifyId": "50ZenUP4O2Q5eCy2NRNvuz",
+                    "name": "Stick Season",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5RqSsdzTNPX1uzkmlHCFvK",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "QLONA",
+                "duration": "2:52",
+                "artist": {
+                    "spotifyId": "790FomKkXshlbRYZFtlgla",
+                    "name": "KAROL G"
+                },
+                "album": {
+                    "spotifyId": "0FqAaUEyKCyUNFE1uQPZ7i",
+                    "name": "MAÑANA SERÁ BONITO (BICHOTA SEASON)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273d026bf9d7780f6a1267b4d03",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02d026bf9d7780f6a1267b4d03",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851d026bf9d7780f6a1267b4d03",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2HRgqmZQC0MC7GeNuDIXHN",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "Seven (feat. Latto) (Explicit Ver.)",
+                "duration": "3:03",
+                "artist": {
+                    "spotifyId": "6HaGTQPmzraVmaVxvz6EUc",
+                    "name": "Jung Kook"
+                },
+                "album": {
+                    "spotifyId": "5pSk3c3wVwnb2arb6ohCPU",
+                    "name": "GOLDEN",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273741fd4807f442af3f7359316",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851741fd4807f442af3f7359316",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7KA4W4McWYRpgf0fWsJZWB",
+                "addedAt": "2024-07-25T09:24:59Z",
+                "name": "See You Again (feat. Kali Uchis)",
+                "duration": "3:00",
+                "artist": {
+                    "spotifyId": "4V8LLVI7PbaPR0K2TGSxFF",
+                    "name": "Tyler, The Creator"
+                },
+                "album": {
+                    "spotifyId": "2nkto6YNI4rUYTLqEwWJ3o",
+                    "name": "Flower Boy",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028940ac99f49e44f59e6f7fb3",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518940ac99f49e44f59e6f7fb3",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            }
+        ],
+        "_id": "kGDl6L"
+    }
+    ,
+    {
+        "type": "playlist",
+        "spotifyId": "37i9dQZF1DXbYM3nMM0oPk",
+        "name": "Mega Hit Mix",
+        "listeners": null,
+        "description": "A mega mix of 75 favorites from the last few years! ",
+        "likes": 7942119,
+        "owner": null,
+        "total": 75,
+        "releaseDate": null,
+        "imgs": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67706f00000002523900c130e847665a66b9d8",
+                "width": null
+            }
+        ],
+        "tracks": [
+            {
+                "spotifyId": "6zSpb8dQRaw0M1dK8PBwQz",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Cold Heart - PNAU Remix",
+                "duration": "3:22",
+                "artist": {
+                    "spotifyId": "3PhoLpVuITZKcymswpck5b",
+                    "name": "Elton John"
+                },
+                "album": {
+                    "spotifyId": "5D8Rdb09BkmHscEGSWAlA6",
+                    "name": "Cold Heart (PNAU Remix)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2739f5cce8304c42d3a5463fd23",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e029f5cce8304c42d3a5463fd23",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048519f5cce8304c42d3a5463fd23",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1BxfuPKGuaTgP7aM0Bbdwr",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Cruel Summer",
+                "duration": "2:58",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "1NAmidJlEaVgA3MpcPFYGq",
+                    "name": "Lover",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0mflMxspEfB0VbI1kyLiAv",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Stick Season",
+                "duration": "3:02",
+                "artist": {
+                    "spotifyId": "2RQXRUsr4IW1f3mKyKsy4B",
+                    "name": "Noah Kahan"
+                },
+                "album": {
+                    "spotifyId": "50ZenUP4O2Q5eCy2NRNvuz",
+                    "name": "Stick Season",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7DSAEUvxU8FajXtRloy8M0",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Flowers",
+                "duration": "3:20",
+                "artist": {
+                    "spotifyId": "5YGY8feqx7naU7z4HrwZM6",
+                    "name": "Miley Cyrus"
+                },
+                "album": {
+                    "spotifyId": "5DvJgsMLbaR1HmAI6VhfcQ",
+                    "name": "Endless Summer Vacation",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273cd222052a2594be29a6616b5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02cd222052a2594be29a6616b5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851cd222052a2594be29a6616b5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7igeByaBM0MgGsgXtNxDJ7",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "positions",
+                "duration": "2:52",
+                "artist": {
+                    "spotifyId": "66CXWjxzNUsdJxJ2JdwvnR",
+                    "name": "Ariana Grande"
+                },
+                "album": {
+                    "spotifyId": "3jqEvfiu2ENgmgzZq27zbi",
+                    "name": "positions",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737368325f5998ef48d4fb5401",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e027368325f5998ef48d4fb5401",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048517368325f5998ef48d4fb5401",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0VjIjW4GlUZAMYd2vXMi3b",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Blinding Lights",
+                "duration": "3:20",
+                "artist": {
+                    "spotifyId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                },
+                "album": {
+                    "spotifyId": "4yP0hdKOZPNshxUOjY0cZj",
+                    "name": "After Hours",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4iZ4pt7kvcaH6Yo8UoZ4s2",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Snooze",
+                "duration": "3:21",
+                "artist": {
+                    "spotifyId": "7tYKF4w9nC0nq9CsPZTHyP",
+                    "name": "SZA"
+                },
+                "album": {
+                    "spotifyId": "07w0rG5TETcyihsEIZR3qG",
+                    "name": "SOS",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27370dbc9f47669d120ad874ec1",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0270dbc9f47669d120ad874ec1",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485170dbc9f47669d120ad874ec1",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6UelLqGlWMcVH1E5c4H7lY",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Watermelon Sugar",
+                "duration": "2:54",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
+                "album": {
+                    "spotifyId": "7xV2TzoaVc0ycW7fwBwAml",
+                    "name": "Fine Line",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3USxtqRwSYz57Ewm6wWRMp",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Heat Waves",
+                "duration": "3:58",
+                "artist": {
+                    "spotifyId": "4yvcSjfu4PC0CYQyLy4wSq",
+                    "name": "Glass Animals"
+                },
+                "album": {
+                    "spotifyId": "5bfpRtBW7RNRdsm3tRyl3R",
+                    "name": "Dreamland",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273712701c5e263efc8726b1464",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02712701c5e263efc8726b1464",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851712701c5e263efc8726b1464",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4uUG5RXrOk84mYEfFvj3cK",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "I'm Good (Blue)",
+                "duration": "2:55",
+                "artist": {
+                    "spotifyId": "1Cs0zKBU1kc0i8ypK3B9ai",
+                    "name": "David Guetta"
+                },
+                "album": {
+                    "spotifyId": "7M842DMhYVALrXsw3ty7B3",
+                    "name": "I'm Good (Blue)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273933c036cd61cd40d3f17a9c4",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02933c036cd61cd40d3f17a9c4",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851933c036cd61cd40d3f17a9c4",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7qEHsqek33rTcFNT9PFqLf",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Someone You Loved",
+                "duration": "3:02",
+                "artist": {
+                    "spotifyId": "4GNC7GD6oZMSxPGyXy4MNB",
+                    "name": "Lewis Capaldi"
+                },
+                "album": {
+                    "spotifyId": "5658aM19fA3JVwTK6eQX70",
+                    "name": "Divinely Uninspired To A Hellish Extent",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fc2101e6889d6ce9025f85f2",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fc2101e6889d6ce9025f85f2",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fc2101e6889d6ce9025f85f2",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6wf7Yu7cxBSPrRlWeSeK0Q",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+                "duration": "3:42",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "3AafSrFIbJPH6BJHiJm1Cd",
+                    "name": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ed317ec13d3de9e01fb99c9e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ed317ec13d3de9e01fb99c9e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ed317ec13d3de9e01fb99c9e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3WMj8moIAXJhHsyLaqIIHI",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Something in the Orange",
+                "duration": "3:48",
+                "artist": {
+                    "spotifyId": "40ZNYROS4zLfyyBSs2PGe2",
+                    "name": "Zach Bryan"
+                },
+                "album": {
+                    "spotifyId": "1CmTOKCeyz1aHH04OwvTPv",
+                    "name": "Something in the Orange",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273b2b6670e3aca9bcd55fbabbb",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02b2b6670e3aca9bcd55fbabbb",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851b2b6670e3aca9bcd55fbabbb",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4h9wh7iOZ0GGn8QVp4RAOB",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "I Ain't Worried",
+                "duration": "2:28",
+                "artist": {
+                    "spotifyId": "5Pwc4xIPtQLFEnJriah9YJ",
+                    "name": "OneRepublic"
+                },
+                "album": {
+                    "spotifyId": "04PEOM6kIEeq9lRp1asNP2",
+                    "name": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ec96e006b8bdfc582610ec13",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ec96e006b8bdfc582610ec13",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "50nfwKoDiSYg8zOCREWAm5",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Shivers",
+                "duration": "3:27",
+                "artist": {
+                    "spotifyId": "6eUKZXaKkcviH0Ku9w2n3V",
+                    "name": "Ed Sheeran"
+                },
+                "album": {
+                    "spotifyId": "32iAEBstCjauDhyKpGjTuq",
+                    "name": "=",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ef24c3fdbf856340d55cfeb2",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ef24c3fdbf856340d55cfeb2",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ef24c3fdbf856340d55cfeb2",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1dGr1c8CrMLDpV6mPbImSI",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Lover",
+                "duration": "3:41",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "1NAmidJlEaVgA3MpcPFYGq",
+                    "name": "Lover",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2HRgqmZQC0MC7GeNuDIXHN",
+                "addedAt": "2024-05-22T11:00:00Z",
+                "name": "Seven (feat. Latto) (Explicit Ver.)",
+                "duration": "3:03",
+                "artist": {
+                    "spotifyId": "6HaGTQPmzraVmaVxvz6EUc",
+                    "name": "Jung Kook"
+                },
+                "album": {
+                    "spotifyId": "5pSk3c3wVwnb2arb6ohCPU",
+                    "name": "GOLDEN",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273741fd4807f442af3f7359316",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851741fd4807f442af3f7359316",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1kuGVB7EU95pJObxwvfwKS",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "vampire",
+                "duration": "3:39",
+                "artist": {
+                    "spotifyId": "1McMsnEElThX1knmY4oliG",
+                    "name": "Olivia Rodrigo"
+                },
+                "album": {
+                    "spotifyId": "1xJHno7SmdVtZAtXbdbDZp",
+                    "name": "GUTS",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e85259a1cae29a8d91f2093d",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e85259a1cae29a8d91f2093d",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e85259a1cae29a8d91f2093d",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4xhsWYTOGcal8zt0J161CU",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Lovin On Me",
+                "duration": "2:18",
+                "artist": {
+                    "spotifyId": "2LIk90788K0zvyj2JJVwkJ",
+                    "name": "Jack Harlow"
+                },
+                "album": {
+                    "spotifyId": "6VCO0fDBGbRW8mCEvV95af",
+                    "name": "Lovin On Me",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fcf4adae77baba5d0169e8e8",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fcf4adae77baba5d0169e8e8",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fcf4adae77baba5d0169e8e8",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4Dvkj6JhhA12EX05fT7y2e",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "As It Was",
+                "duration": "2:47",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
+                "album": {
+                    "spotifyId": "5r36AJ6VOJtp00oxSkBZ5h",
+                    "name": "Harry's House",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "21jGcNKet2qwijlDFuPiPb",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Circles",
+                "duration": "3:35",
+                "artist": {
+                    "spotifyId": "246dkjvS1zLTtiykXe5h60",
+                    "name": "Post Malone"
+                },
+                "album": {
+                    "spotifyId": "4g1ZRSobMefqF6nelkgibi",
+                    "name": "Hollywood's Bleeding",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2739478c87599550dd73bfa7e02",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e029478c87599550dd73bfa7e02",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048519478c87599550dd73bfa7e02",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0u2P5u6lvoDfwTYjAADbn4",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "lovely (with Khalid)",
+                "duration": "3:20",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "2sBB17RXTamvj7Ncps15AK",
+                    "name": "lovely (with Khalid)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738a3f0a3ca7929dea23cd274c",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028a3f0a3ca7929dea23cd274c",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518a3f0a3ca7929dea23cd274c",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7ef4DlsgrMEH11cDZd32M6",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "One Kiss (with Dua Lipa)",
+                "duration": "3:34",
+                "artist": {
+                    "spotifyId": "7CajNmpbOovFoOoasH2HaY",
+                    "name": "Calvin Harris"
+                },
+                "album": {
+                    "spotifyId": "7GEzhoTiqcPYkOprWQu581",
+                    "name": "One Kiss (with Dua Lipa)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273d09f96d82310d4d77c14c108",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02d09f96d82310d4d77c14c108",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851d09f96d82310d4d77c14c108",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0tgVpDi06FyKpA1z0VMD4v",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Perfect",
+                "duration": "4:23",
+                "artist": {
+                    "spotifyId": "6eUKZXaKkcviH0Ku9w2n3V",
+                    "name": "Ed Sheeran"
+                },
+                "album": {
+                    "spotifyId": "3T4tUhGYeRNVUGevb0wThu",
+                    "name": "÷ (Deluxe)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ba5db46f4b838ef6027e6f96",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ba5db46f4b838ef6027e6f96",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5HCyWlXZPP0y6Gqq8TgA20",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "STAY (with Justin Bieber)",
+                "duration": "2:21",
+                "artist": {
+                    "spotifyId": "2tIP7SsRs7vjIcLrU85W8J",
+                    "name": "The Kid LAROI"
+                },
+                "album": {
+                    "spotifyId": "4QLAtpLNUsHEYrcHXmMIZZ",
+                    "name": "STAY (with Justin Bieber)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27341e31d6ea1d493dd77933ee5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0241e31d6ea1d493dd77933ee5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485141e31d6ea1d493dd77933ee5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5LrN7yUQAzvthd4QujgPFr",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Here With Me",
+                "duration": "4:02",
+                "artist": {
+                    "spotifyId": "5y8tKLUfMvliMe8IKamR32",
+                    "name": "d4vd"
+                },
+                "album": {
+                    "spotifyId": "3rrrTOHiXGzuW4FP7t0O1A",
+                    "name": "Petals to Thorns",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27364fa1bda999f4fbd2b7c4bb7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0264fa1bda999f4fbd2b7c4bb7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485164fa1bda999f4fbd2b7c4bb7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4xqrdfXkTW4T0RauPLv3WA",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Heather",
+                "duration": "3:18",
+                "artist": {
+                    "spotifyId": "4Uc8Dsxct0oMqx0P6i60ea",
+                    "name": "Conan Gray"
+                },
+                "album": {
+                    "spotifyId": "2CMlkzFI2oDAy5MbyV7OV5",
+                    "name": "Kid Krow",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27388e3cda6d29b2552d4d6bc43",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0288e3cda6d29b2552d4d6bc43",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485188e3cda6d29b2552d4d6bc43",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5CZ40GBx1sQ9agT82CLQCT",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "traitor",
+                "duration": "3:49",
+                "artist": {
+                    "spotifyId": "1McMsnEElThX1knmY4oliG",
+                    "name": "Olivia Rodrigo"
+                },
+                "album": {
+                    "spotifyId": "6s84u2TUpR3wdUv4NgKA2j",
+                    "name": "SOUR",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a91c10fe9472d9bd89802e5a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a91c10fe9472d9bd89802e5a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0V3wPSX9ygBnCm8psDIegu",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Anti-Hero",
+                "duration": "3:20",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "151w1FgRZfnKZA9FEcg9Z3",
+                    "name": "Midnights",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02bb54dde68cd23e2a268ae0f5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4JNdwEfqwFRiAeEISC8RU8",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Die For You (with Ariana Grande) - Remix",
+                "duration": "3:52",
+                "artist": {
+                    "spotifyId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                },
+                "album": {
+                    "spotifyId": "0YF085Qdh4HgdhZ8zjWkpo",
+                    "name": "Die For You",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738b5a9e7c56f01bec356de9d5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028b5a9e7c56f01bec356de9d5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518b5a9e7c56f01bec356de9d5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1vYXt7VSjH9JIM5oRRo7vA",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Dance The Night - From Barbie The Album",
+                "duration": "2:56",
+                "artist": {
+                    "spotifyId": "6M2wZ9GZgrQXHCFfjv46we",
+                    "name": "Dua Lipa"
+                },
+                "album": {
+                    "spotifyId": "5cH7FqB7JD5q1tJXJ7FHYu",
+                    "name": "Dance The Night (From Barbie The Album)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737dd3ba455ee3390cb55b0192",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e027dd3ba455ee3390cb55b0192",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048517dd3ba455ee3390cb55b0192",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3Wrjm47oTz2sjIgck11l5e",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Beggin'",
+                "duration": "3:31",
+                "artist": {
+                    "spotifyId": "0lAWpj5szCSwM4rUMHYmrr",
+                    "name": "Måneskin"
+                },
+                "album": {
+                    "spotifyId": "2qJw6w5XwQO0PQlSWPu7Tw",
+                    "name": "Chosen",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fa0ab3a28b5c52d8a5f97045",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fa0ab3a28b5c52d8a5f97045",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fa0ab3a28b5c52d8a5f97045",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6HU7h9RYOaPRFeh0R3UeAr",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "deja vu",
+                "duration": "3:35",
+                "artist": {
+                    "spotifyId": "1McMsnEElThX1knmY4oliG",
+                    "name": "Olivia Rodrigo"
+                },
+                "album": {
+                    "spotifyId": "6s84u2TUpR3wdUv4NgKA2j",
+                    "name": "SOUR",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a91c10fe9472d9bd89802e5a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a91c10fe9472d9bd89802e5a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4R2kfaDFhslZEMJqAFNpdd",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "cardigan",
+                "duration": "3:59",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "2fenSS68JI1h4Fo296JfGr",
+                    "name": "folklore",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27395f754318336a07e85ec59bc",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0295f754318336a07e85ec59bc",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485195f754318336a07e85ec59bc",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2IGMVunIBsBLtEQyoI1Mu7",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Paint The Town Red",
+                "duration": "3:51",
+                "artist": {
+                    "spotifyId": "5cj0lLjcoR7YOSnhnX0Po5",
+                    "name": "Doja Cat"
+                },
+                "album": {
+                    "spotifyId": "54dZypaXHAIDzBe9ujAZ63",
+                    "name": "Paint The Town Red",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737acee948ecac8380c1b6ce30",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e027acee948ecac8380c1b6ce30",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048517acee948ecac8380c1b6ce30",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3jjujdWJ72nww5eGnfs2E7",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Adore You",
+                "duration": "3:27",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
+                "album": {
+                    "spotifyId": "7xV2TzoaVc0ycW7fwBwAml",
+                    "name": "Fine Line",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "76OGwb5RA9h4FxQPT33ekc",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "SNAP",
+                "duration": "2:59",
+                "artist": {
+                    "spotifyId": "46xBNx0j6cwY6sD9LgMTm1",
+                    "name": "Rosa Linn"
+                },
+                "album": {
+                    "spotifyId": "4fb1QzgTJpTk9TBjFzjmlR",
+                    "name": "SNAP",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2731391b1fdb63da53e5b112224",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e021391b1fdb63da53e5b112224",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048511391b1fdb63da53e5b112224",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2qxmye6gAegTMjLKEBoR3d",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Let Me Down Slowly",
+                "duration": "2:49",
+                "artist": {
+                    "spotifyId": "5IH6FPUwQTxPSXurCrcIov",
+                    "name": "Alec Benjamin"
+                },
+                "album": {
+                    "spotifyId": "6jKZplJpy21R5lHaYHHjmZ",
+                    "name": "Narrated For You",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02459d675aa0b6f3b211357370",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851459d675aa0b6f3b211357370",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2VxeLyX666F8uXCJ0dZF8B",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Shallow",
+                "duration": "3:35",
+                "artist": {
+                    "spotifyId": "1HY2Jd0NmPuamShAr6KMms",
+                    "name": "Lady Gaga"
+                },
+                "album": {
+                    "spotifyId": "4sLtOBOzn4s3GDUv3c5oJD",
+                    "name": "A Star Is Born Soundtrack",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e2d156fdc691f57900134342",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e2d156fdc691f57900134342",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e2d156fdc691f57900134342",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6Uj1ctrBOjOas8xZXGqKk4",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Woman",
+                "duration": "2:52",
+                "artist": {
+                    "spotifyId": "5cj0lLjcoR7YOSnhnX0Po5",
+                    "name": "Doja Cat"
+                },
+                "album": {
+                    "spotifyId": "1nAQbHeOWTfQzbOoFrvndW",
+                    "name": "Planet Her",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273be841ba4bc24340152e3a79a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02be841ba4bc24340152e3a79a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851be841ba4bc24340152e3a79a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2gMXnyrvIjhVBUZwvLZDMP",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Before You Go",
+                "duration": "3:35",
+                "artist": {
+                    "spotifyId": "4GNC7GD6oZMSxPGyXy4MNB",
+                    "name": "Lewis Capaldi"
+                },
+                "album": {
+                    "spotifyId": "2wiPF3m0ylst0JSk1IvZL8",
+                    "name": "Divinely Uninspired To A Hellish Extent (Extended Edition)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737b9639babbe96e25071ec1d4",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e027b9639babbe96e25071ec1d4",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048517b9639babbe96e25071ec1d4",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6tDDoYIxWvMLTdKpjFkc1B",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "telepatía",
+                "duration": "2:40",
+                "artist": {
+                    "spotifyId": "1U1el3k54VvEUzo3ybLPlM",
+                    "name": "Kali Uchis"
+                },
+                "album": {
+                    "spotifyId": "00wSTrFxoSzA7eeS1UxHgd",
+                    "name": "Sin Miedo (del Amor y Otros Demonios) ∞",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273044a5466dac00f7b3c570b99",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02044a5466dac00f7b3c570b99",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851044a5466dac00f7b3c570b99",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5nujrmhLynf4yMoMtj8AQF",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Levitating (feat. DaBaby)",
+                "duration": "3:23",
+                "artist": {
+                    "spotifyId": "6M2wZ9GZgrQXHCFfjv46we",
+                    "name": "Dua Lipa"
+                },
+                "album": {
+                    "spotifyId": "5lKlFlReHOLShQKyRv6AL9",
+                    "name": "Future Nostalgia",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732172b607853fa89cefa2beb4",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022172b607853fa89cefa2beb4",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512172b607853fa89cefa2beb4",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0WtM2NBVQNNJLh6scP13H8",
+                "addedAt": "2024-03-05T22:15:14Z",
+                "name": "Calm Down (with Selena Gomez)",
+                "duration": "3:59",
+                "artist": {
+                    "spotifyId": "46pWGuE3dSwY3bMMXGBvVS",
+                    "name": "Rema"
+                },
+                "album": {
+                    "spotifyId": "2b2GHWESCWEuHiCZ2Skedp",
+                    "name": "Calm Down (with Selena Gomez)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a3a7f38ea2033aa501afd4cf",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a3a7f38ea2033aa501afd4cf",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a3a7f38ea2033aa501afd4cf",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3ZCTVFBt2Brf31RLEnCkWJ",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "everything i wanted",
+                "duration": "4:05",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "4i3rAwPw7Ln2YrKDusaWyT",
+                    "name": "everything i wanted",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273f2248cf6dad1d6c062587249",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02f2248cf6dad1d6c062587249",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851f2248cf6dad1d6c062587249",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2tnVG71enUj33Ic2nFN6kZ",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Ride It",
+                "duration": "2:37",
+                "artist": {
+                    "spotifyId": "4ofCBoyEiGSePFAG500xev",
+                    "name": "Regard"
+                },
+                "album": {
+                    "spotifyId": "4zOhjJfe0dwqsNdDYk622E",
+                    "name": "Ride It",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2735c27813ae019011fcb370c78",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e025c27813ae019011fcb370c78",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048515c27813ae019011fcb370c78",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1rqqCSm0Qe4I9rUvWncaom",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "High Hopes",
+                "duration": "3:10",
+                "artist": {
+                    "spotifyId": "20JZFwl6HVl6yg8a4H3ZqK",
+                    "name": "Panic! At The Disco"
+                },
+                "album": {
+                    "spotifyId": "6ApYSpXF8GxZAgBTHDzYge",
+                    "name": "Pray for the Wicked",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273c5148520a59be191eea16989",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02c5148520a59be191eea16989",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851c5148520a59be191eea16989",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3RauEVgRgj1IuWdJ9fDs70",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "The Man",
+                "duration": "3:10",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "1NAmidJlEaVgA3MpcPFYGq",
+                    "name": "Lover",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5Z3GHaZ6ec9bsiI5BenrbY",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Young Dumb & Broke",
+                "duration": "3:22",
+                "artist": {
+                    "spotifyId": "6LuN9FCkKOj5PcnpouEgny",
+                    "name": "Khalid"
+                },
+                "album": {
+                    "spotifyId": "6kf46HbnYCZzP6rjvQHYzg",
+                    "name": "American Teen",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02988ede5e1276e758b5f9e577",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851988ede5e1276e758b5f9e577",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3KkXRkHbMCARz0aVfEt68P",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Sunflower - Spider-Man: Into the Spider-Verse",
+                "duration": "2:38",
+                "artist": {
+                    "spotifyId": "246dkjvS1zLTtiykXe5h60",
+                    "name": "Post Malone"
+                },
+                "album": {
+                    "spotifyId": "35s58BRTGAEWztPo9WqCIs",
+                    "name": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e2e352d89826aef6dbd5ff8f",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e2e352d89826aef6dbd5ff8f",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4jPy3l0RUwlUI9T5XHBW2m",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Mood (feat. iann dior)",
+                "duration": "2:20",
+                "artist": {
+                    "spotifyId": "6fWVd57NKTalqvmjRd2t8Z",
+                    "name": "24kGoldn"
+                },
+                "album": {
+                    "spotifyId": "270o30h7cAlEhBnbuSpFZq",
+                    "name": "El Dorado",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27384c53fa832dfa265192419c5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0284c53fa832dfa265192419c5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485184c53fa832dfa265192419c5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2L9N0zZnd37dwF0clgxMGI",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "ceilings",
+                "duration": "3:02",
+                "artist": {
+                    "spotifyId": "1GmsPCcpKgF9OhlNXjOsbS",
+                    "name": "Lizzy McAlpine"
+                },
+                "album": {
+                    "spotifyId": "68L5xVV9wydotfDXEik7eD",
+                    "name": "five seconds flat",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273d370fdc4dbc47778b9b667c3",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02d370fdc4dbc47778b9b667c3",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851d370fdc4dbc47778b9b667c3",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2Fxmhks0bxGSBdJ92vM42m",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "bad guy",
+                "duration": "3:14",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "0S0KGZnfBGSIssfF54WSJh",
+                    "name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0250a3147b4edd7701a876c6ce",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485150a3147b4edd7701a876c6ce",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2iUXsYOEPhVqEBwsqP70rE",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Youngblood",
+                "duration": "3:23",
+                "artist": {
+                    "spotifyId": "5Rl15oVamLq7FbSb0NNBNy",
+                    "name": "5 Seconds of Summer"
+                },
+                "album": {
+                    "spotifyId": "2D0Hi3Jj6RFnpWDcSa0Otu",
+                    "name": "Youngblood (Deluxe)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27341aa6776dc15fbd71a2b4557",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0241aa6776dc15fbd71a2b4557",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485141aa6776dc15fbd71a2b4557",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6h5PAsRni4IRlxWr6uDPTP",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "More Than You Know",
+                "duration": "3:23",
+                "artist": {
+                    "spotifyId": "2XnBwblw31dfGnspMIwgWz",
+                    "name": "Axwell /\\ Ingrosso"
+                },
+                "album": {
+                    "spotifyId": "6Ei5WWek37m1x9AjpSXTcJ",
+                    "name": "More Than You Know",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fba6de0b38b0168d480b1a27",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fba6de0b38b0168d480b1a27",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fba6de0b38b0168d480b1a27",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4qu63nuBpdn0qHUHuObEj1",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Leave Before You Love Me (with Jonas Brothers)",
+                "duration": "2:34",
+                "artist": {
+                    "spotifyId": "64KEffDW9EtZ1y2vBYgq8T",
+                    "name": "Marshmello"
+                },
+                "album": {
+                    "spotifyId": "66JuK41D3LpkbX3HCTGcQk",
+                    "name": "Leave Before You Love Me",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ae40468931087f78919b86ce",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ae40468931087f78919b86ce",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ae40468931087f78919b86ce",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1qEmFfgcLObUfQm0j1W2CK",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Late Night Talking",
+                "duration": "2:57",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
+                "album": {
+                    "spotifyId": "5r36AJ6VOJtp00oxSkBZ5h",
+                    "name": "Harry's House",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512e8ed79e177ff6011076f5f0",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7eJMfftS33KTjuF7lTsMCx",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "death bed (coffee for your head)",
+                "duration": "2:53",
+                "artist": {
+                    "spotifyId": "6bmlMHgSheBauioMgKv2tn",
+                    "name": "Powfu"
+                },
+                "album": {
+                    "spotifyId": "2p9gK2BcdrloHNJwarc9gc",
+                    "name": "death bed (coffee for your head)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273bf01fd0986a195d485922167",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02bf01fd0986a195d485922167",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851bf01fd0986a195d485922167",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5fwSHlTEWpluwOM0Sxnh5k",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Pepas",
+                "duration": "4:47",
+                "artist": {
+                    "spotifyId": "329e4yvIujISKGKz1BZZbO",
+                    "name": "Farruko"
+                },
+                "album": {
+                    "spotifyId": "2A5ksnhz7YWbRLvFMjX1j1",
+                    "name": "Pepas",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2734239a6aa89738d8f798168ad",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e024239a6aa89738d8f798168ad",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048514239a6aa89738d8f798168ad",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4iJyoBOLtHqaGxP12qzhQI",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Peaches (feat. Daniel Caesar & Giveon)",
+                "duration": "3:18",
+                "artist": {
+                    "spotifyId": "1uNFoZAHBGtllmzznpCI3s",
+                    "name": "Justin Bieber"
+                },
+                "album": {
+                    "spotifyId": "5dGWwsZ9iB2Xc3UKR0gif2",
+                    "name": "Justice",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e6f407c7f3a0ec98845e4431",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "21RzyxY3EFaxVy6K4RqaU9",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Body",
+                "duration": "2:43",
+                "artist": {
+                    "spotifyId": "6t1gpxYbY8OlLA7D2RiikQ",
+                    "name": "Loud Luxury"
+                },
+                "album": {
+                    "spotifyId": "3HwBA7xp3XTbFiNzU7gjwp",
+                    "name": "Body",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273af5e185b80d374b0c6beb10f",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02af5e185b80d374b0c6beb10f",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851af5e185b80d374b0c6beb10f",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1ZMiCix7XSAbfAJlEZWMCp",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Falling",
+                "duration": "4:00",
+                "artist": {
+                    "spotifyId": "6KImCVD70vtIoJWnq6nGn3",
+                    "name": "Harry Styles"
+                },
+                "album": {
+                    "spotifyId": "7xV2TzoaVc0ycW7fwBwAml",
+                    "name": "Fine Line",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27377fdcfda6535601aff081b6a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0277fdcfda6535601aff081b6a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485177fdcfda6535601aff081b6a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0QHEIqNKsMoOY5urbzN48u",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Made You Look",
+                "duration": "2:14",
+                "artist": {
+                    "spotifyId": "6JL8zeS1NmiOftqZTRgdTz",
+                    "name": "Meghan Trainor"
+                },
+                "album": {
+                    "spotifyId": "4LVa9bljQRvLYpWr8qyaXs",
+                    "name": "Takin' It Back",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2731a4f1ada93881da4ca8060ff",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e021a4f1ada93881da4ca8060ff",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048511a4f1ada93881da4ca8060ff",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1SOClUWhOi8vHZYMz3GluK",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Infinity",
+                "duration": "3:57",
+                "artist": {
+                    "spotifyId": "6QrQ7OrISRYIfS5mtacaw2",
+                    "name": "Jaymes Young"
+                },
+                "album": {
+                    "spotifyId": "6MuWCR3WPjwyKhqsTKLZ3z",
+                    "name": "Feel Something",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a9897f65d1ead1be10a51e3f",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a9897f65d1ead1be10a51e3f",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a9897f65d1ead1be10a51e3f",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3uUuGVFu1V7jTQL60S1r8z",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Where Are You Now",
+                "duration": "2:28",
+                "artist": {
+                    "spotifyId": "7f5Zgnp2spUuuzKplmRkt7",
+                    "name": "Lost Frequencies"
+                },
+                "album": {
+                    "spotifyId": "5YrOK7zze6egKg9a8WRcnD",
+                    "name": "Where Are You Now",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738d7a7f1855b04104ba59c18b",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028d7a7f1855b04104ba59c18b",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518d7a7f1855b04104ba59c18b",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5mHdCZtVyb4DcJw8799hZp",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Escapism.",
+                "duration": "4:32",
+                "artist": {
+                    "spotifyId": "5KKpBU5eC2tJDzf0wmlRp2",
+                    "name": "RAYE"
+                },
+                "album": {
+                    "spotifyId": "3U8n8LzBx2o9gYXvvNq4uH",
+                    "name": "My 21st Century Blues",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "53tfEupEzQRtVFOeZvk7xq",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "DESPECHÁ",
+                "duration": "2:36",
+                "artist": {
+                    "spotifyId": "7ltDVBr6mKbRvohxheJ9h1",
+                    "name": "ROSALÍA"
+                },
+                "album": {
+                    "spotifyId": "3zbiiu3JTibw0esC7eoMXr",
+                    "name": "MOTOMAMI +",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273efc0ef9dd996312ebaf0bf52",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02efc0ef9dd996312ebaf0bf52",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851efc0ef9dd996312ebaf0bf52",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2RSHsoi04658QL5xgQVov3",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Bad Liar",
+                "duration": "4:20",
+                "artist": {
+                    "spotifyId": "53XhwfbYqKCa1cC15pYq2q",
+                    "name": "Imagine Dragons"
+                },
+                "album": {
+                    "spotifyId": "3JfSxDfmwS5OeHPwLSkrfr",
+                    "name": "Origins (Deluxe)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273da6f73a25f4c79d0e6b4a8bd",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02da6f73a25f4c79d0e6b4a8bd",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851da6f73a25f4c79d0e6b4a8bd",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5w9c2J52mkdntKOmRLeM2m",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Con Calma",
+                "duration": "3:13",
+                "artist": {
+                    "spotifyId": "4VMYDCV2IEDYJArk749S6m",
+                    "name": "Daddy Yankee"
+                },
+                "album": {
+                    "spotifyId": "1otwHKoQ5KPaiekpYk4tWh",
+                    "name": "Con Calma",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273896ffcd42561c44fea2bae7b",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02896ffcd42561c44fea2bae7b",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851896ffcd42561c44fea2bae7b",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4nrPB8O7Y7wsOCJdgXkthe",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Shakira: Bzrp Music Sessions, Vol. 53",
+                "duration": "3:34",
+                "artist": {
+                    "spotifyId": "716NhGYqD1jl2wI1Qkgq36",
+                    "name": "Bizarrap"
+                },
+                "album": {
+                    "spotifyId": "1gi2iwr1l8IUyHYHxi01pg",
+                    "name": "Shakira: Bzrp Music Sessions, Vol. 53",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732b6d78c5a3f6247aa997b812",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022b6d78c5a3f6247aa997b812",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512b6d78c5a3f6247aa997b812",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0O6u0VJ46W86TxN9wgyqDj",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "I Like You (A Happier Song) (with Doja Cat)",
+                "duration": "3:12",
+                "artist": {
+                    "spotifyId": "246dkjvS1zLTtiykXe5h60",
+                    "name": "Post Malone"
+                },
+                "album": {
+                    "spotifyId": "3HHNR44YbP7XogMVwzbodx",
+                    "name": "Twelve Carat Toothache",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27334362676667a4322838ccc97",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0234362676667a4322838ccc97",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485134362676667a4322838ccc97",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6xGruZOHLs39ZbVccQTuPZ",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Glimpse of Us",
+                "duration": "3:53",
+                "artist": {
+                    "spotifyId": "3MZsBdqDrRTJihTHQrO6Dq",
+                    "name": "Joji"
+                },
+                "album": {
+                    "spotifyId": "6ZZvx0aefZV3LKa053fn71",
+                    "name": "Glimpse of Us",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27308596cc28b9f5b00bfe08ae7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0208596cc28b9f5b00bfe08ae7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485108596cc28b9f5b00bfe08ae7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3nqQXoyQOWXiESFLlDF1hG",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Unholy (feat. Kim Petras)",
+                "duration": "2:36",
+                "artist": {
+                    "spotifyId": "2wY79sveU1sp5g7SokKOiI",
+                    "name": "Sam Smith"
+                },
+                "album": {
+                    "spotifyId": "0gX9tkL5njRax8ymWcXARi",
+                    "name": "Unholy (feat. Kim Petras)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a935e4689f15953311772cc4",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a935e4689f15953311772cc4",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a935e4689f15953311772cc4",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2BOqDYLOJBiMOXShCV1neZ",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "Dancing On My Own",
+                "duration": "4:20",
+                "artist": {
+                    "spotifyId": "6ydoSd3N2mwgwBHtF6K7eX",
+                    "name": "Calum Scott"
+                },
+                "album": {
+                    "spotifyId": "6Vip5A5NmEazvKuxj6GLYf",
+                    "name": "Only Human (Deluxe)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273f2d671c22b70e01b78a618a8",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02f2d671c22b70e01b78a618a8",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851f2d671c22b70e01b78a618a8",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "26b3oVLrRUaaybJulow9kz",
+                "addedAt": "2023-11-07T15:29:23Z",
+                "name": "People",
+                "duration": "3:04",
+                "artist": {
+                    "spotifyId": "7kjSuFGKhLm8b5qXoMhRkJ",
+                    "name": "Libianca"
+                },
+                "album": {
+                    "spotifyId": "5Hmh6N8oisrcuZKa8EY5dn",
+                    "name": "People",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fc342f95f117d48dbdde9735",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fc342f95f117d48dbdde9735",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fc342f95f117d48dbdde9735",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            }
+        ],
+        "_id": "U6B6Td"
+    }
+    ,
+    {
+        "type": "playlist",
+        "spotifyId": "37i9dQZF1DXcBWIGoYBM5M",
+        "name": "Today’s Top Hits",
+        "listeners": null,
+        "description": "Benson Boone is on top of the Hottest 50!",
+        "likes": 34782641,
+        "owner": null,
+        "total": 50,
+        "releaseDate": null,
+        "imgs": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67706f000000024925acc4563e5fc176737be4",
+                "width": null
+            }
+        ],
+        "tracks": [
+            {
+                "spotifyId": "51eSHglvG1RJXtL3qI5trr",
+                "addedAt": "2024-04-05T04:23:07Z",
+                "name": "Slow It Down",
+                "duration": "2:41",
+                "artist": {
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
+                    "name": "Benson Boone"
+                },
+                "album": {
+                    "spotifyId": "168CdR21lfn0TTyw1Pkdcm",
+                    "name": "Fireworks & Rollerblades",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02cc04ff3e70e146ba9abacf40",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851cc04ff3e70e146ba9abacf40",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6dOtVTDdiauQNBQEDOtlAB",
+                "addedAt": "2024-05-31T04:00:00Z",
+                "name": "BIRDS OF A FEATHER",
+                "duration": "3:30",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "name": "HIT ME HARD AND SOFT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5N3hjp1WNayUPZrA8kJmJP",
+                "addedAt": "2024-06-07T04:00:19Z",
+                "name": "Please Please Please",
+                "duration": "3:06",
+                "artist": {
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
+                    "name": "Sabrina Carpenter"
+                },
+                "album": {
+                    "spotifyId": "5bBaoign62r1i7OV8w7mi9",
+                    "name": "Please Please Please",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273de84adf0e48248ea2d769c3e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02de84adf0e48248ea2d769c3e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851de84adf0e48248ea2d769c3e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2FQrifJ1N335Ljm3TjTVVf",
+                "addedAt": "2024-04-26T04:00:00Z",
+                "name": "A Bar Song (Tipsy)",
+                "duration": "2:51",
+                "artist": {
+                    "spotifyId": "3y2cIKLjiOlp1Np37WiUdH",
+                    "name": "Shaboozey"
+                },
+                "album": {
+                    "spotifyId": "6egBeCLeGITzGSo5VyRjwZ",
+                    "name": "A Bar Song (Tipsy)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27380d86d636244b72a3a1eede2",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0280d86d636244b72a3a1eede2",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485180d86d636244b72a3a1eede2",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0WbMK4wrZ1wFSty9F7FCgu",
+                "addedAt": "2024-04-19T04:01:02Z",
+                "name": "Good Luck, Babe!",
+                "duration": "3:38",
+                "artist": {
+                    "spotifyId": "7GlBOeep6PqTfFi59PTUUN",
+                    "name": "Chappell Roan"
+                },
+                "album": {
+                    "spotifyId": "1WAjjRMfZjEXtB0lQrAw6Q",
+                    "name": "Good Luck, Babe!",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27391b4bc7c88d91a42e0f3a8b7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0291b4bc7c88d91a42e0f3a8b7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485191b4bc7c88d91a42e0f3a8b7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7fzHQizxTqy8wTXwlrgPQQ",
+                "addedAt": "2024-05-03T04:00:00Z",
+                "name": "MILLION DOLLAR BABY",
+                "duration": "2:35",
+                "artist": {
+                    "spotifyId": "1WaFQSHVGZQJTbf0BdxdNo",
+                    "name": "Tommy Richman"
+                },
+                "album": {
+                    "spotifyId": "52TwRwdTUMtkpglbOE5IRz",
+                    "name": "MILLION DOLLAR BABY",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273210733c8f23a7172e6ef5705",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02210733c8f23a7172e6ef5705",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851210733c8f23a7172e6ef5705",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6AI3ezQ4o3HUoP6Dhudph3",
+                "addedAt": "2024-05-07T00:52:08Z",
+                "name": "Not Like Us",
+                "duration": "4:34",
+                "artist": {
+                    "spotifyId": "2YZyLoL8N0Wb9xBt1NhZWg",
+                    "name": "Kendrick Lamar"
+                },
+                "album": {
+                    "spotifyId": "5JjnoGJyOxfSZUZtk2rRwZ",
+                    "name": "Not Like Us",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e021ea0c62b2339cbf493a999ad",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048511ea0c62b2339cbf493a999ad",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4IadxL6BUymXlh8RCJJu7T",
+                "addedAt": "2024-03-25T12:43:44Z",
+                "name": "Too Sweet",
+                "duration": "4:11",
+                "artist": {
+                    "spotifyId": "2FXC3k01G6Gw61bmprjgqS",
+                    "name": "Hozier"
+                },
+                "album": {
+                    "spotifyId": "1KZC0cX0qq6hodR9YVgh9F",
+                    "name": "Unheard",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a5aab55aa65e5f6bd19564a2",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a5aab55aa65e5f6bd19564a2",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a5aab55aa65e5f6bd19564a2",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6WatFBLVB0x077xWeoVc2k",
+                "addedAt": "2024-06-28T04:00:00Z",
+                "name": "Si Antes Te Hubiera Conocido",
+                "duration": "3:15",
+                "artist": {
+                    "spotifyId": "790FomKkXshlbRYZFtlgla",
+                    "name": "KAROL G"
+                },
+                "album": {
+                    "spotifyId": "5ylbxH7EqpsmHZCRuiYewS",
+                    "name": "Si Antes Te Hubiera Conocido",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273491678beaffcefac517a699e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02491678beaffcefac517a699e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851491678beaffcefac517a699e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7221xIgOnuakPdLqT0F3nP",
+                "addedAt": "2024-05-10T04:00:00Z",
+                "name": "I Had Some Help (Feat. Morgan Wallen)",
+                "duration": "2:58",
+                "artist": {
+                    "spotifyId": "246dkjvS1zLTtiykXe5h60",
+                    "name": "Post Malone"
+                },
+                "album": {
+                    "spotifyId": "1woYXxyyxTQJ0E0AhZE6mj",
+                    "name": "I Had Some Help",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27397306976e3eb8aad53b754eb",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0297306976e3eb8aad53b754eb",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485197306976e3eb8aad53b754eb",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2qSkIjg1o9h3YT9RAgYN75",
+                "addedAt": "2024-04-12T04:00:00Z",
+                "name": "Espresso",
+                "duration": "2:55",
+                "artist": {
+                    "spotifyId": "74KM79TiuVKeVCqs8QtB0B",
+                    "name": "Sabrina Carpenter"
+                },
+                "album": {
+                    "spotifyId": "5quMTd5zeI9yW5UDua8wS4",
+                    "name": "Espresso",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02659cd4673230913b3918e0d5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851659cd4673230913b3918e0d5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6tNQ70jh4OwmPGpYy6R2o9",
+                "addedAt": "2024-01-26T05:00:00Z",
+                "name": "Beautiful Things",
+                "duration": "3:00",
+                "artist": {
+                    "spotifyId": "22wbnEMDvgVIAGdFeek6ET",
+                    "name": "Benson Boone"
+                },
+                "album": {
+                    "spotifyId": "29aSKB1qPEbN0Qf9OPSQpw",
+                    "name": "Beautiful Things",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273bef221ea02a821e7feeda9cf",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02bef221ea02a821e7feeda9cf",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851bef221ea02a821e7feeda9cf",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3Vr3zh0r7ALn8VLqCiRR10",
+                "addedAt": "2024-05-17T04:00:00Z",
+                "name": "Stargazing",
+                "duration": "2:52",
+                "artist": {
+                    "spotifyId": "3bO19AOone0ubCsfDXDtYt",
+                    "name": "Myles Smith"
+                },
+                "album": {
+                    "spotifyId": "3VNxRarx9HUI5w7DHv0TBj",
+                    "name": "Stargazing",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27381b12e1a0584e8ea7ba2ae4a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0281b12e1a0584e8ea7ba2ae4a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485181b12e1a0584e8ea7ba2ae4a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "629DixmZGHc7ILtEntuiWE",
+                "addedAt": "2024-05-17T04:00:00Z",
+                "name": "LUNCH",
+                "duration": "2:59",
+                "artist": {
+                    "spotifyId": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish"
+                },
+                "album": {
+                    "spotifyId": "7aJuG4TFXa2hmE4z1yxc3n",
+                    "name": "HIT ME HARD AND SOFT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0271d62ea7ea8a5be92d3c1f62",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2GxrNKugF82CnoRFbQfzPf",
+                "addedAt": "2024-03-22T04:00:00Z",
+                "name": "i like the way you kiss me",
+                "duration": "2:22",
+                "artist": {
+                    "spotifyId": "0PCCGZ0wGLizHt2KZ7hhA2",
+                    "name": "Artemas"
+                },
+                "album": {
+                    "spotifyId": "5HIWDdg3g9CTOtnevKDl1z",
+                    "name": "i like the way you kiss me",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e67611dbbf69a90d0b6cb738",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e67611dbbf69a90d0b6cb738",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e67611dbbf69a90d0b6cb738",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "22DH8NChecsgPxDjA4pqer",
+                "addedAt": "2024-07-05T04:00:00Z",
+                "name": "Tough",
+                "duration": "3:08",
+                "artist": {
+                    "spotifyId": "0VRj0yCOv2FXJNP47XQnx5",
+                    "name": "Quavo"
+                },
+                "album": {
+                    "spotifyId": "58XIBpQOAw7E2qCL1jxWCd",
+                    "name": "Tough",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e1a7ec3a606b52b7328d3e78",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e1a7ec3a606b52b7328d3e78",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851e1a7ec3a606b52b7328d3e78",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4q5YezDOIPcoLr8R81x9qy",
+                "addedAt": "2024-04-26T04:00:00Z",
+                "name": "I Can Do It With a Broken Heart",
+                "duration": "3:38",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "1Mo4aZ8pdj6L1jx8zSwJnt",
+                    "name": "THE TORTURED POETS DEPARTMENT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3qhlB30KknSejmIvZZLjOD",
+                "addedAt": "2024-03-01T05:00:00Z",
+                "name": "End of Beginning",
+                "duration": "2:39",
+                "artist": {
+                    "spotifyId": "5p9HO3XC5P3BLxJs5Mtrhm",
+                    "name": "Djo"
+                },
+                "album": {
+                    "spotifyId": "4JDXBZdRPId4devseaAOKH",
+                    "name": "DECIDE",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02fddfffec51b4580acae727c1",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851fddfffec51b4580acae727c1",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "46kspZSY3aKmwQe7O77fCC",
+                "addedAt": "2024-03-08T05:00:00Z",
+                "name": "we can't be friends (wait for your love)",
+                "duration": "3:48",
+                "artist": {
+                    "spotifyId": "66CXWjxzNUsdJxJ2JdwvnR",
+                    "name": "Ariana Grande"
+                },
+                "album": {
+                    "spotifyId": "71PfP4E9roOXAudea1aPGw",
+                    "name": "eternal sunshine",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273c75a14e746ffe2030e8cd5da",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02c75a14e746ffe2030e8cd5da",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851c75a14e746ffe2030e8cd5da",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "17phhZDn6oGtzMe56NuWvj",
+                "addedAt": "2023-11-24T05:00:00Z",
+                "name": "Lose Control",
+                "duration": "3:30",
+                "artist": {
+                    "spotifyId": "33qOK5uJ8AR2xuQQAhHump",
+                    "name": "Teddy Swims"
+                },
+                "album": {
+                    "spotifyId": "7nacKlk586eLRBSIsrk9DB",
+                    "name": "I've Tried Everything But Therapy (Part 1)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2731a0323cc23419360a34a3ace",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e021a0323cc23419360a34a3ace",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048511a0323cc23419360a34a3ace",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4NJqhmkGN042BrvHoMKUrJ",
+                "addedAt": "2024-03-15T04:00:00Z",
+                "name": "Austin",
+                "duration": "2:51",
+                "artist": {
+                    "spotifyId": "7Ez6lTtSMjMf2YSYpukP1I",
+                    "name": "Dasha"
+                },
+                "album": {
+                    "spotifyId": "4JtlZzYJEa7bejLF0ASnk0",
+                    "name": "Austin",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273a73f6a4f17c58becc885efe2",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02a73f6a4f17c58becc885efe2",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851a73f6a4f17c58becc885efe2",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2HYFX63wP3otVIvopRS99Z",
+                "addedAt": "2024-06-03T16:40:46Z",
+                "name": "Houdini",
+                "duration": "3:47",
+                "artist": {
+                    "spotifyId": "7dGJo4pcD2V6oG8kP0tJRR",
+                    "name": "Eminem"
+                },
+                "album": {
+                    "spotifyId": "6Xuu2z00jxRPZei4IJ9neK",
+                    "name": "Houdini",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273810603c94c9246379604cf1a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02810603c94c9246379604cf1a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851810603c94c9246379604cf1a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5uQ7de4EWjb3rkcFxyEOpu",
+                "addedAt": "2024-03-29T04:00:00Z",
+                "name": "Belong Together",
+                "duration": "2:28",
+                "artist": {
+                    "spotifyId": "11p2E654TTU8e0nZWBR4AL",
+                    "name": "Mark Ambor"
+                },
+                "album": {
+                    "spotifyId": "3PlCMwyq6nuQYtoYproV1o",
+                    "name": "Belong Together",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273ed71b8008aaa879622f8c3b5",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02ed71b8008aaa879622f8c3b5",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851ed71b8008aaa879622f8c3b5",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "57lsYy0OZLNb5OQ7fEa3Hs",
+                "addedAt": "2024-07-19T04:00:00Z",
+                "name": "Did It First (with Central Cee)",
+                "duration": "1:58",
+                "artist": {
+                    "spotifyId": "3LZZPxNDGDFVSIPqf4JuEf",
+                    "name": "Ice Spice"
+                },
+                "album": {
+                    "spotifyId": "1SiWjniEb94wSFZ5YjZDHr",
+                    "name": "Did It First (with Central Cee)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273dc9f83f20038d54b78c48aeb",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02dc9f83f20038d54b78c48aeb",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851dc9f83f20038d54b78c48aeb",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1BJJbSX6muJVF2AK7uH1x4",
+                "addedAt": "2024-07-05T04:00:00Z",
+                "name": "Move",
+                "duration": "2:57",
+                "artist": {
+                    "spotifyId": "2loEsOijJ6XiGzWYFXMIRk",
+                    "name": "Adam Port"
+                },
+                "album": {
+                    "spotifyId": "4M8ThNHbNjda2cPwL8XZHS",
+                    "name": "Move",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27317a013a00d0a33f3dd49974d",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0217a013a00d0a33f3dd49974d",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485117a013a00d0a33f3dd49974d",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3rUGC1vUpkDG9CZFHMur1t",
+                "addedAt": "2023-11-24T05:00:00Z",
+                "name": "greedy",
+                "duration": "2:11",
+                "artist": {
+                    "spotifyId": "45dkTj5sMRSjrmBSBeiHym",
+                    "name": "Tate McRae"
+                },
+                "album": {
+                    "spotifyId": "3UOV8XvCwMKaATRNXrYCjN",
+                    "name": "greedy",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27322fd802bc61db666c7c81aa8",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0222fd802bc61db666c7c81aa8",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485122fd802bc61db666c7c81aa8",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4w2GLmK2wnioVnb5CPQeex",
+                "addedAt": "2024-06-14T04:00:00Z",
+                "name": "360",
+                "duration": "2:13",
+                "artist": {
+                    "spotifyId": "25uiPmTg16RbhZWAqwLBy5",
+                    "name": "Charli xcx"
+                },
+                "album": {
+                    "spotifyId": "2lIZef4lzdvZkiiCzvPKj7",
+                    "name": "BRAT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27388e3822cccfb8f2832c70c2e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0288e3822cccfb8f2832c70c2e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485188e3822cccfb8f2832c70c2e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "4xdBrk0nFZaP54vvZj0yx7",
+                "addedAt": "2024-06-21T04:00:00Z",
+                "name": "HOT TO GO!",
+                "duration": "3:04",
+                "artist": {
+                    "spotifyId": "7GlBOeep6PqTfFi59PTUUN",
+                    "name": "Chappell Roan"
+                },
+                "album": {
+                    "spotifyId": "0EiI8ylL0FmWWpgHVTsZjZ",
+                    "name": "The Rise and Fall of a Midwest Princess",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27396fa88fb1789be437d5cb4b6",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0296fa88fb1789be437d5cb4b6",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485196fa88fb1789be437d5cb4b6",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6NjWCIYu1W8xa3HIvcIhd4",
+                "addedAt": "2024-06-07T04:00:19Z",
+                "name": "Nasty",
+                "duration": "2:56",
+                "artist": {
+                    "spotifyId": "0NIIxcxNHmOoyBx03SfTCD",
+                    "name": "Tinashe"
+                },
+                "album": {
+                    "spotifyId": "1vMVDUsMWaD5eB4oahCboP",
+                    "name": "Nasty",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27399068b5c52ec35ec2db977a7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0299068b5c52ec35ec2db977a7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485199068b5c52ec35ec2db977a7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7z3PblAN3dH1JMewiRydkZ",
+                "addedAt": "2024-07-05T04:00:00Z",
+                "name": "GIRLS",
+                "duration": "2:32",
+                "artist": {
+                    "spotifyId": "2tIP7SsRs7vjIcLrU85W8J",
+                    "name": "The Kid LAROI"
+                },
+                "album": {
+                    "spotifyId": "17R63Sb8OrPikc2R4mlpdC",
+                    "name": "GIRLS",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273c8af7237bb25ad59488944c1",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02c8af7237bb25ad59488944c1",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851c8af7237bb25ad59488944c1",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "1bjeWoagtHmUKputLVyDxQ",
+                "addedAt": "2024-02-23T05:00:00Z",
+                "name": "Saturn",
+                "duration": "3:06",
+                "artist": {
+                    "spotifyId": "7tYKF4w9nC0nq9CsPZTHyP",
+                    "name": "SZA"
+                },
+                "album": {
+                    "spotifyId": "1fmBMCSSkSlvxyoy1vut2k",
+                    "name": "Saturn",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273d70916ee9e40c90380ba5f07",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02d70916ee9e40c90380ba5f07",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851d70916ee9e40c90380ba5f07",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "331l3xABO0HMr1Kkyh2LZq",
+                "addedAt": "2024-04-12T04:00:00Z",
+                "name": "I Don't Wanna Wait",
+                "duration": "2:29",
+                "artist": {
+                    "spotifyId": "1Cs0zKBU1kc0i8ypK3B9ai",
+                    "name": "David Guetta"
+                },
+                "album": {
+                    "spotifyId": "0wCLHkBRKcndhMQQpeo8Ji",
+                    "name": "I Don't Wanna Wait",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732f479a6c1825c1f29e0a3d49",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022f479a6c1825c1f29e0a3d49",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512f479a6c1825c1f29e0a3d49",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7Fzl7QaTu47WyP9R5S5mh5",
+                "addedAt": "2024-07-12T04:00:00Z",
+                "name": "Lies Lies Lies",
+                "duration": "3:18",
+                "artist": {
+                    "spotifyId": "4oUHIQIBe0LHzYfvXNW4QM",
+                    "name": "Morgan Wallen"
+                },
+                "album": {
+                    "spotifyId": "62ldGEkFUkQa34B8qsAFyc",
+                    "name": "Lies Lies Lies",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27337eedb840f9441959db3107e",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0237eedb840f9441959db3107e",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485137eedb840f9441959db3107e",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "2OzhQlSqBEmt7hmkYxfT6m",
+                "addedAt": "2024-04-19T04:01:02Z",
+                "name": "Fortnight (feat. Post Malone)",
+                "duration": "3:48",
+                "artist": {
+                    "spotifyId": "06HL4z0CvFAxyc27GXpf02",
+                    "name": "Taylor Swift"
+                },
+                "album": {
+                    "spotifyId": "1Mo4aZ8pdj6L1jx8zSwJnt",
+                    "name": "THE TORTURED POETS DEPARTMENT",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0mflMxspEfB0VbI1kyLiAv",
+                "addedAt": "2023-11-24T05:00:00Z",
+                "name": "Stick Season",
+                "duration": "3:02",
+                "artist": {
+                    "spotifyId": "2RQXRUsr4IW1f3mKyKsy4B",
+                    "name": "Noah Kahan"
+                },
+                "album": {
+                    "spotifyId": "50ZenUP4O2Q5eCy2NRNvuz",
+                    "name": "Stick Season",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0h3Xy4V4apMraB5NuM8U7Z",
+                "addedAt": "2024-06-14T04:00:00Z",
+                "name": "Stumblin' In",
+                "duration": "3:33",
+                "artist": {
+                    "spotifyId": "11kt6ggsdxvI8MhyeSMKom",
+                    "name": "CYRIL"
+                },
+                "album": {
+                    "spotifyId": "2HxzXLKO0AvkScWYHSspQc",
+                    "name": "Stumblin' In",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2739a903819d8a5d3c80c47734c",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e029a903819d8a5d3c80c47734c",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048519a903819d8a5d3c80c47734c",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7tI8dRuH2Yc6RuoTjxo4dU",
+                "addedAt": "2024-07-19T04:00:00Z",
+                "name": "Who",
+                "duration": "2:50",
+                "artist": {
+                    "spotifyId": "1oSPZhvZMIrWW5I41kPkkY",
+                    "name": "Jimin"
+                },
+                "album": {
+                    "spotifyId": "15XcLhiVMlSOipUddTNDnr",
+                    "name": "MUSE",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273f02c451189a709b9a952aaec",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7CyPwkp0oE8Ro9Dd5CUDjW",
+                "addedAt": "2023-11-24T05:00:00Z",
+                "name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+                "duration": "4:04",
+                "artist": {
+                    "spotifyId": "1Xyo4u8uXC1ZmMpatF05PJ",
+                    "name": "The Weeknd"
+                },
+                "album": {
+                    "spotifyId": "7tzVd1fwkxsorytCBjEJkU",
+                    "name": "The Idol Episode 4 (Music from the HBO Original Series)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851b0dd6a5cd1dec96c4119c262",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "0Lmbke3KNVFXtoH2mMSHCw",
+                "addedAt": "2024-06-14T04:00:00Z",
+                "name": "the boy is mine",
+                "duration": "2:53",
+                "artist": {
+                    "spotifyId": "66CXWjxzNUsdJxJ2JdwvnR",
+                    "name": "Ariana Grande"
+                },
+                "album": {
+                    "spotifyId": "5EYKrEDnKhhcNxGedaRQeK",
+                    "name": "eternal sunshine",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738b58d20f1b77295730db15b4",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e028b58d20f1b77295730db15b4",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048518b58d20f1b77295730db15b4",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5b3XJ1pjrHO5JtY2PcTjnI",
+                "addedAt": "2024-07-19T04:00:00Z",
+                "name": "Mamushi (feat. Yuki Chiba)",
+                "duration": "2:36",
+                "artist": {
+                    "spotifyId": "181bsRPaVXVlUKXrxwZfHK",
+                    "name": "Megan Thee Stallion"
+                },
+                "album": {
+                    "spotifyId": "0FzWvaeMBfKBCqxHTLVlB8",
+                    "name": "MEGAN",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2732538afd3580d0424bbe28a01",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e022538afd3580d0424bbe28a01",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048512538afd3580d0424bbe28a01",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5iJKGpnFfvbjZJeAtwXfCj",
+                "addedAt": "2024-07-12T04:00:00Z",
+                "name": "28",
+                "duration": "3:53",
+                "artist": {
+                    "spotifyId": "40ZNYROS4zLfyyBSs2PGe2",
+                    "name": "Zach Bryan"
+                },
+                "album": {
+                    "spotifyId": "1U0Z7QjSzlg3gMeUOuUldz",
+                    "name": "The Great American Bar Scene",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273647ad18a07e9e939e399e5a1",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02647ad18a07e9e939e399e5a1",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851647ad18a07e9e939e399e5a1",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "3Pbp7cUCx4d3OAkZSCoNvn",
+                "addedAt": "2024-02-02T05:00:00Z",
+                "name": "Scared To Start",
+                "duration": "2:39",
+                "artist": {
+                    "spotifyId": "4j96cMcT8GRi11qbvo1cLQ",
+                    "name": "Michael Marcagi"
+                },
+                "album": {
+                    "spotifyId": "3NpeIWhWsxU7d3XL5KEh39",
+                    "name": "Scared To Start",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27351ef67c49732e45cd2b26fbe",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0251ef67c49732e45cd2b26fbe",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485151ef67c49732e45cd2b26fbe",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5MPi9e7z46wopyad10R6qx",
+                "addedAt": "2024-06-14T04:00:00Z",
+                "name": "Close To You",
+                "duration": "3:45",
+                "artist": {
+                    "spotifyId": "4tuJ0bMpJh08umKkEXKUI5",
+                    "name": "Gracie Abrams"
+                },
+                "album": {
+                    "spotifyId": "2gxGzfvXQvjVbQiuVcfKDM",
+                    "name": "Close To You",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27305120ec42445d23764388857",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0205120ec42445d23764388857",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485105120ec42445d23764388857",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6vvPecFTmWxDfEJ6cYT1wa",
+                "addedAt": "2024-07-05T04:00:00Z",
+                "name": "Rockstar",
+                "duration": "2:18",
+                "artist": {
+                    "spotifyId": "5L1lO4eRHmJ7a0Q6csE5cT",
+                    "name": "LISA"
+                },
+                "album": {
+                    "spotifyId": "7wIIhHPyaxAHRvdNQQO2G9",
+                    "name": "Rockstar",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b27397265410628ab7f94a380c9d",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e0297265410628ab7f94a380c9d",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000485197265410628ab7f94a380c9d",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "6XjDF6nds4DE2BBbagZol6",
+                "addedAt": "2024-04-05T04:00:00Z",
+                "name": "Gata Only",
+                "duration": "3:42",
+                "artist": {
+                    "spotifyId": "7CvTknweLr9feJtRGrpDBy",
+                    "name": "FloyyMenor"
+                },
+                "album": {
+                    "spotifyId": "5tSQtQGkrCJx3hoQxmLgfM",
+                    "name": "Gata Only",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b273c4583f3ad76630879a75450a",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e02c4583f3ad76630879a75450a",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00004851c4583f3ad76630879a75450a",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "7iabz12vAuVQYyekFIWJxD",
+                "addedAt": "2024-05-31T04:00:00Z",
+                "name": "BAND4BAND (feat. Lil Baby)",
+                "duration": "2:20",
+                "artist": {
+                    "spotifyId": "5H4yInM5zmHqpKIoMNAx4r",
+                    "name": "Central Cee"
+                },
+                "album": {
+                    "spotifyId": "4AzPr5SUpNF553eC1d3aRy",
+                    "name": "BAND4BAND (feat. Lil Baby)",
+                    "imgs": [
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d0000b2737b588bf0555bde606f8b27c7",
+                            "width": 640,
+                            "height": 640
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d00001e027b588bf0555bde606f8b27c7",
+                            "width": 300,
+                            "height": 300
+                        },
+                        {
+                            "url": "https://i.scdn.co/image/ab67616d000048517b588bf0555bde606f8b27c7",
+                            "width": 64,
+                            "height": 64
+                        }
+                    ]
+                }
+            },
+            {
+                "spotifyId": "5496lks6V3fh1mZAB6IAap",
+                "addedAt": "2024-07-19T04:00:00Z",
+                "name": "Alibi (with Pabllo Vittar & Yseult)",
+                "duration": "2:41",
+                "artist": {
+                    "spotifyId": "5MraexJKZDrQYzS98kNwie",
+                    "name": "Sevdaliza"
+                },
+                "album": {
+                    "spotifyId": "2m0euKZUDcoyEXHIS5MFCq",
                     "name": "Alibi (with Pabllo Vittar & Yseult)",
-                    "id": "2m0euKZUDcoyEXHIS5MFCq",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b2734ee35e37bc21fe929a4d3605",
@@ -8742,22 +8469,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "5MraexJKZDrQYzS98kNwie",
-                    "name": "Sevdaliza"
-                },
-                "duration": "2:41",
-                "addedAt": "2024-07-19T04:00:00Z"
+                }
             },
             {
-                "id": "5aIVCx5tnk0ntmdiinnYvw",
-                "type": "track",
+                "spotifyId": "5aIVCx5tnk0ntmdiinnYvw",
+                "addedAt": "2023-12-01T05:00:00Z",
                 "name": "Water",
+                "duration": "3:20",
+                "artist": {
+                    "spotifyId": "3SozjO3Lat463tQICI9LcE",
+                    "name": "Tyla"
+                },
                 "album": {
+                    "spotifyId": "22sXXkKgjEuawIFL1e1tRw",
                     "name": "Water",
-                    "id": "22sXXkKgjEuawIFL1e1tRw",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273d20231861e86a6f74ef2393e",
@@ -8775,22 +8500,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "3SozjO3Lat463tQICI9LcE",
-                    "name": "Tyla"
-                },
-                "duration": "3:20",
-                "addedAt": "2023-12-01T05:00:00Z"
+                }
             },
             {
-                "id": "1YsU8rW2u8z4F0pwOBQ4Ea",
-                "type": "track",
+                "spotifyId": "1YsU8rW2u8z4F0pwOBQ4Ea",
+                "addedAt": "2024-06-28T04:00:00Z",
                 "name": "feelslikeimfallinginlove",
+                "duration": "3:57",
+                "artist": {
+                    "spotifyId": "4gzpq5DPGxSnKTe4SA8HAU",
+                    "name": "Coldplay"
+                },
                 "album": {
+                    "spotifyId": "6RjTapeTvms8jSeIRGc5Ve",
                     "name": "feelslikeimfallinginlove",
-                    "id": "6RjTapeTvms8jSeIRGc5Ve",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b27390ac383add08fbff7286958c",
@@ -8808,22 +8531,20 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "4gzpq5DPGxSnKTe4SA8HAU",
-                    "name": "Coldplay"
-                },
-                "duration": "3:57",
-                "addedAt": "2024-06-28T04:00:00Z"
+                }
             },
             {
-                "id": "5bi0gh89wRuH2OgjdAKFsb",
-                "type": "track",
+                "spotifyId": "5bi0gh89wRuH2OgjdAKFsb",
+                "addedAt": "2024-04-26T04:00:00Z",
                 "name": "Santa",
+                "duration": "3:13",
+                "artist": {
+                    "spotifyId": "1fctva4kpRbg2k3v7kwRuS",
+                    "name": "Rvssian"
+                },
                 "album": {
+                    "spotifyId": "0SqUi6bPIlAaWfvZibBfia",
                     "name": "Santa",
-                    "id": "0SqUi6bPIlAaWfvZibBfia",
-                    "totalTracks": 1,
                     "imgs": [
                         {
                             "url": "https://i.scdn.co/image/ab67616d0000b273f02899736a6ff8dd538ae70b",
@@ -8841,31 +8562,30 @@ export const stations = [
                             "height": 64
                         }
                     ]
-                },
-                "artist": {
-                    "id": "1fctva4kpRbg2k3v7kwRuS",
-                    "name": "Rvssian"
-                },
-                "duration": "3:13",
-                "addedAt": "2024-04-26T04:00:00Z"
+                }
             }
-        ]
+        ],
+        "_id": "9AphSd"
     }
     ,
     {
+        "_id": "2D2M9",
         "type": "playlist",
+        "spotifyId": null,
         "name": "Liked Songs",
+        "listeners": null,
         "description": "User liked songs",
-        "likes": "",
+        "likes": null,
+        "owner": true,
+        "total": null,
+        "releaseDate:": null,
         "imgs": [
             {
                 "url": "https://misc.scdn.co/liked-songs/liked-songs-64.png"
             }
         ],
         "tracks": [],
-        "total": "",
         "createdBy": {id:'userId',name:'user name'},
         "createdAt": 1721766961546,
-        "id": "2D2M9"
     }
 ]

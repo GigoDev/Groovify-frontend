@@ -8,7 +8,7 @@ export function StationList({stations}) {
     return (
             <ul className='cards-container clean-list'>{
                     stations.map(station => (
-                        <Link to={`${station.type}/${station.id}`} key={station.id}>
+                        <Link to={`${station.type}/${station._id}`} key={station._id}>
                             <StationPreview station={station}/> 
                         </Link>
                     ))

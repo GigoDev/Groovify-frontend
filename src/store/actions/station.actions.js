@@ -111,7 +111,7 @@ export function setTracks() {
 
 export function next() {
     const { currTrack, currPlayingTracks } = store.getState().stationModule
-    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
+    let Idx = currPlayingTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
 
     if (Idx === currPlayingTracks.length) Idx = 0 // End of playlist
     setTrack(currPlayingTracks[++Idx])
@@ -120,7 +120,7 @@ export function next() {
 export function prev() {
 
     const { currTrack, currPlayingTracks } = store.getState().stationModule
-    let Idx = currPlayingTracks.findIndex(track => currTrack.id === track.id) // Get curr index
+    let Idx = currPlayingTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
 
     if (Idx === 0) return // Start of playlist
     setTrack(currPlayingTracks[--Idx])

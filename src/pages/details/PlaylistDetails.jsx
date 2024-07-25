@@ -55,7 +55,7 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           <div className="mini-dashboard">
-            John Doe • {likes.toLocaleString()} likes • {total} songs
+            John Doe • {likes?.toLocaleString()} likes • {total} songs
             <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
           </div>
         </div>

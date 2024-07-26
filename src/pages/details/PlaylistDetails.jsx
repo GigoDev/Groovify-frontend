@@ -2,11 +2,11 @@
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import { clearStation, loadStation } from "../../store/actions/station.actions";
+import {clearStation, loadStation} from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
-import { formatDuration, formatDuration2, formatDurationSec, formatTime } from "../../services/util.service";
+import { formatDurationSec } from "../../services/util.service";
 //CMPS
 import { PlaylistList } from "../../cmps/PlaylistList";
 import { UpdateStationModal } from '../../cmps/UpdateStationModal';
@@ -21,7 +21,6 @@ export function PlaylistDetails() {
 
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
@@ -35,7 +34,6 @@ export function PlaylistDetails() {
     await clearStation()
 
   }
-
 
   function openEditModal() {
     setIsModalOpen(true)

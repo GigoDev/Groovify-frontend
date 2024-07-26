@@ -17,7 +17,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const [filtered,setFiltered] = useState(stations)
     
     useEffect(() => {
-        setFiltered(stations.filter(station => station.type === filterBy.type))
+        setFiltered(stations.filter(station => station.type === filterBy.type && station.owner === true))
         // console.log('filterBy',filterBy)
     }, [filterBy,stations]);
     

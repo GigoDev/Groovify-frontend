@@ -1,8 +1,8 @@
 import { storageService } from '../async-storage.service.js'
+import { spotifyService } from "../spotify.service.js";
 import { makeId, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
 import { stations as dataStations, stations } from '../../../data/stations.js'
-
 //local storage keys
 const STORAGE_KEY = 'station'
 
@@ -33,6 +33,7 @@ async function query(filterBy = { txt: '' }) {
 
     return stations
 }
+
 
 function getById(stationId) {
     return storageService.get(STORAGE_KEY, stationId)
@@ -83,24 +84,24 @@ function getDefaultTrack() {
         duration: "8:41",
         artist: { spotifyId: "5a2EaR3hamoenG9rDuVn8j", name: "Prince" },
         album: {
-            spotifyId: "2umoqwMrmjBBPeaqgYu6J9", name: "Purple Rain", imgs: 
-            [
-                {
-                    height: 640,
-                    url: "https://i.scdn.co/image/ab67616d0000b2738a2ce3f148f57584269c3782",
-                    width: 640
-                },
-                {
-                    height: 300,
-                    url: "https://i.scdn.co/image/ab67616d00001e028a2ce3f148f57584269c3782",
-                    width: 300
-                },
-                {
-                    height: 64,
-                    url: "https://i.scdn.co/image/ab67616d000048518a2ce3f148f57584269c3782",
-                    width: 64
-                }
-            ]
+            spotifyId: "2umoqwMrmjBBPeaqgYu6J9", name: "Purple Rain", imgs:
+                [
+                    {
+                        height: 640,
+                        url: "https://i.scdn.co/image/ab67616d0000b2738a2ce3f148f57584269c3782",
+                        width: 640
+                    },
+                    {
+                        height: 300,
+                        url: "https://i.scdn.co/image/ab67616d00001e028a2ce3f148f57584269c3782",
+                        width: 300
+                    },
+                    {
+                        height: 64,
+                        url: "https://i.scdn.co/image/ab67616d000048518a2ce3f148f57584269c3782",
+                        width: 64
+                    }
+                ]
         },
         youtubeId: "TvnYmWpD_T8"
     }

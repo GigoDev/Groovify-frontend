@@ -75,6 +75,10 @@ export function clearStation() {
     store.dispatch(getCmdSetStation())
 }
 
+export function setStation(station) {
+    store.dispatch(getCmdSetStation(station))
+}
+
 export function toggleLibraryAction() {
     return {
         type: MENU_TOGGLE

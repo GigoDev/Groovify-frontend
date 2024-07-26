@@ -12,21 +12,18 @@ export function ArtistDetails() {
     const station = useSelector(storeState => storeState.stationModule.station)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const [opacity, setOpacity] = useState(1);
+    const [follow, setIsFollow] = useState('')
     
     const elMainContainer = document.querySelector('.main-container')
-    const handleScroll = () => {
-        const scrollTop = elMainContainer.scrollTop;
-        const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
-        const scrollFraction = scrollTop / maxScroll;
-        setOpacity(1 - scrollFraction);
-      };
 
+    
     useEffect(() => {
-        loadStation(id)
-        elMainContainer.addEventListener('scroll', handleScroll);
-
+        loadStation(id).then(station => {setIsFollow(station.owner)}) //error from this line
+        elMainContainer?.addEventListener('scroll', handleScroll)
+        
+        
         return async () => {
-            elMainContainer.removeEventListener('scroll', handleScroll);
+            elMainContainer?.removeEventListener('scroll', handleScroll);
             await clear()
         }
     }, [id])
@@ -35,12 +32,28 @@ export function ArtistDetails() {
         await clearStation()
     }
 
-   
+    function handleScroll() {
+        const scrollTop = elMainContainer.scrollTop;
+        const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
+        const scrollFraction = scrollTop / maxScroll;
+        setOpacity(1 - scrollFraction);
+    }
+
+    async function handleFollow() {
+        if (follow) {
+            updateStation({ ...station, owner: null })
+            setIsFollow(null)
+        }
+        else {
+            updateStation({ ...station, owner: true })
+            setIsFollow(true)
+        }
+    }
 
     function onPlay(ev, track) {
         ev.stopPropagation()
         if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
-            
+
         setTrack(track)
         setTracks()
     }
@@ -53,7 +66,7 @@ export function ArtistDetails() {
         console.log(`${track.name} added to ${stationToEdit.name}`)
     }
 
-    async function onRemoveTrack(trackToRemove, stationId = '2D2M9'){
+    async function onRemoveTrack(trackToRemove, stationId = '2D2M9') {
         const stationToEdit = await stationService.getById(stationId)
         const newTracks = stationToEdit.tracks.filter(track => track.spotifyId !== trackToRemove.spotifyId)
         stationToEdit.tracks = newTracks
@@ -62,11 +75,12 @@ export function ArtistDetails() {
     }
 
     if (!station || station.type !== 'artist') return <h1>Loading...</h1>
-    const { imgs, listeners, name: title, type, tracks } = station
+    const { imgs, listeners, name: title, type, tracks, owner } = station
+    const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
     return (
         <section className="station-details-container">
 
-            <div className='hero' style={{opacity}}>
+            <div className='hero' style={{ opacity }}>
                 <img src={imgs[0].url} alt="hero img" />
             </div>
 
@@ -80,11 +94,11 @@ export function ArtistDetails() {
                     <button className='btn play'>
                         <svg role="img" fill="black" height="20" width="20" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.12L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
                     </button>
-                    <button className='btn pill follow'>Follow</button>
+                    <button className='btn pill follow' onClick={handleFollow} style={ownerStyle}>Follow</button>
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks} onAddTrack={onAddTrack} onPlay={onPlay} onRemoveTrack={onRemoveTrack}/>
+                <TrackList tracks={tracks} onAddTrack={onAddTrack} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
             </section>
         </section>
     )

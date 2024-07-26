@@ -15,23 +15,26 @@
     .lists-container {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: auto;
+        grid-auto-columns: 1fr;
         justify-items: left;
+        align-items: baseline;
+        
         gap: 15px;
 
         .list-item {
-            // background-color: red;
-            max-width: 220px;
+            
 
         }
 
     }
 
     .img-container {
-
+        cursor: pointer;
+    
         img {
             border-radius: 10px;
-
+            aspect-ratio: 1;
+            object-fit: cover;
         }
 
     }

@@ -60,7 +60,7 @@ async function getArtist(stationId) {//refactored
         const [resp, topTracks] = await Promise.all([axios.get(url, { headers }), _getArtistTopTracks(stationId)])
 
         station = _getEmptyStation()
-        station._id = makeId()
+        // station._id = makeId()
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
@@ -100,7 +100,7 @@ async function getPlaylist(stationId) {//refactored
         const items = resp.data.tracks.items
 
         station = _getEmptyStation()
-        station._id = makeId()
+        // station._id = makeId() // only for demoData
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
@@ -148,7 +148,7 @@ async function getAlbum(stationId, market = 'US') {//refactored
         const resp = await axios.get(url, { headers })
         // console.log(resp.data)
         station = _getEmptyStation()
-        station._id = makeId()
+        // station._id = makeId()
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
@@ -207,11 +207,12 @@ async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL'
 
         const tracks = resp.data.tracks.items.map(track => ({
             spotifyId: track.id,
-            name: track.name,
             type: track.type,
+            name: track.name,
             duration: formatTime(track.duration_ms / 1000),
             album: { spotifyId: track.album.id, name: track.album.name, imgs: track.album.images, artist: { spotifyId: track.album.artists[0].id, name: track.album.artists[0].name } },
-            artists: track.artists.map(artist => ({ spotifyId: artist.id, name: artist.name, }))
+            artists: track.artists.map(artist => ({ spotifyId: artist.id, name: artist.name, })),
+            addedAt: null,
 
         }))
         console.log(tracks)
@@ -224,7 +225,7 @@ async function getFeaturedPlaylists() {//get top 10 playlists in IL
 
     try {
         const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN`
+        const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN&limit=50`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
 

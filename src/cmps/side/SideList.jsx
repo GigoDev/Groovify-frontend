@@ -14,7 +14,7 @@ export function SideList({ filtered }) {
     }
     
     if (!filtered) return null
-    console.log('filtered', filtered)
+    // console.log('filtered', filtered)
     return (
         <ul className='side-list-container clean-list'>{
             filtered.map(station => (

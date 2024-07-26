@@ -41,7 +41,6 @@ async function getToken() {
 
 }
 
-
 async function getTracks(searchQuery) {
     try {
 
@@ -56,54 +55,7 @@ async function getTracks(searchQuery) {
 
         const res = await axios.get(url, { headers })
 
-        let tracks = res.data.tracks.items //  TODO:  format res to our station.tracks
-        tracks = tracks.map(track => _getTrackDetails(track))
-
-        queries[searchQuery] = tracks
-        saveToStorage(STORAGE_KEY, queries)
-        return tracks
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-function _getTrackDetails(track) {
-    const { name, id, album, artists, duration_ms } = track
-    return {
-        spotifyId: id,
-        addedAt: Date.now(),
-        name,
-        duration: formatTime(duration_ms / 1000),
-        artist: {
-            spotifyId: artists[0].id,
-            name: artists[0].name
-        },
-        album: {
-            spotifyId: album.id,
-            name: album.name,
-            imgs: album.images
-        }
-    }
-}
-
-getTracks('faith')
-
-async function getTracks(searchQuery) {
-    try {
-
-        // From storage:
-        const queries = loadFromStorage(STORAGE_KEY) || {}
-        if (queries[searchQuery]) return queries[searchQuery]
-
-        // From spotify
-        const token = loadFromStorage('access_token')
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=5`
-
-        const res = await axios.get(url, { headers })
-
-        let tracks = res.data.tracks.items //  TODO:  format res to our station.tracks
+        let tracks = res.data.tracks.items 
         tracks = tracks.map(track => _getTrackDetails(track))
 
         queries[searchQuery] = tracks

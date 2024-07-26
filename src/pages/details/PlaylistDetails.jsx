@@ -1,8 +1,8 @@
 //REACT&READUX
 import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import {clearStation, loadStation} from "../../store/actions/station.actions";
+import { clearStation, loadStation, removeStation, updateStation } from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
@@ -14,11 +14,19 @@ import { UpdateStationModal } from '../../cmps/UpdateStationModal';
 //ICONS
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import DurationIcon from '../../assets/icons/DurationIcon.svg'
+import BigBtnOptions from '../../assets/icons/BigBtnOptions.svg'
+import AddLibrary from '../../assets/icons/AddLibrary.svg'
+import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
+import PencilIcon from '../../assets/icons/PencilIcon.svg'
+import DeleteIcon from '../../assets/icons/DeleteIcon.svg'
+
 import { SearchTracks } from '../../cmps/SearchTracks';
+import { StationMenuModal } from '../../cmps/StationMenuModal';
+
 
 
 export function PlaylistDetails() {
-
+  const navigate = useNavigate()
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -35,9 +43,53 @@ export function PlaylistDetails() {
 
   }
 
+  async function handleDeleteStation() {
+    try {
+      await removeStation(id)
+      navigate('/')
+      console.log('id', id)
+    } catch (err) {
+      console.error('Failed to delete station', err)
+    }
+  }
+
+  async function handleDeleteItem(newTracks) {
+    try {
+      await updateStation(newTracks)
+    } catch (err) {
+      console.log('Failed to find station id')
+    }
+  }
+
+
   function openEditModal() {
     setIsModalOpen(true)
   }
+
+  const menuOptions = [
+    {
+      label: (
+        <>
+          <PencilIcon width="18" height="18" fill="#a7a7a7" role="img" aria-hidden="true" />
+          Edit details
+        </>
+      ),
+      onClick: () => {
+        openEditModal()
+      }
+    },
+    {
+      label: (
+        <>
+          <DeleteIcon width="18" height="18" fill="#a7a7a7" role="img" aria-hidden="true" />
+          Delete
+        </>
+      ),
+      onClick: () => {
+        handleDeleteStation()
+      }
+    }
+  ]
 
   if (!station || station.type !== 'playlist') return <h1>Loading...</h1>
   const { imgs, listeners, name, type, tracks, likes, total } = station
@@ -51,7 +103,9 @@ export function PlaylistDetails() {
   return (
     <section className="playlist-details content-layout">
       <section className="station-preview flex full">
-        <ImgUploader imgUrl={imgUrl} className="img-uploader-container" />
+        <div className="img-container">
+          {imgUrl ? <img src={imgUrl} /> : <MusicNoteIcon className="svg-img-uploader" />}
+        </div>
         <div className="station-summary">
           <p className="summary-title">{type}</p>
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
@@ -67,10 +121,18 @@ export function PlaylistDetails() {
           <button className="btn-play-green">
             <PlayIcon />
           </button>
+          <button className="add-library">
+            <AddLibrary />
+          </button>
           <div className="flex option-btns">
-            <button className="btn-more">
-              <svg role="img" height="34" width="34" aria-hidden="true" viewBox="0 0 24 24" className="Svg-sc-ytk21e-0 uPxdw"><path d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-            </button>
+            <StationMenuModal
+              trigger={
+                <button className="btn-more">
+                  <BigBtnOptions />
+                </button>
+              }
+              options={menuOptions}
+            />
           </div>
         </section>
 
@@ -81,11 +143,13 @@ export function PlaylistDetails() {
               <span>Title</span>
               <span className="album">Album</span>
               <span className="date">Date Added</span>
-              <DurationIcon className="duration" />
+              <div>
+                <DurationIcon className="duration" />
+              </div>
             </div>
           ) : (null)}
 
-          <PlaylistList items={tracks} />
+          <PlaylistList items={tracks} handleDeleteItem={handleDeleteItem} />
         </div>
       </section>
 

@@ -3,6 +3,8 @@ import { saveToStorage, loadFromStorage, formatTime, makeId } from './util.servi
 
 const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
 const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
+const STORAGE_KEY = 'tracks_search_DB'
+
 
 export const spotifyService = {
     getToken,
@@ -12,6 +14,7 @@ export const spotifyService = {
     getCategoryPlaylists,
     searchFor,
     getFeaturedPlaylists,
+    getTracks
 }
 
 window.spotifyService = spotifyService
@@ -36,6 +39,99 @@ async function getToken() {
         console.error('Error fetching token:', error)
     }
 
+}
+
+
+async function getTracks(searchQuery) {
+    try {
+
+        // From storage:
+        const queries = loadFromStorage(STORAGE_KEY) || {}
+        if (queries[searchQuery]) return queries[searchQuery]
+
+        // From spotify
+        const token = loadFromStorage('access_token')
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=5`
+
+        const res = await axios.get(url, { headers })
+
+        let tracks = res.data.tracks.items //  TODO:  format res to our station.tracks
+        tracks = tracks.map(track => _getTrackDetails(track))
+
+        queries[searchQuery] = tracks
+        saveToStorage(STORAGE_KEY, queries)
+        return tracks
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function _getTrackDetails(track) {
+    const { name, id, album, artists, duration_ms } = track
+    return {
+        spotifyId: id,
+        addedAt: Date.now(),
+        name,
+        duration: formatTime(duration_ms / 1000),
+        artist: {
+            spotifyId: artists[0].id,
+            name: artists[0].name
+        },
+        album: {
+            spotifyId: album.id,
+            name: album.name,
+            imgs: album.images
+        }
+    }
+}
+
+getTracks('faith')
+
+async function getTracks(searchQuery) {
+    try {
+
+        // From storage:
+        const queries = loadFromStorage(STORAGE_KEY) || {}
+        if (queries[searchQuery]) return queries[searchQuery]
+
+        // From spotify
+        const token = loadFromStorage('access_token')
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=5`
+
+        const res = await axios.get(url, { headers })
+
+        let tracks = res.data.tracks.items //  TODO:  format res to our station.tracks
+        tracks = tracks.map(track => _getTrackDetails(track))
+
+        queries[searchQuery] = tracks
+        saveToStorage(STORAGE_KEY, queries)
+        return tracks
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function _getTrackDetails(track) {
+    const { name, id, album, artists, duration_ms } = track
+    return {
+        spotifyId: id,
+        addedAt: Date.now(),
+        name,
+        duration: formatTime(duration_ms / 1000),
+        artist: {
+            spotifyId: artists[0].id,
+            name: artists[0].name
+        },
+        album: {
+            spotifyId: album.id,
+            name: album.name,
+            imgs: album.images
+        }
+    }
 }
 
 async function getArtist(stationId) {//refactored

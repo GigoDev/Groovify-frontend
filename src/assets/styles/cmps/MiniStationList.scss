@@ -1,7 +1,6 @@
-.cards-container {
+.mini-cards-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 1fr));
-    grid-template-rows: repeat(2, 50px);
     gap: 1rem;
 
 }

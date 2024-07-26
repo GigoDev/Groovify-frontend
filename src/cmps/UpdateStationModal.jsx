@@ -1,5 +1,5 @@
 import { useParams } from "react-router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { stationService } from "../services/station"
 
 export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
@@ -8,6 +8,22 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
   const [descInput, setDescInput] = useState('')
   const [stationImg, setStationImg] = useState('')
 
+  useEffect(() => {
+    loadStationData()
+  }, [isModalOpen, stationId])
+
+  async function loadStationData() {
+    if (isModalOpen && stationId) {
+      try {
+        const station = await stationService.getById(stationId)
+        setTextInput(station.name || '')
+        setDescInput(station.description || '')
+        setStationImg(station.imgs && station.imgs.length > 0 ? station.imgs[0].url : '')
+      } catch (error) {
+        console.error('Failed to fetch station data:', error)
+      }
+    }
+  }
   function closeModal() {
     setTextInput('')
     setDescInput('')

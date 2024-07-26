@@ -13,6 +13,7 @@
 
 
 // pages
+@import "pages/App";
 @import "pages/HomePage";
 @import "pages/StationIndex";
 @import "pages/UserDetails";
@@ -27,9 +28,10 @@
 @import "cmps/UserMsg";
 @import "cmps/UpdateStation";
 @import "cmps/ImgUploader";
-@import "cmps/UpdateStationModal";
 @import "cmps/FeaturedPlaylist";
 
+@import "cmps/UpdateStationModal";
+@import "cmps/StationMenuModal";
 
 @import "cmps/SearchCategoryList";
 @import "cmps/SearchCategoryPreview";
@@ -38,10 +40,9 @@
 @import "cmps/SearchTrackPreview";
 
 
-@import "cmps/StationList";
+@import "cmps/MiniStationList";
 @import "cmps/StationFilter";
-@import "cmps/StationList";
-@import "cmps/StationPreview";
+@import "cmps/MiniStationPreview";
 @import "cmps/TrackList";
 @import "cmps/PlaylistList";
 @import "cmps/AlbumList.scss";

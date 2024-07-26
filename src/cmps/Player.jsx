@@ -68,7 +68,6 @@ export function Player() {
 
         setVolume(newVolume)
     }
-    console.log('currTrack', currTrack)
     const { album, name } = currTrack
     return (
 

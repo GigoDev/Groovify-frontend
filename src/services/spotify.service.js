@@ -14,7 +14,8 @@ export const spotifyService = {
     getAlbum,
     getCategoryPlaylists,
     searchFor,
-    getFeaturedPlaylists
+    getFeaturedPlaylists,
+    getTracks
 }
 
 window.spotifyService = spotifyService
@@ -44,23 +45,47 @@ async function getToken() {
 getTracks('faith')
 
 async function getTracks(searchQuery) {
-
-    const queries = loadFromStorage(STORAGE_KEY) || {}
-    if (queries[searchQuery]) return queries[searchQuery]
-
-    const token = loadFromStorage('access_token')
-    const headers = { 'Authorization': `Bearer ${token}` }
-    const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=1`
     try {
-        const res = await axios.get(url, { headers })
-        console.log('res', res.data.tracks.items[0])
 
-        const tracks = [] //  TODO:  format res to our station.tracks
+        // From storage:
+        const queries = loadFromStorage(STORAGE_KEY) || {}
+        if (queries[searchQuery]) return queries[searchQuery]
+
+        // From spotify
+        const token = loadFromStorage('access_token')
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=5`
+
+        const res = await axios.get(url, { headers })
+
+        let tracks = res.data.tracks.items //  TODO:  format res to our station.tracks
+        tracks = tracks.map(track => _getTrackDetails(track))
+
         queries[searchQuery] = tracks
         saveToStorage(STORAGE_KEY, queries)
+        return tracks
 
     } catch (error) {
         console.log(error)
+    }
+}
+
+function _getTrackDetails(track) {
+    const { name, id, album, artists, duration_ms } = track
+    return {
+        spotifyId: id,
+        addedAt: Date.now(),
+        name,
+        duration: duration_ms,
+        artist: {
+            id: artists[0].id,
+            name: artists[0].name
+        },
+        album: {
+            id: album.id,
+            name: album.name,
+            imgs: album.images
+        }
     }
 }
 

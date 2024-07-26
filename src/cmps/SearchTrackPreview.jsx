@@ -6,14 +6,14 @@ export function SearchTrackPreview({ track }) {
         <li className="station-search-preview">
             <div className="song-img-container">
                 <div className="song-img">
-                    <img src={track.thumbnail} alt="" />
+                    <img src={track.album.imgs[2].url} alt="" />
                 </div>
                 <div className="btn-play-pause">
                     <PlayIcon />
                 </div>
             </div>
             <div className="song-title">
-                <span className="artist-name">{track.title}</span>
+                <span className="artist-name">{track.name}</span>
             </div>
             <button className="btn-add-song">Add</button>
         </li>

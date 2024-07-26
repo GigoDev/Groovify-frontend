@@ -53,7 +53,7 @@ export function SearchTracks() {
 
                     {search && (
                         <div className="track-previews">
-                            {tracks.length > 0 ? (
+                            {tracks?.length > 0 ? (
                                 tracks.map(track => (
                                     <SearchTrackPreview key={track.spotifyId} track={track} />
                                 ))

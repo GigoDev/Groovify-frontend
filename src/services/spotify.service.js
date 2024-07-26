@@ -76,13 +76,13 @@ function _getTrackDetails(track) {
         spotifyId: id,
         addedAt: Date.now(),
         name,
-        duration: duration_ms,
+        duration: formatTime(duration_ms / 1000),
         artist: {
-            id: artists[0].id,
+            spotifyId: artists[0].id,
             name: artists[0].name
         },
         album: {
-            id: album.id,
+            spotifyId: album.id,
             name: album.name,
             imgs: album.images
         }

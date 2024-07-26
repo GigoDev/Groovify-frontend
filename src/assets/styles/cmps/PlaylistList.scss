@@ -2,8 +2,8 @@
    display: grid;
    grid-column: 1 / -1;
    grid-template-columns: subgrid;
-   
-   
+
+
    li {
       padding-inline: 10px;
       padding-block: 10px;
@@ -17,6 +17,25 @@
 
       .play-icon {
          display: none;
+      }
+
+      .small-btn-options {
+         display: none;
+      }
+
+      .like-icon {
+         display: none;
+      }
+
+      .btn-more {
+         background: transparent;
+         border: 0;
+         margin-block-start: .2em;
+      }
+
+      .btn-like {
+         background: transparent;
+         border: 0;
       }
 
       &:hover {
@@ -34,6 +53,32 @@
             svg {
                width: 16px;
                height: 16px;
+            }
+         }
+
+         .small-btn-options {
+            display: inline-block;
+            cursor: pointer;
+            margin-inline-end: 1em;
+
+
+
+
+            svg {
+               width: 20px;
+               height: 20px;
+            }
+         }
+
+         .like-icon {
+            display: inline-block;
+            cursor: pointer;
+            margin-inline-end: 2em;
+            display: flex;
+
+            svg {
+               width: 20px;
+               height: 20px;
             }
          }
       }
@@ -56,13 +101,6 @@
          }
       }
 
-      .album {
-         grid-column: 4;
-      }
-
-      .duration {
-         grid-column: 6;
-      }
 
 
       img {
@@ -77,7 +115,8 @@
          fill: white;
       }
    }
-   li:last-child{
+
+   li:last-child {
       border-bottom: 1px solid $clr05;
    }
 }

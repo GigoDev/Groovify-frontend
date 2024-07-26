@@ -8,7 +8,7 @@
         padding-block-end: 10px;
         gap: 20px;
 
-        .img-uploader-container {
+        .img-container {
             box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
             display: flex;
             align-items: center;
@@ -23,10 +23,6 @@
                 height: 100%;
                 object-fit: cover;
                 aspect-ratio: 1 / 1;
-            }
-            .img-uploader{
-                width: 0;
-                height: 0;
             }
         }
 
@@ -74,7 +70,8 @@
     .playlist-actions {
         padding: 24px 0;
         display: flex;
-        gap: 16px;
+        gap: 30px;
+        align-items: center;
 
         .btn-play-green {
             background-color: #1db954;
@@ -94,6 +91,27 @@
                 background-color: #1ed760;
                 scale: 1.03;
                 box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); // Slightly darker shadow on hover
+            }
+        }
+
+        .add-library {
+            background-color: unset;
+            color: $clr02;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            display: inline-flex;
+            margin-block: .5em;
+            cursor: pointer;
+            transition: color 0.3s; // Smooth transition
+
+            &:hover {
+                color: $clr01;
+            }
+
+            svg {
+                fill: currentColor; // Ensure icon color matches the text color
+                transition: fill 0.3s; // Smooth transition for icon color
             }
         }
 
@@ -117,12 +135,14 @@
                 transition: fill 0.3s; // Smooth transition for icon color
             }
         }
+
     }
 
     .list-container {
         display: grid;
-        grid-template-columns: 30px 40px 2fr 1.5fr 1fr 40px;
+        grid-template-columns: 30px 40px 2fr 1.5fr 1fr 40px 40px 30px;
         gap: 10px;
+        padding: 10px;
 
         .list-titles {
             display: grid;
@@ -142,7 +162,8 @@
             }
 
             .duration {
-                grid-column: 6;
+                margin-inline: 4em;
+                grid-column: 7;
             }
 
             svg {

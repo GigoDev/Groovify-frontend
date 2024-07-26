@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import SearchIcon from '../assets/icons/SearchIcon.svg'
 import { SearchTrackPreview } from './SearchTrackPreview'
-import { getTracks } from '../services/youtube.service'
+import { spotifyService } from '../services/spotify.service'
 import { debounce } from '../services/util.service'
 
 
@@ -12,7 +12,7 @@ export function SearchTracks() {
     const debouncedLoadTracks = useRef(
         debounce(async (searchTerm) => {
             try {
-                const tracks = await getTracks(searchTerm)
+                const tracks = await spotifyService.getTracks(searchTerm)
                 setTracks(tracks)
             } catch (err) {
                 console.error("Failed to load tracks:", err)
@@ -53,9 +53,9 @@ export function SearchTracks() {
 
                     {search && (
                         <div className="track-previews">
-                            {tracks.length > 0 ? (
+                            {tracks?.length > 0 ? (
                                 tracks.map(track => (
-                                    <SearchTrackPreview key={track.videoId} track={track} />
+                                    <SearchTrackPreview key={track.spotifyId} track={track} />
                                 ))
                             ) : (
                                 <p>No songs found</p>

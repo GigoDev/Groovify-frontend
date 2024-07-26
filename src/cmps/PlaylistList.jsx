@@ -1,6 +1,36 @@
 import { formatDate } from "../services/util.service"
+import SmallBtnOptions from '../assets/icons/SmallBtnOptions.svg'
+import LikeIcon from '../assets/icons/LikeIcon.svg'
+import RemoveBinIcon from '../assets/icons/RemoveBinIcon.svg'
+import { StationMenuModal } from "./StationMenuModal"
 
-export function PlaylistList({ items }) {
+
+export function PlaylistList({ items, handleDeleteItem }) {
+
+    async function handleDelete(itemId) {
+        try {
+            const newItems = items.filter(item => item.id !== itemId)
+            handleDeleteItem(newItems)
+
+            console.log('Deleted item id:', itemId)
+        } catch (err) {
+            console.error('Failed to delete item', err)
+        }
+    }
+
+    function getMenuOptions(itemId) {
+        return [
+            {
+                label: (
+                    <>
+                        <RemoveBinIcon width="18" height="18" fill="#a7a7a7" role="img" aria-hidden="true" />
+                        Remove from this playlist
+                    </>
+                ),
+                onClick: () => handleDelete(itemId)
+            }
+        ]
+    }
     return (
         <ul className='playlist-list clean-list'>{items.map((item, idx) => (
             <li key={item.id}>
@@ -22,8 +52,22 @@ export function PlaylistList({ items }) {
                 </div>
 
                 <span className='album'>{item.album.name}</span>
-                <span className='date'>{item.addedAt? formatDate(item.addedAt) : ''}</span>
+                <span className='date'>{item.addedAt ? formatDate(item.addedAt) : ''}</span>
+
+                <button className="btn-like">
+                    <LikeIcon className="like-icon" />
+                </button>
+
                 <span className='createdAt'>{item.duration}</span>
+
+                <StationMenuModal
+                    trigger={
+                        <button className="btn-more">
+                            <SmallBtnOptions className="small-btn-options" />
+                        </button>
+                    }
+                    options={getMenuOptions(item.id)}
+                />
             </li>
         ))}
         </ul>

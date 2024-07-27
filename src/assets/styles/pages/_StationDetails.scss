@@ -2,6 +2,7 @@
    $hero-img-height: 400px;
    position: relative;
    width: 100%;
+   
 
    font-family: circular;
 
@@ -10,8 +11,12 @@
       z-index: 0;
 
       height: $hero-img-height;
-      width: calc(100% - 370px);
+      width: calc(100% - 410px);
       
+      &.collapsed{
+         width: calc(100% - 140px);
+
+      }
 
       img {
          width: 100%;

@@ -47,7 +47,7 @@ export function ArtistDetails() {
         const scrollTop = elMainContainer.scrollTop;
         const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
         const scrollFraction = scrollTop / maxScroll;
-        setOpacity(1 - scrollFraction);
+        setOpacity(1 - scrollFraction*2);
     }
 
     async function handleFollow() {

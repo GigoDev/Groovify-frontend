@@ -30,18 +30,11 @@ export function PlaylistDetails() {
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
+  
   useEffect(() => {
     loadStation(id)
-    return async () => {
-      await clear()
-    }
   }, [id])
 
-  async function clear() {
-    await clearStation()
-
-  }
 
   async function handleDeleteStation() {
     try {
@@ -53,17 +46,15 @@ export function PlaylistDetails() {
     }
   }
 
-  async function handleDeleteItem(newTracks) {
-    try {
-      await updateStation(newTracks)
-    } catch (err) {
-      console.log('Failed to find station id')
-    }
-  }
-
-
   function openEditModal() {
     setIsModalOpen(true)
+  }
+
+  async function onUpdateStation(stationToUpdate) {
+    try {
+      await updateStation(stationToUpdate)
+    } catch (error) {
+    }
   }
 
   const menuOptions = [
@@ -149,14 +140,18 @@ export function PlaylistDetails() {
             </div>
           ) : (null)}
 
-          <PlaylistList items={tracks} handleDeleteItem={handleDeleteItem} />
+          <PlaylistList station={station} onUpdateStation={onUpdateStation} />
         </div>
       </section>
 
-      <SearchTracks />
+      <SearchTracks
+        station={station}
+        onUpdateStation={onUpdateStation} />
       <UpdateStationModal
         isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen} />
+        setIsModalOpen={setIsModalOpen}
+        station={station}
+        onUpdateStation={onUpdateStation} />
     </section>
 
   )

@@ -1,14 +1,14 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
-import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_TRACKS, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG } from '../reducers/station.reducer'
+import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_TRACKS, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
 import { getRandomIntInclusive } from '../../services/util.service.js'
 
 // Station actions:
-export async function loadStations(filterBy) {
+export async function loadStations() {
     try {
-        const stations = await stationService.query(filterBy)
+        const stations = await stationService.query()
         store.dispatch(getCmdSetStations(stations))
     } catch (err) {
         console.log('Cannot load stations', err)
@@ -18,15 +18,15 @@ export async function loadStations(filterBy) {
 
 export async function loadStation(stationId) {
     try {
+        console.log(stationId)
         const station = await stationService.getById(stationId)
         store.dispatch(getCmdSetStation(station))
-        return station
+        // return station
     } catch (err) {
         console.log('Cannot load station', err)
         throw err
     }
 }
-
 
 export async function removeStation(stationId) {
     try {
@@ -53,6 +53,24 @@ export async function updateStation(station) {
     try {
         const savedStation = await stationService.save(station)
         store.dispatch(getCmdUpdateStation(savedStation))
+        return savedStation
+    } catch (err) {
+        console.log('Cannot save station', err)
+        throw err
+    }
+}
+
+export async function updateLikedStation(track) {
+    try {
+        const likedStation = await stationService.getById('2D2M9')
+
+        const idx = likedStation.tracks.findIndex((likedTrack) => likedTrack.spotifyId === track.spotifyId)
+        console.log(idx)
+        if (!likedStation.tracks.length || idx === -1) likedStation.tracks.unshift(track)
+        else likedStation.tracks.splice(idx, 1)
+
+        const savedStation = await stationService.save(likedStation)
+        store.dispatch({ type: UPDATE_LIKED_STATION, station: savedStation })
         return savedStation
     } catch (err) {
         console.log('Cannot save station', err)

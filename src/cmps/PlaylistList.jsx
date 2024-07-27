@@ -5,20 +5,19 @@ import RemoveBinIcon from '../assets/icons/RemoveBinIcon.svg'
 import { StationMenuModal } from "./StationMenuModal"
 
 
-export function PlaylistList({ items, handleDeleteItem }) {
+export function PlaylistList({ station, onUpdateStation }) {
 
-    async function handleDelete(itemId) {
-        try {
-            const newItems = items.filter(item => item.id !== itemId)
-            handleDeleteItem(newItems)
-
-            console.log('Deleted item id:', itemId)
-        } catch (err) {
-            console.error('Failed to delete item', err)
-        }
+    const { tracks } = station
+    console.log('tracks', tracks)
+    function handleDelete(trackId) {
+        console.log('trackId', trackId)
+        const newTracks = tracks.filter(track => track.spotifyId !== trackId)
+        const stationToUpdate = { ...station, tracks: newTracks }
+        onUpdateStation(stationToUpdate)
+        console.log('Deleted track id:', trackId)
     }
 
-    function getMenuOptions(itemId) {
+    function getMenuOptions(trackId) {
         return [
             {
                 label: (
@@ -27,13 +26,13 @@ export function PlaylistList({ items, handleDeleteItem }) {
                         Remove from this playlist
                     </>
                 ),
-                onClick: () => handleDelete(itemId)
+                onClick: () => handleDelete(trackId)
             }
         ]
     }
     return (
-        <ul className='playlist-list clean-list'>{items.map((item, idx) => (
-            <li key={item.spotifyId}>
+        <ul className='playlist-list clean-list'>{tracks.map((track, idx) => (
+            <li key={track.spotifyId + idx}>
                 <span className='play-icon'>
                     <svg width="17" height="17" viewBox="0 0 16 16" >
                         <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
@@ -44,21 +43,21 @@ export function PlaylistList({ items, handleDeleteItem }) {
                     </svg>
                 </span>
                 <span className='playlist-number'>{idx + 1}</span>
-                <img src={item.album.imgs[(item.album.imgs.length - 1)].url} />
+                <img src={track.album.imgs[(track.album.imgs.length - 1)].url} />
 
                 <div className='name'>
-                    <div className="title">{item.name}</div>
-                    <div className="artist">{item.artist.name}</div>
+                    <div className="title">{track.name}</div>
+                    <div className="artist">{track.artist.name}</div>
                 </div>
 
-                <span className='album'>{item.album.name}</span>
-                <span className='date'>{item.addedAt ? formatDate(item.addedAt) : ''}</span>
+                <span className='album'>{track.album.name}</span>
+                <span className='date'>{track.addedAt ? formatDate(track.addedAt) : ''}</span>
 
                 <button className="btn-like">
                     <LikeIcon className="like-icon" />
                 </button>
 
-                <span className='createdAt'>{item.duration}</span>
+                <span className='createdAt'>{track.duration}</span>
 
                 <StationMenuModal
                     trigger={
@@ -66,7 +65,7 @@ export function PlaylistList({ items, handleDeleteItem }) {
                             <SmallBtnOptions className="small-btn-options" />
                         </button>
                     }
-                    options={getMenuOptions(item.id)}
+                    options={getMenuOptions(track.spotifyId)}
                 />
             </li>
         ))}

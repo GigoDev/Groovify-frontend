@@ -8,11 +8,6 @@ import { FeaturedPlaylist } from '../cmps/FeaturedPlaylist'
 export function HomePage() {
     const stations = useSelector(storeState => storeState.stationModule.stations)
 
-    useEffect(() => {
-        loadStations()
-
-    }, [])
-
     if (!stations) return <div>Loading...</div>
     return (
         <>

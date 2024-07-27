@@ -17,18 +17,12 @@ export const stationService = {
 }
 // window.cs = stationService
 
-async function query(filterBy = { txt: '' }) {
+async function query() {
     let stations = await storageService.query(STORAGE_KEY)
     if (!stations || stations.length === 0) {
         saveToStorage(STORAGE_KEY, dataStations)
-
+        console.log(stations)
         stations = dataStations.slice()
-    }
-    const { txt } = filterBy
-
-    if (txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        stations = stations.filter(station => regex.test(station.vendor) || regex.test(station.description))
     }
 
     return stations

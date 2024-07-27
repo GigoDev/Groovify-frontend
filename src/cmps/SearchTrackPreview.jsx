@@ -3,7 +3,7 @@ import PlayIcon from '../assets/icons/PlayIcon.svg'
 
 export function SearchTrackPreview({ track }) {
     return (
-        <li className="station-search-preview">
+        <article className="station-search-preview">
             <div className="song-img-container">
                 <div className="song-img">
                     <img src={track.album.imgs[2].url} alt="" />
@@ -15,7 +15,6 @@ export function SearchTrackPreview({ track }) {
             <div className="song-title">
                 <span className="artist-name">{track.name}</span>
             </div>
-            <button className="btn-add-song">Add</button>
-        </li>
+        </article>
     )
 }

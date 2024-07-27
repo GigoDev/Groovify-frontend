@@ -1,24 +1,25 @@
 import { useParams } from "react-router"
 import { useEffect, useState } from "react"
 import { stationService } from "../services/station"
+import { updateStation } from "../store/actions/station.actions"
 
-export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
-  const { id: stationId } = useParams()
+export function UpdateStationModal({  station, isModalOpen, setIsModalOpen,onUpdateStation }) {
   const [textInput, setTextInput] = useState('')
   const [descInput, setDescInput] = useState('')
   const [stationImg, setStationImg] = useState('')
 
+  const { name, description, imgs } = station
+
   useEffect(() => {
     loadStationData()
-  }, [isModalOpen, stationId])
+  }, [isModalOpen])
 
   async function loadStationData() {
-    if (isModalOpen && stationId) {
+    if (isModalOpen && station) {
       try {
-        const station = await stationService.getById(stationId)
-        setTextInput(station.name || '')
-        setDescInput(station.description || '')
-        setStationImg(station.imgs && station.imgs.length > 0 ? station.imgs[0].url : '')
+        setTextInput(name || '')
+        setDescInput(description || '')
+        setStationImg(imgs && imgs.length > 0 ? imgs[0].url : '')
       } catch (error) {
         console.error('Failed to fetch station data:', error)
       }
@@ -28,7 +29,7 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
     setTextInput('')
     setDescInput('')
     setStationImg(null)
-    setIsModalOpen(false)
+    setIsModalOpen((prevIsModalOpen => !prevIsModalOpen))
   }
 
   function onModalClick(ev) {
@@ -36,7 +37,6 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
   }
 
   function handleInputChange(ev) {
-    console.log(ev.target.value)
     const field = ev.target.name
     const value = ev.target.value
     switch (field) {
@@ -57,7 +57,6 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
     const file = ev.target.files[0]
     if (file) {
       const imgUrl = URL.createObjectURL(file)
-      console.log('imgUrl', imgUrl)
       setStationImg(imgUrl)
     }
   }
@@ -66,13 +65,12 @@ export function UpdateStationModal({ isModalOpen, setIsModalOpen }) {
     ev.preventDefault()
     ev.stopPropagation()
 
-    const stationToUpdate = { id: stationId }
+    const stationToUpdate = { ...station }
     if (textInput) stationToUpdate.name = textInput
     if (descInput) stationToUpdate.description = descInput
     if (stationImg) stationToUpdate.imgs = [{ url: stationImg }]
 
-    stationService.save(stationToUpdate)
-
+    onUpdateStation(stationToUpdate)
     closeModal()
   }
 

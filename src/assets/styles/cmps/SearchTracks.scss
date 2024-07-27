@@ -5,7 +5,7 @@
     gap: 1rem;
     padding-block: 3em;
     padding-inline: .5em;
-    
+
 
     .search-input {
         position: relative;
@@ -21,11 +21,12 @@
         input {
             height: 43px;
             border-radius: 20px;
-            width: 100%; 
+            width: 100%;
             background-color: $clr13;
             padding: 10px 0 8px 33px;
             color: $clr01;
             border: 0;
+            font-size: 1rem;
 
             &::placeholder {
                 color: $clr12;
@@ -33,16 +34,40 @@
         }
     }
 
-    .track-previews {
+    .track-previews-container {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem; 
-        padding-block: 1em;
+        gap: 0.2rem;
+        
 
         p {
-            color: #888; 
-            text-align: center; 
+            color: #888;
+            text-align: center;
             margin: 0;
+        }
+
+        .track-previews {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+        }
+
+
+        .btn-add-song {
+            display: flex;
+            align-items: center;
+            font-size: .95rem;
+            background-color: transparent;
+            color: $clr01;
+            border: 1px solid #717171;
+            padding-inline: 12px;
+            padding-block: 5px;
+            border-radius: 500px;
+            cursor: pointer;
+
+            &:hover {
+                outline: 1px solid #dfdfdf;
+            }
         }
     }
 }

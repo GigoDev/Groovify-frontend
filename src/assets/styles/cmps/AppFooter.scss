@@ -1,6 +1,6 @@
 .footer-container {
     line-height: 1.6;
-    margin-block: 4em;
+    margin-block-start: 4em;
 
     @include for-mobile-layout {
         display: none;

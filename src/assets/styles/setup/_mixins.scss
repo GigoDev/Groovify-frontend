@@ -6,6 +6,12 @@
     }
 }
 
+@mixin for-desktop-layout {
+    @media (min-width: calc($mobile-breakpoint + 40px)) {
+        @content;
+    }
+}
+
 @mixin for-narrow-layout {
     @media (min-width: calc($mobile-breakpoint + 40px)) {
         @content;

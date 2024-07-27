@@ -6,21 +6,31 @@ import { TrackList } from '../../cmps/TrackList'
 import { loadStation, clearStation, setTrack, togglePlay, setTracks, updateStation, updateLikedStation } from '../../store/actions/station.actions'
 import { stationService } from '../../services/station'
 
+import PlayIcon from '../../assets/icons/PlayIcon.svg'
+import PauseIcon from '../../assets/icons/PauseIcon.svg'
+
+
 export function ArtistDetails() {
 
     const { id } = useParams()
     const station = useSelector(storeState => storeState.stationModule.station)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+
+    const [selectedTrack, setSelectedTrack] = useState(null)
     const [opacity, setOpacity] = useState(1);
     // const [follow, setIsFollow] = useState('')
 
     const elMainContainer = document.querySelector('.main-container')
 
 
+
     useEffect(() => {
         loadStation(id)
         // .then(station => {setIsFollow(station.owner)}) //error from this line
         elMainContainer?.addEventListener('scroll', handleScroll)
+
+
 
 
         return async () => {
@@ -54,19 +64,38 @@ export function ArtistDetails() {
 
     function onPlay(ev, track) {
         ev.stopPropagation()
-        if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
+        setSelectedTrack(track)
+        if (track.spotifyId === currTrack.spotifyId) return togglePlay()
 
         setTrack(track)
         setTracks()
     }
 
-    // async function onAddTrack(track, stationId = '2D2M9') {
-    //     const stationToEdit = await stationService.getById(stationId)
-    //     track.addedAt = new Date().toISOString()
-    //     stationToEdit.tracks.unshift(track)
-    //     const savedStation = await stationService.save(stationToEdit)
-    //     console.log(`${track.name} added to ${stationToEdit.name}`)
-    // }
+    function handlePlayPause() {
+        if (!isPlaying) {
+            if (selectedTrack) {
+                setTrack(selectedTrack)
+            } else if (tracks.length > 0) {
+                setTrack(tracks[0])
+            }
+            setTracks()
+        }
+        togglePlay()
+    }
+
+
+    function handlePlayPause() {
+        if (!isPlaying) {
+            if (selectedTrack) {
+                setTrack(selectedTrack)
+            } else if (tracks.length > 0) {
+                setTrack(tracks[0])
+            }
+            setTracks()
+        }
+        togglePlay()
+    }
+
 
     function onAddTrack(track) {
         updateLikedStation(track)
@@ -97,8 +126,8 @@ export function ArtistDetails() {
 
             <section className='station-content'>
                 <div className='controlls'>
-                    <button className='btn play'>
-                        <svg role="img" fill="black" height="20" width="20" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.12L4.05 14.894A.7.7 0 013 14.288V1.713z"></path></svg>
+                    <button className='btn play' onClick={handlePlayPause}>
+                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
                     <button className='btn pill follow' onClick={handleFollow} >Follow</button>
                 </div>

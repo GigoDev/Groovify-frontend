@@ -2,7 +2,7 @@
 import { useSelector } from 'react-redux'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import { clearStation, loadStation, removeStation, updateStation } from "../../store/actions/station.actions";
+import { clearStation, loadStation, removeStation, setTrack, setTracks, togglePlay, updateStation } from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
@@ -29,12 +29,21 @@ export function PlaylistDetails() {
   const navigate = useNavigate()
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
+  const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+  const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   
   useEffect(() => {
     loadStation(id)
+    return async () => {
+      await clear()
+    }
   }, [id])
 
+  async function clear() {
+    await clearStation()
+  }
 
   async function handleDeleteStation() {
     try {
@@ -46,6 +55,17 @@ export function PlaylistDetails() {
     }
   }
 
+
+  function onPlay(ev, track) {
+    ev.stopPropagation()
+    if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
+
+    setTrack(track)
+    setTracks()
+  }
+
+
+
   function openEditModal() {
     setIsModalOpen(true)
   }
@@ -54,6 +74,7 @@ export function PlaylistDetails() {
     try {
       await updateStation(stationToUpdate)
     } catch (error) {
+      console.log(error)
     }
   }
 

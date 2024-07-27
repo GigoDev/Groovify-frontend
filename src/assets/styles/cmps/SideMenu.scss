@@ -1,9 +1,13 @@
 .side-menu {
     @include for-mobile-layout {
-        z-index: 5;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        z-index: 5;
+        grid-template-columns: 1fr;
         grid-template-rows: 50px;
+
+        .side-lib {
+            display: none;
+        }
     }
 
     .side-lib,

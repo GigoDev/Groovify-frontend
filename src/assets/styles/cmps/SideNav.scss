@@ -1,11 +1,11 @@
 .side-nav {
     @include for-mobile-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50px;
         margin: 0;
         place-items: center;
-        background-color: black;
+        background-color: #000000;
     }
     display: grid;
     grid-template-rows: 53px 53px;
@@ -21,7 +21,8 @@
     }
 
     .home-link,
-    .search-link {
+    .search-link,
+    .library-mobile-only {
         @include for-mobile-layout {
             padding-block: 0;
         }
@@ -51,6 +52,16 @@
         &:hover {
             color: $clr01;
             transition: color 0.4s;
+        }
+    }
+
+    .library-mobile-only{
+        @media (min-width: calc($mobile-breakpoint + 40px)) {
+            display: none;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
         }
     }
 

@@ -18,7 +18,6 @@ export async function loadStations() {
 
 export async function loadStation(stationId) {
     try {
-        console.log(stationId)
         const station = await stationService.getById(stationId)
         store.dispatch(getCmdSetStation(station))
         // return station
@@ -65,7 +64,6 @@ export async function updateLikedStation(track) {
         const likedStation = await stationService.getById('2D2M9')
 
         const idx = likedStation.tracks.findIndex((likedTrack) => likedTrack.spotifyId === track.spotifyId)
-        console.log(idx)
         if (!likedStation.tracks.length || idx === -1) likedStation.tracks.unshift(track)
         else likedStation.tracks.splice(idx, 1)
 

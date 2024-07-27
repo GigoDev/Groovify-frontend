@@ -2,7 +2,7 @@
 import { useSelector } from 'react-redux'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import { clearStation, loadStation, removeStation, updateStation } from "../../store/actions/station.actions";
+import { clearStation, loadStation, removeStation, setTrack, setTracks, togglePlay, updateStation } from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
@@ -29,8 +29,11 @@ export function PlaylistDetails() {
   const navigate = useNavigate()
   const { id } = useParams()
   const station = useSelector(storeState => storeState.stationModule.station)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+  const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  
   useEffect(() => {
     loadStation(id)
     return async () => {
@@ -40,7 +43,6 @@ export function PlaylistDetails() {
 
   async function clear() {
     await clearStation()
-
   }
 
   async function handleDeleteStation() {
@@ -53,17 +55,27 @@ export function PlaylistDetails() {
     }
   }
 
-  async function handleDeleteItem(newTracks) {
-    try {
-      await updateStation(newTracks)
-    } catch (err) {
-      console.log('Failed to find station id')
-    }
+
+  function onPlay(ev, track) {
+    ev.stopPropagation()
+    if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
+
+    setTrack(track)
+    setTracks()
   }
+
 
 
   function openEditModal() {
     setIsModalOpen(true)
+  }
+
+  async function onUpdateStation(stationToUpdate) {
+    try {
+      await updateStation(stationToUpdate)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const menuOptions = [
@@ -149,14 +161,18 @@ export function PlaylistDetails() {
             </div>
           ) : (null)}
 
-          <PlaylistList items={tracks} handleDeleteItem={handleDeleteItem} />
+          <PlaylistList station={station} onUpdateStation={onUpdateStation} />
         </div>
       </section>
 
-      <SearchTracks />
+      <SearchTracks
+        station={station}
+        onUpdateStation={onUpdateStation} />
       <UpdateStationModal
         isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen} />
+        setIsModalOpen={setIsModalOpen}
+        station={station}
+        onUpdateStation={onUpdateStation} />
     </section>
 
   )

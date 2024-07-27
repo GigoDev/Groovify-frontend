@@ -6,6 +6,7 @@ export const SET_STATION = 'SET_STATION'
 export const REMOVE_STATION = 'REMOVE_STATION'
 export const ADD_STATION = 'ADD_STATION'
 export const UPDATE_STATION = 'UPDATE_STATION'
+export const UPDATE_LIKED_STATION = 'UPDATE_LIKED_STATION'
 export const ADD_STATION_MSG = 'ADD_STATION_MSG'
 
 // Player CMDs
@@ -43,7 +44,13 @@ export function stationReducer(state = initialState, action) {
             break
         case UPDATE_STATION:
             stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
+            newState = { ...state, stations, station: action.station }
+            break
+        case UPDATE_LIKED_STATION:
+            console.log(action.station)
+            stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
             newState = { ...state, stations }
+
             break
         case ADD_STATION_MSG:
             newState = { ...state, station: { ...state.station, msgs: [...state.station.msgs || [], action.msg] } }

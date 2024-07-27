@@ -3,23 +3,24 @@
     top: 0;
     bottom: 0;
     justify-content: space-between;
-    height: 3.5rem;
+    height: 7rem;
     width: 100%;
-    background-color: $clr07;
     z-index: 333;
 
     .btn {
         background-color: $clr07;
         color: $clr01;
+        
     }
 
     nav {
         display: flex;
         align-items: center;
         gap: .4em;
+        margin-inline: 1.7em;
 
         svg {
-            fill: $clr09;
+            fill: $clr01;
             background: none;
             border: none;
             color: $clr01;
@@ -34,7 +35,7 @@
 
             background-color: $clr14;
             border-radius: 50%;
-            padding: 5px;
+            padding: 7px;
         }
 
         .forward-btn {
@@ -44,12 +45,13 @@
 
             background-color: $clr14;
             border-radius: 50%;
-            padding: 5px;
+            padding: 7px;
         }
     }
 
     .header-menu {
         gap: .3em;
+        margin-inline: 14px;
 
         .install-btn {
             display: flex;

@@ -21,6 +21,7 @@ import Volume033Icon from '../assets/icons/Volume033Icon.svg'
 import Volume066Icon from '../assets/icons/Volume066Icon.svg'
 import LikeIcon from '../assets/icons/LikeIcon.svg'
 
+
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
@@ -35,6 +36,10 @@ export function Player() {
     const [progress, setProgress] = useState(0)
     const [currSongTime, setCurrSongTime] = useState(0)
     const [totalSongTime, setTotalSongTime] = useState(0)
+
+    // Hover state
+    const [isHoverProgressBar, setIsHoverProgressBar] = useState(false)
+    const [isHoverVolumeSlider, setIsHoverVolumeSlider] = useState(false)
 
     const playerRef = useRef(null)
 
@@ -136,7 +141,9 @@ export function Player() {
                         value={progress}
                         onChange={handleSeek}
                         max={totalSongTime}
-                        style={{ background: `linear-gradient(to right, white ${progress / totalSongTime * 100}%,  rgba(255, 255, 255, 0.3) ${progress / totalSongTime * 100}%)` }}
+                        onMouseEnter={() => setIsHoverProgressBar(true)}
+                        onMouseLeave={() => setIsHoverProgressBar(false)}
+                        style={{ background: `linear-gradient(to right, ${isHoverProgressBar ? '#1ED760' : 'white'} ${progress / totalSongTime * 100}%,  rgba(255, 255, 255, 0.3) ${progress / totalSongTime * 100}%)` }}
                     />
 
                     <span className="time-progress"> {formatTime(totalSongTime)} </span>
@@ -161,7 +168,9 @@ export function Player() {
                     type="range"
                     step="0.01"
                     max="1"
-                    style={{ background: `linear-gradient(to right, white ${volume * 100}%,  rgba(255, 255, 255, 0.3) ${volume * 100}%)` }}
+                    onMouseEnter={() => setIsHoverVolumeSlider(true)}
+                    onMouseLeave={() => setIsHoverVolumeSlider(false)}
+                    style={{ background: `linear-gradient(to right, ${isHoverVolumeSlider ? '#1ED760' : 'white'} ${volume * 100}%,  rgba(255, 255, 255, 0.3) ${volume * 100}%)` }}
                 />
 
             </div>

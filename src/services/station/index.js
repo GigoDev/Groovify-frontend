@@ -13,7 +13,7 @@ function getEmptyPlaylist() {
         spotifyId: null, //all
         name: 'New playlist', //all
         listeners: null, //artist
-        description: 'Description', // playlist
+        description: '', // playlist
         likes: null, // playlist
         owner: true, //all
         total: null, //playlist , album

@@ -6,7 +6,7 @@ import { spotifyService } from '../services/spotify.service'
 import { debounce } from '../services/util.service'
 
 
-export function SearchTracks() {
+export function SearchTracks({ onUpdateStation, station }) {
     const [search, setSearch] = useState("")
     const [tracks, setTracks] = useState([])
     const debouncedLoadTracks = useRef(
@@ -25,6 +25,12 @@ export function SearchTracks() {
             debouncedLoadTracks(search)
         }
     }, [search])
+
+    function addTrack(track) {
+        let stationToUpdate = { ...station }
+        stationToUpdate.tracks.push(track)
+        onUpdateStation(stationToUpdate)
+    }
 
 
     function handleChange({ target }) {
@@ -52,15 +58,21 @@ export function SearchTracks() {
 
 
                     {search && (
-                        <div className="track-previews">
+                        <ul className="track-previews-container">
                             {tracks?.length > 0 ? (
                                 tracks.map(track => (
-                                    <SearchTrackPreview key={track.spotifyId} track={track} />
+                                    <li className='clean-list track-previews' key={track.spotifyId}>
+                                        <SearchTrackPreview
+                                            track={track} />
+                                        <button
+                                            onClick={() => addTrack(track)}
+                                            className="btn-add-song pill">Add</button>
+                                    </li>
                                 ))
                             ) : (
                                 <p>No songs found</p>
                             )}
-                        </div>
+                        </ul>
                     )}
                 </div>
             </section>

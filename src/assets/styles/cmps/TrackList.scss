@@ -17,15 +17,19 @@
         &:hover {
             background-color: $clr06;
 
-            .track-number{
+            .track-number {
                 display: none;
             }
 
-            .play-btn{
+            .equalizer {
+                display: block;
+            }
+
+            .play-btn {
                 display: inline-block;
                 cursor: pointer;
 
-                svg path{
+                svg path {
                     fill: white;
                 }
             }
@@ -35,12 +39,17 @@
             }
         }
 
-        .track-number,.play-icon {
+        .track-number,
+        .play-icon {
             grid-column: 1;
             cursor: pointer;
+
+            &.active {
+                color: $clrGreen;
+            }
         }
-        
-        .play-btn{
+
+        .play-btn {
             display: none;
         }
 
@@ -48,6 +57,10 @@
             justify-self: left;
             padding-inline-start: 10px;
             color: white;
+
+            &.active {
+                color: $clrGreen;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -60,21 +73,23 @@
         }
     }
 
-    .btn.show-more {
-        display: flex;
-        justify-content: start;
-        width: 100px;
-        padding-block: 15px;
-        margin-inline-start: 11px;
+    
+}
 
-        cursor: pointer;
-        border: none;
-        color: $clr02;
-        background-color: transparent;
-        font-family: 'circular-bold';
+.btn.show-more {
+    display: flex;
+    justify-content: start;
+    width: 100px;
+    padding-block: 15px;
+    margin-inline-start: 11px;
 
-        &:hover {
-            color: $clr01
-        }
+    cursor: pointer;
+    border: none;
+    color: $clr02;
+    background-color: transparent;
+    font-family: 'circular-bold';
+
+    &:hover {
+        color: $clr01
     }
 }

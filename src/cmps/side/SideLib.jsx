@@ -1,34 +1,38 @@
 //REACT
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 //CMP
 import { SideFilter } from "./SideFilter";
 import { SideList } from "./SideList";
 
-import {stationService} from '../../services/station'
-import { addStation } from "../../store/actions/station.actions";
+import { stationService } from '../../services/station'
+import { addStation, loadStations } from "../../store/actions/station.actions";
 //ICONS
 import PlusIcon from "../../assets/icons/PlusIcon.svg"
 import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
+import { useNavigate } from "react-router";
 
 export function SideLib({ isCollapsed, onCollapse }) {
-    const stations = useSelector(storeState => storeState.stationModule.stations)
-    const [filterBy,setFilterBy] = useState({type:'playlist',txt:''})
-    const [filtered,setFiltered] = useState(stations)
-    
-    useEffect(() => {
-        setFiltered(stations.filter(station => station.type === filterBy.type && station.owner === true))
-        // console.log('filterBy',filterBy)
-    }, [filterBy,stations]);
-    
-   
-    function onAddPlaylist(){
-        const newPlaylist = stationService.getEmptyPlaylist()
-        const savedPlaylist = addStation(newPlaylist)
-        console.log(savedPlaylist)
-        //store for global updates
-    }
+    const navigate = useNavigate()
+    const [filterBy, setFilterBy] = useState({ type: 'playlist', txt: '' })
+    const stations = useSelector(state => state.stationModule.stations)
 
+    useEffect(() => {
+        loadStations()
+    }, [])
+    const newPlaylistCount = useRef(0)
+
+
+    async function onAddPlaylist() {
+        try {
+            const newPlaylist = stationService.getEmptyPlaylist()
+            newPlaylist.name = `${newPlaylist.name}  #${++newPlaylistCount.current}`
+            const savedPlaylist = await addStation(newPlaylist)
+            navigate(`playlist/${savedPlaylist._id}`)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <section className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
@@ -38,11 +42,13 @@ export function SideLib({ isCollapsed, onCollapse }) {
                     <span className="library" style={{ display: isCollapsed ? 'none' : 'inline' }}>Your Library</span>
                 </button>
                 <button className="add-btn">
-                    <PlusIcon onClick={onAddPlaylist}/>
+                    <PlusIcon onClick={onAddPlaylist} />
                 </button>
             </div>
-            <SideFilter setFilterBy={setFilterBy}/>
-            <SideList filtered={filtered} />
+            <SideFilter setFilterBy={setFilterBy} />
+            <SideList
+                filterBy={filterBy}
+                stations={stations} />
         </section>
     )
 }

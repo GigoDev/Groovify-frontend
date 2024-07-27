@@ -9,7 +9,7 @@ import NextPageIcon from '../assets/icons/NextPageIcon.svg'
 export function AppHeader() {
 	const user = useSelector(storeState => storeState.userModule.user)
 	const navigate = useNavigate()
-	
+
 
 	async function onLogout() {
 		try {

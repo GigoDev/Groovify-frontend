@@ -1,4 +1,7 @@
 .side-filter {
+    @include for-mobile-layout{
+        display: none;
+    }
     display: flex;
     flex-direction: column;
     align-self: center;

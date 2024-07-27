@@ -1,4 +1,12 @@
 .side-nav {
+    @include for-mobile-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px;
+        margin: 0;
+        place-items: center;
+        background-color: black;
+    }
     display: grid;
     grid-template-rows: 53px 53px;
     width: 100%;
@@ -7,12 +15,17 @@
     background-color: $clr07;
     font-family: circular-bold;
 
-    .search-link{
+
+    .search-link {
         padding-block: 0px 9px;
     }
 
     .home-link,
     .search-link {
+        @include for-mobile-layout {
+            padding-block: 0;
+        }
+
         display: flex;
         gap: 20px;
         align-items: center;
@@ -26,6 +39,10 @@
         }
 
         span {
+            @include for-mobile-layout {
+                display: none;
+            }
+
             padding-block: 3px 0px;
             color: $clr02;
             font-size: 1rem;

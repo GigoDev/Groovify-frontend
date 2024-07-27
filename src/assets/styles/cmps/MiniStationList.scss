@@ -3,4 +3,8 @@
     grid-template-columns: repeat(4, minmax(auto, 1fr));
     gap: 1rem;
 
+    @include for-mobile-layout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }

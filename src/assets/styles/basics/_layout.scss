@@ -1,31 +1,68 @@
-.app-container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    height: 100vh;
-    gap: .4rem;
-    grid-template-rows:1fr auto;
-    
-    .side-menu {
-        grid-column: 1;
-    }
-    
-    .main-container {
-        grid-column: 2;
+//mobile
+@media (max-width: calc($mobile-breakpoint + 40px)) {
+    .app-container {
         display: grid;
-        grid-template-rows:auto 1fr;
-        border-radius: 10px;
+        grid-template-rows: 1fr 100px 50px;
+        height: 100vh;
+        width: 100vw;
+
+        .side-menu {
+            grid-row: 3;
+            grid-column: 1/-1;
+        }
+
+        .main-container {
+            grid-row: 1;
+            display: block;
+            border-radius: 10px;
+            width: 100vw;
+
+            .header {
+
+                .header-menu {
+                    justify-content: right;
+                }
+            }
+        }
+
+        .player-container {
+            grid-row: 2;
+        }
     }
+}
 
-    .content-layout {
+//desktop
+@media (min-width: calc($mobile-breakpoint + 40px)) {
+    .app-container {
         display: grid;
-        grid-template-columns: 100px 1fr 100px;
+        grid-template-columns: auto 1fr;
+        height: 100vh;
+        gap: .4rem;
+        grid-template-rows: 1fr auto;
 
-        >* {
+        .side-menu {
+            grid-column: 1;
+        }
+
+        .main-container {
             grid-column: 2;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            border-radius: 10px;
+        }
 
-            &.full {
-                grid-column: 1 /-1;
+        .content-layout {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+
+            >* {
+                grid-column: 2;
+
+                &.full {
+                    grid-column: 1 /-1;
+                }
             }
         }
     }
+
 }

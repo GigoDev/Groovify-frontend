@@ -1,9 +1,9 @@
 // General player container styling
 .player-container {
     grid-column: 1/-1;
-
     display: grid;
     grid-template-columns: 200px 1fr 200px;
+
 
     height: 85px;
     padding-inline: 1rem;
@@ -11,6 +11,11 @@
 
     background-color: $clr08;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+
+    @include for-mobile-layout {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+    }
 
     button {
         display: flex;
@@ -28,11 +33,11 @@
                 color: $clr01;
             }
         }
+
     }
 
-
-
     .left-controls {
+
         display: flex;
         align-items: center;
         gap: 20px;
@@ -56,6 +61,10 @@
         }
 
         button {
+            @include for-mobile-layout {
+                display: none;
+            }
+
             background: none;
             border: none;
             color: white;
@@ -70,16 +79,30 @@
 
 
     .center-controls {
+        @include for-mobile-layout {
+            align-self: center;
+            padding-inline: 0;
+        }
+
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
-
         padding-inline: 2.4rem;
 
         .top-center-controls {
             display: flex;
             gap: 10px;
+
+            @include for-mobile-layout {
+
+                .shuffle-btn,
+                .prev-btn,
+                .next-btn,
+                .loop-btn {
+                    display: none;
+                }
+            }
 
             .play-btn {
                 background-color: $clr01;
@@ -97,7 +120,9 @@
                 }
             }
 
-            .loop-btn.active ,.shuffle-btn.active {
+            .loop-btn.active,
+            .shuffle-btn.active {
+
 
                 svg {
                     fill: $clrGreen;
@@ -106,6 +131,10 @@
         }
 
         .bottom-center-controls {
+            @include for-mobile-layout {
+                display: none;
+            }
+
             display: flex;
             align-items: center;
             gap: 10px;
@@ -114,13 +143,22 @@
             max-width: 600px;
 
             .time-progress {
-                color:$clr02;
+                color: $clr02;
                 font-size: 12px;
             }
         }
     }
 
     .right-controls {
+        @include for-mobile-layout {
+            grid-row: 2;
+            grid-column: 1/-1;
+
+            .sound-btn {
+                display: none;
+            }
+        }
+
         display: flex;
         align-items: center;
         gap: 5px;

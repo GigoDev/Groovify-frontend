@@ -1,10 +1,8 @@
 .side-list-container {
+    @include for-mobile-layout{display: none;}
     display: flex;
     flex-direction: column;
     justify-content: start;
-    
-    
-
     .side-card {
         display: flex;
         align-items: center;

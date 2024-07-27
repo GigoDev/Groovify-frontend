@@ -1,12 +1,17 @@
 .footer-container {
     line-height: 1.6;
 
+    @include for-mobile-layout {
+        display: none;
+    }
+
     .details-container {
         display: grid;
         grid-template-columns: 850px 1fr;
         justify-content: space-between;
-
         padding-block: 50px ;
+
+       
 
         .info {
             display: flex;

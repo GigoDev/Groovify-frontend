@@ -1,11 +1,22 @@
 .side-menu {
+    @include for-mobile-layout {
+        z-index: 5;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 50px;
+    }
 
     .side-lib,
     .side-nav {
         width: 350px; // open width
 
+        @include for-mobile-layout {
+            width: 100%;
+        }
+
         &.collapsed {
             width: auto; //close width
+
             span,
             .side-sort-container,
             .side-search-library,

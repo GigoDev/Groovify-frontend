@@ -43,7 +43,7 @@ export function FeaturedPlaylist({ title, from, to, type, isRound }) {
 
     const data = stations.filter(station => station.owner !== true && station.type === type).slice(from, to)
     const list = data.slice(0, itemsToShow)
-    if (!list) return <div>Loading...</div>
+    if (!list) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     return (
         <section className='featured-playlist-container'>
             <h1 className='list-title'>{title}</h1>

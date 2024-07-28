@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PlayIcon from '../assets/icons/PlayIcon.svg';
-import PauseIcon from '.././assets/icons/PauseIcon.svg';
+import PauseIcon from '../assets/icons/PauseIcon.svg';
 import { useSelector } from 'react-redux';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Equalizer from '../assets/gifs/Equalizer.gif';
@@ -41,7 +41,7 @@ export function TrackList({ tracks, onPlay, onRemoveTrack }) {
         setTrackList(items)
     }
 
-    if (!tracks) return <div>Loading...</div>
+    if (!tracks) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
 
     return (
         <DragDropContext onDragEnd={handleOnDragEnd}>

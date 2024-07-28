@@ -1,9 +1,19 @@
 .mini-card {
     display: flex;
     align-items: center;
-    
-    background-color: $clr06;
+    position: relative;
+    background-color: $clr15;
     border-radius: 4px;
+    transition: background-color 0.5s ease-out;
+
+    &:hover {
+        background-color: $clr15hover;
+
+        .btn-play-green {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+    }
 
     .mini-card-img-container {
         width: 70px;
@@ -17,5 +27,31 @@
     .mini-card-title {
         padding-inline: .5rem;
         font-size: .8rem;
+    }
+
+    .btn-play-green {
+        background-color: #1db954;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+
+        &:hover {
+            scale: 1.03;
+            background-color: #1ed760;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
     }
 }

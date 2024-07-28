@@ -4,11 +4,17 @@ import LikeIcon from '../assets/icons/LikeIcon.svg'
 import RemoveBinIcon from '../assets/icons/RemoveBinIcon.svg'
 import { StationMenuModal } from "./StationMenuModal"
 
+import PlayIcon from '../assets/icons/PlayIcon.svg';
+import PauseIcon from '../assets/icons/PauseIcon.svg';
+import Equalizer from '../assets/gifs/Equalizer.gif';
+import { useSelector } from "react-redux"
 
-export function PlaylistList({ station, onUpdateStation }) {
 
+export function PlaylistList({ station, onUpdateStation, onPlay }) {
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const { tracks } = station
-    console.log('tracks', tracks)
+    // console.log('tracks', tracks)
     function handleDelete(trackId) {
         console.log('trackId', trackId)
         const newTracks = tracks.filter(track => track.spotifyId !== trackId)
@@ -33,20 +39,21 @@ export function PlaylistList({ station, onUpdateStation }) {
     return (
         <ul className='playlist-list clean-list'>{tracks.map((track, idx) => (
             <li key={track.spotifyId + idx}>
-                <span className='play-icon'>
-                    <svg width="17" height="17" viewBox="0 0 16 16" >
-                        <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-                            fill='white'
-                            stroke='white'
-                            strokeWidth={1}>
-                        </path>
-                    </svg>
+                <span className='play-icon' onClick={(event) => onPlay(event, track)}>
+                    {isPlaying && currTrack.spotifyId === track.spotifyId ?
+                        <PauseIcon /> : <PlayIcon />}
                 </span>
-                <span className='playlist-number'>{idx + 1}</span>
+                <span className={`playlist-number ${isPlaying && currTrack.spotifyId === track.spotifyId ? 'active' : ''}`}>
+                    {isPlaying && currTrack.spotifyId === track.spotifyId ? (
+                        <img src={Equalizer} alt="Equalizer" className='equalizer equalizer-gif' />
+                    ) : (
+                        idx + 1
+                    )}
+                </span>
                 <img src={track.album.imgs[(track.album.imgs.length - 1)].url} />
 
                 <div className='name'>
-                    <div className="title">{track.name}</div>
+                    <div className={`title ${isPlaying && currTrack.spotifyId === track.spotifyId ? 'active' : ''}`}>{track.name}</div>
                     <div className="artist">{track.artist.name}</div>
                 </div>
 

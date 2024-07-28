@@ -8,6 +8,8 @@ import { stationService } from '../../services/station'
 
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import PauseIcon from '../../assets/icons/PauseIcon.svg'
+import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
+
 
 
 export function ArtistDetails() {
@@ -29,7 +31,7 @@ export function ArtistDetails() {
         loadStation(id)
         // .then(station => {setIsFollow(station.owner)}) //error from this line
         elMainContainer?.addEventListener('scroll', handleScroll)
-
+        document.body.style.setProperty('--bg-color', '#121212')
 
 
 
@@ -93,7 +95,7 @@ export function ArtistDetails() {
         console.log(`${trackToRemove.name} removed from ${stationToEdit.name}`)
     }
 
-    if (!station || station.type !== 'artist') return <h1>Loading...</h1>
+    if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
     return (

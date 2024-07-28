@@ -4,7 +4,7 @@
 
     .station-search-header {
         padding: 17px;
-        
+
     }
 }
 
@@ -14,13 +14,20 @@
     justify-content: center;
 }
 
-.equalizer-icon {
-    width: 24px;
-    height: 24px;
-    
-}
-
 .equalizer-gif {
     width: 16px;
     height: 16px;
+}
+
+.spotify-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.spotify-loader {
+    width: 100px; // Example larger size
+    height: 100px; // Example larger size
 }

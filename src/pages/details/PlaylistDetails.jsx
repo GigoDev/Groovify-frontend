@@ -19,6 +19,8 @@ import AddLibrary from '../../assets/icons/AddLibrary.svg'
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 import PencilIcon from '../../assets/icons/PencilIcon.svg'
 import DeleteIcon from '../../assets/icons/DeleteIcon.svg'
+import PauseIcon from '../../assets/icons/PauseIcon.svg'
+import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
 
 import { SearchTracks } from '../../cmps/SearchTracks';
 import { StationMenuModal } from '../../cmps/StationMenuModal';
@@ -28,14 +30,18 @@ import { StationMenuModal } from '../../cmps/StationMenuModal';
 export function PlaylistDetails() {
   const navigate = useNavigate()
   const { id } = useParams()
+  const [selectedTrack, setSelectedTrack] = useState(null)
+
   const station = useSelector(storeState => storeState.stationModule.station)
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  
+
+
   useEffect(() => {
     loadStation(id)
+        document.body.style.setProperty('--bg-color', '#121212')
     return async () => {
       await clear()
     }
@@ -58,10 +64,23 @@ export function PlaylistDetails() {
 
   function onPlay(ev, track) {
     ev.stopPropagation()
-    if (track.spotifyId === currTrack.spotifyId) return togglePlay() //check if new song
+    setSelectedTrack(track)
+    if (track.spotifyId === currTrack.spotifyId) return togglePlay()
 
     setTrack(track)
     setTracks()
+  }
+
+  function handlePlayPause() {
+    if (!isPlaying) {
+      if (selectedTrack) {
+        setTrack(selectedTrack)
+      } else if (tracks.length > 0) {
+        setTrack(tracks[0])
+      }
+      setTracks()
+    }
+    togglePlay()
   }
 
 
@@ -103,7 +122,7 @@ export function PlaylistDetails() {
     }
   ]
 
-  if (!station || station.type !== 'playlist') return <h1>Loading...</h1>
+  if (!station || station.type !== 'playlist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
   const { imgs, listeners, name, type, tracks, likes, total } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
 
@@ -113,7 +132,7 @@ export function PlaylistDetails() {
   }, 0)
   const formattedDuration = formatDurationSec(totalDuration)
   return (
-    <section className="playlist-details content-layout">
+    <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
           {imgUrl ? <img src={imgUrl} /> : <MusicNoteIcon className="svg-img-uploader" />}
@@ -130,22 +149,27 @@ export function PlaylistDetails() {
 
       <section className="song-list-container content-layout">
         <section className="playlist-actions">
-          <button className="btn-play-green">
-            <PlayIcon />
-          </button>
-          <button className="add-library">
+          {!station.tracks.length ? ('') :
+            (<button className="btn-play-green">
+              <PlayIcon />
+            </button>
+            )}
+          {station.owner ? ('') : (<button className="add-library">
             <AddLibrary />
-          </button>
-          <div className="flex option-btns">
-            <StationMenuModal
-              trigger={
-                <button className="btn-more">
-                  <BigBtnOptions />
-                </button>
-              }
-              options={menuOptions}
-            />
-          </div>
+          </button>)}
+
+          {station._id === '2D2M9' ? ('') :
+            (<div className="flex option-btns">
+              <StationMenuModal
+                trigger={
+                  <button className="btn-more">
+                    <BigBtnOptions />
+                  </button>
+                }
+                options={menuOptions}
+              />
+            </div>)}
+
         </section>
 
         <div className='list-container'>
@@ -161,7 +185,7 @@ export function PlaylistDetails() {
             </div>
           ) : (null)}
 
-          <PlaylistList station={station} onUpdateStation={onUpdateStation} />
+          <PlaylistList station={station} onUpdateStation={onUpdateStation} onPlay={onPlay} />
         </div>
       </section>
 

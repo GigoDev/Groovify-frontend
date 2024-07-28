@@ -3,6 +3,8 @@
     top: 0;
     bottom: 0;
     justify-content: space-between;
+    align-items: start;
+    padding-block-start: 1rem;
     height: 7rem;
     width: 100%;
     z-index: 333;
@@ -17,7 +19,6 @@
         display: flex;
         align-items: center;
         gap: .4em;
-        margin-inline: 1.7em;
 
         svg {
             fill: $clr01;
@@ -51,7 +52,6 @@
 
     .header-menu {
         gap: .3em;
-        margin-inline: 14px;
 
         .install-btn {
             display: flex;

@@ -24,7 +24,7 @@
 
         &:hover {
             background-color: $clr06;
-            
+
             .track-number {
                 display: none;
             }
@@ -61,6 +61,22 @@
             display: none;
         }
 
+        .add-library:hover{
+            display: block;
+            &:hover {
+                fill: $clr01;
+                scale: 1.02;
+            }
+        }
+
+        .v-icon:hover {
+            display: block;
+            &:hover {
+                fill: $clrGreen;
+                scale: 1.06;
+            }
+        }
+
         .title {
             justify-self: left;
             padding-inline-start: 10px;
@@ -80,14 +96,14 @@
             fill: white;
         }
 
-        .like-btn.liked svg{
+        .like-btn.liked svg {
             fill: $clrGreen;
         }
 
-        
+
     }
 
-    
+
 }
 
 .btn.show-more {

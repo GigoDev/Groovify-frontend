@@ -9,6 +9,8 @@
     flex-direction: column;
     justify-content: start;
 
+
+
     .side-card {
         display: flex;
         align-items: center;
@@ -28,6 +30,10 @@
 
 
         .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $clr06;
             width: 46px;
             height: 46px;
             overflow: hidden;

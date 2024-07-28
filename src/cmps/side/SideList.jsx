@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 import { Link } from 'react-router-dom';
+import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
+
 
 
 export function SideList({ stations, filterBy }) {
@@ -10,9 +12,8 @@ export function SideList({ stations, filterBy }) {
 
     useEffect(()=>{
     },[id])
+    if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
 
-    if (!stations) return null
-    // console.log('filtered', filtered)
     return (
         <ul className='side-list-container clean-list'>{
 
@@ -29,9 +30,9 @@ export function SideList({ stations, filterBy }) {
                         >
                             <div className="img-container">
                                 {station.imgs[(station.imgs.length - 1)].url ?
-                                    <img src={station.imgs[(station.imgs.length - 1)].url} />
+                                    <img src={station.imgs[(station.imgs.length - 1)].url}  />
                                     :
-                                    <MusicNoteIcon />
+                                    <MusicNoteIcon className="music-note-icon" fill="#a7a7a7" width="23" height="23"/>
                                 }
                             </div>
                             <div className="card-details">

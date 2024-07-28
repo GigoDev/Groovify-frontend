@@ -2,7 +2,7 @@
 import { useSelector } from 'react-redux'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import { clearStation, loadStation, removeStation, setTrack, setTracks, togglePlay, updateStation } from "../../store/actions/station.actions";
+import { clearStation, loadStation, removeStation, setPlayingStation, setTrack, togglePlay, updateStation } from "../../store/actions/station.actions";
 
 
 import { ImgUploader } from "../../cmps/ImgUploader";
@@ -41,7 +41,7 @@ export function PlaylistDetails() {
 
   useEffect(() => {
     loadStation(id)
-        document.body.style.setProperty('--bg-color', '#121212')
+    document.body.style.setProperty('--bg-color', '#121212')
     return async () => {
       await clear()
     }
@@ -68,7 +68,7 @@ export function PlaylistDetails() {
     if (track.spotifyId === currTrack.spotifyId) return togglePlay()
 
     setTrack(track)
-    setTracks()
+    setPlayingStation()
   }
 
   function handlePlayPause() {
@@ -78,7 +78,7 @@ export function PlaylistDetails() {
       } else if (tracks.length > 0) {
         setTrack(tracks[0])
       }
-      setTracks()
+      setPlayingStation()
     }
     togglePlay()
   }
@@ -86,6 +86,7 @@ export function PlaylistDetails() {
 
 
   function openEditModal() {
+    if (!station.owner || station._id === '2D2M9') return
     setIsModalOpen(true)
   }
 
@@ -125,7 +126,6 @@ export function PlaylistDetails() {
   if (!station || station.type !== 'playlist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
   const { imgs, listeners, name, type, tracks, likes, total } = station
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
-
   const totalDuration = tracks.reduce((acc, track) => {
     const [minutes, seconds] = track.duration.split(':').map(Number)
     return acc + (minutes * 60 + seconds)
@@ -135,10 +135,16 @@ export function PlaylistDetails() {
     <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
-          {imgUrl ? <img src={imgUrl} /> : <MusicNoteIcon className="svg-img-uploader" />}
+          {station.owner && station._id !== '2D2M9' ? (
+            imgUrl ? <img onClick={openEditModal} src={imgUrl} /> : <MusicNoteIcon onClick={openEditModal} />
+          ) : (
+
+            <img src={imgUrl} />
+          )}
         </div>
         <div className="station-summary">
           <p className="summary-title">{type}</p>
+
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           <div className="mini-dashboard">
             John Doe • {likes?.toLocaleString()} likes • {total} songs

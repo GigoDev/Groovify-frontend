@@ -1,8 +1,9 @@
 .featured-playlist-container {
     display: flex;
     flex-direction: column;
-    
+
     .list-title {
+        margin-inline: 6px;
         font-size: 1.5rem;
     }
 
@@ -12,13 +13,13 @@
         grid-auto-columns: 1fr;
         justify-items: left;
         align-items: baseline;
-        
+
         .list-item {
             padding: 10px;
             border-radius: 10px;
 
             &:hover {
-                background-color: rgba(179, 179, 179,0.2);
+                background-color: rgba(179, 179, 179, 0.2);
             }
 
         }
@@ -27,7 +28,7 @@
 
     .img-container {
         cursor: pointer;
-    
+
         img {
             border-radius: 10px;
             aspect-ratio: 1;
@@ -40,12 +41,24 @@
         font-size: 14px;
         text-align: left;
 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
     }
 
     .description {
         // display: none;
         font-size: 12px;
         color: $clr02;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
     }
 }

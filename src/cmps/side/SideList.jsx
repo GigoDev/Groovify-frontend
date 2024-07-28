@@ -20,7 +20,7 @@ export function SideList({ stations, filterBy }) {
                 .filter(station => station.type === filterBy.type && station.owner === true)
                 .map(station => (
 
-                    <Link to={`${station.type}/${station._id}`} key={station._id}>
+                    <Link to={`/${station.type}/${station._id}`} key={station._id}>
 
                         <article
                             className={activeId === station._id ? 'side-card active' : 'side-card'}

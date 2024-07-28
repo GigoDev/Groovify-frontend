@@ -88,6 +88,9 @@
         background-image: linear-gradient(rgba(0, 0, 0, .6) 0, $clr07 230px);
         background-color: $clr04;
         grid-column: 1/-1;
+        @include for-mobile-layout{
+            padding-inline-start: 10px;
+        }
     }
 
     .playlist-actions {

@@ -6,6 +6,9 @@
     li {
         display: grid;
         grid-template-columns: 30px 40px 2fr 1fr 50px 100px;
+        @include for-mobile-layout{
+            grid-template-columns: 30px 40px 1fr 50px;
+        }
         align-items: center;
         justify-items: left;
         padding-block: 9px;
@@ -13,6 +16,10 @@
 
         color: $clr02;
         font-size: 1rem;
+
+        @include for-mobile-layout{
+            .listeners,.time{display: none;}
+        }
         
 
         &:hover {

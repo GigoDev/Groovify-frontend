@@ -12,6 +12,12 @@
     .category-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+        @include for-mobile-layout {
+            grid-template-columns: 1fr 1fr;
+            padding-inline-end: 10px;
+        }
+
         gap: 22px;
     }
 }

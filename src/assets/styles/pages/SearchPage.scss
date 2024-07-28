@@ -4,7 +4,7 @@
 
     .station-search-header {
         padding: 17px;
-
+    
     }
 }
 
@@ -25,9 +25,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    
 }
 
 .spotify-loader {
     width: 100px; // Example larger size
     height: 100px; // Example larger size
+    
+    @include for-mobile-layout{
+        translate: 0 200%;
+    }
 }

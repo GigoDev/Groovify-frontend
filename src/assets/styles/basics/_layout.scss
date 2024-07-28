@@ -17,6 +17,7 @@
             grid-template-columns: 10px 1fr 10px;
             grid-template-rows: auto 1fr;
             border-radius: 10px;
+            padding-block-start: 10px;
     
             >* {
                 grid-column: 2;
@@ -26,9 +27,10 @@
             }
            
             .header {
-                .header-menu {
-                    justify-content: right;
-                }
+                display: none;
+                // .header-menu {
+                //     justify-content: right;
+                // }
             }
         }
 

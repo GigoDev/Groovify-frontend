@@ -32,7 +32,7 @@ export function RootCmp() {
                     <Route path="playlist/" element={<PlaylistDetails />} />
                     <Route path="album/:id" element={<AlbumDetails />} />
                     <Route path="album/" element={<AlbumDetails />} />
-                    <Route path="library/" element={<SideLib />} />
+                    <Route path="library" element={<SideLib />} />
                 </Routes>
                 <AppFooter />
             </main>

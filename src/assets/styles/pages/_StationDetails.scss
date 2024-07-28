@@ -11,9 +11,11 @@
    .hero {
       position: fixed;
       z-index: 0;
-
       height: $hero-img-height;
-      width: var(--hero-width);
+      
+      @include for-desktop-layout{
+         width: var(--hero-width);
+      }
       
       &.collapsed{
          width: var(--hero-width)
@@ -38,6 +40,9 @@
       .title {
          font-family: circular-bold;
          font-size: 96px;
+         @include for-mobile-layout{
+            font-size: 50px;
+         }
       }
 
       .listeners {}

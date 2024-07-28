@@ -94,7 +94,6 @@ export function ArtistDetails() {
         const savedStation = await stationService.save(stationToEdit)
         console.log(`${trackToRemove.name} removed from ${stationToEdit.name}`)
     }
-
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };

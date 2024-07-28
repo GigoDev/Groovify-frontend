@@ -10,12 +10,14 @@ import { addStation, loadStations } from "../../store/actions/station.actions";
 //ICONS
 import PlusIcon from "../../assets/icons/PlusIcon.svg"
 import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 export function SideLib({ isCollapsed, onCollapse }) {
+    const { id } = useParams()
     const navigate = useNavigate()
     const [filterBy, setFilterBy] = useState({ type: 'playlist', txt: '' })
     const stations = useSelector(state => state.stationModule.stations)
+    const [activeId, setActiveId] = useState(id)
 
     useEffect(() => {
         loadStations()
@@ -28,6 +30,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
             const newPlaylist = stationService.getEmptyPlaylist()
             newPlaylist.name = `${newPlaylist.name}  #${++newPlaylistCount.current}`
             const savedPlaylist = await addStation(newPlaylist)
+            setActiveId(savedPlaylist._id)
             navigate(`playlist/${savedPlaylist._id}`)
         } catch (error) {
             console.log(error)
@@ -49,7 +52,9 @@ export function SideLib({ isCollapsed, onCollapse }) {
             <SideList
                 filterBy={filterBy}
                 stations={stations}
-                isCollapsed={isCollapsed} />
+                isCollapsed={isCollapsed}
+                activeId={activeId}
+                setActiveId={setActiveId} />
         </section>
     )
 }

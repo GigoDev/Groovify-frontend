@@ -1,19 +1,10 @@
-import { useState, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 import { Link } from 'react-router-dom';
 import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
 
-
-
-export function SideList({ stations, filterBy, isCollapsed}) {
-    const { id } = useParams()
-    const [activeId, setActiveId] = useState(id)
-
-    useEffect(() => {
-    }, [id])
+export function SideList({ stations, filterBy, isCollapsed, activeId, setActiveId}) {
+    
     if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
-
     return (
         <ul className='side-list-container clean-list'>{
 

@@ -18,8 +18,8 @@ const initialState = {
     stations: [],
     station: null,
     isPlaying: false,
+    currPlayingStation: stationService.getById('uHX2t6'),
     currTrack: stationService.getDefaultTrack(),
-    currPlayingStation: null
 }
 
 export function stationReducer(state = initialState, action) {
@@ -69,7 +69,6 @@ export function stationReducer(state = initialState, action) {
         default:
             return state
     }
-    console.log(newState.currPlayingStation)
     return newState
 }
 

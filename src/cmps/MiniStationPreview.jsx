@@ -2,14 +2,19 @@ import MusicNoteIcon from '../assets/icons/MusicNoteIcon.svg'
 import PlayIcon from '../assets/icons/PlayIcon.svg'
 import PauseIcon from '../assets/icons/PauseIcon.svg'
 import { useSelector } from 'react-redux'
+import { setPlayingStation, setTrack, togglePlay } from '../store/actions/station.actions'
 
-export function MiniStationPreview({ station, onPlay }) {
+export function MiniStationPreview({ station }) {
     const { imgs, id, listeners, name, type, tracks } = station
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
-    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
-    function onPreviewPlay() {
-        
+    
+    function onPreviewPlay(event, station) {
+        event.stopPropagation()
+        event.preventDefault()
+        if (currPlayingStation._id === station._id) return togglePlay()
+        setTrack(station.tracks[0])
+        setPlayingStation(station)
     }
 
     return (
@@ -23,8 +28,8 @@ export function MiniStationPreview({ station, onPlay }) {
                 }
             </div>
             <span className='mini-card-title'>{name}</span>
-            <button className="btn-play-green" onClick={(ev) => onPlay(ev, tracks[0], tracks)}>
-                {isPlaying ? <PauseIcon /> : <PlayIcon />}
+            <button className="btn-play-green" onClick={(ev) => onPreviewPlay(ev, station)}>
+                {isPlaying && currPlayingStation._id === station._id ? <PauseIcon /> : <PlayIcon />}
             </button>
         </article >
     )

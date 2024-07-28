@@ -2,11 +2,8 @@
     display: flex;
     flex-direction: column;
     
-
-
     .list-title {
         font-size: 1.5rem;
-
     }
 
     .lists-container {
@@ -15,8 +12,7 @@
         grid-auto-columns: 1fr;
         justify-items: left;
         align-items: baseline;
-        gap: 15px;
-
+        
         .list-item {
             padding: 10px;
             border-radius: 10px;

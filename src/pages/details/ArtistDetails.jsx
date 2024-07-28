@@ -117,7 +117,7 @@ export function ArtistDetails() {
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks}  onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
+                <TrackList tracks={tracks} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
             </section>
         </section>
     )

@@ -13,10 +13,11 @@
 
         color: $clr02;
         font-size: 1rem;
+        
 
         &:hover {
             background-color: $clr06;
-
+            
             .track-number {
                 display: none;
             }
@@ -67,10 +68,16 @@
             }
         }
 
-        .add-btn svg:hover {
+        .like-btn svg:hover {
             cursor: pointer;
             fill: white;
         }
+
+        .like-btn.liked svg{
+            fill: $clrGreen;
+        }
+
+        
     }
 
     

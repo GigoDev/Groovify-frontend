@@ -47,7 +47,6 @@ export function stationReducer(state = initialState, action) {
             newState = { ...state, stations, station: action.station }
             break
         case UPDATE_LIKED_STATION:
-            console.log(action.station)
             stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
             newState = { ...state, stations }
 

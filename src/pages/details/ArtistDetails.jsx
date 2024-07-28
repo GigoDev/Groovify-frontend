@@ -65,7 +65,7 @@ export function ArtistDetails() {
     function onPlay(ev, track) {
         ev.stopPropagation()
         setSelectedTrack(track)
-        if (track.spotifyId === currTrack.spotifyId) return togglePlay()
+        if (track.spotifyId === currTrack.spotifyId) return togglePlay() // check if new track was clicked
 
         setTrack(track)
         setTracks()
@@ -84,22 +84,6 @@ export function ArtistDetails() {
     }
 
 
-    function handlePlayPause() {
-        if (!isPlaying) {
-            if (selectedTrack) {
-                setTrack(selectedTrack)
-            } else if (tracks.length > 0) {
-                setTrack(tracks[0])
-            }
-            setTracks()
-        }
-        togglePlay()
-    }
-
-
-    function onAddTrack(track) {
-        updateLikedStation(track)
-    }
 
     async function onRemoveTrack(trackToRemove, stationId = '2D2M9') {
         const stationToEdit = await stationService.getById(stationId)
@@ -113,7 +97,7 @@ export function ArtistDetails() {
     const { imgs, listeners, name: title, type, tracks, owner } = station
     // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
     return (
-        <section className="station-details-container">
+        <section className="station-details-container full-details">
 
             <div className='hero' style={{ opacity }}>
                 <img src={imgs[0].url} alt="hero img" />
@@ -133,7 +117,7 @@ export function ArtistDetails() {
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks} onAddTrack={onAddTrack} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
+                <TrackList tracks={tracks}  onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
             </section>
         </section>
     )

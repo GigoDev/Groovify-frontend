@@ -33,7 +33,7 @@ export function PlaylistDetails() {
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  
+
   useEffect(() => {
     loadStation(id)
     return async () => {
@@ -113,7 +113,7 @@ export function PlaylistDetails() {
   }, 0)
   const formattedDuration = formatDurationSec(totalDuration)
   return (
-    <section className="playlist-details content-layout">
+    <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
           {imgUrl ? <img src={imgUrl} /> : <MusicNoteIcon className="svg-img-uploader" />}
@@ -130,22 +130,27 @@ export function PlaylistDetails() {
 
       <section className="song-list-container content-layout">
         <section className="playlist-actions">
-          <button className="btn-play-green">
-            <PlayIcon />
-          </button>
-          <button className="add-library">
+          {!station.tracks.length ? ('') :
+            (<button className="btn-play-green">
+              <PlayIcon />
+            </button>
+            )}
+          {station.owner ? ('') : (<button className="add-library">
             <AddLibrary />
-          </button>
-          <div className="flex option-btns">
-            <StationMenuModal
-              trigger={
-                <button className="btn-more">
-                  <BigBtnOptions />
-                </button>
-              }
-              options={menuOptions}
-            />
-          </div>
+          </button>)}
+
+          {station._id === '2D2M9' ? ('') :
+            (<div className="flex option-btns">
+              <StationMenuModal
+                trigger={
+                  <button className="btn-more">
+                    <BigBtnOptions />
+                  </button>
+                }
+                options={menuOptions}
+              />
+            </div>)}
+
         </section>
 
         <div className='list-container'>

@@ -13,12 +13,19 @@
 
         .main-container {
             grid-row: 1;
-            display: block;
+            display: grid;
+            grid-template-columns: 10px 1fr 10px;
+            grid-template-rows: auto 1fr;
             border-radius: 10px;
-            width: 100vw;
-
+    
+            >* {
+                grid-column: 2;
+                &.full-details{
+                    grid-column: 1 /-1;
+                }
+            }
+           
             .header {
-
                 .header-menu {
                     justify-content: right;
                 }

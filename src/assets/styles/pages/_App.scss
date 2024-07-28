@@ -3,10 +3,6 @@
     padding: 6px;
     overflow: hidden;
 
-    @include for-mobile-layout {
-        padding: 0px;
-    }
-
     .main-container {
         background-color: $clr07;
         overflow: hidden;

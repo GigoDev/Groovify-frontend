@@ -1,5 +1,5 @@
 //REACT
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export function SideNav({ isCollapsed }) {
@@ -8,6 +8,12 @@ export function SideNav({ isCollapsed }) {
     function handleClick(link) {
         setActiveLink(link)
     }
+
+    useEffect(() => {//side effect for mobile - no header in 'library' state
+        activeLink === 'library' ?document.querySelector('.header').style.display = 'none'
+        : document.querySelector('.header').style.display = '' 
+    
+    }, [activeLink]);
 
     return (
         <section className={`side-nav ${isCollapsed ? 'collapsed' : ''}`}>

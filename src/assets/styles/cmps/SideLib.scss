@@ -5,6 +5,10 @@
     border-radius: 7px;
     background-color: $clr07;
     height: calc(100% - 115px);
+    
+    @include for-mobile-layout {
+        padding-block-start: 10px;
+    }
 
     .top-bar {
         display: flex;

@@ -48,7 +48,8 @@ export function SideLib({ isCollapsed, onCollapse }) {
             <SideFilter setFilterBy={setFilterBy} />
             <SideList
                 filterBy={filterBy}
-                stations={stations} />
+                stations={stations}
+                isCollapsed={isCollapsed} />
         </section>
     )
 }

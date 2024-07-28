@@ -5,7 +5,7 @@
     border-radius: 7px;
     background-color: $clr07;
     height: calc(100% - 115px);
-    
+
     @include for-mobile-layout {
         padding-block-start: 10px;
     }
@@ -16,47 +16,6 @@
         justify-content: space-between;
         align-items: center;
         white-space: nowrap;
-
-        .side-nav {
-            display: grid;
-            grid-template-rows: 53px 53px;
-            width: 100%;
-            margin-block-end: 7px;
-            border-radius: 7px;
-            background-color: $clr07;
-            font-family: circular-bold;
-
-            .search-link {
-                padding-block: 0px 9px;
-            }
-
-            .home-link,
-            .search-link {
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                padding-inline: 25px;
-                color: $clr03;
-                text-decoration: none;
-
-                svg {
-                    width: 20px;
-                    height: 20px;
-                }
-
-                span {
-                    padding-block: 3px 0px;
-                    color: $clr02;
-                    font-size: 1rem;
-                }
-
-                &:hover {
-                    color: $clr01;
-                    transition: color 0.4s;
-                }
-            }
-
-        }
 
         .your-library {
             display: flex;
@@ -69,9 +28,10 @@
 
 
             svg {
-                @include for-mobile-layout{
+                @include for-mobile-layout {
                     display: none;
                 }
+
                 width: 30px;
                 height: 24px;
                 margin-right: 5px;
@@ -79,10 +39,11 @@
             }
 
             span.library {
-                @include for-mobile-layout{
+                @include for-mobile-layout {
                     color: $clr01;
                     font-size: 1.2rem;
                 }
+
                 color: $clr02;
                 font-weight: bold;
                 font-family: circular-bold;

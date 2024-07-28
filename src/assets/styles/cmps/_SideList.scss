@@ -38,19 +38,16 @@
             height: 46px;
             overflow: hidden;
             border-radius: 5px;
-            margin-inline: 12px;
-            margin-block: 8px;
+            margin-inline: 15px;
+            margin-block: 10px;
 
         }
 
         .card-details {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-
+            gap: 6px;
             align-items: start;
-            // padding-block: 3px;
-
             font-family: circular;
             font-size: 1rem;
 
@@ -59,10 +56,10 @@
             }
 
             .card-type {
-                // padding-block: 1px 0;
-                color: $clr03;
-                font-size: 0.9rem;
+                color: $clr02;
+                font-size: 0.8rem;
                 position: relative;
+                letter-spacing: 0.5px;
             }
 
 

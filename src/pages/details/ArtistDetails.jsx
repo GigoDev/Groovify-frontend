@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { TrackList } from '../../cmps/TrackList'
 
-import { loadStation, clearStation, setTrack, togglePlay, setTracks, updateStation, updateLikedStation } from '../../store/actions/station.actions'
+import { loadStation, clearStation, setTrack, togglePlay, updateStation, updateLikedStation, setPlayingStation } from '../../store/actions/station.actions'
 import { stationService } from '../../services/station'
 
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
@@ -70,7 +70,7 @@ export function ArtistDetails() {
         if (track.spotifyId === currTrack.spotifyId) return togglePlay() // check if new track was clicked
 
         setTrack(track)
-        setTracks()
+        setPlayingStation()
     }
 
     function handlePlayPause() {
@@ -80,7 +80,7 @@ export function ArtistDetails() {
             } else if (tracks.length > 0) {
                 setTrack(tracks[0])
             }
-            setTracks()
+            setPlayingStation()
         }
         togglePlay()
     }

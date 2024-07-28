@@ -1,6 +1,6 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
-import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_TRACKS, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION } from '../reducers/station.reducer'
+import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
 import { getRandomIntInclusive } from '../../services/util.service.js'
@@ -120,11 +120,11 @@ export async function setTrack(track) {
         throw err
     }
 }
-export function setTracks(tracks = null) {
+export function setPlayingStation(station = null) {
     try {
         store.dispatch({
-            type: SET_CURR_TRACKS,
-            tracks
+            type: SET_CURR_PLAYING_STATION,
+            station
         })
     } catch (err) {
         console.log('cannot play/pause', err)
@@ -133,27 +133,31 @@ export function setTracks(tracks = null) {
 }
 
 export function next() {
-    const { currTrack, currPlayingTracks } = store.getState().stationModule
-    let Idx = currPlayingTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
+    const { currTrack, currPlayingStation } = store.getState().stationModule
+    const { tracks: currTracks } = currPlayingStation
+    
+    let Idx = currTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
 
-    if (Idx === currPlayingTracks.length) Idx = 0 // End of playlist
-    setTrack(currPlayingTracks[++Idx])
+    if (Idx === currTracks.length) Idx = 0 // End of playlist
+    setTrack(currTracks[++Idx])
 }
 
 export function prev() {
 
-    const { currTrack, currPlayingTracks } = store.getState().stationModule
-    let Idx = currPlayingTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
+    const { currTrack, currPlayingStation } = store.getState().stationModule
+    const { tracks: currTracks } = currPlayingStation
+    let Idx = currTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
 
     if (Idx === 0) return // Start of playlist
-    setTrack(currPlayingTracks[--Idx])
+    setTrack(currTracks[--Idx])
 }
 
 export function shuffle() {
-    const { currPlayingTracks } = store.getState().stationModule
+    const { currPlayingStation } = store.getState().stationModule
+    const { tracks: currTracks } = currPlayingStation
 
-    const Idx = getRandomIntInclusive(0, currPlayingTracks.length - 1) // Shuffle
-    setTrack(currPlayingTracks[Idx])
+    const Idx = getRandomIntInclusive(0, currTracks.length - 1) // Shuffle
+    setTrack(currTracks[Idx])
 }
 
 

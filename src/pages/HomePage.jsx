@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { MiniStationList } from "../cmps/MiniStationList"
-import { setTrack, setTracks, togglePlay } from '../store/actions/station.actions'
+import { setPlayingStation, setTrack, togglePlay } from '../store/actions/station.actions'
 import { FeaturedPlaylist } from '../cmps/FeaturedPlaylist'
 import { FastAverageColor } from 'fast-average-color'
 import SpotifyLoader from '../assets/gifs/SpotifyLoader.gif'
@@ -27,15 +27,14 @@ export function HomePage() {
         }
     }
 
-    function onPlay(ev, track, tracks) {
+    function onPlay(ev, track, station) {
         ev.stopPropagation()
         ev.preventDefault()
         
         if (track.spotifyId === currTrack.spotifyId) return togglePlay()
-
+        console.log('not the same track')
         setTrack(track)
-        setTracks(tracks)
-        togglePlay()
+        setPlayingStation(station)
     }
 
 

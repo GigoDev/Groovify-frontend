@@ -11,7 +11,7 @@ export const ADD_STATION_MSG = 'ADD_STATION_MSG'
 
 // Player CMDs
 export const SET_CURR_TRACK = 'SET_CURR_TRACK'
-export const SET_CURR_TRACKS = 'SET_CURR_TRACKS'
+export const SET_CURR_PLAYING_STATION = 'SET_CURR_PLAYING_STATION'
 export const IS_PLAYING = 'IS_PLAYING'
 
 const initialState = {
@@ -19,7 +19,7 @@ const initialState = {
     station: null,
     isPlaying: false,
     currTrack: stationService.getDefaultTrack(),
-    currPlayingTracks: null
+    currPlayingStation: null
 }
 
 export function stationReducer(state = initialState, action) {
@@ -59,8 +59,9 @@ export function stationReducer(state = initialState, action) {
         case SET_CURR_TRACK:
             newState = { ...state, currTrack: action.currTrack, isPlaying: true }
             break
-        case SET_CURR_TRACKS:
-            newState = { ...state, currPlayingTracks: action.tracks || state.station.tracks }
+        case SET_CURR_PLAYING_STATION:
+            
+            newState = { ...state, currPlayingStation: action.station || state.station }
             break
         case IS_PLAYING:
             newState = { ...state, isPlaying: !state.isPlaying }
@@ -68,6 +69,7 @@ export function stationReducer(state = initialState, action) {
         default:
             return state
     }
+    console.log(newState.currPlayingStation)
     return newState
 }
 

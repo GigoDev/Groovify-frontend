@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    
-    
+
+
 
     .side-card {
         display: flex;
@@ -24,13 +24,23 @@
 
 
         .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $clr06;
             width: 46px;
             height: 46px;
             overflow: hidden;
             border-radius: 5px;
             margin-inline: 12px;
             margin-block: 8px;
-            
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
         }
 
         .card-details {

@@ -24,6 +24,7 @@ export function SearchPage() {
         if (search) {
             debouncedLoadTracks(search)
         }
+        document.body.style.setProperty('--bg-color', '#121212')
     }, [search])
 
     return (

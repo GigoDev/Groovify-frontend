@@ -2,9 +2,9 @@ import { MiniStationPreview } from "./MiniStationPreview"
 import { Link } from 'react-router-dom';
 
 
-export function MiniStationList({ stations, extractColor }) {
+export function MiniStationList({ stations, extractColor, onPlay}) {
 
-    if (!stations) return <div>Loading..</div>
+    if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     return (
         <ul className='mini-cards-container clean-list'>{
 
@@ -12,7 +12,7 @@ export function MiniStationList({ stations, extractColor }) {
                 <Link to={`${station.type}/${station._id}`}
                     onMouseEnter={() => extractColor(station.imgs[0].url)}
                     key={station._id}>
-                    <MiniStationPreview station={station} />
+                    <MiniStationPreview station={station} onPlay={onPlay} />
                 </Link>
             ))
         }

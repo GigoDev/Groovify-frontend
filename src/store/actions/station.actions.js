@@ -120,9 +120,12 @@ export async function setTrack(track) {
         throw err
     }
 }
-export function setTracks() {
+export function setTracks(tracks = null) {
     try {
-        store.dispatch({ type: SET_CURR_TRACKS })
+        store.dispatch({
+            type: SET_CURR_TRACKS,
+            tracks
+        })
     } catch (err) {
         console.log('cannot play/pause', err)
         throw err

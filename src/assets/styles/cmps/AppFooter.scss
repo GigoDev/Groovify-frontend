@@ -8,7 +8,7 @@
 
     .details-container {
         display: grid;
-        grid-template-columns: 850px 1fr;
+        grid-template-columns: 2fr 1fr;
         justify-content: space-between;
         padding-block: 50px ;
 
@@ -141,8 +141,8 @@
         gap: 10px;
         justify-content: start;
 
-        height: 100px;
-        margin-block: 3rem;
+        // height: 100px;
+        margin-block: 3rem 5rem;
 
         span:last-child {
             justify-self: end;

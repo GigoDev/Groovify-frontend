@@ -1,7 +1,10 @@
+:root{--hero-width: calc(100% - 378px)}
 .station-details-container {
+   
    $hero-img-height: 400px;
    position: relative;
    width: 100%;
+   
 
    font-family: circular;
 
@@ -10,8 +13,12 @@
       z-index: 0;
 
       height: $hero-img-height;
-      width: calc(100% - 370px);
+      width: var(--hero-width);
       
+      &.collapsed{
+         width: var(--hero-width)
+
+      }
 
       img {
          width: 100%;

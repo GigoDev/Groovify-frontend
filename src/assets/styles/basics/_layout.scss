@@ -44,12 +44,22 @@
             grid-column: 1;
         }
 
-        .main-container {
+    .main-container {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 15px 1fr 15px;
+        grid-template-rows: auto 1fr;
+        border-radius: 10px;
+
+        >* {
             grid-column: 2;
-            display: grid;
-            grid-template-rows: auto 1fr;
-            border-radius: 10px;
+
+            &.full-details{
+                grid-column: 1 /-1;
+            }
         }
+    }
+
 
         .content-layout {
             display: grid;

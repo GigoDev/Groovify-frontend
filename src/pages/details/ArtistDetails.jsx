@@ -8,6 +8,8 @@ import { stationService } from '../../services/station'
 
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import PauseIcon from '../../assets/icons/PauseIcon.svg'
+import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
+
 
 
 export function ArtistDetails() {
@@ -29,7 +31,7 @@ export function ArtistDetails() {
         loadStation(id)
         // .then(station => {setIsFollow(station.owner)}) //error from this line
         elMainContainer?.addEventListener('scroll', handleScroll)
-
+        document.body.style.setProperty('--bg-color', '#121212')
 
 
 
@@ -47,7 +49,7 @@ export function ArtistDetails() {
         const scrollTop = elMainContainer.scrollTop;
         const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
         const scrollFraction = scrollTop / maxScroll;
-        setOpacity(1 - scrollFraction);
+        setOpacity(1 - scrollFraction*2);
     }
 
     async function handleFollow() {
@@ -65,7 +67,7 @@ export function ArtistDetails() {
     function onPlay(ev, track) {
         ev.stopPropagation()
         setSelectedTrack(track)
-        if (track.spotifyId === currTrack.spotifyId) return togglePlay()
+        if (track.spotifyId === currTrack.spotifyId) return togglePlay() // check if new track was clicked
 
         setTrack(track)
         setTracks()
@@ -84,22 +86,6 @@ export function ArtistDetails() {
     }
 
 
-    function handlePlayPause() {
-        if (!isPlaying) {
-            if (selectedTrack) {
-                setTrack(selectedTrack)
-            } else if (tracks.length > 0) {
-                setTrack(tracks[0])
-            }
-            setTracks()
-        }
-        togglePlay()
-    }
-
-
-    function onAddTrack(track) {
-        updateLikedStation(track)
-    }
 
     async function onRemoveTrack(trackToRemove, stationId = '2D2M9') {
         const stationToEdit = await stationService.getById(stationId)
@@ -109,11 +95,11 @@ export function ArtistDetails() {
         console.log(`${trackToRemove.name} removed from ${stationToEdit.name}`)
     }
 
-    if (!station || station.type !== 'artist') return <h1>Loading...</h1>
+    if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
     return (
-        <section className="station-details-container">
+        <section className="station-details-container full-details">
 
             <div className='hero' style={{ opacity }}>
                 <img src={imgs[0].url} alt="hero img" />
@@ -133,7 +119,7 @@ export function ArtistDetails() {
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks} onAddTrack={onAddTrack} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
+                <TrackList tracks={tracks} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
             </section>
         </section>
     )

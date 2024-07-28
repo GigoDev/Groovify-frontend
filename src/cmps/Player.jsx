@@ -40,7 +40,7 @@ export function Player() {
     // Hover state
     const [isHoverProgressBar, setIsHoverProgressBar] = useState(false)
     const [isHoverVolumeSlider, setIsHoverVolumeSlider] = useState(false)
-
+    
     const playerRef = useRef(null)
 
     function handleProgress(state) {

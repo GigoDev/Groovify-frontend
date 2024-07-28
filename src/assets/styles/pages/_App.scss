@@ -11,8 +11,6 @@
         background-color: $clr07;
         overflow: hidden;
         overflow-y: auto;
-        padding-inline: 15px;
-
         @include for-desktop-layout {
             background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 20%, $clr07 30%), var(--bg-color);
             transition: background-color 1.5s ease-out;

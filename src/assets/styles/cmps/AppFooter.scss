@@ -1,10 +1,10 @@
 .footer-container {
     line-height: 1.6;
-    margin-block: 4em;
+    margin-block-start: 4em;
 
     .details-container {
         display: grid;
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 2fr 1fr;
         justify-content: space-between;
 
         .info {
@@ -134,8 +134,8 @@
         gap: 10px;
         justify-content: start;
 
-        height: 100px;
-        margin-block: 3rem;
+        // height: 100px;
+        margin-block: 3rem 5rem;
 
         span:last-child {
             justify-self: end;

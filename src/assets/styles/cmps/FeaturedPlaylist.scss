@@ -1,13 +1,11 @@
 .featured-playlist-container {
     display: flex;
     flex-direction: column;
-    // margin-top: 60px;
+    
 
 
     .list-title {
         font-size: 1.5rem;
-        // margin-bottom: 25px;
-        // margin-inline: 25px 0;
 
     }
 
@@ -21,6 +19,12 @@
         gap: 15px;
 
         .list-item {
+            padding: 10px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: rgba(179, 179, 179,0.2);
+            }
 
         }
 

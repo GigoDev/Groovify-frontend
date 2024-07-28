@@ -15,14 +15,11 @@ export function SideFilter({ setFilterBy }) {
     const handleInput = (ev) => {
         const { target } = ev
         setSearchInput(target.value)
-
     }
 
     useEffect(() => {
         const debounceTimeout = setTimeout(() => {
-            if (searchInput) {
-                setFilterBy(filterBy => ({ ...filterBy, txt: searchInput }))
-            }
+            setFilterBy(filterBy => ({ ...filterBy, txt: searchInput }))
         }, 500);
 
         return () => clearTimeout(debounceTimeout);

@@ -21,18 +21,14 @@ export function ArtistDetails() {
 
     const [selectedTrack, setSelectedTrack] = useState(null)
     const [opacity, setOpacity] = useState(1);
-    // const [follow, setIsFollow] = useState('')
+    const [isFollow, setIsFollow] = useState(false)
 
     const elMainContainer = document.querySelector('.main-container')
 
-
-
     useEffect(() => {
         loadStation(id)
-        // .then(station => {setIsFollow(station.owner)}) //error from this line
         elMainContainer?.addEventListener('scroll', handleScroll)
         document.body.style.setProperty('--bg-color', '#121212')
-
 
 
         return async () => {
@@ -40,6 +36,19 @@ export function ArtistDetails() {
             await clear()
         }
     }, [id])
+
+    useEffect(() => {
+        // Check if the user is already following the station
+        const getLoggedInUser = () => ({ _id: 'userId', name: 'user' }); //to be replaced by service function 
+        const loggedInUser = getLoggedInUser();
+
+        if (station && station.followBy) {
+            const isUserFollowing = station.followBy.some(user => user._id === loggedInUser._id);
+            setIsFollow(isUserFollowing);
+        }
+    }, [station]);
+
+
 
     async function clear() {
         await clearStation()
@@ -49,19 +58,30 @@ export function ArtistDetails() {
         const scrollTop = elMainContainer.scrollTop;
         const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
         const scrollFraction = scrollTop / maxScroll;
-        setOpacity(1 - scrollFraction*2);
+        setOpacity(1 - scrollFraction * 2);
     }
 
-    async function handleFollow() {
-        return
-        if (follow) {
-            updateStation({ ...station, owner: null })
-            setIsFollow(null)
-        }
-        else {
-            updateStation({ ...station, owner: true })
+    async function handleFollow() {//work for initial state and for update state
+        const getLoggedInUser = () => ({ _id: 'userId', name: 'user' });
+        const loggedInUser = getLoggedInUser()
+        const stationToUpdate = { ...station }
+
+        if (stationToUpdate.followBy) {
+            const idx = stationToUpdate.followBy.findIndex(user => user._id === loggedInUser._id)
+            if (idx >= 0) {
+                stationToUpdate.followBy.splice(idx, 1) //remove
+                setIsFollow(false)
+            }
+            else {
+                stationToUpdate.followBy.push(loggedInUser) //add
+                setIsFollow(true)
+            }
+        } else {
+            stationToUpdate.followBy = [loggedInUser] //add
             setIsFollow(true)
         }
+
+        updateStation(stationToUpdate)
     }
 
     function onPlay(ev, track) {
@@ -85,8 +105,6 @@ export function ArtistDetails() {
         togglePlay()
     }
 
-
-
     async function onRemoveTrack(trackToRemove, stationId = '2D2M9') {
         const stationToEdit = await stationService.getById(stationId)
         const newTracks = stationToEdit.tracks.filter(track => track.spotifyId !== trackToRemove.spotifyId)
@@ -96,7 +114,7 @@ export function ArtistDetails() {
     }
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
-    // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
+    const followStyle = isFollow? { borderColor: 'green' }: { borderColor: 'white' };
     return (
         <section className="station-details-container full-details">
 
@@ -114,7 +132,7 @@ export function ArtistDetails() {
                     <button className='btn play' onClick={handlePlayPause}>
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className='btn pill follow' onClick={handleFollow} >Follow</button>
+                    <button className='btn pill follow' onClick={handleFollow} style={followStyle}>Follow</button>
                 </div>
 
                 <h2>Popular</h2>

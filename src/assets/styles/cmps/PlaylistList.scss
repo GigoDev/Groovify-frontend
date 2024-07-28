@@ -3,6 +3,11 @@
    grid-column: 1 / -1;
    grid-template-columns: subgrid;
 
+   @include for-mobile-layout{
+      li{
+         .play-icon,.album,.date,.btn-like,.createdAt{display: none;}
+      } 
+   }
    li {
       padding-inline: 10px;
       padding-block: 10px;

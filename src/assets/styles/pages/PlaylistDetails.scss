@@ -1,12 +1,23 @@
+// @include for-mobile-layout {.header{display: none;}}
 .playlist-details {
     background: transparent;
     background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
 
 
     .station-preview {
-        padding: 100px;
-        padding-block-end: 10px;
-        gap: 20px;
+        @include for-desktop-layout {
+            padding: 100px;
+            padding-block-end: 10px;
+            gap: 20px;
+        }
+
+        @include for-mobile-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+
 
         .img-container {
             box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
@@ -33,13 +44,21 @@
 
 
             h1 {
-                font-size: 65px;
                 margin: 20px 0;
-                font-weight: 900;
-                transform: translateY(-15%);
+
+                @include for-desktop-layout {
+                    font-size: 65px;
+                    font-weight: 900;
+                    transform: translateY(-15%);
+                }
+
             }
 
             .summary-title {
+                @include for-mobile-layout {
+                    display: none;
+                }
+
                 font-size: .75rem;
                 margin-bottom: 0;
                 position: relative;
@@ -54,6 +73,10 @@
             }
 
             .mini-dashboard {
+                @include for-mobile-layout {
+                    display: none;
+                }
+
                 font-size: 0.875rem;
                 margin-bottom: 0;
                 line-height: normal;
@@ -141,10 +164,19 @@
     .list-container {
         display: grid;
         grid-template-columns: 30px 40px 2fr 1.5fr 1fr 40px 40px 30px;
+
+        @include for-mobile-layout {
+            grid-template-columns: 30px 40px 1fr 30px;
+        }
+
         gap: 10px;
         padding: 10px;
 
         .list-titles {
+            @include for-mobile-layout {
+                display: none;
+            }
+
             display: grid;
             grid-template-columns: subgrid;
             grid-column: 1 / -1;

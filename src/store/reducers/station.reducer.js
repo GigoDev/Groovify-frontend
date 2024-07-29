@@ -18,7 +18,7 @@ const initialState = {
     stations: [],
     station: null,
     isPlaying: false,
-    currPlayingStation: stationService.getById('uHX2t6'),
+    currPlayingStation: stationService.getById('66a7304e661319abe097f45d'),
     currTrack: stationService.getDefaultTrack(),
 }
 

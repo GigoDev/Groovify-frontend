@@ -86,7 +86,7 @@ export function PlaylistDetails() {
 
 
   function openEditModal() {
-    if (!station.owner || station._id === '2D2M9') return
+    if (!station.owner || station.name === 'Liked Songs') return
     setIsModalOpen(true)
   }
 
@@ -135,7 +135,7 @@ export function PlaylistDetails() {
     <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
-          {station.owner && station._id !== '2D2M9' ? (
+          {station.owner && station.name === 'Liked Songs' ? (
             imgUrl ? <img onClick={openEditModal} src={imgUrl} /> : <MusicNoteIcon onClick={openEditModal} />
           ) : (
 
@@ -164,7 +164,7 @@ export function PlaylistDetails() {
             <AddLibrary />
           </button>)}
 
-          {station._id === '2D2M9' ? ('') :
+          {station.name === 'Liked Songs' ? ('') :
             (<div className="flex option-btns">
               <StationMenuModal
                 trigger={

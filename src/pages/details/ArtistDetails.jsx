@@ -25,8 +25,6 @@ export function ArtistDetails() {
 
     const elMainContainer = document.querySelector('.main-container')
 
-
-
     useEffect(() => {
         loadStation(id)
         // .then(station => {setIsFollow(station.owner)}) //error from this line
@@ -49,7 +47,7 @@ export function ArtistDetails() {
         const scrollTop = elMainContainer.scrollTop;
         const maxScroll = elMainContainer.scrollHeight - elMainContainer.clientHeight;
         const scrollFraction = scrollTop / maxScroll;
-        setOpacity(1 - scrollFraction*2);
+        setOpacity(1 - scrollFraction * 2);
     }
 
     async function handleFollow() {
@@ -85,15 +83,6 @@ export function ArtistDetails() {
         togglePlay()
     }
 
-
-
-    async function onRemoveTrack(trackToRemove, stationId = '2D2M9') {
-        const stationToEdit = await stationService.getById(stationId)
-        const newTracks = stationToEdit.tracks.filter(track => track.spotifyId !== trackToRemove.spotifyId)
-        stationToEdit.tracks = newTracks
-        const savedStation = await stationService.save(stationToEdit)
-        console.log(`${trackToRemove.name} removed from ${stationToEdit.name}`)
-    }
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     // const ownerStyle = follow ? { borderColor: 'green' } : { borderColor: 'white' };
@@ -118,7 +107,7 @@ export function ArtistDetails() {
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks} onPlay={onPlay} onRemoveTrack={onRemoveTrack} />
+                <TrackList tracks={tracks} onPlay={onPlay}  />
             </section>
         </section>
     )

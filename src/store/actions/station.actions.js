@@ -1,6 +1,6 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
-import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION } from '../reducers/station.reducer'
+import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION, UPDATE_TRACK_ORDER } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
 import { getRandomIntInclusive } from '../../services/util.service.js'
@@ -87,6 +87,15 @@ export async function addStationMsg(stationId, txt) {
     }
 }
 
+export async function updateTrackDnd(updatedTracks) {
+    try {
+        store.dispatch(getCmdUpdateTrackOrder(updatedTracks))
+    } catch (err) {
+        console.log('Cannot update track order', err)
+        throw err
+    }
+}
+
 export function clearStation() {
     store.dispatch(getCmdSetStation())
 }
@@ -100,6 +109,8 @@ export function toggleLibraryAction() {
         type: MENU_TOGGLE
     }
 }
+
+
 
 // Player actions:
 export async function togglePlay() {
@@ -135,11 +146,12 @@ export function setPlayingStation(station = null) {
 export function next() {
     const { currTrack, currPlayingStation } = store.getState().stationModule
     const { tracks: currTracks } = currPlayingStation
-    
-    let Idx = currTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
 
+    let Idx = currTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
+    if (Idx === -1) return
+    Idx++
     if (Idx === currTracks.length) Idx = 0 // End of playlist
-    setTrack(currTracks[++Idx])
+    setTrack(currTracks[Idx])
 }
 
 export function prev() {
@@ -147,9 +159,10 @@ export function prev() {
     const { currTrack, currPlayingStation } = store.getState().stationModule
     const { tracks: currTracks } = currPlayingStation
     let Idx = currTracks.findIndex(track => currTrack.spotifyId === track.spotifyId) // Get curr index
-
-    if (Idx === 0) return // Start of playlist
-    setTrack(currTracks[--Idx])
+    if (Idx === -1) return
+    if (Idx === 0) Idx = currTracks.length // Start of playlist
+    Idx--
+    setTrack(currTracks[Idx])
 }
 
 export function shuffle() {
@@ -211,6 +224,13 @@ export function getActionSetTrack(track) {
     return {
         type: SET_CURR_TRACK,
         currTrack: track
+    }
+}
+
+function getCmdUpdateTrackOrder(updatedTracks) {
+    return {
+        type: UPDATE_TRACK_ORDER,
+        updatedTracks
     }
 }
 

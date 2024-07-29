@@ -1,20 +1,22 @@
-import { formatDate } from "../services/util.service"
+import { formatDate, truncateText } from "../services/util.service"
 import SmallBtnOptions from '../assets/icons/SmallBtnOptions.svg'
 import LikeIcon from '../assets/icons/LikeIcon.svg'
 import RemoveBinIcon from '../assets/icons/RemoveBinIcon.svg'
 import { StationMenuModal } from "./StationMenuModal"
-
 import PlayIcon from '../assets/icons/PlayIcon.svg';
 import PauseIcon from '../assets/icons/PauseIcon.svg';
 import Equalizer from '../assets/gifs/Equalizer.gif';
 import { useSelector } from "react-redux"
+import { useState } from "react"
 
 
 export function PlaylistList({ station, onUpdateStation, onPlay }) {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+
+    const [activeId, setActiveId] = useState('')
+
     const { tracks } = station
-    // console.log('tracks', tracks)
     function handleDelete(trackId) {
         console.log('trackId', trackId)
         const newTracks = tracks.filter(track => track.spotifyId !== trackId)
@@ -38,7 +40,9 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
     }
     return (
         <ul className='playlist-list clean-list'>{tracks.map((track, idx) => (
-            <li key={track.spotifyId + idx}>
+            <li className={activeId === track.spotifyId ? 'active' : ''}
+                onClick={() => setActiveId(track.spotifyId)}
+                key={track.spotifyId + idx}>
                 <span className='play-icon' onClick={(event) => onPlay(event, track)}>
                     {isPlaying && currTrack.spotifyId === track.spotifyId ?
                         <PauseIcon /> : <PlayIcon />}
@@ -53,11 +57,11 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
                 <img src={track.album.imgs[(track.album.imgs.length - 1)].url} />
 
                 <div className='name'>
-                    <div className={`title ${isPlaying && currTrack.spotifyId === track.spotifyId ? 'active' : ''}`}>{track.name}</div>
+                    <div className={`title ${isPlaying && currTrack.spotifyId === track.spotifyId ? 'active' : ''}`}>{truncateText(track.name, 4)}</div>
                     <div className="artist">{track.artist.name}</div>
                 </div>
 
-                <span className='album'>{track.album.name}</span>
+                <span className='album'>{truncateText(track.album.name, 4)}</span>
                 <span className='date'>{track.addedAt ? formatDate(track.addedAt) : ''}</span>
 
                 <button className="btn-like">

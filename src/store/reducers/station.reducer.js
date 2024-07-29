@@ -8,6 +8,7 @@ export const ADD_STATION = 'ADD_STATION'
 export const UPDATE_STATION = 'UPDATE_STATION'
 export const UPDATE_LIKED_STATION = 'UPDATE_LIKED_STATION'
 export const ADD_STATION_MSG = 'ADD_STATION_MSG'
+export const UPDATE_TRACK_ORDER = 'UPDATE_TRACK_ORDER'
 
 // Player CMDs
 export const SET_CURR_TRACK = 'SET_CURR_TRACK'
@@ -54,12 +55,22 @@ export function stationReducer(state = initialState, action) {
             newState = { ...state, station: { ...state.station, msgs: [...state.station.msgs || [], action.msg] } }
             break
 
+        case UPDATE_TRACK_ORDER:
+            newState = {
+                ...state,
+                currPlayingStation: {
+                    ...state.currPlayingStation,
+                    tracks: action.updatedTracks
+                }
+            }
+            break
+
         // Player:
         case SET_CURR_TRACK:
             newState = { ...state, currTrack: action.currTrack, isPlaying: true }
             break
         case SET_CURR_PLAYING_STATION:
-            
+
             newState = { ...state, currPlayingStation: action.station || state.station }
             break
         case IS_PLAYING:

@@ -1,5 +1,5 @@
 //REACT
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export function SideNav({ isCollapsed }) {
@@ -8,12 +8,6 @@ export function SideNav({ isCollapsed }) {
     function handleClick(link) {
         setActiveLink(link)
     }
-
-    useEffect(() => {//side effect for mobile - no header in 'library' state
-        activeLink === 'library' ?document.querySelector('.header').style.display = 'none'
-        : document.querySelector('.header').style.display = '' 
-    
-    }, [activeLink]);
 
     return (
         <section className={`side-nav ${isCollapsed ? 'collapsed' : ''}`}>
@@ -33,7 +27,7 @@ export function SideNav({ isCollapsed }) {
                     >
                     </path>
                 </svg>
-                <span>Home</span>
+                <span style={{ color: activeLink === 'home' ? 'white' : '#b3b3b3' }}>Home</span>
             </Link>
 
             <Link className="search-link"
@@ -56,7 +50,8 @@ export function SideNav({ isCollapsed }) {
                         />
                     )}
                 </svg>
-                <span className="span-search">Search</span>
+                <span className="span-search" 
+                style={{ color: activeLink === 'search' ? 'white' : '#b3b3b3' }}>Search</span>
             </Link>
 
             <Link className="library-mobile-only "

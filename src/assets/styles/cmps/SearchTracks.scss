@@ -2,14 +2,13 @@
     display: flex;
     flex-direction: column;
     font-family: circular-bold;
-    gap: 1rem;
     padding-block: 3em;
     padding-inline: .5em;
 
 
     .search-input {
         position: relative;
-        width: 320px;
+        width: 360px;
 
         svg {
             position: absolute;
@@ -18,9 +17,16 @@
             top: 13px;
         }
 
+        svg:first-child {
+            position: absolute;
+            display: flex;
+            top: 13px;
+            left: 335px;
+        }
+
         input {
-            height: 43px;
-            border-radius: 20px;
+            height: 40px;
+            border-radius: 5px;
             width: 100%;
             background-color: $clr13;
             padding: 10px 0 8px 33px;
@@ -29,7 +35,7 @@
             font-size: 1rem;
 
             &::placeholder {
-                color: $clr12;
+                color: $clr02;
             }
         }
     }
@@ -37,21 +43,21 @@
     .track-previews-container {
         display: flex;
         flex-direction: column;
-        gap: 0.2rem;
-        
+
+        li {
+            &.active {
+                background-color: $clr05;
+
+                
+            }
+        }
+
 
         p {
             color: #888;
             text-align: center;
             margin: 0;
         }
-
-        .track-previews {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-        }
-
 
         .btn-add-song {
             display: flex;
@@ -62,7 +68,7 @@
             border: 1px solid #717171;
             padding-inline: 12px;
             padding-block: 5px;
-            border-radius: 500px;
+
             cursor: pointer;
 
             &:hover {

@@ -43,8 +43,8 @@
         gap: 20px;
 
         .media-img {
-            width: 53px;
-            height: 53px;
+            width: 65px;
+            height: 65px;
             border-radius: 5px;
             object-fit: cover;
         }
@@ -52,13 +52,24 @@
         .artist-details {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            height: 40px;
+            white-space: nowrap;
+
+
+            .player-song-name {
+                color: white;
+                font-size: 1rem;
+                max-width: 100%;
+                margin-block: .1em;
+            }
+
+            .player-song-artist {
+                color: $clr02;
+                font-size: 1rem;
+            }
         }
 
-        .player-song-name {
-            font-size: 16px;
-            color: white;
-        }
+
 
         button {
             @include for-mobile-layout {
@@ -122,12 +133,39 @@
 
             .loop-btn.active,
             .shuffle-btn.active {
-
+                position: relative;
 
                 svg {
                     fill: $clrGreen;
                 }
+
+
             }
+
+            .loop-btn.active {
+                &::after {
+                    content: "•";
+                    
+                    position: absolute;
+                    right: 11px;
+                    top: 25px;
+                    color: $clrGreen; // Adjust color as needed
+                    font-size: 11px; // Adjust size as needed
+                }
+            }
+            .shuffle-btn.active {
+                &::after {
+                    content: "•";
+                    
+                    position: absolute;
+                    right: 11px;
+                    top: 25px;
+                    color: $clrGreen; // Adjust color as needed
+                    font-size: 11px; // Adjust size as needed
+                }
+            }
+
+            
         }
 
         .bottom-center-controls {

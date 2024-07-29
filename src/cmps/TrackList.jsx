@@ -28,7 +28,6 @@ export function TrackList({ tracks, onPlay }) {
     }
    
     function toggleLikedTrack(track) {
-        console.log(track)
         updateLikedStation(track)
     }
 

@@ -24,6 +24,7 @@ import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
 
 import { SearchTracks } from '../../cmps/SearchTracks';
 import { StationMenuModal } from '../../cmps/StationMenuModal';
+import { FastAverageColor } from 'fast-average-color'
 
 
 
@@ -38,14 +39,28 @@ export function PlaylistDetails() {
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  async function extractColor(stationImgUrl) {
+    if (!stationImgUrl) return
+    const fac = new FastAverageColor()
+    try {
+      const color = await fac.getColorAsync(stationImgUrl)
+      
+    } catch (error) {
+      console.error('Error extracting color:', error)
+    }
+  }
 
   useEffect(() => {
     loadStation(id)
-    document.body.style.setProperty('--bg-color', '#121212')
+    
+    extractColor(station?.imgs[0].url)
+    
     return async () => {
       await clear()
+      
     }
   }, [id])
+
 
   async function clear() {
     await clearStation()
@@ -156,8 +171,8 @@ export function PlaylistDetails() {
       <section className="song-list-container content-layout">
         <section className="playlist-actions">
           {!station.tracks.length ? ('') :
-            (<button className="btn-play-green">
-              <PlayIcon />
+            (<button className="btn-play-green" onClick={handlePlayPause}>
+              {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
             )}
           {station.owner ? ('') : (<button className="add-library">
@@ -195,9 +210,12 @@ export function PlaylistDetails() {
         </div>
       </section>
 
-      <SearchTracks
-        station={station}
-        onUpdateStation={onUpdateStation} />
+      {!station.owner || station._id === '2D2M9' ? ('') : (
+        <SearchTracks
+          station={station}
+          onUpdateStation={onUpdateStation} />)
+      }
+
       <UpdateStationModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}

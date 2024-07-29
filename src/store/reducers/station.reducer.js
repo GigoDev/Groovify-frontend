@@ -1,3 +1,4 @@
+import { stations } from '../../../data/stations'
 import { stationService } from '../../services/station'
 
 // Station CMDs
@@ -20,11 +21,12 @@ const initialState = {
     station: null,
     isPlaying: false,
     currPlayingStation: stationService.getDefualtStation(),
-    currTrack:stationService.getDefualtStation().tracks[0],
+    currTrack: stationService.getDefualtStation().tracks[0],
 }
 
 export function stationReducer(state = initialState, action) {
     var newState = state
+    var stations
     switch (action.type) {
         // Station:
         case SET_STATIONS:

@@ -1,12 +1,15 @@
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
 import { Link } from 'react-router-dom';
 import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
+import { userService } from '../../services/user'
+
 
 export function SideList({ stations, filterBy, isCollapsed, activeId, setActiveId }) {
-    
-    function filterStations(loggedInUser) {
+
+    function filterStations() {
+        const loggedInUser = userService.getLoggedinUser()
         // Filter stations based on whether they are followed by the logged-in user
-        let stationsToReturn = stations?.filter(station => station.followBy?.some(user => user._id === loggedInUser._id) || station.owner === true)
+        let stationsToReturn = stations?.filter(station => station.followBy?.some(user => user._id === loggedInUser._id) || station.owner?._id === loggedInUser._id)
 
         // Filter by type if specified
         if (filterBy.type) stationsToReturn = stationsToReturn.filter(station => station.type === filterBy.type)
@@ -21,7 +24,7 @@ export function SideList({ stations, filterBy, isCollapsed, activeId, setActiveI
     }
 
     if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
-    const userStations = filterStations({ _id: 'userId', name: 'user' })
+    const userStations = filterStations()
     return (
         <ul className='side-list-container clean-list'>{
             userStations.map(station => (

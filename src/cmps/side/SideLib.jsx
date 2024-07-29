@@ -18,7 +18,6 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const [filterBy, setFilterBy] = useState({ type: 'playlist', txt: '' })
     const stations = useSelector(state => state.stationModule.stations)
     const [activeId, setActiveId] = useState(id)
-
     useEffect(() => {
         loadStations()
     }, [])

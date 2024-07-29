@@ -15,6 +15,9 @@ import { ArtistDetails } from './pages/details/ArtistDetails.jsx'
 import { PlaylistDetails } from './pages/details/PlaylistDetails.jsx'
 import { AlbumDetails } from './pages/details/AlbumDetails.jsx'
 import { SideLib } from './cmps/side/SideLib.jsx'
+import { Login } from './pages/Login.jsx'
+import { Signup } from './pages/Signup.jsx'
+import { LoginSignup } from './pages/LoginSignup.jsx'
 
 
 export function RootCmp() {
@@ -34,6 +37,11 @@ export function RootCmp() {
                     <Route path="album/" element={<AlbumDetails />} />
                     <Route path="/genre" element={<GenrePage />} />
                     <Route path="library" element={<SideLib />} />
+                    <Route path="login" element={<LoginSignup />}>
+                        <Route index element={<Login />} />
+                        <Route path="signup" element={<Signup />} />
+                    </Route>
+
                 </Routes>
                 <AppFooter />
             </main>

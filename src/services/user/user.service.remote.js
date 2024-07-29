@@ -37,6 +37,8 @@ async function update({ _id, score }) {
 	return user
 }
 
+//  login({username:'Guest', password:''}).then((res)=> console.log(res))
+
 async function login(userCred) {
 	const user = await httpService.post('auth/login', userCred)
 	if (user) return saveLoggedinUser(user)
@@ -44,9 +46,9 @@ async function login(userCred) {
 
 async function signup(userCred) {
 	if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
-	userCred.score = 10000
 
     const user = await httpService.post('auth/signup', userCred)
+	console.log(user)
 	return saveLoggedinUser(user)
 }
 
@@ -64,7 +66,6 @@ function saveLoggedinUser(user) {
         _id: user._id, 
         fullname: user.fullname, 
         imgUrl: user.imgUrl, 
-        score: user.score, 
         isAdmin: user.isAdmin 
     }
 	sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))

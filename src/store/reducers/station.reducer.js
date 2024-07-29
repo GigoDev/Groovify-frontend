@@ -1,4 +1,4 @@
-import { stationService } from "../../services/station/station.service.local"
+import { stationService } from '../../services/station'
 
 // Station CMDs
 export const SET_STATIONS = 'SET_STATIONS'
@@ -19,13 +19,12 @@ const initialState = {
     stations: [],
     station: null,
     isPlaying: false,
-    currPlayingStation: stationService.getById('uHX2t6'),
-    currTrack: stationService.getDefaultTrack(),
+    currPlayingStation: stationService.getDefualtStation(),
+    currTrack:stationService.getDefualtStation().tracks[0],
 }
 
 export function stationReducer(state = initialState, action) {
     var newState = state
-    var stations
     switch (action.type) {
         // Station:
         case SET_STATIONS:

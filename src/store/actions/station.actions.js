@@ -18,6 +18,7 @@ export async function loadStations() {
 
 export async function loadStation(stationId) {
     try {
+        console.log(stationId)
         const station = await stationService.getById(stationId)
         store.dispatch(getCmdSetStation(station))
         // return station
@@ -61,12 +62,11 @@ export async function updateStation(station) {
 
 export async function updateLikedStation(track) {
     try {
-        const likedStation = await stationService.getById('2D2M9')
-
+        const likedStation = await stationService.getById('66a7304e661319abe097f467') 
         const idx = likedStation.tracks.findIndex((likedTrack) => likedTrack.spotifyId === track.spotifyId)
+
         if (!likedStation.tracks.length || idx === -1) likedStation.tracks.unshift(track)
         else likedStation.tracks.splice(idx, 1)
-
         const savedStation = await stationService.save(likedStation)
         store.dispatch({ type: UPDATE_LIKED_STATION, station: savedStation })
         return savedStation

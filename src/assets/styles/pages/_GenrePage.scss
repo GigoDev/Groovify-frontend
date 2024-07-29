@@ -1,0 +1,35 @@
+.genre-page-container {
+    // background-color: white;
+    height: 100%;
+    grid-row: 1/2;
+    
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+
+}
+
+.genre-header {
+    display: flex;
+    align-items: end;
+    height: 180px;
+
+
+
+    .genre-title {
+        margin: 0;
+        padding: 0 0 30px 25px;
+        font-size: 94px;
+        // letter-spacing: 1px;
+        font-family: circular-bold;
+
+
+    }
+
+}
+
+.genre-content {
+    padding-block-start: 65px;
+    padding: 64px 0 0 16px;
+    // background-color: green;
+
+}

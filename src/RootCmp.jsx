@@ -18,6 +18,7 @@ import { SideLib } from './cmps/side/SideLib.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
+import { GenrePage } from './pages/GenrePage.jsx'
 
 
 export function RootCmp() {
@@ -28,14 +29,14 @@ export function RootCmp() {
                 <AppHeader />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/search" element={<SearchPage />} />
+                    <Route path="/search" element={<SearchPage />}/>
+                    <Route path="/genre" element={<GenrePage />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="artist/:id" element={<ArtistDetails />} />
                     <Route path="playlist/:id" element={<PlaylistDetails />} />
                     <Route path="playlist/" element={<PlaylistDetails />} />
                     <Route path="album/:id" element={<AlbumDetails />} />
                     <Route path="album/" element={<AlbumDetails />} />
-                    <Route path="/genre" element={<GenrePage />} />
                     <Route path="library" element={<SideLib />} />
                     <Route path="login" element={<LoginSignup />}>
                         <Route index element={<Login />} />

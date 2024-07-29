@@ -30,7 +30,7 @@ export function RootCmp() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />}/>
-                    <Route path="/genre" element={<GenrePage />} />
+                    <Route path="genre/:label/:color" element={<GenrePage />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="artist/:id" element={<ArtistDetails />} />
                     <Route path="playlist/:id" element={<PlaylistDetails />} />

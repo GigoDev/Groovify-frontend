@@ -11,13 +11,17 @@
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
-        justify-items: left;
+        justify-items: center;
         align-items: baseline;
+        overflow-x: hidden;
+       
 
         .list-item {
             padding: 10px;
             border-radius: 10px;
-            max-width: 250px;
+            max-width: 200px;
+            // width: 200px;
+            
 
             &:hover {
                 background-color: rgba(179, 179, 179, 0.2);

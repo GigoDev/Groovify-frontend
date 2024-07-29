@@ -2,34 +2,35 @@
     // background-color: white;
     height: 100%;
     grid-row: 1/2;
-    
+
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 285px 1fr;
 
-}
-
-.genre-header {
-    display: flex;
-    align-items: end;
-    height: 180px;
+    .genre-header {
+        display: flex;
+        align-items: end;
 
 
 
-    .genre-title {
-        margin: 0;
-        padding: 0 0 30px 25px;
-        font-size: 94px;
-        // letter-spacing: 1px;
-        font-family: circular-bold;
+        .genre-title {
+            margin: 0;
+            padding: 0 0 25px 16px;
+            font-size: 94px;
+            font-family: circular-bold;
 
+
+        }
 
     }
 
-}
+    .genre-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-block-start: 65px;
+        padding: 64px 0 0 16px;
+        // background-color: green;
 
-.genre-content {
-    padding-block-start: 65px;
-    padding: 64px 0 0 16px;
-    // background-color: green;
+    }
 
 }

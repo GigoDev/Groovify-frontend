@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
@@ -36,7 +36,7 @@ export function AppHeader() {
 			<section className='header-menu flex align-center'>
 				<button className='btn pill install-btn'><i className="fa-regular fa-circle-down"></i>Install App</button>
 				<button className='btn round notification-btn'><i className="fa-regular fa-bell"></i></button>
-				<button className='btn round  user-btn'>G</button>
+				<Link to='login'><button className='btn round  user-btn'>G</button></Link>
 			</section>
 		</header>
 	)

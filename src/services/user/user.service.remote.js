@@ -37,6 +37,8 @@ async function update({ _id, score }) {
 	return user
 }
 
+//  login({username:'Guest', password:''}).then((res)=> console.log(res))
+
 async function login(userCred) {
 	const user = await httpService.post('auth/login', userCred)
 	if (user) return saveLoggedinUser(user)

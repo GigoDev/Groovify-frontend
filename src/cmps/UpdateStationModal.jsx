@@ -1,12 +1,11 @@
-import { useParams } from "react-router"
 import { useEffect, useState } from "react"
-import { stationService } from "../services/station"
-import { updateStation } from "../store/actions/station.actions"
+import { uploadService } from '../services/upload.service'
 
-export function UpdateStationModal({  station, isModalOpen, setIsModalOpen,onUpdateStation }) {
+export function UpdateStationModal({ station, isModalOpen, setIsModalOpen, onUpdateStation }) {
   const [textInput, setTextInput] = useState('')
   const [descInput, setDescInput] = useState('')
   const [stationImg, setStationImg] = useState('')
+  const [selectedFile, setSelectedFile] = useState(null)
 
   const { name, description, imgs } = station
 
@@ -29,6 +28,7 @@ export function UpdateStationModal({  station, isModalOpen, setIsModalOpen,onUpd
     setTextInput('')
     setDescInput('')
     setStationImg(null)
+    setSelectedFile(null)
     setIsModalOpen((prevIsModalOpen => !prevIsModalOpen))
   }
 
@@ -55,21 +55,24 @@ export function UpdateStationModal({  station, isModalOpen, setIsModalOpen,onUpd
 
   function handleFileInput(ev) {
     const file = ev.target.files[0]
-    if (file) {
+    if (file) {// local url
       const imgUrl = URL.createObjectURL(file)
       setStationImg(imgUrl)
+      setSelectedFile(file)
     }
   }
 
-  function handleFormSubmit(ev) {
+  async function handleFormSubmit(ev) {
     ev.preventDefault()
     ev.stopPropagation()
 
     const stationToUpdate = { ...station }
     if (textInput) stationToUpdate.name = textInput
     if (descInput) stationToUpdate.description = descInput
-    if (stationImg) stationToUpdate.imgs = [{ url: stationImg }]
-
+    if (selectedFile) { //cloud url
+      const imgCloudUrl = await uploadService.uploadImg(selectedFile)
+      stationToUpdate.imgs = [{ url: imgCloudUrl }]
+    }
     onUpdateStation(stationToUpdate)
     closeModal()
   }

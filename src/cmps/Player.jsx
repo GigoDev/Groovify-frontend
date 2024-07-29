@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
 
 import { next, prev, shuffle, togglePlay } from '../store/actions/station.actions'
-import { formatTime } from '../services/util.service'
+import { formatTime, truncateText } from '../services/util.service'
 
 
 // SVGs:
@@ -73,7 +73,7 @@ export function Player() {
 
         setVolume(newVolume)
     }
-    const { album, name } = currTrack
+    const {artist, album, name } = currTrack
     return (
 
         <section className="player-container">
@@ -95,11 +95,12 @@ export function Player() {
 
             <div className="left-controls">
                 <img className="media-img fit-img" src={`${album.imgs[2].url}`} />
-                <div className="artist-details">
-                    <span className="player-song-name">{name}</span>
+                 <div className="artist-details">
+                    <span className="player-song-name">{truncateText(name, 5) }</span>
+                    <span className="player-song-artist">{artist.name}</span>
                 </div>
                 <button className="like-btn">
-                    <LikeIcon />
+                    <LikeIcon width="18" height="18"/>
                 </button>
             </div>
 

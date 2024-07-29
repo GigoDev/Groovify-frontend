@@ -6,9 +6,19 @@
     li {
         display: grid;
         grid-template-columns: 30px 40px 2fr 1fr 50px 100px;
-        @include for-mobile-layout{
+
+        @include for-mobile-layout {
             grid-template-columns: 30px 40px 1fr 50px;
         }
+
+        &.active {
+            background-color: $clr05;
+
+            .add-library {
+                opacity: 1;
+            }
+        }
+
         align-items: center;
         justify-items: left;
         padding-block: 9px;
@@ -17,13 +27,43 @@
         color: $clr02;
         font-size: 1rem;
 
-        @include for-mobile-layout{
-            .listeners,.time{display: none;}
+        @include for-mobile-layout {
+
+            .listeners,
+            .time {
+                display: none;
+            }
         }
-        
+
+
+        .add-library {
+            opacity: 0;
+        }
+
+
+
 
         &:hover {
             background-color: $clr06;
+
+            .add-library {
+                opacity: 1;
+
+                &:hover {
+                    fill: $clr01;
+                    scale: 1.02;
+                }
+            }
+
+
+            .v-icon {
+                opacity: 1;
+
+                &:hover {
+                    fill: $clrGreen;
+                    scale: 1.06;
+                }
+            }
 
             .track-number {
                 display: none;
@@ -61,21 +101,6 @@
             display: none;
         }
 
-        .add-library:hover{
-            display: block;
-            &:hover {
-                fill: $clr01;
-                scale: 1.02;
-            }
-        }
-
-        .v-icon:hover {
-            display: block;
-            &:hover {
-                fill: $clrGreen;
-                scale: 1.06;
-            }
-        }
 
         .title {
             justify-self: left;

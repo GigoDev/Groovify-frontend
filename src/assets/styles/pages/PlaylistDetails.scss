@@ -1,7 +1,6 @@
 // @include for-mobile-layout {.header{display: none;}}
 .playlist-details {
     background: transparent;
-    background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
 
 
     .station-preview {
@@ -85,8 +84,7 @@
     }
 
     .song-list-container {
-        background-image: linear-gradient(rgba(0, 0, 0, .6) 0, $clr07 230px);
-        background-color: $clr04;
+        background-color: transparent;
         grid-column: 1/-1;
         @include for-mobile-layout{
             padding-inline-start: 10px;

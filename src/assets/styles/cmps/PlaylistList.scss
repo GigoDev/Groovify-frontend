@@ -3,11 +3,19 @@
    grid-column: 1 / -1;
    grid-template-columns: subgrid;
 
-   @include for-mobile-layout{
-      li{
-         .play-icon,.album,.date,.btn-like,.createdAt{display: none;}
-      } 
+   @include for-mobile-layout {
+      li {
+
+         .play-icon,
+         .album,
+         .date,
+         .btn-like,
+         .createdAt {
+            display: none;
+         }
+      }
    }
+
    li {
       padding-inline: 10px;
       padding-block: 10px;
@@ -17,6 +25,15 @@
       grid-column: 1 / -1;
       color: $clr02;
       font-size: 1rem;
+
+      &.active {
+         background-color: $clr05;
+
+         .small-btn-options,
+         .like-icon{
+            display: block;
+         }
+      }
 
       .play-icon,
       .small-btn-options,

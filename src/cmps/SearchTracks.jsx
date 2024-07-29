@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import SearchIcon from '../assets/icons/SearchIcon.svg'
+import XBtnIcon from '../assets/icons/XBtnIcon.svg'
 import { SearchTrackPreview } from './SearchTrackPreview'
 import { spotifyService } from '../services/spotify.service'
 import { debounce } from '../services/util.service'
@@ -9,6 +10,8 @@ import { debounce } from '../services/util.service'
 export function SearchTracks({ onUpdateStation, station }) {
     const [search, setSearch] = useState("")
     const [tracks, setTracks] = useState([])
+    const [activeId, setActiveId] = useState('')
+
     const debouncedLoadTracks = useRef(
         debounce(async (searchTerm) => {
             try {
@@ -37,6 +40,9 @@ export function SearchTracks({ onUpdateStation, station }) {
         setSearch(target.value)
     }
 
+    function clearSearch() {
+        setSearch("")
+    }
 
     return (
         <>
@@ -46,9 +52,10 @@ export function SearchTracks({ onUpdateStation, station }) {
                     <h1>Let's find something for your playlist</h1>
 
                     <div className="search-input">
-
+                        {search ? <XBtnIcon onClick={clearSearch} width="16" height="16" className="x-btn" /> : null}
                         <input
-                            type="search"
+                            type="text"
+                            value={search}
                             placeholder="Search for songs"
                             onChange={handleChange}
                         />
@@ -58,15 +65,15 @@ export function SearchTracks({ onUpdateStation, station }) {
 
 
                     {search && (
-                        <ul className="track-previews-container">
+                        <ul className="track-previews-container clean-list-preview">
                             {tracks?.length > 0 ? (
                                 tracks.map(track => (
-                                    <li className='clean-list track-previews' key={track.spotifyId}>
+                                    <li className={activeId === track.spotifyId ? 'active' : ''}
+                                        onClick={() => setActiveId(track.spotifyId)}
+                                        key={track.spotifyId}>
                                         <SearchTrackPreview
-                                            track={track} />
-                                        <button
-                                            onClick={() => addTrack(track)}
-                                            className="btn-add-song pill">Add</button>
+                                            track={track}
+                                            addTrack={addTrack} />
                                     </li>
                                 ))
                             ) : (

@@ -43,7 +43,7 @@ export function HomePage() {
         <>
             <section className="home-container">
                 <MiniStationList stations={stations.slice(0, 8)} extractColor={extractColor} onPlay={onPlay}  />
-                <FeaturedPlaylist title={'Top playlists'} from={0} to={7} type={'playlist'} />
+                <FeaturedPlaylist title={'Top playlists'} from={0} to={10} type={'playlist'} />
                 <FeaturedPlaylist title={'Recommanded for you'} from={7} to={14} type={'playlist'} />
                 <FeaturedPlaylist title={'Your favorite artists'} from={0} to={7} type={'artist'} isRound={true} />
                 <FeaturedPlaylist title={'Mood'} from={14} to={21} type={'playlist'} />

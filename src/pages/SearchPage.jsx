@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { SearchCategory } from "../cmps/SearchCategory";
 import { SearchCategoryList } from "../cmps/SearchCategoryList";
-import { getTracks } from "../services/youtube.service";
 import { MainSearchPreview } from "../cmps/MainSearchPreview";
 import { debounce } from "../services/util.service";
+import { spotifyService } from "../services/spotify.service";
 
 
 export function SearchPage() {
@@ -12,7 +12,7 @@ export function SearchPage() {
     const debouncedLoadTracks = useRef(
         debounce(async (searchTerm) => {
             try {
-                const tracks = await getTracks(searchTerm)
+                const tracks = await spotifyService.getTracks(searchTerm)
                 setTracks(tracks)
             } catch (err) {
                 console.error("Failed to load tracks:", err)

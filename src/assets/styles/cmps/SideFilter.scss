@@ -3,13 +3,12 @@
     flex-direction: column;
     align-self: center;
     gap: 10px;
-   
+
     .side-filter-btns {
-    
         .btn:first-child {
             margin-left: 18px;
         }
-    
+
         .btn {
             height: 32px;
             margin-inline: 4px;
@@ -22,15 +21,15 @@
             transition: 0.3s ease;
             cursor: pointer;
             font-family: circular-light;
-            
+
             &:hover {
                 background-color: $clr11;
             }
-        }
-    
-        .btn-clicked:first-child {
-            margin-left: 4px;
-            margin-right: 12px;
+
+            &.active { 
+                background-color: $clr01;
+                color: $clr07;
+            }
         }
     }
 
@@ -39,11 +38,11 @@
         justify-content: space-between;
         align-items: center;
         padding-inline: 18px 15px;
-    
+
         .side-search-btn {
             display: flex;
             align-items: center;
-    
+
             button {
                 display: flex;
                 justify-content: center;
@@ -56,21 +55,21 @@
                 height: 32px;
                 border-radius: 50%;
                 transition: background-color 0.3s ease;
-    
+
                 &:hover {
                     background-color: $clr04;
                 }
-    
+
                 svg {
                     fill: $clr02;
                     transition: fill 1s ease;
                 }
-    
+
                 &:hover svg {
                     fill: $clr02;
                 }
             }
-    
+
             input {
                 background-color: transparent;
                 border: none;
@@ -78,25 +77,21 @@
                 opacity: 0;
                 color: $clr02;
                 transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-    
+
                 &:focus {
                     outline: none;
                 }
-    
+
                 &::placeholder {
                     color: $clr02;
                 }
-    
+
                 &.input-visible {
                     opacity: 1;
                 }
             }
-    
-            &.button-clicked input {
-                background-color: $clr01;
-            }
         }
-    
+
         .side-filter-menu {
             button {
                 background: none;
@@ -106,31 +101,29 @@
                 align-items: center;
                 color: $clr02;
             }
-    
+
             &:hover {
                 color: $clr01;
-    
+
                 span {
                     color: $clr01;
                 }
-    
+
                 svg {
                     fill: $clr01;
                 }
             }
-    
+
             span {
                 color: $clr02;
                 font-size: 14px;
             }
-    
+
             svg {
                 fill: $clr02;
                 margin-inline-start: 6px;
                 transform: translateY(1px);
             }
-    
         }
     }
 }
-

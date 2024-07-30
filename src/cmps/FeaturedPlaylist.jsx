@@ -3,8 +3,8 @@ import useBreakpoint from '../customHooks/useBreakpoint'
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 
-export function FeaturedPlaylist({ title, from, to, type, isRound }) {
-    const stations = useSelector(storeState => storeState.stationModule.stations)
+export function FeaturedPlaylist({stations ,title, startIdx, type, isRound }) {
+    // const stations = useSelector(storeState => storeState.stationModule.stations)
     const [itemsToShow, setItemsToShow] = useState(null);
     const style = {
         borderRadius: "50%",
@@ -15,7 +15,7 @@ export function FeaturedPlaylist({ title, from, to, type, isRound }) {
     useEffect(() => {
         switch (breakpoint) {
             case 'large':
-                setItemsToShow(10);
+                setItemsToShow(7);
                 break;
             case 'medium':
                 setItemsToShow(6);
@@ -41,7 +41,7 @@ export function FeaturedPlaylist({ title, from, to, type, isRound }) {
         navigate(`${type}/${_id}`)
     }
 
-    const data = stations.filter(station => station.owner !== true && station.type === type).slice(from, to)
+    const data = stations.filter(station => station.owner !== true && station.type === type).slice(startIdx, startIdx + 7)
     const list = data.slice(0, itemsToShow)
     if (!list) return <div>Loading...</div>
     return (

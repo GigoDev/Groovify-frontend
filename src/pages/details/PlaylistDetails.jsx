@@ -32,19 +32,20 @@ export function PlaylistDetails() {
   const navigate = useNavigate()
   const { id } = useParams()
   const [selectedTrack, setSelectedTrack] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const station = useSelector(storeState => storeState.stationModule.station)
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
-
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
+  
 
   async function extractColor(stationImgUrl) {
     if (!stationImgUrl) return
     const fac = new FastAverageColor()
     try {
       const color = await fac.getColorAsync(stationImgUrl)
-      
+
     } catch (error) {
       console.error('Error extracting color:', error)
     }
@@ -52,12 +53,12 @@ export function PlaylistDetails() {
 
   useEffect(() => {
     loadStation(id)
-    
+
     extractColor(station?.imgs[0].url)
-    
+    document.body.style.setProperty('--bg-color', '#121212')
     return async () => {
       await clear()
-      
+
     }
   }, [id])
 
@@ -162,10 +163,12 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
 
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
-          <div className="mini-dashboard">
-            John Doe • {likes?.toLocaleString()} likes • {total} songs
-            <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
-          </div>
+          {!station.tracks.length ? ('') :
+            <div className="mini-dashboard">
+              John Doe • {likes?.toLocaleString()} likes • {total} songs
+              <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
+            </div>}
+
         </div>
       </section>
 

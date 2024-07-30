@@ -55,7 +55,7 @@ async function getTracks(searchQuery) {
 
         const res = await axios.get(url, { headers })
 
-        let tracks = res.data.tracks.items 
+        let tracks = res.data.tracks.items
         tracks = tracks.map(track => _getTrackDetails(track))
 
         queries[searchQuery] = tracks
@@ -209,7 +209,7 @@ async function getAlbum(stationId, market = 'US') {//refactored
             name: item.name,
             duration: item.duration_ms,
             artist: { spotifyId: item.artists[0].id, name: item.artists[0].name },
-            album: {spotifyId: resp.data.id, name: resp.data.name, imgs: resp.data.images},
+            album: { spotifyId: resp.data.id, name: resp.data.name, imgs: resp.data.images },
             addedAt: null,
         }))
 
@@ -222,22 +222,25 @@ async function getAlbum(stationId, market = 'US') {//refactored
 }
 
 async function getCategoryPlaylists(category) {
+    const lowerCaseCategory = category.toLowerCase()
+    console.log(lowerCaseCategory)
 
     const token = loadFromStorage('access_token')
-    const url = `https://api.spotify.com/v1/browse/categories/${category}/playlists`
+    const url = `https://api.spotify.com/v1/browse/categories/${lowerCaseCategory}/playlists?limit=30`
     const headers = { 'Authorization': `Bearer ${token}` }
     const resp = await axios.get(url, { headers })
     console.log(resp)
-    const playlists = resp.data.playlists.items.map(playlist => ({
-        spotifyId: playlist.id,
-        type: playlist.type,
-        name: playlist.name,
-        description: playlist.description,
-        imgs: playlist.images,
-        owner: { id: playlist.owner.id, name: playlist.owner.display_name },
-        category: category
-
-    }))
+    const playlists = resp.data.playlists.items.map(playlist => {
+        const station = _getEmptyStation()
+        station.spotifyId = playlist.id
+        station.type = playlist.type
+        station.name = playlist.name
+        station.description = playlist.description
+        station.imgs = playlist.images
+        station.owner = { id: playlist.owner.id, name: playlist.owner.display_name }
+        station.category = category.toLowerCase()
+        return station
+    })
 
     console.log('playlists:', playlists)
     return playlists

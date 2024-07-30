@@ -39,14 +39,15 @@ export function HomePage() {
 
 
     if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
+    
     return (
         <>
             <section className="home-container">
                 <MiniStationList stations={stations.slice(0, 8)} extractColor={extractColor} onPlay={onPlay}  />
-                <FeaturedPlaylist title={'Top playlists'} from={0} to={10} type={'playlist'} />
-                <FeaturedPlaylist title={'Recommanded for you'} from={7} to={14} type={'playlist'} />
-                <FeaturedPlaylist title={'Your favorite artists'} from={0} to={7} type={'artist'} isRound={true} />
-                <FeaturedPlaylist title={'Mood'} from={14} to={21} type={'playlist'} />
+                <FeaturedPlaylist stations={stations} title={'Top playlists'} startIdx={0} type={'playlist'} />
+                <FeaturedPlaylist stations={stations} title={'Recommanded for you'} startIdx={7} type={'playlist'} />
+                <FeaturedPlaylist stations={stations} title={'Your favorite artists'} startIdx={0} type={'artist'} isRound={true} />
+                <FeaturedPlaylist stations={stations} title={'Mood'} startIdx={14} type={'playlist'} />
             </section>
         </>
     )

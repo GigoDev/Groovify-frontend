@@ -1,5 +1,6 @@
 :root{--hero-width: calc(100% - 378px)}
 .station-details-container {
+   grid-row: 1/2;
    
    $hero-img-height: 400px;
    position: relative;

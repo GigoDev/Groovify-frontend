@@ -4,6 +4,7 @@ import { SearchCategoryList } from "../cmps/SearchCategoryList";
 import { MainSearchPreview } from "../cmps/MainSearchPreview";
 import { debounce } from "../services/util.service";
 import { spotifyService } from "../services/spotify.service";
+import SpotifyLoader from '../assets/gifs/SpotifyLoader.gif'
 
 
 export function SearchPage() {
@@ -29,30 +30,20 @@ export function SearchPage() {
 
     return (
         <>
-            {search !== "" ? (
-                <section className="search-container">
-                    <section className="station-search-header">
-                        <SearchCategory setSearch={setSearch} />
-                    </section>
-                </section >
-            ) : (
-                <section className="search-container">
-                    <section className="station-search-header">
-                        <SearchCategory setSearch={setSearch} />
-                    </section>
-                    <SearchCategoryList />
+            <section className="search-container">
+                <section className="station-search-header">
+                    <SearchCategory setSearch={setSearch} />
                 </section>
-            )
-            }
-
-            <section className='station-details'>
-                {search && tracks.length > 0 ? (
-                    tracks.map(track => (
-                        <MainSearchPreview key={track.videoId} track={track} />
-                    ))
-                ) : (
-                    search && <p>No songs found</p>
-                )}
+                <section className='station-details'>
+                    {search && tracks.length > 0 ? (
+                        tracks.map(track => (
+                            <MainSearchPreview key={track.videoId} track={track} />
+                        ))
+                    ) : (
+                        search && <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
+                    )}
+                </section>
+                <SearchCategoryList />
             </section>
         </>
     )

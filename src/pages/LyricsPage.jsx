@@ -1,30 +1,31 @@
-import { useState, useEffect, useRef } from 'react'
-import { useSelector } from 'react-redux'
-import { updateTrackLyrics } from '../store/actions/station.actions'
-import { lyricsService } from '../services/lyrics.service'
+import { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
+import { updateTrackLyrics } from '../store/actions/station.actions';
+import { lyricsService } from '../services/lyrics.service';
+import { FastAverageColor } from 'fast-average-color';
 
 export function LyricsPage() {
+    const [backgroundColor, setBackgroundColor] = useState('#121212')
     const [lyrics, setLyrics] = useState('')
-    const lyricsContainer = useRef(null)
-
-    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
-
+        
+    const currTrack = useSelector(storeState => storeState.stationModule.station)
     async function getLyrics() {
-        if (!currTrack.lyrics) {
-            console.log('fetching lyrics from api');
+        if (!currTrack) {
+            console.log('fetching lyrics from api')
             try {
+                const res = await lyricsService.getLyrics(currTrack)
                 console.log('res', res)
-                const res = await lyricsService.getLyrics(currTrackName)
                 updateTrackLyrics(res)
+                console.log(currTrack)
                 setLyrics(res === '' ? 'No lyrics found' : res)
             } catch (error) {
                 console.error('Error fetching lyrics:', error)
             }
         } else {
             console.log('got lyrics from storage')
-            setLyrics(currTrack.lyrics)
+            setLyrics(currTrack)
         }
-    };
+    }
 
     async function extractColor(stationImgUrl) {
         if (!stationImgUrl) return '#121212'
@@ -38,18 +39,17 @@ export function LyricsPage() {
         }
     }
 
-    async function setBackgroundColor() {
+    async function backgroundColorImg() {
         try {
-
-            const elImg = currTrack?.imgUrl[0].url
+            const elImg = currTrack?.imgs?.[0]?.url
             const color = await extractColor(elImg)
-            return color
+            setBackgroundColor(color)
         } catch (err) {
             console.log('Encountered error', err)
         }
     }
 
-    const artist = currTrack?.artists[0].name
+    const artist = currTrack?.artist[0]?.name
     const title = currTrack?.title
     const currTrackName = `${artist} ${title}`
 
@@ -57,14 +57,16 @@ export function LyricsPage() {
         if (currTrackName) {
             setLyrics('')
             getLyrics()
-            setBackgroundColor()
+            backgroundColorImg()
         }
-    }, [currTrackName])
+    }, [currTrack, currTrackName])
+
     return (
-        <section ref={lyricsContainer} className="lyrics-container">
+        <section
+            className="lyrics-container"
+            style={{ backgroundColor }}
+        >
             {!lyrics ? <h1>Looking for lyrics...</h1> : <h1 className="lyrics">{lyrics}</h1>}
         </section>
     )
 }
-
-export default LyricsPage;

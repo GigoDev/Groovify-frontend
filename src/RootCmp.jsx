@@ -17,7 +17,7 @@ import { AlbumDetails } from './pages/details/AlbumDetails.jsx'
 import { SideLib } from './cmps/side/SideLib.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { GenrePage } from './pages/GenrePage.jsx'
-import LyricsPage from './pages/LyricsPage.jsx'
+import {LyricsPage} from './pages/LyricsPage.jsx'
 
 
 export function RootCmp() {

@@ -20,11 +20,13 @@ import VolumeNormalIcon from '../assets/icons/VolumeNormalIcon.svg'
 import Volume033Icon from '../assets/icons/Volume033Icon.svg'
 import Volume066Icon from '../assets/icons/Volume066Icon.svg'
 import LikeIcon from '../assets/icons/LikeIcon.svg'
+import LyricsIcon from '../assets/icons/LyricsIcon.svg'
 
 
 export function Player() {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+
     const [volume, setVolume] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
 
@@ -39,7 +41,7 @@ export function Player() {
     // Hover state
     const [isHoverProgressBar, setIsHoverProgressBar] = useState(false)
     const [isHoverVolumeSlider, setIsHoverVolumeSlider] = useState(false)
-    
+    console.log(currTrack)
     const playerRef = useRef(null)
 
     function handleProgress(state) {
@@ -151,7 +153,9 @@ export function Player() {
             </div>
 
             <div className="right-controls">
-
+                <button className="lyrics-btn">
+                    <LyricsIcon />
+                </button>
                 <button className="sound-btn" onClick={handleMute}>
                     {isMuted || volume === 0 ? (
                         <VolumeMutedIcon />

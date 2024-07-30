@@ -17,6 +17,7 @@ import { AlbumDetails } from './pages/details/AlbumDetails.jsx'
 import { SideLib } from './cmps/side/SideLib.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { GenrePage } from './pages/GenrePage.jsx'
+import LyricsPage from './pages/LyricsPage.jsx'
 
 
 export function RootCmp() {
@@ -37,6 +38,7 @@ export function RootCmp() {
                     <Route path="album/" element={<AlbumDetails />} />
                     <Route path="library" element={<SideLib />} />
                     <Route path="/login" element={<LoginSignup />} />
+                    <Route path="/lyrics" element={<LyricsPage />} />
                 </Routes>
                 <AppFooter />
             </main>

@@ -15,6 +15,7 @@ export const UPDATE_TRACK_ORDER = 'UPDATE_TRACK_ORDER'
 export const SET_CURR_TRACK = 'SET_CURR_TRACK'
 export const SET_CURR_PLAYING_STATION = 'SET_CURR_PLAYING_STATION'
 export const IS_PLAYING = 'IS_PLAYING'
+export const UPDATE_TRACK = 'UPDATE_TRACK'
 
 const initialState = {
     stations: [],
@@ -77,6 +78,15 @@ export function stationReducer(state = initialState, action) {
             break
         case IS_PLAYING:
             newState = { ...state, isPlaying: !state.isPlaying }
+            break
+        case UPDATE_TRACK:
+            newState = {
+                ...state,
+                currTrack: {
+                    ...state.currTrack,
+                    lyrics: action.lyrics,
+                },
+            }
             break
         default:
             return state

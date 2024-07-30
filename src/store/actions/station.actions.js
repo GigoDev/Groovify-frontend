@@ -96,6 +96,14 @@ export async function updateTrackDnd(updatedTracks) {
     }
 }
 
+export async function updateTrackLyrics(newLyrics) {
+    try {
+        store.dispatch(getCmdUpdateTrackLyrics(newLyrics))
+    } catch (err) {
+        console.log('Encountered lyrics error', err)
+    }
+}
+
 export function clearStation() {
     store.dispatch(getCmdSetStation())
 }
@@ -231,6 +239,13 @@ function getCmdUpdateTrackOrder(updatedTracks) {
     return {
         type: UPDATE_TRACK_ORDER,
         updatedTracks
+    }
+}
+
+function getCmdUpdateTrackLyrics(lyrics) {
+    return {
+        type: UPDATE_TRACK,
+        lyrics
     }
 }
 

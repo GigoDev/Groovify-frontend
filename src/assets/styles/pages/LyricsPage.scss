@@ -1,0 +1,18 @@
+.lyrics-container {
+    height: 100%;
+    text-align: center;
+    overflow-x: hidden;
+    grid-column: 2;
+    color: $clr2;
+    border-radius: 0.5rem;
+
+    h1 {
+        padding-block: 10rem;
+        font-size: 2rem;
+        white-space: pre-line;
+
+        @include for-mobile-layout {
+            font-size: 1rem;
+        }
+    }
+}

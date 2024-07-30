@@ -38,35 +38,41 @@ export function PlaylistDetails() {
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
   // const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
-  
+
 
   async function extractColor(stationImgUrl) {
-    if (!stationImgUrl) return
+    if (!stationImgUrl) return '#121212'
     const fac = new FastAverageColor()
     try {
-      const color = await fac.getColorAsync(stationImgUrl)
-
+      const { hex } = await fac.getColorAsync(stationImgUrl)
+      return hex
     } catch (error) {
       console.error('Error extracting color:', error)
+      return '#121212'
     }
   }
-
   useEffect(() => {
     loadStation(id)
-
-    extractColor(station?.imgs[0].url)
-    document.body.style.setProperty('--bg-color', '#121212')
     return async () => {
       await clear()
-
+      
     }
   }, [id])
-
-
+  
   async function clear() {
     await clearStation()
   }
-
+  
+  async function setBackgroundColor() {
+    try {
+      
+      const color = await extractColor(station?.imgs[0].url)
+      document.body.style.setProperty('--bg-color', color)
+    } catch (err) {
+      console.log('Ecountered error', err)
+    }
+    
+  }
   async function handleDeleteStation() {
     try {
       await removeStation(id)
@@ -76,48 +82,48 @@ export function PlaylistDetails() {
       console.error('Failed to delete station', err)
     }
   }
-
-
+  
+  
   function onPlay(ev, track) {
     ev.stopPropagation()
     setSelectedTrack(track)
     if (track.spotifyId === currTrack.spotifyId) return togglePlay()
-
-    setTrack(track)
-    setPlayingStation()
-  }
-
-  function handlePlayPause() {
-    if (!isPlaying) {
-      if (selectedTrack) {
-        setTrack(selectedTrack)
-      } else if (tracks.length > 0) {
-        setTrack(tracks[0])
-      }
+      
+      setTrack(track)
       setPlayingStation()
     }
-    togglePlay()
-  }
-
-
-
-  function openEditModal() {
-    if (!station.owner || station.name === 'Liked Songs') return
-    setIsModalOpen(true)
-  }
-
-  async function onUpdateStation(stationToUpdate) {
-    try {
-      await updateStation(stationToUpdate)
-    } catch (error) {
-      console.log(error)
+    
+    function handlePlayPause() {
+      if (!isPlaying) {
+        if (selectedTrack) {
+          setTrack(selectedTrack)
+        } else if (tracks.length > 0) {
+          setTrack(tracks[0])
+        }
+        setPlayingStation()
+      }
+      togglePlay()
     }
-  }
-
-  const menuOptions = [
-    {
-      label: (
-        <>
+    
+    
+    
+    function openEditModal() {
+      if (!station.owner || station.name === 'Liked Songs') return
+      setIsModalOpen(true)
+    }
+    
+    async function onUpdateStation(stationToUpdate) {
+      try {
+        await updateStation(stationToUpdate)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    
+    const menuOptions = [
+      {
+        label: (
+          <>
           <PencilIcon width="18" height="18" fill="#a7a7a7" role="img" aria-hidden="true" />
           Edit details
         </>
@@ -138,9 +144,10 @@ export function PlaylistDetails() {
       }
     }
   ]
-
+  
   if (!station || station.type !== 'playlist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
-  const { imgs, listeners, name, type, tracks, likes, total,owner } = station
+  setBackgroundColor()
+  const { imgs, listeners, name, type, tracks, likes, total, owner } = station
   console.log(owner)
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
   const totalDuration = tracks.reduce((acc, track) => {
@@ -155,7 +162,7 @@ export function PlaylistDetails() {
           {owner?._id && name !== 'Liked Songs' ? (
             imgUrl ? <img onClick={openEditModal} src={imgUrl} /> : <MusicNoteIcon onClick={openEditModal} />
           ) : (
-
+            
             <img src={imgUrl} />
           )}
         </div>
@@ -214,11 +221,11 @@ export function PlaylistDetails() {
         </div>
       </section>
 
-      {!!station.owner || !station.name === 'Liked Songs' &&(
-       <SearchTracks
+      {!!station.owner || !station.name === 'Liked Songs' && (
+        <SearchTracks
           station={station}
           onUpdateStation={onUpdateStation} />
-   
+
       )}
 
       <UpdateStationModal

@@ -62,9 +62,9 @@ export async function updateStation(station) {
 export async function updateLikedStation(track) {
     try {
         const likedStation = store.getState().stationModule.stations.filter(station => station.name === 'Liked Songs')[0]
+        console.log(track)
         console.log(likedStation)
-        const idx = likedStation.tracks.length ? -1 : likedStation.tracks.findIndex((likedTrack) => likedTrack.spotifyId === track.spotifyId)
-
+        const idx = !likedStation.tracks.length ? -1 : likedStation.tracks.findIndex(likedTrack => likedTrack.spotifyId === track.spotifyId)
         if ( idx === -1) likedStation.tracks.unshift(track)
         else likedStation.tracks.splice(idx, 1)
         const savedStation = await stationService.save(likedStation)

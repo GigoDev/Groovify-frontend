@@ -38,7 +38,7 @@ async function update({ _id, score }) {
 	return user
 }
 
-//  login({username:'Guest', password:''}).then((res)=> console.log(res))
+// login({username:'Guest', password:'Guest'}).then((res)=> console.log(res))
 
 async function login(userCred) {
 	const user = await httpService.post('auth/login', userCred)
@@ -65,7 +65,7 @@ function getLoggedinUser() {
 function saveLoggedinUser(user) {
 	user = { 
         _id: user._id, 
-        fullname: user.fullname, 
+        username: user.username, 
         imgUrl: user.imgUrl, 
         isAdmin: user.isAdmin 
     }
@@ -77,6 +77,5 @@ function getEmptyCredentials() {
     return {
         username: '',
         password: '',
-        fullname: '',
     }
 }

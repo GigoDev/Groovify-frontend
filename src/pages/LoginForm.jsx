@@ -47,15 +47,7 @@ export function LoginForm({ onLogin, isSignup }) {
                 />
                 {isSignup && (
                     <>
-                        <label className="fullname">Full name</label>
-                        <input
-                            type="text"
-                            name="fullname"
-                            value={credentials.fullname}
-                            placeholder="Full name"
-                            onChange={handleChange}
-                            required
-                        />
+              
                         <ImgUploader onUploaded={onUploaded} />
                     </>
                 )}

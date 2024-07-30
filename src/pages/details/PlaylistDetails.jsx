@@ -215,7 +215,7 @@ export function PlaylistDetails() {
         </div>
       </section>
 
-      {!!station.owner || !station.name === 'Liked Songs' && (
+      {(station.name !== 'Liked Songs' && station.owner) && (
         <SearchTracks
           station={station}
           onUpdateStation={onUpdateStation} />

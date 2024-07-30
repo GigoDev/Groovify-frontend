@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Equalizer from '../assets/gifs/Equalizer.gif';
 import { updateLikedStation, updateTrackDnd } from "../store/actions/station.actions";
+import { truncateText } from "../services/util.service";
 
 export function TrackList({ tracks, onPlay }) {
     const initialTrackLength = tracks.length >= 5 ? 5 : tracks.length
@@ -73,7 +74,7 @@ export function TrackList({ tracks, onPlay }) {
                                             </span>
                                             <img src={track.album.imgs.at(-1).url} alt="Album Art" />
                                             <Link className={isPlaying && currTrack.spotifyId === track.spotifyId ? 'active title' : 'title'}>{track.name}</Link>
-                                            <span className='listeners' >1,000,000</span>
+                                            <span className='listeners' >{truncateText(track.album.name, 5)}</span>
                                             <span className={`like-btn ${likedTracksIds.includes(track.spotifyId) ? 'liked' : ''}`}
                                                 onClick={() => toggleLikedTrack(track)}>
                                                 {likedTracksIds.includes(track.spotifyId) ? <VIcon className="v-icon" width="17" height="17" fill="rgb(30, 215, 96)" /> :

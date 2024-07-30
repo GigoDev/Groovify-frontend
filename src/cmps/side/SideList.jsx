@@ -6,7 +6,7 @@ export function SideList({ stations, filterBy, isCollapsed, activeId, setActiveI
     
     function filterStations(loggedInUser) {
         // Filter stations based on whether they are followed by the logged-in user
-        let stationsToReturn = stations?.filter(station => station.followBy?.some(user => user._id === loggedInUser._id) || station.owner === true)
+        let stationsToReturn = stations?.filter(station => station.followBy?.some(user => user._id === loggedInUser._id) || station.owner)
 
         // Filter by type if specified
         if (filterBy.type) stationsToReturn = stationsToReturn.filter(station => station.type === filterBy.type)

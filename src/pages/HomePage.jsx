@@ -8,7 +8,7 @@ import SpotifyLoader from '../assets/gifs/SpotifyLoader.gif'
 
 
 export function HomePage() {
-    const stations = useSelector(storeState => storeState.stationModule.stations)
+    const stations = useSelector(storeState => storeState.stationModule.stations.filter(station=> !station.owner))
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
     useEffect(() => {

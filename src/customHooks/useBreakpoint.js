@@ -5,9 +5,11 @@ const breakpoints = {
     small: 1050,
     medium: 1280,
     large: 1500,
+    xlarge: 2000,
 };
 
 const getBreakpoint = (width) => {
+    if (width >= breakpoints.xlarge) return 'xlarge';
     if (width >= breakpoints.large) return 'large';
     if (width >= breakpoints.medium) return 'medium';
     if (width >= breakpoints.small) return 'small';

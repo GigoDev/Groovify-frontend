@@ -37,7 +37,7 @@ export function HomePage() {
         setPlayingStation(station)
     }
 
-
+    console.log(stations)
     if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     
     return (
@@ -45,9 +45,9 @@ export function HomePage() {
             <section className="home-container">
                 <MiniStationList stations={stations.slice(0, 8)} extractColor={extractColor} onPlay={onPlay}  />
                 <FeaturedPlaylist stations={stations} title={'Top playlists'} startIdx={0} type={'playlist'} />
-                <FeaturedPlaylist stations={stations} title={'Recommanded for you'} startIdx={7} type={'playlist'} />
+                <FeaturedPlaylist stations={stations} title={'Recommanded for you'} startIdx={9} type={'playlist'} />
                 <FeaturedPlaylist stations={stations} title={'Your favorite artists'} startIdx={0} type={'artist'} isRound={true} />
-                <FeaturedPlaylist stations={stations} title={'Mood'} startIdx={14} type={'playlist'} />
+                <FeaturedPlaylist stations={stations} title={'Mood'} startIdx={18} type={'playlist'} />
             </section>
         </>
     )

@@ -35,7 +35,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
             console.log(error)
         }
     }
-
+    
     return (
         <section className={`side-lib ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="top-bar">

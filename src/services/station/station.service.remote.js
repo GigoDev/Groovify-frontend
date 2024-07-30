@@ -9,7 +9,7 @@ export const stationService = {
   getDefualtStation
 }
 
-async function query(filterBy = { txt: '', price: 0 }) {
+async function query(filterBy = {spotifyId: ''}) {
   return httpService.get(`station`, filterBy)
 }
 
@@ -29,6 +29,7 @@ async function save(station) {
   }
   return savedStation
 }
+
 
 async function addStationMsg(stationId, txt) {
   const savedMsg = await httpService.post(`station/${stationId}/msg`, { txt })

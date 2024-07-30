@@ -165,7 +165,7 @@ async function getPlaylist(stationId) {//refactored
             album: { spotifyId: item.track.album.id, name: item.track.album.name, imgs: item.track.album.images },
         }))
 
-        console.log(station)
+        // console.log(station)
         return station
 
     } catch (error) {
@@ -242,7 +242,7 @@ async function getCategoryPlaylists(category) {
         return station
     })
 
-    console.log('playlists:', playlists)
+    // console.log('playlists:', playlists)
     return playlists
 
 }

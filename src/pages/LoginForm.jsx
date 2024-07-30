@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { ImgUploader } from '../cmps/ImgUploader'
+import { userService } from '../services/user/user.service.remote'
+
 
 
 export function LoginForm({ onLogin, isSignup }) {
-    const [credentials, setCredentials] = useState('')
+    const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
 
     function handleChange({ target }) {
         const { name: field, value } = target

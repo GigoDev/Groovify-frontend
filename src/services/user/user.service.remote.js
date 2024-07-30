@@ -38,7 +38,9 @@ async function update({ _id, score }) {
 	return user
 }
 
-login({username:'guest', password:'guest'}).then((res)=> console.log(res))
+login({username:'guest', password:'guest'}).then((res)=> {
+	return res
+})
 
 async function login(userCred) {
 	console.log(userCred)

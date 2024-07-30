@@ -38,7 +38,7 @@ export function PlaylistDetails() {
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
   // const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
-  
+
 
   async function extractColor(stationImgUrl) {
     if (!stationImgUrl) return
@@ -140,14 +140,15 @@ export function PlaylistDetails() {
   ]
 
   if (!station || station.type !== 'playlist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
-  const { imgs, listeners, name, type, tracks, likes, total,owner } = station
-  console.log(owner)
+  const { imgs, listeners, name, type, tracks, likes, total, owner } = station
+
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
-  const totalDuration = tracks.reduce((acc, track) => {
-    const [minutes, seconds] = track.duration.split(':').map(Number)
+  const totalDuration = tracks?.reduce((acc, track) => {
+    const [minutes, seconds] = track.duration?.split(':').map(Number)
     return acc + (minutes * 60 + seconds)
   }, 0)
   const formattedDuration = formatDurationSec(totalDuration)
+
   return (
     <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
@@ -163,7 +164,7 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
 
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
-          {!station.tracks.length ? ('') :
+          {!station.tracks.length &&
             <div className="mini-dashboard">
               John Doe • {likes?.toLocaleString()} likes • {total} songs
               <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
@@ -174,16 +175,16 @@ export function PlaylistDetails() {
 
       <section className="song-list-container content-layout">
         <section className="playlist-actions">
-          {!station.tracks.length ? ('') :
+          {!!station.tracks.length &&
             (<button className="btn-play-green" onClick={handlePlayPause}>
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
             )}
-          {station.owner ? ('') : (<button className="add-library">
+          {!station.owner && (<button className="add-library">
             <AddLibrary />
           </button>)}
 
-          {station.name === 'Liked Songs' ? ('') :
+          {station.name === 'Liked Songs' ||
             (<div className="flex option-btns">
               <StationMenuModal
                 trigger={
@@ -214,11 +215,11 @@ export function PlaylistDetails() {
         </div>
       </section>
 
-      {!!station.owner || !station.name === 'Liked Songs' &&(
-       <SearchTracks
+      {!!station.owner || !station.name === 'Liked Songs' && (
+        <SearchTracks
           station={station}
           onUpdateStation={onUpdateStation} />
-   
+
       )}
 
       <UpdateStationModal

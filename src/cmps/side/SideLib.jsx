@@ -18,12 +18,13 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const { id } = useParams()
     const navigate = useNavigate()
     const [filterBy, setFilterBy] = useState({ type: 'playlist', txt: '' })
-    const sideStations = useSelector(state => state.stationModule.stations.filter(station => station.owner?._id || station.followBy?.includes(loggedInUser._id)))
+    const sideStations = useSelector(state => state.stationModule.stations.filter(station => station.owner?._id || station.followBy?.some(user => user.userId === loggedInUser._id)))
     const [activeId, setActiveId] = useState(id)
+    const newPlaylistCount = useRef(0)
+
     useEffect(() => {
         loadStations()
     }, [])
-    const newPlaylistCount = useRef(0)
 
 
     async function onAddPlaylist() {

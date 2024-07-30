@@ -40,11 +40,9 @@ export function ArtistDetails() {
 
     useEffect(() => {
         // Check if the user is already following the station
-        const getLoggedInUser = () => ({ _id: 'userId', name: 'user' }); //to be replaced by service function 
-        const loggedInUser = getLoggedInUser();
-
-        if (station && station.followBy) {
-            const isUserFollowing = station.followBy.some(user => user._id === loggedInUser._id);
+        const loggedInUser = userService.getLoggedinUser()
+        if (station && station.followBy  ) {
+            const isUserFollowing = station.followBy.some(user => user.userId === loggedInUser._id)
             setIsFollow(isUserFollowing);
         }
     }, [station]);
@@ -104,7 +102,6 @@ export function ArtistDetails() {
         }
         togglePlay()
     }
-
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     const followStyle = isFollow ? { borderColor: 'green' } : { borderColor: 'white' };

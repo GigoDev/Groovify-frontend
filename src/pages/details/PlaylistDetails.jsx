@@ -152,7 +152,7 @@ export function PlaylistDetails() {
     <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
-          {owner._id && name !== 'Liked Songs' ? (
+          {owner?._id && name !== 'Liked Songs' ? (
             imgUrl ? <img onClick={openEditModal} src={imgUrl} /> : <MusicNoteIcon onClick={openEditModal} />
           ) : (
 

@@ -17,7 +17,11 @@ export function TrackList({ tracks, onPlay }) {
 
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
-    const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
+    const likedTracksIds = useSelector(storeState => storeState.stationModule.stations
+                                                                                    .find((station) => {
+                                                                                        console.log(station)
+                                                                                       return station.name === 'Liked Songs'}))
+                                                                                         .tracks.map(track => track.spotifyId)
 
     function handleMoreLessClick() {
         if (tracks.length < 5) return
@@ -29,7 +33,7 @@ export function TrackList({ tracks, onPlay }) {
             setTrackList(tracks.slice(0, 5))
         }
     }
-   
+
     function toggleLikedTrack(track) {
         updateLikedStation(track)
     }
@@ -57,9 +61,9 @@ export function TrackList({ tracks, onPlay }) {
                                 <Draggable key={track.spotifyId} draggableId={track.spotifyId} index={idx}>
                                     {(provided) => (
                                         <li className={activeId === track.spotifyId ? 'active' : ''}
-                                        key={track.spotifyId}
-                                        onClick={() => setActiveId(track.spotifyId)} 
-                                        ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                            key={track.spotifyId}
+                                            onClick={() => setActiveId(track.spotifyId)}
+                                            ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                                             <span className='play-btn' onClick={(event) => onPlay(event, track)}>
                                                 {isPlaying && currTrack.spotifyId === track.spotifyId ?
                                                     <PauseIcon /> : <PlayIcon />}
@@ -77,9 +81,9 @@ export function TrackList({ tracks, onPlay }) {
                                             <span className={`like-btn ${likedTracksIds.includes(track.spotifyId) ? 'liked' : ''}`}
                                                 onClick={() => toggleLikedTrack(track)}>
                                                 {likedTracksIds.includes(track.spotifyId) ? <VIcon className="v-icon" width="17" height="17" fill="rgb(30, 215, 96)" /> :
-                                                    <AddLibrary className="add-library" fill="#b3b3b3" width="14" height="14"/>
+                                                    <AddLibrary className="add-library" fill="#b3b3b3" width="14" height="14" />
                                                 }
-                                                
+
                                             </span>
                                             <span className='time'>{track.duration}</span>
                                         </li>

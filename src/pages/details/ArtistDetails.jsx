@@ -63,21 +63,21 @@ export function ArtistDetails() {
     }
 
     async function handleFollow() {//work for initial state and for update state
-        const loggedinUser =  userService.getLoggedinUser()
+        const loggedinUser = userService.getLoggedinUser()
         const stationToUpdate = { ...station }
 
         if (stationToUpdate.followBy) {
-            const idx = stationToUpdate.followBy.findIndex(user => user._id === loggedinUser._id)
+            const idx = stationToUpdate.followBy.findIndex(user => user.userId === loggedinUser._id)
             if (idx >= 0) {
                 stationToUpdate.followBy.splice(idx, 1) //remove
                 setIsFollow(false)
             }
             else {
-                stationToUpdate.followBy.push(loggedinUser) //add
+                stationToUpdate.followBy.push({ userId: loggedinUser._id }) //add
                 setIsFollow(true)
             }
         } else {
-            stationToUpdate.followBy = [loggedinUser] //add
+            stationToUpdate.followBy = [{ userId: loggedinUser._id }] //add
             setIsFollow(true)
         }
 
@@ -107,7 +107,7 @@ export function ArtistDetails() {
 
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
-    const followStyle = isFollow? { borderColor: 'green' }: { borderColor: 'white' };
+    const followStyle = isFollow ? { borderColor: 'green' } : { borderColor: 'white' };
     return (
         <section className="station-details-container full-details">
 
@@ -129,7 +129,7 @@ export function ArtistDetails() {
                 </div>
 
                 <h2>Popular</h2>
-                <TrackList tracks={tracks} onPlay={onPlay}  />
+                <TrackList tracks={tracks} onPlay={onPlay} />
             </section>
         </section>
     )

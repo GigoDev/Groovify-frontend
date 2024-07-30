@@ -37,7 +37,7 @@ export function PlaylistDetails() {
   const station = useSelector(storeState => storeState.stationModule.station)
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
-  const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
+  // const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
   
 
   async function extractColor(stationImgUrl) {
@@ -214,11 +214,12 @@ export function PlaylistDetails() {
         </div>
       </section>
 
-      {!station.owner || station._id === '2D2M9' ? ('') : (
-        <SearchTracks
+      {!!station.owner || !station.name === 'Liked Songs' &&(
+       <SearchTracks
           station={station}
-          onUpdateStation={onUpdateStation} />)
-      }
+          onUpdateStation={onUpdateStation} />
+   
+      )}
 
       <UpdateStationModal
         isModalOpen={isModalOpen}

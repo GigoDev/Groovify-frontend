@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { ImgUploader } from '../cmps/ImgUploader'
+import { userService } from '../services/user/user.service.remote'
+
 
 
 export function LoginForm({ onLogin, isSignup }) {
-    const [credentials, setCredentials] = useState('')
+    const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
 
     function handleChange({ target }) {
         const { name: field, value } = target
@@ -45,15 +47,7 @@ export function LoginForm({ onLogin, isSignup }) {
                 />
                 {isSignup && (
                     <>
-                        <label className="fullname">Full name</label>
-                        <input
-                            type="text"
-                            name="fullname"
-                            value={credentials.fullname}
-                            placeholder="Full name"
-                            onChange={handleChange}
-                            required
-                        />
+              
                         <ImgUploader onUploaded={onUploaded} />
                     </>
                 )}

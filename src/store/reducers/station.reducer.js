@@ -25,8 +25,8 @@ const initialState = {
 }
 
 export function stationReducer(state = initialState, action) {
-    var newState = state
-    var stations
+    let newState = state
+    let stations
     switch (action.type) {
         // Station:
         case SET_STATIONS:

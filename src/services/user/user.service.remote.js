@@ -12,6 +12,7 @@ export const userService = {
 	update,
     getLoggedinUser,
     saveLoggedinUser,
+	getEmptyCredentials,
 }
 
 function getUsers() {
@@ -37,9 +38,10 @@ async function update({ _id, score }) {
 	return user
 }
 
-//  login({username:'Guest', password:''}).then((res)=> console.log(res))
+login({username:'guest', password:'guest'}).then((res)=> console.log(res))
 
 async function login(userCred) {
+	console.log(userCred)
 	const user = await httpService.post('auth/login', userCred)
 	if (user) return saveLoggedinUser(user)
 }
@@ -64,10 +66,17 @@ function getLoggedinUser() {
 function saveLoggedinUser(user) {
 	user = { 
         _id: user._id, 
-        fullname: user.fullname, 
+        username: user.username, 
         imgUrl: user.imgUrl, 
         isAdmin: user.isAdmin 
     }
 	sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
 	return user
+}
+
+function getEmptyCredentials() {
+    return {
+        username: '',
+        password: '',
+    }
 }

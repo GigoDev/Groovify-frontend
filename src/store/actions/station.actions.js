@@ -50,6 +50,7 @@ export async function addStation(station) {
 
 export async function updateStation(station) {
     try {
+        console.log(station)
         const savedStation = await stationService.save(station)
         store.dispatch(getCmdUpdateStation(savedStation))
         return savedStation

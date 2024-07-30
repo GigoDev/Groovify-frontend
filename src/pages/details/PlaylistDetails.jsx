@@ -139,7 +139,8 @@ export function PlaylistDetails() {
   ]
 
   if (!station || station.type !== 'playlist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
-  const { imgs, listeners, name, type, tracks, likes, total } = station
+  const { imgs, listeners, name, type, tracks, likes, total,owner } = station
+  console.log(owner)
   const imgUrl = imgs && imgs.length > 0 ? imgs[0].url : null
   const totalDuration = tracks.reduce((acc, track) => {
     const [minutes, seconds] = track.duration.split(':').map(Number)
@@ -150,7 +151,7 @@ export function PlaylistDetails() {
     <section className="playlist-details full-details content-layout">
       <section className="station-preview flex full">
         <div className="img-container">
-          {station.owner && station.name === 'Liked Songs' ? (
+          {owner._id && name !== 'Liked Songs' ? (
             imgUrl ? <img onClick={openEditModal} src={imgUrl} /> : <MusicNoteIcon onClick={openEditModal} />
           ) : (
 

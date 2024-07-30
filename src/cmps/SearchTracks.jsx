@@ -24,9 +24,7 @@ export function SearchTracks({ onUpdateStation, station }) {
     ).current
 
     useEffect(() => {
-        if (search) {
-            debouncedLoadTracks(search)
-        }
+        if (search)  debouncedLoadTracks(search)
     }, [search])
 
     function addTrack(track) {

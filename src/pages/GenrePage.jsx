@@ -41,7 +41,7 @@ export function GenrePage() {
                 style={{ background: `linear-gradient(${bgColor} -50%, rgb(18, 18, 18) 30%,rgb(18, 18, 18) 100%)` }}>
                 <FeaturedPlaylist stations={data} title={'Popular'} startIdx={0} type={'playlist'} />
                 <FeaturedPlaylist stations={data} title={'Hand-picked'} startIdx={7} type={'playlist'} />
-                <FeaturedPlaylist stations={data} title={'From out editors'} startIdx={14} type={'playlist'} />
+                <FeaturedPlaylist stations={data} title={'From our editors'} startIdx={14} type={'playlist'} />
 
 
 

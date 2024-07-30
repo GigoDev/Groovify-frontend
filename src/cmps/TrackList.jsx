@@ -77,7 +77,7 @@ export function TrackList({ tracks, onPlay }) {
                                             <span className={`like-btn ${likedTracksIds.includes(track.spotifyId) ? 'liked' : ''}`}
                                                 onClick={() => toggleLikedTrack(track)}>
                                                 {likedTracksIds.includes(track.spotifyId) ? <VIcon className="v-icon" width="17" height="17" fill="rgb(30, 215, 96)" /> :
-                                                    <AddLibrary fill="#b3b3b3" width="14" height="14"/>
+                                                    <AddLibrary className="add-library" fill="#b3b3b3" width="14" height="14"/>
                                                 }
                                                 
                                             </span>

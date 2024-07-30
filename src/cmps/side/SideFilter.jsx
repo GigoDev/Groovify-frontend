@@ -6,6 +6,7 @@ export function SideFilter({ setFilterBy }) {
     const [isInputVisible, setIsInputVisible] = useState(false)
     const [isButtonClicked, setIsButtonClicked] = useState(false)
     const [searchInput, setSearchInput] = useState('')
+    const [activeFilter, setActiveFilter] = useState('playlist')
 
     function toggleInputVisibility() {
         setIsInputVisible(!isInputVisible)
@@ -15,6 +16,11 @@ export function SideFilter({ setFilterBy }) {
     const handleInput = (ev) => {
         const { target } = ev
         setSearchInput(target.value)
+    }
+
+    function handleFilterChange(filterType) {
+        setActiveFilter(filterType)
+        setFilterBy(filterBy => ({ ...filterBy, type: filterType }))
     }
 
     useEffect(() => {
@@ -28,8 +34,18 @@ export function SideFilter({ setFilterBy }) {
     return (
         <section className='side-filter'>
             <div className={'side-filter-btns'}>
-                <button className="btn" onClick={() => setFilterBy(filterBy => ({ ...filterBy, type: 'playlist' }))}>Playlists</button>
-                <button className="btn" onClick={() => setFilterBy(filterBy => ({ ...filterBy, type: 'artist' }))}>Artists</button>
+                <button
+                    className={`btn ${activeFilter === 'playlist' ? 'active' : ''}`}
+                    onClick={() => handleFilterChange('playlist')}
+                >
+                    Playlists
+                </button>
+                <button
+                    className={`btn ${activeFilter === 'artist' ? 'active' : ''}`}
+                    onClick={() => handleFilterChange('artist')}
+                >
+                    Artists
+                </button>
             </div>
 
             <div className="side-search-container">

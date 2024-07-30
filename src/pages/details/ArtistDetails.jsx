@@ -9,6 +9,7 @@ import { stationService } from '../../services/station'
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import PauseIcon from '../../assets/icons/PauseIcon.svg'
 import SpotifyLoader from '../../assets/gifs/SpotifyLoader.gif'
+import { userService } from '../../services/user'
 
 
 
@@ -62,22 +63,21 @@ export function ArtistDetails() {
     }
 
     async function handleFollow() {//work for initial state and for update state
-        const getLoggedInUser = () => ({ _id: 'userId', name: 'user' });
-        const loggedInUser = getLoggedInUser()
+        const loggedinUser =  userService.getLoggedinUser()
         const stationToUpdate = { ...station }
 
         if (stationToUpdate.followBy) {
-            const idx = stationToUpdate.followBy.findIndex(user => user._id === loggedInUser._id)
+            const idx = stationToUpdate.followBy.findIndex(user => user._id === loggedinUser._id)
             if (idx >= 0) {
                 stationToUpdate.followBy.splice(idx, 1) //remove
                 setIsFollow(false)
             }
             else {
-                stationToUpdate.followBy.push(loggedInUser) //add
+                stationToUpdate.followBy.push(loggedinUser) //add
                 setIsFollow(true)
             }
         } else {
-            stationToUpdate.followBy = [loggedInUser] //add
+            stationToUpdate.followBy = [loggedinUser] //add
             setIsFollow(true)
         }
 

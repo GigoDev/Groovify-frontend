@@ -26,7 +26,7 @@ export function SearchTracks({ onUpdateStation, station }) {
             } catch (err) {
                 console.error("Failed to load tracks:", err)
             }
-        }, 1000)
+        }, 500)
     ).current
 
     useEffect(() => {
@@ -51,7 +51,7 @@ export function SearchTracks({ onUpdateStation, station }) {
 
     function onPlay(ev, track) {
         ev.stopPropagation()
-        // setSelectedTrack(track)
+
         if (track.spotifyId === currTrack.spotifyId) return togglePlay() // check if new track was clicked
         let currStation = {}
         currStation.tracks = tracks

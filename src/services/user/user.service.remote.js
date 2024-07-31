@@ -43,6 +43,7 @@ login({username:'guest', password:'guest'}).then((res)=> {
 })
 
 async function login(userCred) {
+	// console.log(userCred)
 	const user = await httpService.post('auth/login', userCred)
 	if (user) return saveLoggedinUser(user)
 }

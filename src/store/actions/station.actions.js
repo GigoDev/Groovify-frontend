@@ -1,6 +1,6 @@
 import { stationService } from '../../services/station'
 import { store } from '../store'
-import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION, UPDATE_TRACK_ORDER } from '../reducers/station.reducer'
+import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMOVE_STATION, SET_STATIONS, SET_STATION, UPDATE_STATION, ADD_STATION_MSG, UPDATE_LIKED_STATION, UPDATE_TRACK_ORDER, UPDATE_TRACK } from '../reducers/station.reducer'
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
 import { getRandomIntInclusive } from '../../services/util.service.js'
@@ -93,6 +93,14 @@ export async function updateTrackDnd(updatedTracks) {
     } catch (err) {
         console.log('Cannot update track order', err)
         throw err
+    }
+}
+
+export async function updateTrackLyrics(newLyrics) {
+    try {
+        store.dispatch(getCmdUpdateTrackLyrics(newLyrics))
+    } catch (err) {
+        console.log('Encountered lyrics error', err)
     }
 }
 
@@ -231,6 +239,13 @@ function getCmdUpdateTrackOrder(updatedTracks) {
     return {
         type: UPDATE_TRACK_ORDER,
         updatedTracks
+    }
+}
+
+function getCmdUpdateTrackLyrics(lyrics) {
+    return {
+        type: UPDATE_TRACK,
+        lyrics
     }
 }
 

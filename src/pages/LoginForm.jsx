@@ -24,7 +24,6 @@ export function LoginForm({ onLogin, isSignup }) {
     return (
         <article className="login-form">
             <form className="login-form flex column align-center" onSubmit={handleSubmit}>
-            <div></div>
                 <label className="username">Username</label>
                 <input
                     type="text"
@@ -35,6 +34,8 @@ export function LoginForm({ onLogin, isSignup }) {
                     required
                     autoFocus
                 />
+
+
                 <label className="password">Password</label>
                 <input
                     type="password"
@@ -45,9 +46,10 @@ export function LoginForm({ onLogin, isSignup }) {
                     required
                     autoComplete="off"
                 />
+
                 {isSignup && (
                     <>
-              
+
                         <ImgUploader onUploaded={onUploaded} />
                     </>
                 )}

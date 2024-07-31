@@ -61,12 +61,13 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
         if (!_id) {//if no Id on card - search dataBase (no database ID for search resaults)
             const [stationFromService] = await stationService.query({spotifyId: spotifyId}) 
             if(stationFromService) navId = stationFromService._id 
+
             else{//get new playlist from spotify and save to DB
                 const newPlaylist = await spotifyService.getPlaylist(spotifyId)
-                console.log(newPlaylist)
-                const savedPlaylist = await stationService.save(newPlaylist)
+                const savedPlaylist = await stationService.save(newPlaylist) //this also add an owner to the list
+                const updatedStation = await stationService.save({...savedPlaylist, owner:null})
+                console.log(updatedStation)
                 navId = savedPlaylist._id
-                console.log(navId)
             }
         }
         navigate(`/${type}/${navId}`)

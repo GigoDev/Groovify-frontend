@@ -42,7 +42,7 @@ export function ArtistDetails() {
     useEffect(() => {
         // Check if the user is already following the station
         const loggedInUser = userService.getLoggedinUser()
-        if (station && station.followBy  ) {
+        if (station && station.followBy) {
             const isUserFollowing = station.followBy.some(user => user.userId === loggedInUser._id)
             setIsFollow(isUserFollowing);
         }
@@ -123,7 +123,7 @@ export function ArtistDetails() {
                     <button className='btn play' onClick={handlePlayPause}>
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className='btn pill follow' onClick={handleFollow} style={followStyle}>Follow</button>
+                    <button className='btn pill follow' onClick={handleFollow} style={followStyle}>{isFollow ? 'Following' : 'Follow'}</button>
                 </div>
 
                 <h2>Popular</h2>

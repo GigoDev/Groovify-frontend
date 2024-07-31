@@ -6,6 +6,19 @@
     border-radius: 4px;
     transition: background-color 0.5s ease-out;
 
+    &.loading .loading-shine {
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.8) 50%,
+                rgba(255, 255, 255, 0) 100%);
+        animation: shine 1.5s forwards;
+    }
+
     &:hover {
         background-color: $clr15hover;
 
@@ -68,5 +81,11 @@
             background-color: #1ed760;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
         }
+    }
+}
+
+@keyframes shine {
+    to {
+        left: 150%;
     }
 }

@@ -11,6 +11,12 @@
             grid-template-columns: 30px 40px 1fr 50px;
         }
 
+        cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+        }
+
         &.active {
             background-color: $clr05;
 

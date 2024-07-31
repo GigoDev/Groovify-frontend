@@ -3,12 +3,21 @@ import PlayIcon from '../assets/icons/PlayIcon.svg'
 import PauseIcon from '../assets/icons/PauseIcon.svg'
 import { useSelector } from 'react-redux'
 import { setPlayingStation, setTrack, togglePlay } from '../store/actions/station.actions'
+import { useEffect, useState } from 'react'
 
 export function MiniStationPreview({ station }) {
     const { imgs, id, listeners, name, type, tracks } = station
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
-    
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 1500)
+
+        return () => clearTimeout(timer)
+    }, [])
     function onPreviewPlay(event, station) {
         event.stopPropagation()
         event.preventDefault()
@@ -18,7 +27,8 @@ export function MiniStationPreview({ station }) {
     }
 
     return (
-        <article className="mini-card">
+        <article className={`mini-card ${isLoading ? 'loading' : ''}`}>
+            <div className="loading-shine"></div>
             <div className="mini-card-img-container">
                 {imgs[(imgs.length - 1)].url ?
                     <img className="mini-card-img"

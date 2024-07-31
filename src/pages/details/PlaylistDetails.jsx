@@ -171,7 +171,7 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
 
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
-          {!station.tracks.length &&
+          {station.tracks.length > 0 && 
             <div className="mini-dashboard">
               John Doe • {likes?.toLocaleString()} likes • {total} songs
               <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>

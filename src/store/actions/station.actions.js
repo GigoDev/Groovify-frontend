@@ -4,6 +4,7 @@ import { IS_PLAYING, SET_CURR_TRACK, SET_CURR_PLAYING_STATION, ADD_STATION, REMO
 import { MENU_TOGGLE } from '../reducers/system.reducer'
 import { youtubeService } from '../../services/youtube.service.js'
 import { getRandomIntInclusive } from '../../services/util.service.js'
+import { showSuccessMsg } from '../../services/event-bus.service.js'
 
 // Station actions:
 export async function loadStations() {
@@ -31,6 +32,7 @@ export async function removeStation(stationId) {
     try {
         await stationService.remove(stationId)
         store.dispatch(getCmdRemoveStation(stationId))
+        showSuccessMsg('Removed from Your Library')
     } catch (err) {
         console.log('Cannot remove station', err)
         throw err
@@ -41,6 +43,7 @@ export async function addStation(station) {
     try {
         const savedStation = await stationService.save(station)
         store.dispatch(getCmdAddStation(savedStation))
+        showSuccessMsg('Added to Your Library')
         return savedStation
     } catch (err) {
         console.log('Cannot add station', err)
@@ -52,6 +55,7 @@ export async function updateStation(station) {
     try {
         const savedStation = await stationService.save(station)
         store.dispatch(getCmdUpdateStation(savedStation))
+        showSuccessMsg('Updated Your Library')
         return savedStation
     } catch (err) {
         console.log('Cannot save station', err)
@@ -69,6 +73,8 @@ export async function updateLikedStation(track) {
 
         const savedStation = await stationService.save(likedStation)
         store.dispatch({ type: UPDATE_LIKED_STATION, station: savedStation })
+        const msg = idx === -1 ? 'Added to' : 'Removed from'
+        showSuccessMsg(`${msg} Liked Songs`)
         return savedStation
     } catch (err) {
         console.log('Cannot save station', err)

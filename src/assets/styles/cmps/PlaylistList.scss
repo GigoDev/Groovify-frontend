@@ -29,8 +29,12 @@
       &.active {
          background-color: $clr05;
 
+         .add-library{
+            opacity: 1;
+         }
+
          .small-btn-options,
-         .like-icon{
+         .like-icon {
             display: block;
          }
       }
@@ -52,8 +56,33 @@
          border: 0;
       }
 
+      .add-library{
+         opacity: 0;
+      }
+
       &:hover {
          background-color: $clr06;
+
+         cursor: pointer;
+         
+         .add-library {
+            opacity: 1;
+
+            &:hover {
+               fill: $clr01;
+               scale: 1.02;
+            }
+         }
+
+
+         .v-icon {
+            opacity: 1;
+
+            &:hover {
+               fill: $clrGreen;
+               scale: 1.06;
+            }
+         }
 
          .playlist-number {
             display: none;

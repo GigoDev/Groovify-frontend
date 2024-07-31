@@ -5,6 +5,8 @@ import RemoveBinIcon from '../assets/icons/RemoveBinIcon.svg'
 import { StationMenuModal } from "./StationMenuModal"
 import PlayIcon from '../assets/icons/PlayIcon.svg';
 import PauseIcon from '../assets/icons/PauseIcon.svg';
+import VIcon from '../assets/icons/VIcon.svg';
+import AddLibrary from '../assets/icons/AddLibrary.svg';
 import Equalizer from '../assets/gifs/Equalizer.gif';
 import { useSelector } from "react-redux"
 import { useState } from "react"
@@ -15,6 +17,7 @@ import { updateLikedStation } from "../store/actions/station.actions";
 export function PlaylistList({ station, onUpdateStation, onPlay }) {
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    const likedTracksIds = useSelector(storeState => storeState.stationModule.stations?.find((station) => station.name === 'Liked Songs'))?.tracks.map(track => track.spotifyId)
 
     const [activeId, setActiveId] = useState('')
 
@@ -71,9 +74,13 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
                 <span className='album'>{truncateText(track.album.name, 4)}</span>
                 <span className='date'>{track.addedAt ? formatDate(track.addedAt) : ''}</span>
 
-                <button onClick={() => toggleLikedTrack(track)} className="btn-like">
-                    <LikeIcon className="like-icon" />
-                </button>
+                <span className={`like-btn ${likedTracksIds?.includes(track.spotifyId) ? 'liked' : ''}`}
+                    onClick={() => toggleLikedTrack(track)}>
+                    {likedTracksIds?.includes(track.spotifyId) ? <VIcon className="v-icon" width="17" height="17" fill="rgb(30, 215, 96)" /> :
+                        <AddLibrary className="add-library" fill="#b3b3b3" width="14" height="14" />
+                    }
+
+                </span>
 
                 <span className='createdAt'>{track.duration}</span>
 

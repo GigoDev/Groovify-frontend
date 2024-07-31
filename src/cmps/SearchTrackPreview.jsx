@@ -4,7 +4,7 @@ import PauseIcon from '../assets/icons/PauseIcon.svg'
 
 
 export function SearchTrackPreview({ track, addTrack, onPlay, currTrack, isPlaying }) {
-    console.log(isPlaying)
+    
     return (
         <article className="station-search-preview">
             <div className="song-img-container">

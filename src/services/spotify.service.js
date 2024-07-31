@@ -103,7 +103,7 @@ async function getArtist(stationId) {
         return station
 
     } catch (error) {
-        if (error.response.status === 403) {
+        if (error.response.status === 401 || error.response.status === 403) {
             console.log('token refresh')
             await getToken()
             return await getArtist(stationId)
@@ -140,7 +140,7 @@ async function getPlaylist(stationId) {
         return station
 
     } catch (error) {
-        if (error.response.status === 403) {
+        if (error.response.status === 401 || error.response.status === 403) {
             console.log('token refresh')
             await getToken()
             return await getPlaylist(stationId)
@@ -217,7 +217,7 @@ async function getCategoryPlaylists(category) {
         return playlists
 
     } catch (error) {
-        if (error.response.status === 403) {
+        if (error.response.status === 401 || error.response.status === 403) {
             console.log('token refresh')
             await getToken()
             return await getCategoryPlaylists(category)

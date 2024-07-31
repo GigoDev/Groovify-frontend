@@ -16,7 +16,7 @@ async function getTrackId(trackToFind) {
         const tracks = loadFromStorage(STORAGE_KEY) || []
         let track = tracks.find(currTrack => currTrack.name === trackToFind.name)
         if (track) return track
-      console.log('tracktoFind', trackToFind)
+
         const url = _getUrl(`${trackToFind.artist.name} - ${trackToFind.name}`)
         const res = await axios.get(url)
         track = {

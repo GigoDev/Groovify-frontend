@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { saveToStorage, loadFromStorage, formatTime, makeId } from './util.service'
+import { saveToStorage, loadFromStorage, formatTime } from './util.service'
 
 const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
 const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
@@ -86,69 +86,41 @@ function _getTrackDetails(track) {
     }
 }
 
-async function getArtist(stationId) {//refactored
-    var station
-    //local storage
-    try {
-        const stations = await loadFromStorage('station')
-        station = stations.find(item => item._id === stationId)
-        if (station) {
-            console.log('from local storage', station)
-            return station
-        }
-    } catch (error) {
-        console.log('cant find id in cache, getting playlist from spotify')
-    }
-
-    //from spotify
+async function getArtist(stationId) {
     try {
         const token = loadFromStorage('access_token')
         const url = `https://api.spotify.com/v1/artists/${stationId}`;
         const headers = { 'Authorization': `Bearer ${token}` }
         const [resp, topTracks] = await Promise.all([axios.get(url, { headers }), _getArtistTopTracks(stationId)])
 
-        station = _getEmptyStation()
-        // station._id = makeId()
+        const station = _getEmptyStation()
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
         station.listeners = resp.data.followers.total
         station.imgs = resp.data.images
         station.tracks = topTracks
-        console.log(station)
         return station
 
     } catch (error) {
-        console.error('Error fetching artist from spotify:', error)
+        if (error.response.status === 401 || error.response.status === 403) {
+            console.log('token refresh')
+            await getToken()
+            return await getArtist(stationId)
+        } else console.error('Error fetching artist from spotify:', error)
     }
-
 }
 
-async function getPlaylist(stationId) {//refactored
-    //localStorage
-    var station
-    try {
-        const stations = await loadFromStorage('station')
-        station = stations.find(item => item._id === stationId)
-        if (station) {
-            console.log('from local storage', station)
-            return station
-        }
-    } catch (error) {
-        console.log('cant find id in cache, getting playlist from spotify')
-    }
-    // sporify
+async function getPlaylist(stationId) {
     try {
         const token = loadFromStorage('access_token')
         const fields = 'description,followers,href,id,images,name,type,followers,tracks(href,total,items())'
         const url = `https://api.spotify.com/v1/playlists/${stationId}?fields=${fields}`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
-
         const items = resp.data.tracks.items
 
-        station = _getEmptyStation()
-        // station._id = makeId() // only for demoData
+        const station = _getEmptyStation()
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
@@ -165,15 +137,18 @@ async function getPlaylist(stationId) {//refactored
             album: { spotifyId: item.track.album.id, name: item.track.album.name, imgs: item.track.album.images },
         }))
 
-        // console.log(station)
         return station
 
     } catch (error) {
-        console.error('Error fetching playlist from spotify:', error)
+        if (error.response.status === 401 || error.response.status === 403) {
+            console.log('token refresh')
+            await getToken()
+            return await getPlaylist(stationId)
+        } else console.error('Error fetching playlist from spotify:', error) 
     }
 }
 
-async function getAlbum(stationId, market = 'US') {//refactored
+async function getAlbum(stationId, market = 'US') {//in Dev
     var station
     //from local storage
     try {
@@ -194,15 +169,14 @@ async function getAlbum(stationId, market = 'US') {//refactored
         const url = `https://api.spotify.com/v1/albums/${stationId}?market=${market}`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
-        // console.log(resp.data)
+
         station = _getEmptyStation()
-        // station._id = makeId()
         station.type = resp.data.type
         station.spotifyId = resp.data.id
         station.name = resp.data.name
         station.imgs = resp.data.images
-        station.total = resp.data.tracks.total //total tracks in the album
-        station.releaseDate = resp.data.release_date //album release date
+        station.total = resp.data.tracks.total
+        station.releaseDate = resp.data.release_date
         station.artist = { spotifyId: resp.data.artists[0].id, name: resp.data.artists[0].name }
         station.tracks = resp.data.tracks.items.map(item => ({
             spotifyId: item.id,
@@ -213,7 +187,7 @@ async function getAlbum(stationId, market = 'US') {//refactored
             addedAt: null,
         }))
 
-        console.log(station)
+        // console.log(station)
         return station
 
     } catch (error) {
@@ -222,28 +196,34 @@ async function getAlbum(stationId, market = 'US') {//refactored
 }
 
 async function getCategoryPlaylists(category) {
-    const lowerCaseCategory = category.toLowerCase()
-    console.log(lowerCaseCategory)
+    try {
+        const lowerCaseCategory = category.toLowerCase()
+        const token = loadFromStorage('access_token')
+        const url = `https://api.spotify.com/v1/browse/categories/${lowerCaseCategory}/playlists?limit=30`
+        const headers = { 'Authorization': `Bearer ${token}` }
+        const resp = await axios.get(url, { headers })
+        console.log(resp)
+        const playlists = resp.data.playlists.items.map(playlist => {
+            const station = _getEmptyStation()
+            station.spotifyId = playlist.id
+            station.type = playlist.type
+            station.name = playlist.name
+            station.description = playlist.description
+            station.imgs = playlist.images
+            station.owner = { id: playlist.owner.id, name: playlist.owner.display_name }
+            station.category = category.toLowerCase()
+            return station
+        })
+        return playlists
 
-    const token = loadFromStorage('access_token')
-    const url = `https://api.spotify.com/v1/browse/categories/${lowerCaseCategory}/playlists?limit=30`
-    const headers = { 'Authorization': `Bearer ${token}` }
-    const resp = await axios.get(url, { headers })
-    console.log(resp)
-    const playlists = resp.data.playlists.items.map(playlist => {
-        const station = _getEmptyStation()
-        station.spotifyId = playlist.id
-        station.type = playlist.type
-        station.name = playlist.name
-        station.description = playlist.description
-        station.imgs = playlist.images
-        station.owner = { id: playlist.owner.id, name: playlist.owner.display_name }
-        station.category = category.toLowerCase()
-        return station
-    })
-
-    // console.log('playlists:', playlists)
-    return playlists
+    } catch (error) {
+        if (error.response.status === 401 || error.response.status === 403) {
+            console.log('token refresh')
+            await getToken()
+            return await getCategoryPlaylists(category)
+        }
+        else console.log('error fetching category playlist', error)
+    }
 
 }
 
@@ -273,7 +253,6 @@ async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL'
 }
 
 async function getFeaturedPlaylists() {//get top 10 playlists in IL
-
     try {
         const token = loadFromStorage('access_token')
         const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN&limit=50`
@@ -338,63 +317,3 @@ function _getEmptyStation() {
     })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-async function getRecommendationsByArtist(seed_artist, limit = 10) {
-    try {
-        const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/recommendations?limit=${limit}&seed_artists=${seed_artist}`
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const resp = await axios.get(url, { headers })
-        console.log(resp.data.tracks)
-
-    } catch (error) {
-        console.error('Error getting recommendations by artist:', error)
-    }
-}
-
-async function getRecommendationsByGeners(geners, limit = 10, market = 'IL') {
-
-    try {
-        const token = loadFromStorage('access_token')
-        const genersStr = geners.join('%2C')
-        const url = `https://api.spotify.com/v1/recommendations?limit=${limit}&market=${market}&seed_genres=${genersStr}`
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const resp = await axios.get(url, { headers })
-
-        console.log(resp.data.tracks)
-
-    } catch (error) {
-        console.error('Error getting recommendations by geners:', error)
-    }
-}
-
-async function getRecommendationTopTracks(limit = '10') {
-    try {
-        const token = loadFromStorage('access_token')
-        const url = `https://api.spotify.com/v1/recommendations?limit=${limit}&market=IL&seed_genres=pop%2Crock%2Ccountry%2Chip-hop&min_popularity=80&max_popularity=100`
-        const headers = { 'Authorization': `Bearer ${token}` }
-        const resp = await axios.get(url, { headers })
-        const topTracks = resp.data.tracks.map(track => ({
-            artist: track.artists[0],
-            spotifyId: track.id,
-            name: track.name
-        }))
-
-        console.log(topTracks)
-
-
-    } catch (error) {
-        console.error('Error in getting top tracks:', error)
-    }
-}

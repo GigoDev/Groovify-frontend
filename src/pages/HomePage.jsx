@@ -37,7 +37,6 @@ export function HomePage() {
         setPlayingStation(station)
     }
 
-    console.log(stations)
     if (!stations) return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     
     return (

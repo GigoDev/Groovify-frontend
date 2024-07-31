@@ -51,7 +51,7 @@ async function getTracks(searchQuery) {
         // From spotify
         const token = loadFromStorage('access_token')
         const headers = { 'Authorization': `Bearer ${token}` }
-        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=5`
+        const url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=track&limit=10`
 
         const res = await axios.get(url, { headers })
 

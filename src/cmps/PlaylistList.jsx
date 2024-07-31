@@ -8,6 +8,8 @@ import PauseIcon from '../assets/icons/PauseIcon.svg';
 import Equalizer from '../assets/gifs/Equalizer.gif';
 import { useSelector } from "react-redux"
 import { useState } from "react"
+import { updateLikedStation } from "../store/actions/station.actions";
+
 
 
 export function PlaylistList({ station, onUpdateStation, onPlay }) {
@@ -38,6 +40,11 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
             }
         ]
     }
+
+    function toggleLikedTrack(track) {
+        updateLikedStation(track)
+    }
+
     return (
         <ul className='playlist-list clean-list'>{tracks.map((track, idx) => (
             <li className={activeId === track.spotifyId ? 'active' : ''}
@@ -64,7 +71,7 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
                 <span className='album'>{truncateText(track.album.name, 4)}</span>
                 <span className='date'>{track.addedAt ? formatDate(track.addedAt) : ''}</span>
 
-                <button className="btn-like">
+                <button onClick={() => toggleLikedTrack(track)} className="btn-like">
                     <LikeIcon className="like-icon" />
                 </button>
 

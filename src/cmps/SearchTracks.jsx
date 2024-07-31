@@ -5,12 +5,18 @@ import XBtnIcon from '../assets/icons/XBtnIcon.svg'
 import { SearchTrackPreview } from './SearchTrackPreview'
 import { spotifyService } from '../services/spotify.service'
 import { debounce } from '../services/util.service'
+import { setPlayingStation, setTrack, togglePlay } from '../store/actions/station.actions'
+import { useSelector } from 'react-redux'
+
+
 
 
 export function SearchTracks({ onUpdateStation, station }) {
     const [search, setSearch] = useState("")
     const [tracks, setTracks] = useState([])
     const [activeId, setActiveId] = useState('')
+    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
     const debouncedLoadTracks = useRef(
         debounce(async (searchTerm) => {
@@ -20,11 +26,11 @@ export function SearchTracks({ onUpdateStation, station }) {
             } catch (err) {
                 console.error("Failed to load tracks:", err)
             }
-        }, 1000)
+        }, 500)
     ).current
 
     useEffect(() => {
-        if (search)  debouncedLoadTracks(search)
+        if (search) debouncedLoadTracks(search)
     }, [search])
 
     function addTrack(track) {
@@ -40,6 +46,17 @@ export function SearchTracks({ onUpdateStation, station }) {
 
     function clearSearch() {
         setSearch("")
+    }
+
+
+    function onPlay(ev, track) {
+        ev.stopPropagation()
+
+        if (track.spotifyId === currTrack.spotifyId) return togglePlay() // check if new track was clicked
+        let currStation = {}
+        currStation.tracks = tracks
+        setTrack(track)
+        setPlayingStation(currStation)
     }
 
     return (
@@ -71,7 +88,11 @@ export function SearchTracks({ onUpdateStation, station }) {
                                         key={track.spotifyId}>
                                         <SearchTrackPreview
                                             track={track}
-                                            addTrack={addTrack} />
+                                            addTrack={addTrack}
+                                            onPlay={onPlay}
+                                            currTrack={currTrack}
+                                            isPlaying={isPlaying} />
+
                                     </li>
                                 ))
                             ) : (

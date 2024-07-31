@@ -1,31 +1,22 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { updateTrackLyrics } from '../store/actions/station.actions';
 import { lyricsService } from '../services/lyrics.service';
-import { FastAverageColor } from 'fast-average-color';
+import { FastAverageColor } from 'fast-average-color'
+
 
 export function LyricsPage() {
-    const [backgroundColor, setBackgroundColor] = useState('#121212')
     const [lyrics, setLyrics] = useState('')
-        
-    const currTrack = useSelector(storeState => storeState.stationModule.station)
-    async function getLyrics() {
-        if (!currTrack) {
-            console.log('fetching lyrics from api')
-            try {
-                const res = await lyricsService.getLyrics(currTrack)
-                console.log('res', res)
-                updateTrackLyrics(res)
-                console.log(currTrack)
-                setLyrics(res === '' ? 'No lyrics found' : res)
-            } catch (error) {
-                console.error('Error fetching lyrics:', error)
-            }
-        } else {
-            console.log('got lyrics from storage')
-            setLyrics(currTrack)
+    const [bgColor, setBgColor] = useState('#121212');
+
+    const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
+    console.log('currTrack', currTrack)
+
+    useEffect(() => {
+        if (currTrack) {
+            getLyrics()
+            setBackgroundClr()
         }
-    }
+    }, [bgColor, currTrack])
 
     async function extractColor(stationImgUrl) {
         if (!stationImgUrl) return '#121212'
@@ -39,34 +30,46 @@ export function LyricsPage() {
         }
     }
 
-    async function backgroundColorImg() {
+    async function setBackgroundClr() {
         try {
-            const elImg = currTrack?.imgs?.[0]?.url
+            const elImg = currTrack?.album.imgs[(imgs.length - 1)].url
             const color = await extractColor(elImg)
-            setBackgroundColor(color)
+            setBgColor(color)
         } catch (err) {
-            console.log('Encountered error', err)
+            console.log('Ecountered error', err)
         }
     }
 
-    const artist = currTrack?.artist[0]?.name
-    const title = currTrack?.title
-    const currTrackName = `${artist} ${title}`
+    async function getLyrics() {
+        if (currTrack) {
+            console.log('fetching lyrics from api')
+            try {
+                const res = await lyricsService.getLyrics(currTrack.name, currTrack.artist.name)
+                console.log('res', res)
+                console.log('{ lyrics: res }', { lyrics: res })
+                setLyrics(res === '' ? 'No lyrics found' : res)
+            } catch (error) {
+                console.error('Error fetching lyrics:', error)
+            }
+        } else {
+            setLyrics(currTrack)
+        }
+    }
+
+    const currTrackName = currTrack ? `${currTrack?.artist?.name} ${currTrack?.name}` : ''
 
     useEffect(() => {
         if (currTrackName) {
             setLyrics('')
             getLyrics()
-            backgroundColorImg()
         }
     }, [currTrack, currTrackName])
 
     return (
         <section
-            className="lyrics-container"
-            style={{ backgroundColor }}
+            className="lyrics-container full-details"
+            style={{ backgroundColor: bgColor }}
         >
-            {!lyrics ? <h1>Looking for lyrics...</h1> : <h1 className="lyrics">{lyrics}</h1>}
-        </section>
+            {!lyrics ? <h1>Looking for lyrics...</h1> : <pre className="lyrics">{lyrics}</pre>}</section>
     )
 }

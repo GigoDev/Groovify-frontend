@@ -21,6 +21,7 @@ import Volume033Icon from '../assets/icons/Volume033Icon.svg'
 import Volume066Icon from '../assets/icons/Volume066Icon.svg'
 import LikeIcon from '../assets/icons/LikeIcon.svg'
 import LyricsIcon from '../assets/icons/LyricsIcon.svg'
+import { Link } from 'react-router-dom'
 
 
 export function Player() {
@@ -41,7 +42,7 @@ export function Player() {
     // Hover state
     const [isHoverProgressBar, setIsHoverProgressBar] = useState(false)
     const [isHoverVolumeSlider, setIsHoverVolumeSlider] = useState(false)
-    console.log(currTrack)
+    // console.log(currTrack)
     const playerRef = useRef(null)
 
     function handleProgress(state) {
@@ -74,7 +75,7 @@ export function Player() {
 
         setVolume(newVolume)
     }
-    const {artist, album, name } = currTrack
+    const { artist, album, name } = currTrack
     return (
 
         <section className="player-container">
@@ -96,12 +97,12 @@ export function Player() {
 
             <div className="left-controls">
                 <img className="media-img fit-img" src={`${album.imgs[2].url}`} />
-                 <div className="artist-details">
-                    <span className="player-song-name">{truncateText(name, 5) }</span>
+                <div className="artist-details">
+                    <span className="player-song-name">{truncateText(name, 5)}</span>
                     <span className="player-song-artist">{artist.name}</span>
                 </div>
                 <button className="like-btn">
-                    <LikeIcon width="18" height="18"/>
+                    <LikeIcon width="18" height="18" />
                 </button>
             </div>
 
@@ -153,9 +154,11 @@ export function Player() {
             </div>
 
             <div className="right-controls">
-                <button className="lyrics-btn">
-                    <LyricsIcon />
-                </button>
+                <Link to={`/lyrics`}>
+                    <button className="lyrics-btn" >
+                        <LyricsIcon />
+                    </button>
+                </Link>
                 <button className="sound-btn" onClick={handleMute}>
                     {isMuted || volume === 0 ? (
                         <VolumeMutedIcon />

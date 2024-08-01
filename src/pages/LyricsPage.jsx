@@ -32,11 +32,11 @@ export function LyricsPage() {
 
     async function setBackgroundClr() {
         try {
-            const elImg = currTrack?.album.imgs[(imgs.length - 1)].url
+            const elImg = currTrack?.album.imgs[(currTrack.album.imgs.length - 1)].url
             const color = await extractColor(elImg)
             setBgColor(color)
         } catch (err) {
-            console.log('Ecountered error', err)
+            console.log('Encountered error', err)
         }
     }
 

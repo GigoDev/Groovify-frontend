@@ -130,12 +130,14 @@
             transition: color 0.3s; // Smooth transition
 
             &:hover {
+                .add-library-icon{
+                    fill: white;
+                }
                 color: $clr01;
-            }
-
-            svg {
-                fill: currentColor; // Ensure icon color matches the text color
-                transition: fill 0.3s; // Smooth transition for icon color
+                svg:hover {
+                    scale: 1.03;
+                    transition: fill 0.3s; // Smooth transition for icon color
+                }
             }
         }
 

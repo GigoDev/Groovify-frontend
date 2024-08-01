@@ -2,24 +2,33 @@
     height: 100%;
     text-align: center;
     font-size: 32px;
-    
+    color: rgba(255, 255, 255, 0.7);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     color: $clr01;
     border-radius: 0.5rem;
 
-
+    
     pre {
         font-family: circular-bold;
         display: flex;
         justify-content: center;
+        .lyrics {
+            white-space: pre-wrap; // Ensures lyrics keep their format
+            word-break: break-word;
+    
+            .highlight {
+                color: white;
+                transition: color 0.3s ease;
+            }
+        }
     }
 
     h1 {
         padding-block: 10rem;
         font-size: 2rem;
         white-space: pre-line;
-        
+
 
         @include for-mobile-layout {
             font-size: 1rem;

@@ -14,6 +14,7 @@ import { UpdateStationModal } from '../../cmps/UpdateStationModal';
 //ICONS
 import PlayIcon from '../../assets/icons/PlayIcon.svg'
 import DurationIcon from '../../assets/icons/DurationIcon.svg'
+import VIcon from '../../assets/icons/VIcon.svg'
 import BigBtnOptions from '../../assets/icons/BigBtnOptions.svg'
 import AddLibrary from '../../assets/icons/AddLibrary.svg'
 import MusicNoteIcon from '../../assets/icons/MusicNoteIcon.svg'
@@ -222,7 +223,7 @@ export function PlaylistDetails() {
             </button>
             )}
           {!station.owner && (<button onClick={handleFollow} className="add-library">
-            <AddLibrary style={followStyle} />
+            {isFollow ? <VIcon className="v-icon" width="32" height="32" fill="rgb(30, 215, 96)" /> : <AddLibrary className="add-library-icon" fill="#b3b3b3" />}
           </button>)}
 
           {station.name === 'Liked Songs' ||

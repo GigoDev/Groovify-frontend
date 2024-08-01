@@ -1,5 +1,5 @@
 // React:
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
 
@@ -21,7 +21,7 @@ import Volume033Icon from '../assets/icons/Volume033Icon.svg'
 import Volume066Icon from '../assets/icons/Volume066Icon.svg'
 import LikeIcon from '../assets/icons/LikeIcon.svg'
 import LyricsIcon from '../assets/icons/LyricsIcon.svg'
-import { Link } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 export function Player() {
@@ -42,8 +42,25 @@ export function Player() {
     // Hover state
     const [isHoverProgressBar, setIsHoverProgressBar] = useState(false)
     const [isHoverVolumeSlider, setIsHoverVolumeSlider] = useState(false)
+
+    const [isLyricsActive, setIsLyricsActive] = useState(false)
     // console.log(currTrack)
     const playerRef = useRef(null)
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const path = location.pathname
+        setIsLyricsActive(path === '/lyrics')
+    }, [location])
+
+    function toggleLyrics() {
+        if (isLyricsActive) {
+            navigate(-1)
+        } else {
+            navigate('/lyrics')
+        }
+    }
 
     function handleProgress(state) {
         if (!state.loaded) return
@@ -75,6 +92,7 @@ export function Player() {
 
         setVolume(newVolume)
     }
+
     const { artist, album, name } = currTrack
     return (
 
@@ -102,7 +120,7 @@ export function Player() {
                     <span className="player-song-artist">{artist.name}</span>
                 </div>
                 <button className="like-btn">
-                    <LikeIcon width="18" height="18" />
+                    <LikeIcon width="16" height="16" />
                 </button>
             </div>
 
@@ -154,11 +172,9 @@ export function Player() {
             </div>
 
             <div className="right-controls">
-                <Link to={`/lyrics`}>
-                    <button className="lyrics-btn" >
-                        <LyricsIcon />
-                    </button>
-                </Link>
+                <button onClick={toggleLyrics} className={'lyrics-btn' + (isLyricsActive ? ' active' : '')}>
+                    <LyricsIcon />
+                </button>
                 <button className="sound-btn" onClick={handleMute}>
                     {isMuted || volume === 0 ? (
                         <VolumeMutedIcon />
@@ -175,6 +191,7 @@ export function Player() {
                     type="range"
                     step="0.01"
                     max="1"
+                    value={volume}
                     onMouseEnter={() => setIsHoverVolumeSlider(true)}
                     onMouseLeave={() => setIsHoverVolumeSlider(false)}
                     style={{ background: `linear-gradient(to right, ${isHoverVolumeSlider ? '#1ED760' : 'white'} ${volume * 100}%,  rgba(255, 255, 255, 0.3) ${volume * 100}%)` }}

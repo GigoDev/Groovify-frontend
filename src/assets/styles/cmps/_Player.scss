@@ -47,6 +47,11 @@
             height: 65px;
             border-radius: 5px;
             object-fit: cover;
+
+            @include for-mobile-layout{
+                width: 55px;
+                height: 55px;
+            }
         }
 
 

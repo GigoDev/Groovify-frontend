@@ -12,9 +12,8 @@
     background-color: $clr08;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 
-    @include for-mobile-layout {
-        grid-template-columns: 1fr auto;
-        gap: 12px;
+    .player-full-nav{
+        display: none;
     }
 
     button {
@@ -48,7 +47,7 @@
             border-radius: 5px;
             object-fit: cover;
 
-            @include for-mobile-layout{
+            @include for-mobile-layout {
                 width: 55px;
                 height: 55px;
             }
@@ -75,7 +74,7 @@
             }
         }
 
-        
+
 
 
         button {
@@ -235,5 +234,105 @@
 
     .react-player {
         display: none;
+    }
+
+
+    @include for-mobile-layout {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        background-color: var(--bg-color2);
+
+        &.full-screen {
+            position: absolute;
+            inset: 0;
+
+            grid-template-columns: 5px 1fr 5px;
+            column-gap: 0;
+
+            >* {
+                grid-column: 2;
+            }
+
+            height: auto;
+
+            background: linear-gradient(to top, $clr07, var(--bg-color2) 70%);
+            z-index: 6;
+
+            .left-controls {
+                flex-direction: column;
+
+                .media-img {
+                    width: 100%;
+                    height: auto;
+
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+
+                .artist-details {
+                    align-self: start;
+
+                    .player-song-name,
+                    .player-song-artist {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .center-controls {
+                align-items: normal;
+
+                .top-center-controls {
+                    gap: 0;
+                    justify-content: space-around;
+
+                    .play-btn {
+                        padding: 23px;
+                    }
+
+                    .shuffle-btn,
+                    .prev-btn,
+                    .next-btn,
+                    .loop-btn {
+                        display: block;
+
+                        svg {
+                            fill: white;
+                            height: 28px;
+                            width: 28px;
+                        }
+
+                    }
+
+                    .loop-btn.active,
+                    .shuffle-btn.active {
+                        svg {
+                            fill: $clrGreen;
+                        }
+                    }
+                }
+            }
+
+            .right-controls {
+                grid-row: auto;
+            }
+
+
+
+            .player-full-nav {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                align-items: center;
+
+                .collapse-player-btn {
+                    justify-self: start;
+                    display: block;
+                }
+
+                .full-player-album{
+                    justify-self: center;
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,29 @@
 import fs from 'fs'
+import { FastAverageColor } from 'fast-average-color'
+
 // import fr from 'follow-redirects'
+
+export async function setBackgroundColor2(stationImgUrl) {
+    try {
+
+        const color = await extractColor(stationImgUrl)
+        document.body.style.setProperty('--bg-color2', color)
+    } catch (err) {
+        console.log('Ecountered error', err)
+    }
+}
+
+async function extractColor(stationImgUrl) {
+    if (!stationImgUrl) return '#121212'
+    const fac = new FastAverageColor()
+    try {
+        const { hex } = await fac.getColorAsync(stationImgUrl)
+        return hex
+    } catch (error) {
+        console.error('Error extracting color:', error)
+        return '#121212'
+    }
+}
 
 
 export function makeId(length = 6) {
@@ -50,10 +74,10 @@ export function randomPastTime() {
 export function truncateText(text, wordLimit) {
     const words = text.split(' ');
     if (words.length > wordLimit) {
-      return words.slice(0, wordLimit).join(' ') + '...';
+        return words.slice(0, wordLimit).join(' ') + '...';
     }
     return text;
-  }
+}
 
 export function formatDuration(ms) {
     const totalSeconds = Math.floor(ms / 1000);

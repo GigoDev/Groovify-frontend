@@ -48,8 +48,11 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
             case 'xxSmall':
                 setItemsToShow(3);
                 break
+            case 'mobile':
+                setItemsToShow(7);
+                break
             default:
-                setItemsToShow(1);
+                setItemsToShow(7);
                 break;
         }
     }, [breakpoint]);

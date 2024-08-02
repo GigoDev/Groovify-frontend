@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 
 const breakpoints = {
-    xSmall: 830,
+    mobile: 450,
+    xxSmall: 450,
+    xSmall: 970,
     small: 1050,
     medium: 1280,
     large: 1500,
@@ -9,12 +11,13 @@ const breakpoints = {
 };
 
 const getBreakpoint = (width) => {
-    if (width >= breakpoints.xlarge) return 'xlarge';
-    if (width >= breakpoints.large) return 'large';
-    if (width >= breakpoints.medium) return 'medium';
-    if (width >= breakpoints.small) return 'small';
-    if (width >= breakpoints.xSmall) return 'xSmall';
-    if (width < breakpoints.xSmall) return 'xxSmall';
+    if (width >= breakpoints.xlarge) return 'xlarge'; //9 items
+    if (width >= breakpoints.large) return 'large'; // 7 items
+    if (width >= breakpoints.medium) return 'medium'; // 6 items
+    if (width >= breakpoints.small) return 'small'; // 5 items
+    if (width >= breakpoints.xSmall) return 'xSmall'; // 4 items
+    if (width > breakpoints.xxSmall) return 'xxSmall'; //3 items + scroll
+    if (width <= breakpoints.mobile) return 'mobile'; //7 items + scroll-x
 };
 
 const useBreakpoint = () => {

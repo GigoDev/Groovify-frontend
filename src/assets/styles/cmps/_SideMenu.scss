@@ -14,6 +14,13 @@
         }
     }
 
+    .side-lib.collapsed{
+        grid-template-rows: 60px 1fr; // control the side lib vertical layout [your lib, filter buttons, search, list]
+        .side-list-container{
+            scrollbar-width: none;
+        }
+    }
+
     .side-lib,
     .side-nav {
         width: 350px; // open width
@@ -35,10 +42,8 @@
             }
 
             .side-list-container .side-card {
+
                 align-self: center;
-
-                // padding-inline-start: 12px;
-
                 .card-details {
                     display: none;
                 }

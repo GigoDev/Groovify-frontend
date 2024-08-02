@@ -2,12 +2,13 @@
     @include for-mobile-layout {
         display: block;
         width: 100%;
-        // z-index: 5;
     }
 
     display: flex;
     flex-direction: column;
     justify-content: start;
+    overflow-y: auto;
+    height: 100%;
 
 
 
@@ -81,4 +82,22 @@
 
     }
 
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $clr07;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $clr06;
+        border-radius: 5px;
+    }
+
+    &:hover::-webkit-scrollbar {
+            width: 5px;
+    }
 }

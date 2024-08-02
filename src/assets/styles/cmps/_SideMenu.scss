@@ -1,4 +1,8 @@
 .side-menu {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+    
     @include for-mobile-layout {
         display: grid;
         z-index: 5;

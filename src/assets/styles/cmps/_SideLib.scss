@@ -1,10 +1,10 @@
 .side-lib {
     display: grid;
-    grid-template-rows: 60px 85px auto 110px; // control the side lib vertical layout [your lib, filter buttons, search, list]
+    grid-template-rows: 60px 85px 1fr; // control the side lib vertical layout [your lib, filter buttons, search, list]
     align-items: start;
     border-radius: 7px;
     background-color: $clr07;
-    height: calc(100% - 115px);
+    overflow: hidden;
 
     @include for-mobile-layout {
         padding-block-start: 10px;

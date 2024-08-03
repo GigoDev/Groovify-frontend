@@ -47,7 +47,7 @@ export function LyricsPage() {
                 const res = await lyricsService.getLyrics(currTrack.name, currTrack.artist.name)
                 console.log('res', res)
                 console.log('{ lyrics: res }', { lyrics: res })
-                setLyrics(res === '' ? 'No lyrics found' : res)
+                setLyrics(res === '' ? 'Hmm. We don\'t know the lyrics for this one.' : res)
             } catch (error) {
                 console.error('Error fetching lyrics:', error)
             }

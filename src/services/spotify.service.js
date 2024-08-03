@@ -193,7 +193,7 @@ async function getCategoryPlaylists(category) {
         const url = `https://api.spotify.com/v1/browse/categories/${lowerCaseCategory}/playlists?limit=30`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
-        console.log(resp)
+        // console.log(resp)
         const playlists = resp.data.playlists.items.map(playlist => {
             const station = _getEmptyStation()
             station.spotifyId = playlist.id

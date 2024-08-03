@@ -3,8 +3,6 @@ import { Routes, Route } from 'react-router'
 
 import { HomePage } from './pages/HomePage'
 
-import { UserDetails } from './pages/UserDetails'
-
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 import { UserMsg } from './cmps/UserMsg.jsx'
@@ -13,7 +11,6 @@ import { SideMenu } from './cmps/side/SideMenu.jsx'
 import { Player } from './cmps/Player.jsx'
 import { ArtistDetails } from './pages/details/ArtistDetails.jsx'
 import { PlaylistDetails } from './pages/details/PlaylistDetails.jsx'
-import { AlbumDetails } from './pages/details/AlbumDetails.jsx'
 import { SideLib } from './cmps/side/SideLib.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { GenrePage } from './pages/GenrePage.jsx'
@@ -30,12 +27,9 @@ export function RootCmp() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/search" element={<SearchPage />}/>
                     <Route path="genre/:label/:color" element={<GenrePage />} />
-                    <Route path="user/:id" element={<UserDetails />} />
                     <Route path="artist/:id" element={<ArtistDetails />} />
                     <Route path="playlist/:id" element={<PlaylistDetails />} />
                     <Route path="playlist/" element={<PlaylistDetails />} />
-                    <Route path="album/:id" element={<AlbumDetails />} />
-                    <Route path="album/" element={<AlbumDetails />} />
                     <Route path="library" element={<SideLib />} />
                     <Route path="/login" element={<LoginSignup />} />
                     <Route path="/lyrics" element={<LyricsPage />} />

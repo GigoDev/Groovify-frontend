@@ -1,8 +1,7 @@
 import { storageService } from '../async-storage.service.js'
-import { spotifyService } from "../spotify.service.js";
 import { makeId, saveToStorage } from '../util.service.js'
 import { userService } from '../user'
-import { stations as dataStations, stations } from '../../../data/stations.js'
+import { stations as dataStations} from '../../../data/stations.js'
 //local storage keys
 const STORAGE_KEY = 'station'
 

@@ -146,7 +146,7 @@ async function getAlbum(stationId, market = 'US') {//in Dev
         const stations = await loadFromStorage('station')
         station = stations.find(item => item._id === stationId)
         if (station) {
-            console.log('from local storage', station)
+            // console.log('from local storage', station)
             return station
         }
 
@@ -260,7 +260,7 @@ async function getFeaturedPlaylists() {
             total: playlist.tracks.total
         }))
 
-        console.log(featuredPlaylists)
+        // console.log(featuredPlaylists)
         return featuredPlaylists
 
     } catch (error) {

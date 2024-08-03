@@ -9,7 +9,7 @@ export function LyricsPage() {
     const [bgColor, setBgColor] = useState('#121212');
 
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
-    console.log('currTrack', currTrack)
+    // console.log('currTrack', currTrack)
 
     useEffect(() => {
         if (currTrack) {
@@ -42,11 +42,11 @@ export function LyricsPage() {
 
     async function getLyrics() {
         if (currTrack) {
-            console.log('fetching lyrics from api')
+            // console.log('fetching lyrics from api')
             try {
                 const res = await lyricsService.getLyrics(currTrack.name, currTrack.artist.name)
-                console.log('res', res)
-                console.log('{ lyrics: res }', { lyrics: res })
+                // console.log('res', res)
+                // console.log('{ lyrics: res }', { lyrics: res })
                 setLyrics(res === '' ? 'Hmm. We don\'t know the lyrics for this one.' : res)
             } catch (error) {
                 console.error('Error fetching lyrics:', error)

@@ -23,11 +23,11 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
 
     const { tracks } = station
     function handleDelete(trackId) {
-        console.log('trackId', trackId)
+        // console.log('trackId', trackId)
         const newTracks = tracks.filter(track => track.spotifyId !== trackId)
         const stationToUpdate = { ...station, tracks: newTracks }
         onUpdateStation(stationToUpdate)
-        console.log('Deleted track id:', trackId)
+        // console.log('Deleted track id:', trackId)
     }
 
     function getMenuOptions(trackId) {

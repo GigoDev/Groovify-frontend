@@ -4,8 +4,8 @@ export const lyricsService = {
 }
 
 async function getLyrics(term = 'Kiss', artist = 'Prince') {
-    console.log('term', term)
-    console.log('term', artist)
+    // console.log('term', term)
+    // console.log('term', artist)
     try {
         const lyrics = await httpService.get('lyrics/',{term: term, artist: artist})
         return lyrics

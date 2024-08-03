@@ -17,7 +17,7 @@ export function SearchPage() {
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const debouncedLoadTracks = useRef(
         debounce(async (searchTerm) => {
-            console.log('searchTerm ',searchTerm)
+            // console.log('searchTerm ',searchTerm)
             try {
                 const tracks = await spotifyService.getTracks(searchTerm)
                 setTracks(tracks)

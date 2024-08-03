@@ -46,8 +46,8 @@ export function LoginSignup() {
             <h1>Log in to Groovify</h1>
             <LoginForm onLogin={onLogin} isSignup={isSignup} />
 
-            <div className="flex justify-center">
-                <button onClick={() => setIsSignUp(!isSignup)}>
+            <div className="flex justify-center ">
+                <button className='login-sighnup-btn' onClick={() => setIsSignUp(!isSignup)}>
                     {isSignup ? 'Already have an account? Log in here.' : 'Don\'t have an account? Sign up for Groovify'}
                 </button>
             </div>

@@ -17,10 +17,6 @@ export function LoginForm({ onLogin, isSignup }) {
         onLogin(credentials)
     }
 
-    function onUploaded(imgUrl) {
-        setCredentials(credentials => ({ ...credentials, imgUrl }))
-    }
-
     return (
         <article className="login-form">
             <form className="login-form flex column align-center" onSubmit={handleSubmit}>
@@ -46,13 +42,6 @@ export function LoginForm({ onLogin, isSignup }) {
                     required
                     autoComplete="off"
                 />
-
-                {isSignup && (
-                    <>
-
-                        <ImgUploader onUploaded={onUploaded} />
-                    </>
-                )}
 
                 <button className="btn-submit">{isSignup ? 'Sign up' : 'Log In'}</button>
             </form>

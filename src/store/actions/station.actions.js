@@ -127,8 +127,9 @@ export function toggleLibraryAction() {
 
 
 // Player actions:
-export async function togglePlay() {
+export async function togglePlay(ev = null) {
     try {
+        ev?.stopPropagation()
         store.dispatch(getActionIsPlaying())
     } catch (err) {
         console.log('cannot play/pause', err)
@@ -157,7 +158,10 @@ export function setPlayingStation(station = null) {
     }
 }
 
-export function next() {
+export function next(ev=null) {
+    ev?.stopPropagation()
+
+
     const { currTrack, currPlayingStation } = store.getState().stationModule
     const { tracks: currTracks } = currPlayingStation
 
@@ -168,7 +172,8 @@ export function next() {
     setTrack(currTracks[Idx])
 }
 
-export function prev() {
+export function prev(ev=null) {
+    ev?.stopPropagation()
 
     const { currTrack, currPlayingStation } = store.getState().stationModule
     const { tracks: currTracks } = currPlayingStation
@@ -179,7 +184,9 @@ export function prev() {
     setTrack(currTracks[Idx])
 }
 
-export function shuffle() {
+export function shuffle(ev=null) {
+    ev?.stopPropagation()
+
     const { currPlayingStation } = store.getState().stationModule
     const { tracks: currTracks } = currPlayingStation
 

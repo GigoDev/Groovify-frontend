@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player/youtube'
 import { useSelector } from 'react-redux'
 
 import { next, prev, shuffle, togglePlay } from '../store/actions/station.actions'
-import { formatTime, truncateText } from '../services/util.service'
+import { formatTime, setBackgroundColor2, truncateText } from '../services/util.service'
 
 
 // SVGs:
@@ -14,6 +14,7 @@ import PlayIcon from '../assets/icons/PlayIcon.svg'
 import PauseIcon from '../assets/icons/PauseIcon.svg'
 import NextSong from '../assets/icons/NextSong.svg'
 import LoopIcon from '../assets/icons/LoopIcon.svg'
+import DownArrowIcon from '../assets/icons/DownArrowIcon.svg'
 
 import VolumeMutedIcon from '../assets/icons/VolumeMutedIcon.svg'
 import VolumeNormalIcon from '../assets/icons/VolumeNormalIcon.svg'
@@ -33,6 +34,7 @@ export function Player() {
 
     const [isLoop, setLoop] = useState(false)
     const [isShuffle, setShuffle] = useState(false)
+    const [isFullScreen, setIsFullScreen] = useState(false)
 
     // Time states
     const [progress, setProgress] = useState(0)
@@ -52,9 +54,15 @@ export function Player() {
     useEffect(() => {
         const path = location.pathname
         setIsLyricsActive(path === '/lyrics')
+
     }, [location])
 
-    function toggleLyrics() {
+    useEffect(() => {
+        setBackgroundColor2(currTrack?.album.imgs[0].url)
+    }, [currTrack])
+
+    function toggleLyrics(ev) {
+        ev.stopPropagation()
         if (isLyricsActive) {
             navigate(-1)
         } else {
@@ -72,6 +80,7 @@ export function Player() {
     }
 
     function handleSeek(ev) {
+        ev.stopPropagation()
         const seekProgress = ev.target.value
         console.log(seekProgress)
         setProgress(seekProgress)
@@ -93,10 +102,22 @@ export function Player() {
         setVolume(newVolume)
     }
 
+    function onFullScreen(ev) {
+        ev.stopPropagation()
+
+        setIsFullScreen(prevIsFullScreen => !prevIsFullScreen)
+    }
+
+    const fullClass = isFullScreen ? 'full-screen' : ''
     const { artist, album, name } = currTrack
     return (
 
-        <section className="player-container">
+        <section
+            onClick={(ev)=>{
+                if(isFullScreen) return
+                onFullScreen(ev)
+            }}
+            className={`player-container ${fullClass}`} >
 
             <ReactPlayer
                 className='react-player'
@@ -113,8 +134,23 @@ export function Player() {
                 width="0"
             />
 
+
+            {isFullScreen &&
+
+                <nav className='player-full-nav'>
+
+                    <button
+                        onClick={onFullScreen}
+                        className='collapse-player-btn'
+                        value='collapse'>
+                          
+                        <DownArrowIcon value='collapse' />
+                    </button>
+                    <span className='full-player-album'>{album.name}</span>
+                </nav>
+            }
             <div className="left-controls">
-                <img className="media-img fit-img" src={`${album.imgs[2].url}`} />
+                <img className="media-img fit-img" src={`${album.imgs[0].url}`} />
                 <div className="artist-details">
                     <span className="player-song-name">{truncateText(name, 5)}</span>
                     <span className="player-song-artist">{artist.name}</span>
@@ -141,10 +177,11 @@ export function Player() {
                     <button className="play-btn" onClick={togglePlay} >
                         {isPlaying ? <PauseIcon /> : <PlayIcon />}
                     </button>
-                    <button className="next-btn " onClick={() => isShuffle ? shuffle() : next()}>
+                    <button className="next-btn " onClick={(ev) => isShuffle ? shuffle(ev) : next(ev)}>
                         <NextSong />
                     </button>
-                    <button className={'loop-btn' + (isLoop ? ' active' : '')} onClick={() => {
+                    <button className={'loop-btn' + (isLoop ? ' active' : '')} onClick={(ev) => {
+                        ev.stopPropagation()
                         setLoop(!isLoop)
                     }}>
                         <LoopIcon />

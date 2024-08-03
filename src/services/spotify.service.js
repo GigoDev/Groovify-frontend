@@ -23,7 +23,7 @@ async function getToken() {
 
     try {
         const token = await httpService.get('spotify/get-token',{})
-        console.log(token)
+        // console.log(token)
         saveToStorage('access_token', token)
 
     } catch (error) {

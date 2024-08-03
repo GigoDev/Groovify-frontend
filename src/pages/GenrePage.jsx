@@ -13,7 +13,7 @@ export function GenrePage() {
             if (!data) {
                 var category = label
                 if (category === 'R&B') category = 'rnb'
-                if (category === 'Hip-Hop') category = 'hip-hop'
+                if (category === 'Hip-Hop') category = 'hiphop'
                 if (category === 'K-pop') category = 'kpop'
                 const playlists = await spotifyService.getCategoryPlaylists(category)
                 setData(playlists)

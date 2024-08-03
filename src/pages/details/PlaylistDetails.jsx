@@ -89,7 +89,7 @@ export function PlaylistDetails() {
     try {
       await removeStation(id)
       navigate('/')
-      console.log('id', id)
+      // console.log('id', id)
     } catch (err) {
       console.error('Failed to delete station', err)
     }

@@ -1,7 +1,15 @@
-export function SearchCategory({setSearch}) {
+import { SET_SEARCH } from '.././store/reducers/station.reducer'
+import { store } from '../store/store'
+
+
+export function SearchCategory() {
+
     function handleChange({ target }) {
-        setSearch(target.value)
+        const search = target.value
+        store.dispatch({ type: SET_SEARCH, search })
+
     }
+
     return (
         <section className="main-search">
             <div className="input-container">

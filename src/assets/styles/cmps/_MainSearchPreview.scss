@@ -1,9 +1,5 @@
-.clean-list-preview {
-    padding: 0;
-    list-style-type: none;
-}
 
-.station-search-preview {
+.track-search-preview {
     border-radius: 5px;
     height: 56px;
     display: grid;
@@ -81,27 +77,8 @@
 
 
     .song-title {
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
         white-space: nowrap;
-
-        .track-name {
-            font-size: 1rem;
-            margin-block-end: 1.1em;
-            &.active {
-                color: $clrGreen;
-            }
-        }
-
-        .artist-name {
-            font-size: .8rem;
-            color: $clr02;
-        }
     }
-
-
 
     .btn-add-song {
         border: 1px solid #717171;

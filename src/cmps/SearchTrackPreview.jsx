@@ -1,10 +1,10 @@
 
 import PlayIcon from '../assets/icons/PlayIcon.svg'
 import PauseIcon from '../assets/icons/PauseIcon.svg'
+import { truncateText } from '../services/util.service'
 
 
 export function SearchTrackPreview({ track, addTrack, onPlay, currTrack, isPlaying }) {
-    
     return (
         <article className="station-search-preview">
             <div className="song-img-container">
@@ -19,7 +19,8 @@ export function SearchTrackPreview({ track, addTrack, onPlay, currTrack, isPlayi
                 </div>
             </div>
             <div className="song-title">
-                <span className="artist-name">{track.name}</span>
+                <span className={`track-name ${isPlaying && currTrack.spotifyId === track.spotifyId ? 'active' : ''}`}>{truncateText(track.name, 4)}</span>
+                <span className="artist-name">{track.artist.name}</span>
             </div>
 
             <button

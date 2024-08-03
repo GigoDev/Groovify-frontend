@@ -23,4 +23,13 @@
     button {
         font-size: 1.3em;
     }
+
+    div{
+        .login-sighnup-btn{
+            background-color: transparent;
+            border: 0;
+            color: $clr01;
+            cursor: pointer;
+        }
+    }
 }

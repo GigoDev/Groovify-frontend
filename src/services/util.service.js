@@ -25,6 +25,21 @@ async function extractColor(stationImgUrl) {
     }
 }
 
+export function findNextNum(stations) {
+    let nums = []
+    stations.forEach(({ name }) => {
+        if (name.length !== 15) return
+        const subStr = name.substring(0, 14)
+        if (subStr !== 'New playlist #') return
+        const numChar = name.charAt(14)
+        if (isNaN(numChar)) return
+        const num = +numChar
+        nums.push(num)
+    })
+    if (nums.length===0) return 1 
+    return Math.max(...nums) + 1
+}
+
 
 export function makeId(length = 6) {
     var txt = ''

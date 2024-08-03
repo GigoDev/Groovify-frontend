@@ -12,6 +12,7 @@ import PlusIcon from "../../assets/icons/PlusIcon.svg"
 import LibraryIcon from "../../assets/icons/LibraryIcon.svg"
 import { useNavigate, useParams } from "react-router";
 import { userService } from "../../services/user";
+import { findNextNum } from "../../services/util.service";
 
 export function SideLib({ isCollapsed, onCollapse }) {
     const loggedInUser = userService.getLoggedinUser()
@@ -20,7 +21,6 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const [filterBy, setFilterBy] = useState({ type: 'playlist', txt: '' })
     const sideStations = useSelector(state => state.stationModule.stations.filter(station => station.owner?._id || station.followBy?.some(user => user.userId === loggedInUser._id)))
     const [activeId, setActiveId] = useState(id)
-    const newPlaylistCount = useRef(0)
 
     useEffect(() => {
         loadStations()
@@ -30,7 +30,7 @@ export function SideLib({ isCollapsed, onCollapse }) {
     async function onAddPlaylist() {
         try {
             const newPlaylist = stationService.getEmptyPlaylist()
-            newPlaylist.name = `${newPlaylist.name}  #${++newPlaylistCount.current}`
+            newPlaylist.name = `${newPlaylist.name} #${findNextNum(sideStations)}`
             const savedPlaylist = await addStation(newPlaylist)
             setActiveId(savedPlaylist._id)
             navigate(`playlist/${savedPlaylist._id}`)

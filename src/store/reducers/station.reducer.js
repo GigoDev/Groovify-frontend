@@ -17,12 +17,16 @@ export const SET_CURR_PLAYING_STATION = 'SET_CURR_PLAYING_STATION'
 export const IS_PLAYING = 'IS_PLAYING'
 export const UPDATE_TRACK = 'UPDATE_TRACK'
 
+// Search CMDs
+export const SET_SEARCH = 'SET_SEARCH'
+
 const initialState = {
     stations: [],
     station: null,
     isPlaying: false,
     currPlayingStation: stationService.getDefualtStation(),
     currTrack: stationService.getDefualtStation().tracks[0],
+    search:''
 }
 
 export function stationReducer(state = initialState, action) {
@@ -82,12 +86,13 @@ export function stationReducer(state = initialState, action) {
         case UPDATE_TRACK:
             newState = {
                 ...state,
-                currTrack: {
-                    ...state.currTrack,
-                    lyrics: action.lyrics,
-                },
+                currTrack: {...state.currTrack, lyrics: action.lyrics},
             }
             break
+            // Search:
+            case SET_SEARCH:
+                newState = { ...state, search: action.search }
+                break
         default:
             return state
     }

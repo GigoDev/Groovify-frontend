@@ -1,21 +1,29 @@
 
 import PlayIcon from '../assets/icons/PlayIcon.svg'
+import PauseIcon from '../assets/icons/PauseIcon.svg'
 
-export function MainSearchPreview({ track }) {
+import { useSelector } from 'react-redux'
+
+
+export function MainSearchPreview({ track,onPlay,currTrack }) {
+    const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
+
     return (
-        <li className="station-search-preview">
+        <li className="track-search-preview">
             <div className="song-img-container">
                 <div className="song-img">
-                    <img src={track.thumbnail} alt="" />
+                    <img src={track.album.imgs[2].url} alt="" />
                 </div>
-                <div className="btn-play-pause">
-                    <PlayIcon />
+                <div onClick={(ev) => onPlay(ev, track)}
+                    className="btn-play-pause">
+                    {currTrack.spotifyId === track.spotifyId ? isPlaying ? (<PauseIcon className="play-icon" fill="white" stroke="white" />) : ((<PlayIcon className="play-icon" fill="white" stroke="white" />)) :
+                        (<PlayIcon className="play-icon" fill="white" stroke="white" />)}
+
                 </div>
             </div>
             <div className="song-title">
-                <span className="artist-name">{track.title}</span>
+                <span className="artist-name">{track.name}</span>
             </div>
-            <button className="btn-add-song">Add</button>
         </li>
     )
 }

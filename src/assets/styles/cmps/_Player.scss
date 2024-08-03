@@ -99,6 +99,7 @@
         @include for-mobile-layout {
             align-self: center;
             padding-inline: 0;
+            gap: 0;
         }
 
         display: flex;
@@ -318,6 +319,7 @@
             }
 
             .center-controls {
+                gap: 10px;
                 align-items: normal;
 
                 .top-center-controls {

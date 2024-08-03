@@ -1,0 +1,92 @@
+
+.track-search-preview {
+    border-radius: 5px;
+    height: 56px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 1fr auto;
+    gap: 15px;
+    padding: 0 .5rem;
+
+    .song-img-container {
+        position: relative;
+        height: rem(40px);
+        width: rem(40px);
+
+
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .btn-play-pause {
+            display: none;
+            background-color: rgba(83, 83, 83, 0.5);
+            position: absolute;
+            inset: 0;
+
+            .play-icon {
+                path {
+                    fill: $clr01;
+                }
+            }
+
+            svg {
+                fill: $clr01;
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $clr10;
+
+        .img-screen-play {
+            opacity: 1;
+        }
+
+        .btn-play-pause {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &.clicked {
+        background-color: $clr04;
+
+        .img-screen-play {
+            opacity: 1;
+        }
+
+        .btn-play-pause {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .artist-name {
+            color: $clrGreen;
+        }
+    }
+
+
+    .song-title {
+        white-space: nowrap;
+    }
+
+    .btn-add-song {
+        border: 1px solid #717171;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover {
+            outline: 1px solid #dfdfdf;
+        }
+    }
+}

@@ -10,12 +10,21 @@
    font-family: circular;
 
    .hero {
+      display: block;
       position: fixed;
       z-index: 0;
-      height: $hero-img-height;
-      
+      @include for-mobile-layout {
+         display: grid;
+         grid-template-columns: 0px 1fr 7px;
+         img {
+            grid-column: 2;
+            min-height: 400px;
+         }
+      }
+     
       @include for-desktop-layout{
          width: var(--hero-width);
+         height: $hero-img-height;
       }
       
       &.collapsed{

@@ -1,4 +1,3 @@
-import { stations } from '../../../data/stations'
 import { stationService } from '../../services/station'
 
 // Station CMDs

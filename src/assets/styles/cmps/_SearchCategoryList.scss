@@ -15,7 +15,6 @@
 
         @include for-mobile-layout {
             grid-template-columns: 1fr 1fr;
-            padding-inline-end: 10px;
         }
 
         gap: 22px;

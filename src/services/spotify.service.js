@@ -23,7 +23,7 @@ async function getToken() {
 
     try {
         const token = await httpService.get('spotify/get-token',{})
-        console.log(token)
+        // console.log(token)
         saveToStorage('access_token', token)
 
     } catch (error) {
@@ -146,7 +146,7 @@ async function getAlbum(stationId, market = 'US') {//in Dev
         const stations = await loadFromStorage('station')
         station = stations.find(item => item._id === stationId)
         if (station) {
-            console.log('from local storage', station)
+            // console.log('from local storage', station)
             return station
         }
 
@@ -193,7 +193,7 @@ async function getCategoryPlaylists(category) {
         const url = `https://api.spotify.com/v1/browse/categories/${lowerCaseCategory}/playlists?limit=30`
         const headers = { 'Authorization': `Bearer ${token}` }
         const resp = await axios.get(url, { headers })
-        console.log(resp)
+        // console.log(resp)
         const playlists = resp.data.playlists.items.map(playlist => {
             const station = _getEmptyStation()
             station.spotifyId = playlist.id
@@ -260,7 +260,7 @@ async function getFeaturedPlaylists() {
             total: playlist.tracks.total
         }))
 
-        console.log(featuredPlaylists)
+        // console.log(featuredPlaylists)
         return featuredPlaylists
 
     } catch (error) {

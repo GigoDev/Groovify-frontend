@@ -89,7 +89,7 @@ export function PlaylistDetails() {
     try {
       await removeStation(id)
       navigate('/')
-      console.log('id', id)
+      // console.log('id', id)
     } catch (err) {
       console.error('Failed to delete station', err)
     }
@@ -208,7 +208,7 @@ export function PlaylistDetails() {
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
           {station.tracks.length > 0 && 
             <div className="mini-dashboard">
-              John Doe • {likes?.toLocaleString()} likes • {total} songs
+              John Doe • {likes? `${likes.toLocaleString()} likes • ` :''} {owner? tracks.length : total} songs
               <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
             </div>}
 
@@ -226,7 +226,7 @@ export function PlaylistDetails() {
             {isFollow ? <VIcon className="v-icon" width="32" height="32" fill="rgb(30, 215, 96)" /> : <AddLibrary className="add-library-icon" fill="#b3b3b3" />}
           </button>)}
 
-          {station.name === 'Liked Songs' ||
+          {station.name === 'Liked Songs' || !station.owner ||
             (<div className="flex option-btns">
               <StationMenuModal
                 trigger={

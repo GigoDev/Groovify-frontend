@@ -32,7 +32,7 @@ export function HomePage() {
         ev.preventDefault()
         
         if (track.spotifyId === currTrack.spotifyId) return togglePlay()
-        console.log('not the same track')
+        // console.log('not the same track')
         setTrack(track)
         setPlayingStation(station)
     }

@@ -69,7 +69,7 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
                 const newPlaylist = await spotifyService.getPlaylist(spotifyId)
                 const savedPlaylist = await stationService.save(newPlaylist) //this also add an owner to the list
                 const updatedStation = await stationService.save({...savedPlaylist, owner:null})
-                console.log(updatedStation)
+                // console.log(updatedStation)
                 navId = savedPlaylist._id
             }
         }

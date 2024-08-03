@@ -82,7 +82,7 @@ export function Player() {
     function handleSeek(ev) {
         ev.stopPropagation()
         const seekProgress = ev.target.value
-        console.log(seekProgress)
+        // console.log(seekProgress)
         setProgress(seekProgress)
         playerRef.current.seekTo(seekProgress)
     }

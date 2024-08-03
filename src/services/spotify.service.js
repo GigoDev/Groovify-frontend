@@ -1,10 +1,8 @@
 import axios from 'axios'
 import { saveToStorage, loadFromStorage, formatTime } from './util.service'
+import { httpService } from './http.service'
 
-const CLIENT_ID = '1c050b057d7c4a9d89225fabe0c0bed7'
-const CLIENT_SECRET = '798827575dda46239866dc3c071fcfc1'
 const STORAGE_KEY = 'tracks_search_DB'
-
 
 export const spotifyService = {
     getToken,
@@ -23,17 +21,10 @@ if (!loadFromStorage('access_token')) getToken()
 
 async function getToken() {
 
-    const url = 'https://accounts.spotify.com/api/token'
-    const data = {
-        'client_id': CLIENT_ID,
-        'grant_type': 'client_credentials',
-        'client_secret': CLIENT_SECRET,
-    }
-    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
-
     try {
-        const resp = await axios.post(url, data, { headers })
-        saveToStorage('access_token', resp.data.access_token)
+        const token = await httpService.get('spotify/get-token',{})
+        console.log(token)
+        saveToStorage('access_token', token)
 
     } catch (error) {
         console.error('Error fetching token:', error)
@@ -227,7 +218,7 @@ async function getCategoryPlaylists(category) {
 
 }
 
-async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL') {//type values: "album", "artist", "playlist", "track"
+async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL') {
 
     try {
         const typesStr = types.join('%2C')
@@ -252,7 +243,7 @@ async function searchFor(searchStr, types = ["track"], limit = 10, market = 'IL'
     }
 }
 
-async function getFeaturedPlaylists() {//get top 10 playlists in IL
+async function getFeaturedPlaylists() {
     try {
         const token = loadFromStorage('access_token')
         const url = `https://api.spotify.com/v1/browse/featured-playlists?locale=EN&limit=50`
@@ -278,7 +269,7 @@ async function getFeaturedPlaylists() {//get top 10 playlists in IL
 
 }
 
-async function _getArtistTopTracks(artistId, market = 'IL') {//refactored
+async function _getArtistTopTracks(artistId, market = 'IL') {
     try {
         const token = loadFromStorage('access_token')
         const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${market}`;

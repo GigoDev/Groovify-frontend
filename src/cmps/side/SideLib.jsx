@@ -22,9 +22,9 @@ export function SideLib({ isCollapsed, onCollapse }) {
     const sideStations = useSelector(state => state.stationModule.stations.filter(station => station.owner?._id || station.followBy?.some(user => user.userId === loggedInUser._id)))
     const [activeId, setActiveId] = useState(id)
 
-    useEffect(() => {
-        loadStations()
-    }, [])
+    // useEffect(() => {
+    //     loadStations()
+    // }, [])
 
 
     async function onAddPlaylist() {

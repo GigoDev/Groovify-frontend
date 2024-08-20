@@ -21,7 +21,7 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
 
     const [activeId, setActiveId] = useState('')
 
-    const { tracks } = station
+    const { tracks, owner } = station
     function handleDelete(trackId) {
         // console.log('trackId', trackId)
         const newTracks = tracks.filter(track => track.spotifyId !== trackId)
@@ -84,14 +84,15 @@ export function PlaylistList({ station, onUpdateStation, onPlay }) {
 
                 <span className='createdAt'>{track.duration}</span>
 
-                <StationMenuModal
-                    trigger={
-                        <button className="btn-more">
-                            <SmallBtnOptions className="small-btn-options" />
-                        </button>
-                    }
-                    options={getMenuOptions(track.spotifyId)}
-                />
+                {owner &&
+                    <StationMenuModal
+                        trigger={
+                            <button className="btn-more">
+                                <SmallBtnOptions className="small-btn-options" />
+                            </button>
+                        }
+                        options={getMenuOptions(track.spotifyId)}
+                    />}
             </li>
         ))}
         </ul>

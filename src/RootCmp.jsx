@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Routes, Route } from 'react-router'
 
 import { HomePage } from './pages/HomePage'
@@ -14,10 +14,25 @@ import { PlaylistDetails } from './pages/details/PlaylistDetails.jsx'
 import { SideLib } from './cmps/side/SideLib.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { GenrePage } from './pages/GenrePage.jsx'
-import {LyricsPage} from './pages/LyricsPage.jsx'
+import { LyricsPage } from './pages/LyricsPage.jsx'
+import { login } from './store/actions/user.actions.js'
+import { loadStations } from './store/actions/station.actions.js'
 
 
 export function RootCmp() {
+
+    useEffect(() => {
+        init()
+    }, [])
+
+    async function init() {
+        try {
+            await login()
+            loadStations()
+        } catch (err) {
+            console.log(err)
+        }
+    }
     return (
         <div className="app-container">
             <SideMenu />
@@ -25,7 +40,7 @@ export function RootCmp() {
                 <AppHeader />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/search" element={<SearchPage />}/>
+                    <Route path="/search" element={<SearchPage />} />
                     <Route path="genre/:label/:color" element={<GenrePage />} />
                     <Route path="artist/:id" element={<ArtistDetails />} />
                     <Route path="playlist/:id" element={<PlaylistDetails />} />

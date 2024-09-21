@@ -1,12 +1,11 @@
-import axios from "axios"
 import { loadFromStorage, saveToStorage } from "./util.service"
+import { httpService } from "./http.service"
 
 export const youtubeService = {
     getTrackId,
-    
+
 }
 const STORAGE_KEY = 'youtube_DB'
-const YT_KEY = 'AIzaSyCilqLL-8Izy6Fx59c3SKshxQkbcSnuG5I'
 
 window.youtubeService = youtubeService
 
@@ -16,11 +15,12 @@ async function getTrackId(trackToFind) {
         let track = tracks.find(currTrack => currTrack.name === trackToFind.name)
         if (track) return track
 
-        const url = _getUrl(`${trackToFind.artist.name} - ${trackToFind.name}`)
-        const res = await axios.get(url)
+        const trackName = `${trackToFind.artist.name} - ${trackToFind.name}`
+        const id = await httpService.get(`youtube/${trackName}`)
+        
         track = {
             ...trackToFind,
-            youtubeId: res.data.items[0].id.videoId
+            youtubeId: id
         }
         tracks.push(track)
         saveToStorage(STORAGE_KEY, tracks)
@@ -30,13 +30,5 @@ async function getTrackId(trackToFind) {
         console.log('err:', error)
     }
 
-}
-
-function _getUrl(trackName) {
-    return `https://www.googleapis.com/youtube/v3/search?` +
-        `part=snippet&` +
-        `videoEmbeddable=true&` +
-        `type=video&` +
-        `key=${YT_KEY}&q=${trackName}`
 }
 

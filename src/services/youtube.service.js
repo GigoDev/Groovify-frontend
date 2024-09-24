@@ -12,7 +12,7 @@ window.youtubeService = youtubeService
 async function getTrackId(trackToFind) {
     try {
         const tracks = loadFromStorage(STORAGE_KEY) || []
-        let track = tracks.find(currTrack => currTrack.name === trackToFind.name)
+        let track = tracks.find(currTrack => currTrack.spotifyId === trackToFind.spotifyId)
         if (track) return track
 
         const trackName = `${trackToFind.artist.name} - ${trackToFind.name}`

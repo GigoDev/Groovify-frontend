@@ -30,6 +30,7 @@ export function Player() {
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
 
     const [volume, setVolume] = useState(0.5)
+    const [prevVolume, setPrevVolume] = useState(volume)
     const [isMuted, setIsMuted] = useState(false)
 
     const [isLoop, setLoop] = useState(false)
@@ -88,6 +89,12 @@ export function Player() {
     }
 
     function handleMute() {
+        if (isMuted) {
+            setVolume(prevVolume)
+        } else {
+            setPrevVolume(volume)
+            setVolume(0)
+        }
         setIsMuted(!isMuted)
     }
 
@@ -113,8 +120,8 @@ export function Player() {
     return (
 
         <section
-            onClick={(ev)=>{
-                if(isFullScreen) return
+            onClick={(ev) => {
+                if (isFullScreen) return
                 onFullScreen(ev)
             }}
             className={`player-container ${fullClass}`} >
@@ -143,7 +150,7 @@ export function Player() {
                         onClick={onFullScreen}
                         className='collapse-player-btn'
                         value='collapse'>
-                          
+
                         <DownArrowIcon value='collapse' />
                     </button>
                     <span className='full-player-album'>{album.name}</span>

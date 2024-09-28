@@ -54,7 +54,11 @@ async function getTracks(searchQuery) {
         return tracks
 
     } catch (error) {
-        console.log(error)
+        if (error.response.status === 401 || error.response.status === 403) {
+            console.log('token refresh')
+            await getToken()
+            return await getTracks(searchQuery)
+        } else console.error('Error fetching playlist from spotify:', error)
     }
 }
 
@@ -135,7 +139,7 @@ async function getPlaylist(stationId) {
             console.log('token refresh')
             await getToken()
             return await getPlaylist(stationId)
-        } else console.error('Error fetching playlist from spotify:', error) 
+        } else console.error('Error fetching playlist from spotify:', error)
     }
 }
 

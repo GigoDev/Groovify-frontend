@@ -13,13 +13,24 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
     // const stations = useSelector(storeState => storeState.stationModule.stations)
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
+    
+    async function onPreviewPlay(event, station) {
+        try {
+            event.stopPropagation()
+            event.preventDefault()
 
-    function onPreviewPlay(event, station) {
-        event.stopPropagation()
-        event.preventDefault()
-        if (currPlayingStation._id === station._id) return togglePlay()
-        setTrack(station.tracks[0])
-        setPlayingStation(station)
+            if (currPlayingStation.spotifyId === station.spotifyId) return togglePlay()
+
+            const newPlaylist = await spotifyService.getPlaylist(station.spotifyId)
+            const savedPlaylist = await stationService.save(newPlaylist) //this also add an owner to the list
+            const stationToPlay = await stationService.save({ ...savedPlaylist, owner: null })
+
+            setTrack(stationToPlay.tracks[0])
+            setPlayingStation(stationToPlay)
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const [itemsToShow, setItemsToShow] = useState(null);
@@ -62,13 +73,13 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
     async function handleClick(type, _id, spotifyId) {//handle missing ID in for search page
         var navId = _id
         if (!_id) {//if no Id on card - search dataBase (no database ID for search resaults)
-            const [stationFromService] = await stationService.query({spotifyId: spotifyId}) 
-            if(stationFromService) navId = stationFromService._id 
+            const [stationFromService] = await stationService.query({ spotifyId: spotifyId })
+            if (stationFromService) navId = stationFromService._id
 
-            else{//get new playlist from spotify and save to DB
+            else {//get new playlist from spotify and save to DB
                 const newPlaylist = await spotifyService.getPlaylist(spotifyId)
                 const savedPlaylist = await stationService.save(newPlaylist) //this also add an owner to the list
-                const updatedStation = await stationService.save({...savedPlaylist, owner:null})
+                const updatedStation = await stationService.save({ ...savedPlaylist, owner: null })
                 // console.log(updatedStation)
                 navId = savedPlaylist._id
             }
@@ -83,15 +94,15 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
         <section className='featured-playlist-container'>
             <h1 className='list-title'>{title}</h1>
             <div className='lists-container'>
-                {list.map(item => (
-                    <div className='list-item' key={item.spotifyId} onClick={() => handleClick(item.type, item._id, item.spotifyId)}>
+                {list.map((item, idx) => (
+                    <div className='list-item' key={item.spotifyId + idx} onClick={() => handleClick(item.type, item._id, item.spotifyId)}>
                         <div className='img-container' >
                             <img src={item.imgs[0].url} alt="" style={isRound ? style : null} />
                         </div>
                         <div className='title'>{item.name}</div>
                         <div className={'description'}>{type != 'artist' ? item.description : 'Artist'}</div>
                         <button className="btn-play-green" onClick={(ev) => onPreviewPlay(ev, item)}>
-                            {isPlaying && currPlayingStation._id === item._id ? <PauseIcon /> : <PlayIcon />}
+                            {isPlaying && currPlayingStation.spotifyId === item.spotifyId ? <PauseIcon /> : <PlayIcon />}
                         </button>
                     </div>
                 ))

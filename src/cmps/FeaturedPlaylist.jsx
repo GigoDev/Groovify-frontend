@@ -13,15 +13,18 @@ export function FeaturedPlaylist({ stations, title, startIdx, type, isRound }) {
     // const stations = useSelector(storeState => storeState.stationModule.stations)
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
     const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
-    
+
     async function onPreviewPlay(event, station) {
         try {
             event.stopPropagation()
             event.preventDefault()
+            console.log(station)
 
             if (currPlayingStation.spotifyId === station.spotifyId) return togglePlay()
 
-            const newPlaylist = await spotifyService.getPlaylist(station.spotifyId)
+            const getFunc = station.type === 'artist' ? spotifyService.getArtist : spotifyService.getPlaylist
+
+            const newPlaylist = await getFunc(station.spotifyId)
             const savedPlaylist = await stationService.save(newPlaylist) //this also add an owner to the list
             const stationToPlay = await stationService.save({ ...savedPlaylist, owner: null })
 

@@ -18,6 +18,7 @@ export function ArtistDetails() {
 
     const { id } = useParams()
     const station = useSelector(storeState => storeState.stationModule.station)
+    const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
     const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
     const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
 
@@ -93,16 +94,16 @@ export function ArtistDetails() {
     }
 
     function handlePlayPause() {
-        if (!isPlaying) {
-            if (selectedTrack) {
-                setTrack(selectedTrack)
-            } else if (tracks.length > 0) {
-                setTrack(tracks[0])
-            }
-            setPlayingStation()
+        if (station._id === currPlayingStation._id) {
+            togglePlay()
+            return
         }
-        togglePlay()
+
+        setTrack(station.tracks[0])
+        setSelectedTrack(station.tracks[0])
+        setPlayingStation()
     }
+
     if (!station || station.type !== 'artist') return <div className='spotify-loader-container'><img src={SpotifyLoader} className='spotify-loader' alt="Spotify Loader" /></div>
     const { imgs, listeners, name: title, type, tracks, owner } = station
     const followStyle = isFollow ? { borderColor: 'green' } : { borderColor: 'white' };
@@ -121,7 +122,7 @@ export function ArtistDetails() {
             <section className='station-content'>
                 <div className='controlls'>
                     <button className='btn play' onClick={handlePlayPause}>
-                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                        {isPlaying && selectedTrack ? <PauseIcon /> : <PlayIcon />}
                     </button>
                     <button className='btn pill follow' onClick={handleFollow} style={followStyle}>{isFollow ? 'Following' : 'Follow'}</button>
                 </div>

@@ -36,6 +36,7 @@ export function PlaylistDetails() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const station = useSelector(storeState => storeState.stationModule.station)
+  const currPlayingStation = useSelector(storeState => storeState.stationModule.currPlayingStation)
   const currTrack = useSelector(storeState => storeState.stationModule.currTrack)
   const isPlaying = useSelector(storeState => storeState.stationModule.isPlaying)
   // const likedTracksIds = useSelector(storeState => storeState.stationModule.stations.find((station) => station.name === 'Liked Songs')).tracks.map(track => track.spotifyId)
@@ -106,16 +107,17 @@ export function PlaylistDetails() {
   }
 
   function handlePlayPause() {
-    if (!isPlaying) {
-      if (selectedTrack) {
-        setTrack(selectedTrack)
-      } else if (tracks.length > 0) {
-        setTrack(tracks[0])
-      }
-      setPlayingStation()
+    if (station._id === currPlayingStation._id) {
+      togglePlay()
+      return
     }
-    togglePlay()
+
+    setTrack(station.tracks[0])
+    setSelectedTrack(station.tracks[0])
+    setPlayingStation()
   }
+
+
 
 
 
@@ -206,9 +208,9 @@ export function PlaylistDetails() {
           <p className="summary-title">{type}</p>
 
           <h1 className="pointer" onClick={openEditModal}>{name}</h1>
-          {station.tracks.length > 0 && 
+          {station.tracks.length > 0 &&
             <div className="mini-dashboard">
-              John Doe • {likes? `${likes.toLocaleString()} likes • ` :''} {owner? tracks.length : total} songs
+              John Doe • {likes ? `${likes.toLocaleString()} likes • ` : ''} {owner ? tracks.length : total} songs
               <span>, <span className="light">{`Total Time: ${formattedDuration}`}</span></span>
             </div>}
 
@@ -219,7 +221,7 @@ export function PlaylistDetails() {
         <section className="playlist-actions">
           {!!station.tracks.length &&
             (<button className="btn-play-green" onClick={handlePlayPause}>
-              {isPlaying ? <PauseIcon /> : <PlayIcon />}
+              {isPlaying && selectedTrack ? <PauseIcon /> : <PlayIcon />}
             </button>
             )}
           {!station.owner && (<button onClick={handleFollow} className="add-library">

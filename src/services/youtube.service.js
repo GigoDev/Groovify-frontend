@@ -15,7 +15,7 @@ async function getTrackId(trackToFind) {
         let track = tracks.find(currTrack => currTrack.spotifyId === trackToFind.spotifyId)
         if (track) return track
 
-        const trackName = `${trackToFind.artist.name} - ${trackToFind.name}`
+        const trackName = encodeURIComponent(`${trackToFind.artist.name} - ${trackToFind.name}`)
         const id = await httpService.get(`youtube/${trackName}`)
         
         track = {

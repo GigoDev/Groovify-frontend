@@ -15,17 +15,20 @@ async function getTrackId(trackToFind) {
         let track = tracks.find(currTrack => currTrack.spotifyId === trackToFind.spotifyId)
         if (track) return track
 
-        const trackName = encodeURIComponent(`${trackToFind.artist.name} - ${trackToFind.name}`)
+        const trackName = `${trackToFind.artist.name} - ${trackToFind.name}`
         const id = await httpService.get(`youtube/${trackName}`)
-        
-        track = {
-            ...trackToFind,
-            youtubeId: id
-        }
-        tracks.push(track)
-        saveToStorage(STORAGE_KEY, tracks)
-        return track
 
+        if (id && typeof id === 'string') {
+            track = {
+                ...trackToFind,
+                youtubeId: id
+            }
+            tracks.push(track)
+            saveToStorage(STORAGE_KEY, tracks)
+            return track
+        } else {
+            throw new Error('Invalid YouTube ID')
+        }
     } catch (error) {
         console.log('err:', error)
     }
